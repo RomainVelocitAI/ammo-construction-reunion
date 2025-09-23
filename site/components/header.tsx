@@ -7,14 +7,26 @@ import Link from 'next/link';
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    // Initial check
+    handleResize();
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   const navLinks = [
@@ -52,7 +64,8 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation - Ultra espacé et premium */}
-          <div className="hidden lg:flex items-center gap-16 xl:gap-20">
+          {!isMobile && (
+          <div className="flex items-center gap-16 xl:gap-20">
             <div className="flex items-center gap-12 xl:gap-16">
               {navLinks.map((link) => (
                 <Link
@@ -83,11 +96,13 @@ export function Header() {
               </span>
             </button>
           </div>
+          )}
 
           {/* Mobile Menu Button - Premium design */}
+          {isMobile && (
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden relative w-12 h-12 flex flex-col items-center justify-center gap-2 group"
+            className="relative w-12 h-12 flex flex-col items-center justify-center gap-2 group"
           >
             <span className={`w-8 h-[3px] bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full transition-all duration-500 ${
               isMobileMenuOpen ? 'rotate-45 translate-y-[11px]' : ''
@@ -99,10 +114,12 @@ export function Header() {
               isMobileMenuOpen ? '-rotate-45 -translate-y-[11px]' : ''
             }`}></span>
           </button>
+          )}
         </div>
 
         {/* Mobile Menu - Premium design */}
-        <div className={`lg:hidden transition-all duration-500 overflow-hidden ${
+        {isMobile && (
+        <div className={`transition-all duration-500 overflow-hidden ${
           isMobileMenuOpen ? 'max-h-[600px] opacity-100 mt-6' : 'max-h-0 opacity-0'
         }`}>
           <div className="py-6 border-t border-amber-500/20">
@@ -124,6 +141,7 @@ export function Header() {
             </button>
           </div>
         </div>
+        )}
       </nav>
     </header>
   );
