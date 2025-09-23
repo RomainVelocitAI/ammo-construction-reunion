@@ -1,15 +1,39 @@
+"use client";
+
 import Link from 'next/link';
 import { Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 export function Footer() {
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      setIsMobile(width < 640);
+      setIsTablet(width >= 640 && width < 1024);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const getGridCols = () => {
+    if (isMobile) return 'grid-cols-1';
+    if (isTablet) return 'grid-cols-2';
+    return 'grid-cols-4';
+  };
+
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+      <div className={`container mx-auto ${isMobile ? 'px-4 py-8' : isTablet ? 'px-6 py-12' : 'px-6 py-16'}`}>
+        <div className={`grid ${getGridCols()} ${isMobile ? 'gap-6' : 'gap-8'}`}>
           {/* Company Info */}
           <div>
-            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-amber-500">AMMO.re</h3>
-            <p className="text-sm sm:text-base text-gray-300 mb-4">
+            <h3 className={`${isMobile ? 'text-xl' : 'text-2xl'} font-bold ${isMobile ? 'mb-3' : 'mb-4'} text-amber-500`}>AMMO.re</h3>
+            <p className={`${isMobile ? 'text-sm' : 'text-base'} text-gray-300 mb-4`}>
               Expert en construction et rénovation à La Réunion depuis 1993
             </p>
             <div className="flex space-x-4">
@@ -24,7 +48,7 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-amber-500">Nos Services</h4>
+            <h4 className={`${isMobile ? 'text-base' : 'text-lg'} font-semibold ${isMobile ? 'mb-3' : 'mb-4'} text-amber-500`}>Nos Services</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/services/container-house" className="text-gray-300 hover:text-amber-500 transition-colors">
@@ -61,7 +85,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-amber-500">Liens Rapides</h4>
+            <h4 className={`${isMobile ? 'text-base' : 'text-lg'} font-semibold ${isMobile ? 'mb-3' : 'mb-4'} text-amber-500`}>Liens Rapides</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/about" className="text-gray-300 hover:text-amber-500 transition-colors">
@@ -88,11 +112,11 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-amber-500">Contact</h4>
+            <h4 className={`${isMobile ? 'text-base' : 'text-lg'} font-semibold ${isMobile ? 'mb-3' : 'mb-4'} text-amber-500`}>Contact</h4>
             <div className="space-y-3">
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
-                <p className="text-sm sm:text-base text-gray-300">
+                <p className={`${isMobile ? 'text-sm' : 'text-base'} text-gray-300`}>
                   123 Rue de la Construction<br />
                   97400 Saint-Denis<br />
                   La Réunion
@@ -116,11 +140,11 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-gray-800">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm mb-4 md:mb-0">
+          <div className={`flex ${isMobile || isTablet ? 'flex-col' : 'flex-row'} justify-between items-center`}>
+            <p className={`text-gray-400 text-sm ${isMobile || isTablet ? 'mb-4' : 'mb-0'}`}>
               © {new Date().getFullYear()} AMMO.re - Tous droits réservés
             </p>
-            <div className="flex space-x-6">
+            <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} ${isMobile ? 'space-y-2' : 'space-x-6'} ${isMobile ? 'items-center' : ''}`}>
               <Link href="/mentions-legales" className="text-gray-400 text-sm hover:text-amber-500 transition-colors">
                 Mentions Légales
               </Link>

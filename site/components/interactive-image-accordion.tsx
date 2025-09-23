@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 // --- Data for the image accordion ---
@@ -52,17 +52,43 @@ interface AccordionItemProps {
   item: typeof accordionItems[0];
   isActive: boolean;
   onMouseEnter: () => void;
+  onClick: () => void;
+  isMobile: boolean;
+  isTablet: boolean;
 }
 
-const AccordionItem: React.FC<AccordionItemProps> = ({ item, isActive, onMouseEnter }) => {
+const AccordionItem: React.FC<AccordionItemProps> = ({ item, isActive, onMouseEnter, onClick, isMobile, isTablet }) => {
+  // Dynamic width calculation based on viewport
+  const getWidth = () => {
+    if (isMobile) {
+      return isActive ? 'w-[200px]' : 'w-[40px]';
+    } else if (isTablet) {
+      return isActive ? 'w-[300px]' : 'w-[50px]';
+    } else {
+      return isActive ? 'w-[400px]' : 'w-[60px]';
+    }
+  };
+
+  // Dynamic height based on viewport
+  const getHeight = () => {
+    if (isMobile) {
+      return 'h-[250px]';
+    } else if (isTablet) {
+      return 'h-[350px]';
+    } else {
+      return 'h-[450px]';
+    }
+  };
+
   return (
     <div
       className={`
-        relative h-[300px] sm:h-[450px] rounded-2xl overflow-hidden cursor-pointer
+        relative ${getHeight()} rounded-2xl overflow-hidden cursor-pointer
         transition-all duration-700 ease-in-out
-        ${isActive ? 'w-[250px] sm:w-[400px]' : 'w-[50px] sm:w-[60px]'}
+        ${getWidth()}
       `}
-      onMouseEnter={onMouseEnter}
+      onMouseEnter={!isMobile ? onMouseEnter : undefined}
+      onClick={isMobile ? onClick : undefined}
     >
       {/* Background Image */}
       <img
@@ -74,7 +100,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ item, isActive, onMouseEn
       {/* Caption Text */}
       <span
         className={`
-          absolute text-white text-lg font-semibold whitespace-nowrap
+          absolute text-white ${isMobile ? 'text-sm' : 'text-lg'} font-semibold whitespace-nowrap
           transition-all duration-300 ease-in-out
           ${
             isActive
@@ -94,24 +120,42 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ item, isActive, onMouseEn
 // --- Main App Component ---
 export function LandingAccordionItem() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      setIsMobile(width < 640);
+      setIsTablet(width >= 640 && width < 1024);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleItemHover = (index: number) => {
+    setActiveIndex(index);
+  };
+
+  const handleItemClick = (index: number) => {
     setActiveIndex(index);
   };
 
   const activeItem = accordionItems[activeIndex];
 
   return (
-    <div className="bg-white font-sans pt-24 sm:pt-32 lg:pt-48 xl:pt-52">
-      <section className="container mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-20">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+    <div className={`bg-white font-sans ${isMobile ? 'pt-20' : isTablet ? 'pt-28' : 'pt-48 xl:pt-52'}`}>
+      <section className={`container mx-auto ${isMobile ? 'px-4 py-8' : isTablet ? 'px-6 py-12' : 'px-6 py-20'}`}>
+        <div className={`flex ${isMobile || isTablet ? 'flex-col' : 'flex-row'} items-center justify-between ${isMobile ? 'gap-8' : isTablet ? 'gap-10' : 'gap-12'}`}>
 
           {/* Left Side: Text Content - Dynamic based on selection */}
-          <div className="w-full md:w-1/2 text-center md:text-left">
-            <span className="inline-block px-4 py-1 bg-gradient-to-r from-amber-600/10 to-yellow-600/10 border border-amber-600/40 rounded-full text-amber-600 text-sm font-semibold mb-6 uppercase tracking-wider">
+          <div className={`w-full ${!isMobile && !isTablet ? 'md:w-1/2' : ''} ${isMobile || isTablet ? 'text-center' : 'text-left'}`}>
+            <span className={`inline-block px-4 py-1 bg-gradient-to-r from-amber-600/10 to-yellow-600/10 border border-amber-600/40 rounded-full text-amber-600 ${isMobile ? 'text-xs' : 'text-sm'} font-semibold mb-6 uppercase tracking-wider`}>
               {activeItem.title}
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight tracking-tighter">
+            <h1 className={`${isMobile ? 'text-2xl' : isTablet ? 'text-4xl' : 'text-6xl'} font-bold leading-tight tracking-tighter`}>
               <span className="bg-gradient-to-r from-amber-500 via-yellow-600 to-amber-700 bg-clip-text text-transparent">
                 Construction & Rénovation
               </span>
@@ -120,35 +164,35 @@ export function LandingAccordionItem() {
                 à La Réunion
               </span>
             </h1>
-            <p className="mt-6 text-base sm:text-lg text-gray-600 max-w-xl mx-auto md:mx-0">
+            <p className={`mt-6 ${isMobile ? 'text-sm' : isTablet ? 'text-base' : 'text-lg'} text-gray-600 max-w-xl ${isMobile || isTablet ? 'mx-auto' : 'mx-0'}`}>
               {activeItem.description}
             </p>
 
             {/* Features list */}
-            <div className="mt-6 space-y-2">
+            <div className={`mt-6 space-y-2 ${isMobile || isTablet ? 'max-w-sm mx-auto' : ''}`}>
               {activeItem.features.map((feature, index) => (
-                <div key={index} className="flex items-center gap-2">
+                <div key={index} className={`flex items-center gap-2 ${isMobile || isTablet ? 'justify-center' : ''}`}>
                   <svg className="w-5 h-5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-gray-700">{feature}</span>
+                  <span className={`${isMobile ? 'text-sm' : 'text-base'} text-gray-700`}>{feature}</span>
                 </div>
               ))}
             </div>
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <div className={`mt-8 flex ${isMobile ? 'flex-col' : 'flex-row'} gap-4 ${isMobile || isTablet ? 'justify-center' : 'justify-start'}`}>
               <a
                 href="#contact"
                 className="relative inline-block px-6 sm:px-8 py-3 overflow-hidden group text-center"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-500 transition-transform duration-300 group-hover:scale-105"></span>
-                <span className="relative text-white font-bold tracking-wider">
+                <span className={`relative text-white font-bold tracking-wider ${isMobile ? 'text-sm' : 'text-base'}`}>
                   DEVIS GRATUIT
                 </span>
               </a>
               <a
                 href="#realisations"
-                className="inline-block px-6 sm:px-8 py-3 border-2 border-amber-500 text-amber-600 font-bold tracking-wider hover:bg-amber-500/10 transition-all duration-300 text-center"
+                className={`inline-block px-6 sm:px-8 py-3 border-2 border-amber-500 text-amber-600 font-bold tracking-wider hover:bg-amber-500/10 transition-all duration-300 text-center ${isMobile ? 'text-sm' : 'text-base'}`}
               >
                 NOS PROJETS
               </a>
@@ -156,15 +200,18 @@ export function LandingAccordionItem() {
           </div>
 
           {/* Right Side: Image Accordion */}
-          <div className="w-full md:w-1/2 overflow-x-auto">
-            {/* Changed flex-col to flex-row to keep the layout consistent */}
-            <div className="flex flex-row items-center justify-start md:justify-center gap-2 sm:gap-4 p-2 sm:p-4 min-w-max">
+          <div className={`w-full ${!isMobile && !isTablet ? 'md:w-1/2' : ''} ${isMobile ? '' : 'overflow-x-auto'}`}>
+            {/* Responsive accordion container */}
+            <div className={`flex flex-row items-center ${isMobile ? 'justify-center gap-1 overflow-x-auto' : isTablet ? 'justify-center gap-2' : 'justify-center gap-4'} ${isMobile ? 'p-2' : isTablet ? 'p-3' : 'p-4'} ${isMobile ? '' : 'min-w-max'}`}>
               {accordionItems.map((item, index) => (
                 <AccordionItem
                   key={item.id}
                   item={item}
                   isActive={index === activeIndex}
                   onMouseEnter={() => handleItemHover(index)}
+                  onClick={() => handleItemClick(index)}
+                  isMobile={isMobile}
+                  isTablet={isTablet}
                 />
               ))}
             </div>

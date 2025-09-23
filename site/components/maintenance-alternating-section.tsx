@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, useScroll, useTransform } from "framer-motion"
-import { useRef } from "react"
+import { useRef, useState, useEffect } from "react"
 import Image from "next/image"
 
 const maintenanceData = [
@@ -65,9 +65,35 @@ const MaintenanceCard = ({
 }) => {
   const container = useRef<HTMLDivElement>(null)
   const scale = useTransform(progress, range, [1, targetScale])
+  const [isMobile, setIsMobile] = useState(false)
+  const [isTablet, setIsTablet] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth
+      setIsMobile(width < 640)
+      setIsTablet(width >= 640 && width < 1024)
+    }
+
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  const getImageHeight = () => {
+    if (isMobile) return 'h-[250px]'
+    if (isTablet) return 'h-[350px]'
+    return 'h-[500px]'
+  }
+
+  const getTextSize = () => {
+    if (isMobile) return 'text-2xl'
+    if (isTablet) return 'text-3xl'
+    return 'text-4xl'
+  }
 
   return (
-    <div ref={container} className="sticky top-20 flex items-center justify-center px-4 sm:px-6 lg:px-8 w-full">
+    <div ref={container} className={`sticky top-20 flex items-center justify-center ${isMobile ? 'px-2' : isTablet ? 'px-4' : 'px-8'} w-full`}>
       <motion.div
         style={{
           scale,
@@ -75,11 +101,11 @@ const MaintenanceCard = ({
         }}
         className="relative -top-1/4 w-full max-w-7xl mx-auto origin-top bg-white rounded-3xl shadow-xl"
       >
-        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center p-8 ${
-          isLeftImage ? '' : 'lg:[direction:rtl]'
+        <div className={`grid ${isMobile || isTablet ? 'grid-cols-1' : 'grid-cols-2'} ${isMobile ? 'gap-4' : isTablet ? 'gap-6' : 'gap-16'} items-center ${isMobile ? 'p-4' : isTablet ? 'p-6' : 'p-8'} ${
+          !isMobile && !isTablet && !isLeftImage ? '[direction:rtl]' : ''
         }`}>
           {/* Image Column */}
-          <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+          <div className={`relative ${getImageHeight()} rounded-2xl overflow-hidden shadow-2xl`}>
             <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-transparent z-10" />
             <Image
               src={src}
@@ -91,27 +117,27 @@ const MaintenanceCard = ({
           </div>
 
           {/* Text Column */}
-          <div className={`space-y-6 ${isLeftImage ? '' : 'lg:[direction:ltr]'}`}>
-            <div className="inline-flex items-center gap-2 bg-amber-500/10 px-4 py-2 rounded-full">
+          <div className={`space-y-4 ${!isMobile && !isTablet && !isLeftImage ? '[direction:ltr]' : ''}`}>
+            <div className="inline-flex items-center gap-2 bg-amber-500/10 px-3 py-1.5 rounded-full">
               <span className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
-              <span className="text-sm font-semibold text-amber-600 uppercase tracking-wider">
+              <span className={`${isMobile ? 'text-xs' : 'text-sm'} font-semibold text-amber-600 uppercase tracking-wider`}>
                 Avantage #{i + 1}
               </span>
             </div>
 
-            <h3 className="text-3xl lg:text-4xl font-bold text-gray-900">
+            <h3 className={`${getTextSize()} font-bold text-gray-900`}>
               {title}
             </h3>
 
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className={`${isMobile ? 'text-base' : 'text-lg'} text-gray-600 leading-relaxed`}>
               {description}
             </p>
 
-            <div className="bg-gray-50 rounded-xl p-6 shadow-lg border-l-4 border-amber-500">
-              <div className="text-2xl font-bold text-amber-600">
+            <div className={`bg-gray-50 rounded-xl ${isMobile ? 'p-4' : 'p-6'} shadow-lg border-l-4 border-amber-500`}>
+              <div className={`${isMobile ? 'text-xl' : 'text-2xl'} font-bold text-amber-600`}>
                 {highlight}
               </div>
-              <div className="text-sm text-gray-500 mt-1">
+              <div className={`${isMobile ? 'text-xs' : 'text-sm'} text-gray-500 mt-1`}>
                 Résultat prouvé
               </div>
             </div>
@@ -129,15 +155,36 @@ const MaintenanceAlternatingSection = () => {
     offset: ["start start", "end end"],
   })
 
+  const [isMobile, setIsMobile] = useState(false)
+  const [isTablet, setIsTablet] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth
+      setIsMobile(width < 640)
+      setIsTablet(width >= 640 && width < 1024)
+    }
+
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  const getHeaderSize = () => {
+    if (isMobile) return 'text-3xl'
+    if (isTablet) return 'text-4xl'
+    return 'text-5xl'
+  }
+
   return (
     <section className="bg-white">
         {/* Header */}
-        <div className="text-center py-20 px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        <div className={`text-center ${isMobile ? 'py-12 px-4' : isTablet ? 'py-16 px-6' : 'py-20 px-4'}`}>
+          <h2 className={`${getHeaderSize()} font-bold text-gray-900 mb-6`}>
             Service d'Entretien Préventif
             <span className="block text-amber-600 mt-2">Votre Avantage Décisif</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className={`${isMobile ? 'text-lg' : 'text-xl'} text-gray-600 max-w-3xl mx-auto`}>
             Maximisez la longévité et la rentabilité de votre bien immobilier
             en évitant les réparations tardives et coûteuses.
           </p>
@@ -164,19 +211,19 @@ const MaintenanceAlternatingSection = () => {
         </main>
 
         {/* CTA Section */}
-        <div className="pt-0 pb-8 px-4">
-          <div className="bg-gradient-to-r from-amber-500/10 to-[#FFD54F]/10 rounded-3xl p-12 max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+        <div className={`pt-0 ${isMobile ? 'pb-4 px-2' : isTablet ? 'pb-6 px-4' : 'pb-8 px-4'}`}>
+          <div className={`bg-gradient-to-r from-amber-500/10 to-[#FFD54F]/10 rounded-3xl ${isMobile ? 'p-6' : isTablet ? 'p-8' : 'p-12'} max-w-4xl mx-auto text-center`}>
+            <h3 className={`${isMobile ? 'text-xl' : 'text-2xl'} font-bold text-gray-900 mb-4`}>
               Protégez Votre Investissement
             </h3>
-            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className={`text-gray-600 ${isMobile ? 'mb-6 text-sm' : 'mb-8'} max-w-2xl mx-auto`}>
               Demandez votre diagnostic gratuit et découvrez notre programme d'entretien personnalisé.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+            <div className={`flex ${isMobile || isTablet ? 'flex-col' : 'flex-row'} gap-4 justify-center`}>
+              <button className={`bg-gradient-to-r from-amber-500 to-amber-600 text-white ${isMobile ? 'px-6 py-3 text-sm' : 'px-8 py-4'} rounded-xl font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300`}>
                 Diagnostic Gratuit
               </button>
-              <button className="bg-white text-gray-700 px-8 py-4 rounded-xl font-semibold border-2 border-gray-200 hover:border-amber-500 transition-colors duration-300">
+              <button className={`bg-white text-gray-700 ${isMobile ? 'px-6 py-3 text-sm' : 'px-8 py-4'} rounded-xl font-semibold border-2 border-gray-200 hover:border-amber-500 transition-colors duration-300`}>
                 Voir nos Contrats
               </button>
             </div>

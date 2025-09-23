@@ -49,7 +49,16 @@
       "Bash(git push:*)",
       "Bash(for:*)",
       "Bash(do sed -i \"/touchScrollType: ''pointer''/d\" \"$file\")",
-      "Bash(xargs:*)"
+      "Bash(xargs:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(pip install:*)",
+      "Bash(C:UsersromaiAppDataRoamingPythonPython313ScriptsSuperClaude.exe install)",
+      "Bash(python:*)",
+      "Read(//c/Users/romai/.claude/**)",
+      "mcp__playwright__browser_resize",
+      "Bash(GIT_CURL_VERBOSE=1 git push origin main)",
+      "Bash(git reset:*)",
+      "Bash(git restore:*)"
     ],
     "deny": [],
     "ask": []
