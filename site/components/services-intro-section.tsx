@@ -7,21 +7,21 @@ import { LinkPreview } from "@/components/ui/link-preview";
 
 export function ServicesIntroSection() {
   return (
-    <section className="py-24 bg-gradient-to-b from-white via-gray-50 to-white">
-      <div className="container mx-auto px-4 flex flex-col">
+    <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-b from-white via-gray-50 to-white">
+      <div className="container mx-auto px-4 sm:px-6 flex flex-col">
         {/* Section Header avec SEO et Copywriting optimisés pour les services */}
         <div className="w-full mb-16">
           <div className="max-w-6xl mx-auto text-center">
           {/* Titre principal H2 optimisé SEO services */}
-          <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Nos Services de Construction et Rénovation
-            <span className="block text-2xl lg:text-3xl font-light text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-600 mt-2">
+            <span className="block text-lg sm:text-xl lg:text-3xl font-light text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-600 mt-2">
               Maison Container • Villa • Extension • Aménagement
             </span>
           </h2>
 
           {/* Description services avec mots-clés SEO et link previews */}
-          <p className="text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed px-2 sm:px-4 lg:px-0">
             Spécialiste de la{" "}
             <LinkPreview
               url="#maison-container"
@@ -82,10 +82,10 @@ export function ServicesIntroSection() {
 
         {/* Grille 3x3 de cartes 3D */}
         <div className="w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-7xl mx-auto">
           {/* Carte 1 - Maison Container */}
           <CardContainer className="inter-var">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border">
+            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-4 sm:p-6 border">
               <CardItem
                 translateZ="50"
                 className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -104,11 +104,11 @@ export function ServicesIntroSection() {
                   src="/maison_contener.png"
                   height="1000"
                   width="1000"
-                  className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                  className="h-40 sm:h-48 lg:h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
                   alt="Maison Container La Réunion"
                 />
               </CardItem>
-              <div className="flex justify-between items-center mt-20">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-0 sm:justify-between items-stretch sm:items-center mt-8 sm:mt-12 lg:mt-20">
                 <CardItem
                   translateZ={20}
                   as={Link}
@@ -131,7 +131,7 @@ export function ServicesIntroSection() {
 
           {/* Carte 2 - Villa Contemporaine */}
           <CardContainer className="inter-var">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border">
+            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-4 sm:p-6 border">
               <CardItem
                 translateZ="50"
                 className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -150,11 +150,11 @@ export function ServicesIntroSection() {
                   src="/villamoderne.png"
                   height="1000"
                   width="1000"
-                  className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                  className="h-40 sm:h-48 lg:h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
                   alt="Villa Contemporaine La Réunion"
                 />
               </CardItem>
-              <div className="flex justify-between items-center mt-20">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-0 sm:justify-between items-stretch sm:items-center mt-8 sm:mt-12 lg:mt-20">
                 <CardItem
                   translateZ={20}
                   as={Link}
@@ -177,7 +177,7 @@ export function ServicesIntroSection() {
 
           {/* Carte 3 - Rénovation Complète */}
           <CardContainer className="inter-var">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border">
+            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-4 sm:p-6 border">
               <CardItem
                 translateZ="50"
                 className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -196,11 +196,11 @@ export function ServicesIntroSection() {
                   src="/renovation.png"
                   height="1000"
                   width="1000"
-                  className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                  className="h-40 sm:h-48 lg:h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
                   alt="Rénovation Complète La Réunion"
                 />
               </CardItem>
-              <div className="flex justify-between items-center mt-20">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-0 sm:justify-between items-stretch sm:items-center mt-8 sm:mt-12 lg:mt-20">
                 <CardItem
                   translateZ={20}
                   as={Link}
@@ -223,7 +223,7 @@ export function ServicesIntroSection() {
 
           {/* Carte 4 - Extension Sur-Mesure */}
           <CardContainer className="inter-var">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border">
+            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-4 sm:p-6 border">
               <CardItem
                 translateZ="50"
                 className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -242,11 +242,11 @@ export function ServicesIntroSection() {
                   src="/extension.png"
                   height="1000"
                   width="1000"
-                  className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                  className="h-40 sm:h-48 lg:h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
                   alt="Extension Sur-Mesure La Réunion"
                 />
               </CardItem>
-              <div className="flex justify-between items-center mt-20">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-0 sm:justify-between items-stretch sm:items-center mt-8 sm:mt-12 lg:mt-20">
                 <CardItem
                   translateZ={20}
                   as={Link}
@@ -269,7 +269,7 @@ export function ServicesIntroSection() {
 
           {/* Carte 5 - Aménagement Extérieur */}
           <CardContainer className="inter-var">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border">
+            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-4 sm:p-6 border">
               <CardItem
                 translateZ="50"
                 className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -288,11 +288,11 @@ export function ServicesIntroSection() {
                   src="/amenagement exterieur.png"
                   height="1000"
                   width="1000"
-                  className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                  className="h-40 sm:h-48 lg:h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
                   alt="Aménagement Extérieur La Réunion"
                 />
               </CardItem>
-              <div className="flex justify-between items-center mt-20">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-0 sm:justify-between items-stretch sm:items-center mt-8 sm:mt-12 lg:mt-20">
                 <CardItem
                   translateZ={20}
                   as={Link}
@@ -315,7 +315,7 @@ export function ServicesIntroSection() {
 
           {/* Carte 6 - Lodge de Luxe */}
           <CardContainer className="inter-var">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border">
+            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-4 sm:p-6 border">
               <CardItem
                 translateZ="50"
                 className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -334,11 +334,11 @@ export function ServicesIntroSection() {
                   src="/lodgedeluxe.png"
                   height="1000"
                   width="1000"
-                  className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                  className="h-40 sm:h-48 lg:h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
                   alt="Lodge de Luxe La Réunion"
                 />
               </CardItem>
-              <div className="flex justify-between items-center mt-20">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-0 sm:justify-between items-stretch sm:items-center mt-8 sm:mt-12 lg:mt-20">
                 <CardItem
                   translateZ={20}
                   as={Link}

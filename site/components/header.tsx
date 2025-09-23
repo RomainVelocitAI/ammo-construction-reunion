@@ -29,11 +29,11 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-in-out ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-2xl shadow-[0_2px_20px_rgba(0,0,0,0.1)] py-5'
-          : 'bg-white/90 backdrop-blur-md py-10'
+          ? 'bg-white/95 backdrop-blur-2xl shadow-[0_2px_20px_rgba(0,0,0,0.1)] py-3 sm:py-5'
+          : 'bg-white/90 backdrop-blur-md py-4 sm:py-6 lg:py-10'
       }`}
     >
-      <nav className="max-w-[1800px] mx-auto px-10 lg:px-16 xl:px-20">
+      <nav className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-16 xl:px-20">
         <div className="flex items-center justify-between">
           {/* Logo - Encore plus grand pour un impact premium maximal */}
           <Link href="/" className="flex items-center group relative">
@@ -45,7 +45,7 @@ export function Header() {
                 alt="AMMO Construction"
                 width={360}
                 height={115}
-                className="h-24 lg:h-28 xl:h-32 w-auto"
+                className="h-16 sm:h-20 lg:h-28 xl:h-32 w-auto"
                 priority
               />
             </div>
@@ -103,20 +103,20 @@ export function Header() {
 
         {/* Mobile Menu - Premium design */}
         <div className={`lg:hidden transition-all duration-500 overflow-hidden ${
-          isMobileMenuOpen ? 'max-h-[600px] opacity-100 mt-8' : 'max-h-0 opacity-0'
+          isMobileMenuOpen ? 'max-h-[600px] opacity-100 mt-6' : 'max-h-0 opacity-0'
         }`}>
-          <div className="py-8 border-t border-amber-500/20">
+          <div className="py-6 border-t border-amber-500/20">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className="block py-4 px-4 text-gray-100 hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-amber-400 hover:to-yellow-500 transition-all duration-500 font-light tracking-[0.2em] uppercase text-sm"
+                className="block py-3 px-4 text-gray-700 hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-amber-400 hover:to-yellow-500 transition-all duration-500 font-light tracking-[0.2em] uppercase text-sm"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
-            <button className="mt-6 mx-4 w-[calc(100%-2rem)] py-4 bg-gradient-to-r from-amber-500 to-yellow-500 text-black font-medium text-sm tracking-[0.3em] uppercase hover:from-amber-400 hover:to-yellow-400 transition-all duration-500 relative overflow-hidden group">
+            <button className="mt-6 mx-4 w-[calc(100%-2rem)] py-3 bg-gradient-to-r from-amber-500 to-yellow-500 text-white font-medium text-sm tracking-[0.2em] uppercase hover:from-amber-400 hover:to-yellow-400 transition-all duration-500 relative overflow-hidden group">
               <span className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-500">
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent -skew-x-12 group-hover:animate-[shimmer_2s_ease-in-out_infinite]"></span>
               </span>

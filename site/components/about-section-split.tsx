@@ -53,12 +53,12 @@ export function AboutSectionSplit() {
   const parallaxOffset = scrollY * 0.5;
 
   return (
-    <section ref={sectionRef} className="relative min-h-screen flex items-center overflow-hidden bg-white">
+    <section ref={sectionRef} className="relative min-h-[600px] lg:min-h-screen flex items-center overflow-hidden bg-white">
       {/* Split Layout Container */}
       <div className="w-full h-full flex flex-col lg:flex-row">
 
         {/* Left Side - Image with Parallax */}
-        <div className="relative lg:w-1/2 h-[50vh] lg:h-screen bg-white">
+        <div className="relative lg:w-1/2 h-[40vh] sm:h-[50vh] lg:h-screen bg-white">
           <div className="absolute inset-0 overflow-hidden bg-white">
             <div
               className="absolute inset-0 scale-110"
@@ -74,16 +74,16 @@ export function AboutSectionSplit() {
           </div>
 
           {/* Floating Stats Cards - Outside of overflow container */}
-          <div className={`absolute bottom-10 left-6 lg:left-10 z-10 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="bg-white/95 backdrop-blur-md p-6 rounded-2xl shadow-2xl">
-              <div className="text-4xl lg:text-5xl font-bold text-amber-500">{stats.years}+</div>
+          <div className={`absolute bottom-4 sm:bottom-10 left-4 sm:left-6 lg:left-10 z-10 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className="bg-white/95 backdrop-blur-md p-4 sm:p-6 rounded-2xl shadow-2xl">
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-500">{stats.years}+</div>
               <div className="text-gray-700 font-medium">Années d'excellence</div>
             </div>
           </div>
         </div>
 
         {/* Right Side - Content */}
-        <div className="lg:w-1/2 flex items-center justify-center p-8 lg:p-16 bg-white">
+        <div className="lg:w-1/2 flex items-center justify-center p-6 sm:p-8 lg:p-16 bg-white">
           <div className={`max-w-2xl transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             {/* Badge */}
             <span className="inline-block px-6 py-2 bg-gradient-to-r from-amber-600/10 to-yellow-600/10 backdrop-blur-sm border border-amber-600/40 rounded-full text-amber-600 text-sm font-bold mb-8 uppercase tracking-wider">
@@ -91,9 +91,9 @@ export function AboutSectionSplit() {
             </span>
 
             {/* Title */}
-            <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               AMMO Construction
-              <span className="block text-2xl lg:text-3xl font-light text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-600 mt-2">
+              <span className="block text-xl sm:text-2xl lg:text-3xl font-light text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-600 mt-2">
                 L'excellence à La Réunion
               </span>
             </h2>

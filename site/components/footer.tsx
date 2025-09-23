@@ -4,12 +4,12 @@ import { Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 export function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-amber-500">AMMO.re</h3>
-            <p className="text-gray-300 mb-4">
+            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-amber-500">AMMO.re</h3>
+            <p className="text-sm sm:text-base text-gray-300 mb-4">
               Expert en construction et rénovation à La Réunion depuis 1993
             </p>
             <div className="flex space-x-4">
@@ -24,7 +24,7 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-amber-500">Nos Services</h4>
+            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-amber-500">Nos Services</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/services/container-house" className="text-gray-300 hover:text-amber-500 transition-colors">
@@ -61,7 +61,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-amber-500">Liens Rapides</h4>
+            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-amber-500">Liens Rapides</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/about" className="text-gray-300 hover:text-amber-500 transition-colors">
@@ -88,11 +88,11 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-amber-500">Contact</h4>
+            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-amber-500">Contact</h4>
             <div className="space-y-3">
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
-                <p className="text-gray-300">
+                <p className="text-sm sm:text-base text-gray-300">
                   123 Rue de la Construction<br />
                   97400 Saint-Denis<br />
                   La Réunion
