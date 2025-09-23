@@ -5,7 +5,7 @@ import { useEffect, useState, useRef } from 'react';
 export function AboutSectionSplit() {
   const [scrollY, setScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLElement>(null);
   const [stats, setStats] = useState({ years: 0, projects: 0, satisfaction: 0 });
 
   useEffect(() => {

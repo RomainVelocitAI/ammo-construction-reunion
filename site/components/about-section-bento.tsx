@@ -3,19 +3,23 @@
 import { useEffect, useState, useRef } from 'react';
 
 export function AboutSectionBento() {
-  const [isVisible, setIsVisible] = useState({});
-  const [hoveredCard, setHoveredCard] = useState(null);
-  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState<Record<string, boolean>>({});
+  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       if (sectionRef.current) {
         const elements = sectionRef.current.querySelectorAll('[data-animate]');
         elements.forEach((el) => {
-          const rect = el.getBoundingClientRect();
+          const htmlEl = el as HTMLElement;
+          const rect = htmlEl.getBoundingClientRect();
           const isInView = rect.top < window.innerHeight * 0.9 && rect.bottom > 0;
           if (isInView) {
-            setIsVisible((prev) => ({ ...prev, [el.dataset.animate]: true }));
+            const animateKey = htmlEl.dataset.animate;
+            if (animateKey) {
+              setIsVisible((prev) => ({ ...prev, [animateKey]: true }));
+            }
           }
         });
       }

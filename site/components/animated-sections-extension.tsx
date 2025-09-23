@@ -273,7 +273,6 @@ const AnimatedSectionsExtension: React.FC = () => {
       },
       tolerance: 10,
       preventDefault: true,
-      touchScrollType: 'pointer'
     });
 
     gotoSection(0, 1);

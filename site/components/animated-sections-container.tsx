@@ -272,8 +272,7 @@ const AnimatedSectionsContainer: React.FC = () => {
         }
       },
       tolerance: 10,
-      preventDefault: true,
-      touchScrollType: 'pointer'
+      preventDefault: true
     });
 
     gotoSection(0, 1);

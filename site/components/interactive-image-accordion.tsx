@@ -48,7 +48,13 @@ const accordionItems = [
 ];
 
 // --- Accordion Item Component ---
-const AccordionItem = ({ item, isActive, onMouseEnter }) => {
+interface AccordionItemProps {
+  item: typeof accordionItems[0];
+  isActive: boolean;
+  onMouseEnter: () => void;
+}
+
+const AccordionItem: React.FC<AccordionItemProps> = ({ item, isActive, onMouseEnter }) => {
   return (
     <div
       className={`
@@ -89,7 +95,7 @@ const AccordionItem = ({ item, isActive, onMouseEnter }) => {
 export function LandingAccordionItem() {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleItemHover = (index) => {
+  const handleItemHover = (index: number) => {
     setActiveIndex(index);
   };
 

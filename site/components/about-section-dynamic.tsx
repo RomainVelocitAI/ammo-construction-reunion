@@ -4,8 +4,8 @@ import { useEffect, useState, useRef } from 'react';
 
 export function AboutSectionDynamic() {
   const [scrollY, setScrollY] = useState(0);
-  const [isVisible, setIsVisible] = useState({});
-  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState<Record<string, boolean>>({});
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,11 +14,15 @@ export function AboutSectionDynamic() {
       // Check visibility for animations
       if (sectionRef.current) {
         const elements = sectionRef.current.querySelectorAll('[data-animate]');
-        elements.forEach(el => {
-          const rect = el.getBoundingClientRect();
+        elements.forEach((el: Element) => {
+          const htmlEl = el as HTMLElement;
+          const rect = htmlEl.getBoundingClientRect();
           const isInView = rect.top < window.innerHeight && rect.bottom > 0;
           if (isInView) {
-            setIsVisible(prev => ({...prev, [el.dataset.animate]: true}));
+            const animateKey = htmlEl.dataset.animate;
+            if (animateKey) {
+              setIsVisible(prev => ({...prev, [animateKey]: true}));
+            }
           }
         });
       }
@@ -52,7 +56,7 @@ export function AboutSectionDynamic() {
           <div
             data-animate="title"
             className={`text-center mb-16 transition-all duration-1000 transform ${
-              isVisible.title ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              isVisible['title'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
             <span className="inline-block px-6 py-2 bg-gradient-to-r from-amber-600/10 to-yellow-600/10 backdrop-blur-sm border border-amber-600/40 rounded-full text-amber-600 text-sm font-bold mb-6 uppercase tracking-wider">
