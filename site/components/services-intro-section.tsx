@@ -8,8 +8,12 @@ import { LinkPreview } from "@/components/ui/link-preview";
 export function ServicesIntroSection() {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    // Mark that we're on the client to handle hydration
+    setIsClient(true);
+
     const handleResize = () => {
       const width = window.innerWidth;
       setIsMobile(width < 768);
@@ -21,29 +25,33 @@ export function ServicesIntroSection() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Use default desktop layout on server to prevent hydration mismatch
+  const effectiveIsMobile = isClient ? isMobile : false;
+  const effectiveIsTablet = isClient ? isTablet : false;
+
   // Dynamically determine grid columns based on viewport
   const getGridCols = () => {
-    if (isMobile) return 'grid-cols-1';
-    if (isTablet) return 'grid-cols-2';
+    if (effectiveIsMobile) return 'grid-cols-1';
+    if (effectiveIsTablet) return 'grid-cols-2';
     return 'grid-cols-3';
   };
 
   return (
-    <section className={`${isMobile ? 'py-12' : isTablet ? 'py-16' : 'py-24'} bg-gradient-to-b from-white via-gray-50 to-white`}>
-      <div className={`container mx-auto ${isMobile ? 'px-4' : 'px-6'} flex flex-col`}>
+    <section className={`${effectiveIsMobile ? 'py-12' : effectiveIsTablet ? 'py-16' : 'py-24'} bg-gradient-to-b from-white via-gray-50 to-white`}>
+      <div className={`container mx-auto ${effectiveIsMobile ? 'px-4' : 'px-6'} flex flex-col`}>
         {/* Section Header avec SEO et Copywriting optimisés pour les services */}
         <div className="w-full mb-16">
           <div className="max-w-6xl mx-auto text-center">
           {/* Titre principal H2 optimisé SEO services */}
-          <h2 className={`${isMobile ? 'text-2xl' : isTablet ? 'text-3xl' : 'text-6xl'} font-bold text-gray-900 mb-6 leading-tight`}>
+          <h2 className={`${effectiveIsMobile ? 'text-2xl' : effectiveIsTablet ? 'text-3xl' : 'text-6xl'} font-bold text-gray-900 mb-6 leading-tight`}>
             Nos Services de Construction et Rénovation
-            <span className={`block ${isMobile ? 'text-lg' : isTablet ? 'text-xl' : 'text-3xl'} font-light text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-600 mt-2`}>
+            <span className={`block ${effectiveIsMobile ? 'text-lg' : effectiveIsTablet ? 'text-xl' : 'text-3xl'} font-light text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-600 mt-2`}>
               Maison Container • Villa • Extension • Aménagement
             </span>
           </h2>
 
           {/* Description services avec mots-clés SEO et link previews */}
-          <p className={`${isMobile ? 'text-base' : isTablet ? 'text-lg' : 'text-xl'} text-gray-600 mb-8 leading-relaxed ${isMobile ? 'px-2' : isTablet ? 'px-4' : 'px-0'}`}>
+          <div className={`${effectiveIsMobile ? 'text-base' : effectiveIsTablet ? 'text-lg' : 'text-xl'} text-gray-600 mb-8 leading-relaxed ${effectiveIsMobile ? 'px-2' : effectiveIsTablet ? 'px-4' : 'px-0'}`}>
             Spécialiste de la{" "}
             <LinkPreview
               url="#maison-container"
@@ -98,16 +106,16 @@ export function ServicesIntroSection() {
             </LinkPreview>.
             Chaque réalisation bénéficie de notre expertise technique RE2020 et de notre connaissance
             approfondie du territoire réunionnais.
-          </p>
+          </div>
           </div>
         </div>
 
         {/* Grille responsive de cartes 3D */}
         <div className="w-full">
-          <div className={`grid ${getGridCols()} ${isMobile ? 'gap-4' : isTablet ? 'gap-6' : 'gap-8'} max-w-7xl mx-auto`}>
+          <div className={`grid ${getGridCols()} ${effectiveIsMobile ? 'gap-4' : effectiveIsTablet ? 'gap-6' : 'gap-8'} max-w-7xl mx-auto`}>
           {/* Carte 1 - Maison Container */}
           <CardContainer className="inter-var">
-            <CardBody className={`bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${isMobile ? 'p-4' : 'p-6'} border`}>
+            <CardBody className={`bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${effectiveIsMobile ? 'p-4' : 'p-6'} border`}>
               <CardItem
                 translateZ="50"
                 className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -126,11 +134,11 @@ export function ServicesIntroSection() {
                   src="/maison_contener.png"
                   height="1000"
                   width="1000"
-                  className={`${isMobile ? 'h-40' : isTablet ? 'h-48' : 'h-60'} w-full object-cover rounded-xl group-hover/card:shadow-xl`}
+                  className={`${effectiveIsMobile ? 'h-40' : effectiveIsTablet ? 'h-48' : 'h-60'} w-full object-cover rounded-xl group-hover/card:shadow-xl`}
                   alt="Maison Container La Réunion"
                 />
               </CardItem>
-              <div className={`flex ${isMobile ? 'flex-col gap-2' : 'flex-row justify-between'} items-stretch ${!isMobile ? 'items-center' : ''} ${isMobile ? 'mt-8' : isTablet ? 'mt-12' : 'mt-20'}`}>
+              <div className={`flex ${effectiveIsMobile ? 'flex-col gap-2' : 'flex-row justify-between'} items-stretch ${!effectiveIsMobile ? 'items-center' : ''} ${effectiveIsMobile ? 'mt-8' : effectiveIsTablet ? 'mt-12' : 'mt-20'}`}>
                 <CardItem
                   translateZ={20}
                   as={Link}
@@ -153,7 +161,7 @@ export function ServicesIntroSection() {
 
           {/* Carte 2 - Villa Contemporaine */}
           <CardContainer className="inter-var">
-            <CardBody className={`bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${isMobile ? 'p-4' : 'p-6'} border`}>
+            <CardBody className={`bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${effectiveIsMobile ? 'p-4' : 'p-6'} border`}>
               <CardItem
                 translateZ="50"
                 className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -172,11 +180,11 @@ export function ServicesIntroSection() {
                   src="/villamoderne.png"
                   height="1000"
                   width="1000"
-                  className={`${isMobile ? 'h-40' : isTablet ? 'h-48' : 'h-60'} w-full object-cover rounded-xl group-hover/card:shadow-xl`}
+                  className={`${effectiveIsMobile ? 'h-40' : effectiveIsTablet ? 'h-48' : 'h-60'} w-full object-cover rounded-xl group-hover/card:shadow-xl`}
                   alt="Villa Contemporaine La Réunion"
                 />
               </CardItem>
-              <div className={`flex ${isMobile ? 'flex-col gap-2' : 'flex-row justify-between'} items-stretch ${!isMobile ? 'items-center' : ''} ${isMobile ? 'mt-8' : isTablet ? 'mt-12' : 'mt-20'}`}>
+              <div className={`flex ${effectiveIsMobile ? 'flex-col gap-2' : 'flex-row justify-between'} items-stretch ${!effectiveIsMobile ? 'items-center' : ''} ${effectiveIsMobile ? 'mt-8' : effectiveIsTablet ? 'mt-12' : 'mt-20'}`}>
                 <CardItem
                   translateZ={20}
                   as={Link}
@@ -199,7 +207,7 @@ export function ServicesIntroSection() {
 
           {/* Carte 3 - Rénovation Complète */}
           <CardContainer className="inter-var">
-            <CardBody className={`bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${isMobile ? 'p-4' : 'p-6'} border`}>
+            <CardBody className={`bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${effectiveIsMobile ? 'p-4' : 'p-6'} border`}>
               <CardItem
                 translateZ="50"
                 className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -218,11 +226,11 @@ export function ServicesIntroSection() {
                   src="/renovation.png"
                   height="1000"
                   width="1000"
-                  className={`${isMobile ? 'h-40' : isTablet ? 'h-48' : 'h-60'} w-full object-cover rounded-xl group-hover/card:shadow-xl`}
+                  className={`${effectiveIsMobile ? 'h-40' : effectiveIsTablet ? 'h-48' : 'h-60'} w-full object-cover rounded-xl group-hover/card:shadow-xl`}
                   alt="Rénovation Complète La Réunion"
                 />
               </CardItem>
-              <div className={`flex ${isMobile ? 'flex-col gap-2' : 'flex-row justify-between'} items-stretch ${!isMobile ? 'items-center' : ''} ${isMobile ? 'mt-8' : isTablet ? 'mt-12' : 'mt-20'}`}>
+              <div className={`flex ${effectiveIsMobile ? 'flex-col gap-2' : 'flex-row justify-between'} items-stretch ${!effectiveIsMobile ? 'items-center' : ''} ${effectiveIsMobile ? 'mt-8' : effectiveIsTablet ? 'mt-12' : 'mt-20'}`}>
                 <CardItem
                   translateZ={20}
                   as={Link}
@@ -245,7 +253,7 @@ export function ServicesIntroSection() {
 
           {/* Carte 4 - Extension Sur-Mesure */}
           <CardContainer className="inter-var">
-            <CardBody className={`bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${isMobile ? 'p-4' : 'p-6'} border`}>
+            <CardBody className={`bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${effectiveIsMobile ? 'p-4' : 'p-6'} border`}>
               <CardItem
                 translateZ="50"
                 className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -264,11 +272,11 @@ export function ServicesIntroSection() {
                   src="/extension.png"
                   height="1000"
                   width="1000"
-                  className={`${isMobile ? 'h-40' : isTablet ? 'h-48' : 'h-60'} w-full object-cover rounded-xl group-hover/card:shadow-xl`}
+                  className={`${effectiveIsMobile ? 'h-40' : effectiveIsTablet ? 'h-48' : 'h-60'} w-full object-cover rounded-xl group-hover/card:shadow-xl`}
                   alt="Extension Sur-Mesure La Réunion"
                 />
               </CardItem>
-              <div className={`flex ${isMobile ? 'flex-col gap-2' : 'flex-row justify-between'} items-stretch ${!isMobile ? 'items-center' : ''} ${isMobile ? 'mt-8' : isTablet ? 'mt-12' : 'mt-20'}`}>
+              <div className={`flex ${effectiveIsMobile ? 'flex-col gap-2' : 'flex-row justify-between'} items-stretch ${!effectiveIsMobile ? 'items-center' : ''} ${effectiveIsMobile ? 'mt-8' : effectiveIsTablet ? 'mt-12' : 'mt-20'}`}>
                 <CardItem
                   translateZ={20}
                   as={Link}
@@ -291,7 +299,7 @@ export function ServicesIntroSection() {
 
           {/* Carte 5 - Aménagement Extérieur */}
           <CardContainer className="inter-var">
-            <CardBody className={`bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${isMobile ? 'p-4' : 'p-6'} border`}>
+            <CardBody className={`bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${effectiveIsMobile ? 'p-4' : 'p-6'} border`}>
               <CardItem
                 translateZ="50"
                 className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -310,11 +318,11 @@ export function ServicesIntroSection() {
                   src="/amenagement exterieur.png"
                   height="1000"
                   width="1000"
-                  className={`${isMobile ? 'h-40' : isTablet ? 'h-48' : 'h-60'} w-full object-cover rounded-xl group-hover/card:shadow-xl`}
+                  className={`${effectiveIsMobile ? 'h-40' : effectiveIsTablet ? 'h-48' : 'h-60'} w-full object-cover rounded-xl group-hover/card:shadow-xl`}
                   alt="Aménagement Extérieur La Réunion"
                 />
               </CardItem>
-              <div className={`flex ${isMobile ? 'flex-col gap-2' : 'flex-row justify-between'} items-stretch ${!isMobile ? 'items-center' : ''} ${isMobile ? 'mt-8' : isTablet ? 'mt-12' : 'mt-20'}`}>
+              <div className={`flex ${effectiveIsMobile ? 'flex-col gap-2' : 'flex-row justify-between'} items-stretch ${!effectiveIsMobile ? 'items-center' : ''} ${effectiveIsMobile ? 'mt-8' : effectiveIsTablet ? 'mt-12' : 'mt-20'}`}>
                 <CardItem
                   translateZ={20}
                   as={Link}
@@ -337,7 +345,7 @@ export function ServicesIntroSection() {
 
           {/* Carte 6 - Lodge de Luxe */}
           <CardContainer className="inter-var">
-            <CardBody className={`bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${isMobile ? 'p-4' : 'p-6'} border`}>
+            <CardBody className={`bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${effectiveIsMobile ? 'p-4' : 'p-6'} border`}>
               <CardItem
                 translateZ="50"
                 className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -356,11 +364,11 @@ export function ServicesIntroSection() {
                   src="/lodgedeluxe.png"
                   height="1000"
                   width="1000"
-                  className={`${isMobile ? 'h-40' : isTablet ? 'h-48' : 'h-60'} w-full object-cover rounded-xl group-hover/card:shadow-xl`}
+                  className={`${effectiveIsMobile ? 'h-40' : effectiveIsTablet ? 'h-48' : 'h-60'} w-full object-cover rounded-xl group-hover/card:shadow-xl`}
                   alt="Lodge de Luxe La Réunion"
                 />
               </CardItem>
-              <div className={`flex ${isMobile ? 'flex-col gap-2' : 'flex-row justify-between'} items-stretch ${!isMobile ? 'items-center' : ''} ${isMobile ? 'mt-8' : isTablet ? 'mt-12' : 'mt-20'}`}>
+              <div className={`flex ${effectiveIsMobile ? 'flex-col gap-2' : 'flex-row justify-between'} items-stretch ${!effectiveIsMobile ? 'items-center' : ''} ${effectiveIsMobile ? 'mt-8' : effectiveIsTablet ? 'mt-12' : 'mt-20'}`}>
                 <CardItem
                   translateZ={20}
                   as={Link}

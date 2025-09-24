@@ -58,7 +58,9 @@
       "mcp__playwright__browser_resize",
       "Bash(GIT_CURL_VERBOSE=1 git push origin main)",
       "Bash(git reset:*)",
-      "Bash(git restore:*)"
+      "Bash(git restore:*)",
+      "Bash(ipconfig)",
+      "Bash(findstr:*)"
     ],
     "deny": [],
     "ask": []

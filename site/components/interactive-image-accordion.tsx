@@ -61,7 +61,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ item, isActive, onMouseEn
   // Dynamic width calculation based on viewport
   const getWidth = () => {
     if (isMobile) {
-      return isActive ? 'w-[200px]' : 'w-[40px]';
+      return isActive ? 'w-[160px]' : 'w-[35px]';
     } else if (isTablet) {
       return isActive ? 'w-[300px]' : 'w-[50px]';
     } else {
@@ -120,10 +120,31 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ item, isActive, onMouseEn
 // --- Main App Component ---
 export function LandingAccordionItem() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-  const [isTablet, setIsTablet] = useState(false);
+
+  // Initialize with actual window width if available (client-side)
+  const getInitialMobileState = () => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth < 640;
+    }
+    return false;
+  };
+
+  const getInitialTabletState = () => {
+    if (typeof window !== 'undefined') {
+      const width = window.innerWidth;
+      return width >= 640 && width < 1024;
+    }
+    return false;
+  };
+
+  const [isMobile, setIsMobile] = useState(getInitialMobileState);
+  const [isTablet, setIsTablet] = useState(getInitialTabletState);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    // Mark that we're on the client to handle hydration
+    setIsClient(true);
+
     const handleResize = () => {
       const width = window.innerWidth;
       setIsMobile(width < 640);
@@ -145,17 +166,21 @@ export function LandingAccordionItem() {
 
   const activeItem = accordionItems[activeIndex];
 
+  // Use actual detected values directly
+  const effectiveIsMobile = isMobile;
+  const effectiveIsTablet = isTablet;
+
   return (
-    <div className={`bg-white font-sans ${isMobile ? 'pt-20' : isTablet ? 'pt-28' : 'pt-48 xl:pt-52'}`}>
-      <section className={`container mx-auto ${isMobile ? 'px-4 py-8' : isTablet ? 'px-6 py-12' : 'px-6 py-20'}`}>
-        <div className={`flex ${isMobile || isTablet ? 'flex-col' : 'flex-row'} items-center justify-between ${isMobile ? 'gap-8' : isTablet ? 'gap-10' : 'gap-12'}`}>
+    <div className={`bg-white font-sans ${effectiveIsMobile ? 'pt-20' : effectiveIsTablet ? 'pt-28' : 'pt-48 xl:pt-52'}`}>
+      <section className={`container mx-auto ${effectiveIsMobile ? 'px-4 py-8' : effectiveIsTablet ? 'px-6 py-12' : 'px-6 py-20'}`}>
+        <div className={`flex ${effectiveIsMobile || effectiveIsTablet ? 'flex-col' : 'flex-row'} items-center justify-between ${effectiveIsMobile ? 'gap-8' : effectiveIsTablet ? 'gap-10' : 'gap-12'}`}>
 
           {/* Left Side: Text Content - Dynamic based on selection */}
-          <div className={`w-full ${!isMobile && !isTablet ? 'md:w-1/2' : ''} ${isMobile || isTablet ? 'text-center' : 'text-left'}`}>
-            <span className={`inline-block px-4 py-1 bg-gradient-to-r from-amber-600/10 to-yellow-600/10 border border-amber-600/40 rounded-full text-amber-600 ${isMobile ? 'text-xs' : 'text-sm'} font-semibold mb-6 uppercase tracking-wider`}>
+          <div className={`w-full ${!effectiveIsMobile && !effectiveIsTablet ? 'md:w-1/2' : ''} ${effectiveIsMobile || effectiveIsTablet ? 'text-center' : 'text-left'}`}>
+            <span className={`inline-block px-4 py-1 bg-gradient-to-r from-amber-600/10 to-yellow-600/10 border border-amber-600/40 rounded-full text-amber-600 ${effectiveIsMobile ? 'text-xs' : 'text-sm'} font-semibold mb-6 uppercase tracking-wider`}>
               {activeItem.title}
             </span>
-            <h1 className={`${isMobile ? 'text-2xl' : isTablet ? 'text-4xl' : 'text-6xl'} font-bold leading-tight tracking-tighter`}>
+            <h1 className={`${effectiveIsMobile ? 'text-2xl' : effectiveIsTablet ? 'text-4xl' : 'text-6xl'} font-bold leading-tight tracking-tighter`}>
               <span className="bg-gradient-to-r from-amber-500 via-yellow-600 to-amber-700 bg-clip-text text-transparent">
                 Construction & Rénovation
               </span>
@@ -164,35 +189,35 @@ export function LandingAccordionItem() {
                 à La Réunion
               </span>
             </h1>
-            <p className={`mt-6 ${isMobile ? 'text-sm' : isTablet ? 'text-base' : 'text-lg'} text-gray-600 max-w-xl ${isMobile || isTablet ? 'mx-auto' : 'mx-0'}`}>
+            <p className={`mt-6 ${effectiveIsMobile ? 'text-sm' : effectiveIsTablet ? 'text-base' : 'text-lg'} text-gray-600 max-w-xl ${effectiveIsMobile || effectiveIsTablet ? 'mx-auto' : 'mx-0'}`}>
               {activeItem.description}
             </p>
 
             {/* Features list */}
-            <div className={`mt-6 space-y-2 ${isMobile || isTablet ? 'max-w-sm mx-auto' : ''}`}>
+            <div className={`mt-6 space-y-2 ${effectiveIsMobile || effectiveIsTablet ? 'max-w-sm mx-auto' : ''}`}>
               {activeItem.features.map((feature, index) => (
-                <div key={index} className={`flex items-center gap-2 ${isMobile || isTablet ? 'justify-center' : ''}`}>
+                <div key={index} className={`flex items-center gap-2 ${effectiveIsMobile || effectiveIsTablet ? 'justify-center' : ''}`}>
                   <svg className="w-5 h-5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className={`${isMobile ? 'text-sm' : 'text-base'} text-gray-700`}>{feature}</span>
+                  <span className={`${effectiveIsMobile ? 'text-sm' : 'text-base'} text-gray-700`}>{feature}</span>
                 </div>
               ))}
             </div>
 
-            <div className={`mt-8 flex ${isMobile ? 'flex-col' : 'flex-row'} gap-4 ${isMobile || isTablet ? 'justify-center' : 'justify-start'}`}>
+            <div className={`mt-8 flex ${effectiveIsMobile ? 'flex-col' : 'flex-row'} gap-4 ${effectiveIsMobile || effectiveIsTablet ? 'justify-center' : 'justify-start'}`}>
               <a
                 href="#contact"
                 className="relative inline-block px-6 sm:px-8 py-3 overflow-hidden group text-center"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-500 transition-transform duration-300 group-hover:scale-105"></span>
-                <span className={`relative text-white font-bold tracking-wider ${isMobile ? 'text-sm' : 'text-base'}`}>
+                <span className={`relative text-white font-bold tracking-wider ${effectiveIsMobile ? 'text-sm' : 'text-base'}`}>
                   DEVIS GRATUIT
                 </span>
               </a>
               <a
                 href="#realisations"
-                className={`inline-block px-6 sm:px-8 py-3 border-2 border-amber-500 text-amber-600 font-bold tracking-wider hover:bg-amber-500/10 transition-all duration-300 text-center ${isMobile ? 'text-sm' : 'text-base'}`}
+                className={`inline-block px-6 sm:px-8 py-3 border-2 border-amber-500 text-amber-600 font-bold tracking-wider hover:bg-amber-500/10 transition-all duration-300 text-center ${effectiveIsMobile ? 'text-sm' : 'text-base'}`}
               >
                 NOS PROJETS
               </a>
@@ -200,9 +225,9 @@ export function LandingAccordionItem() {
           </div>
 
           {/* Right Side: Image Accordion */}
-          <div className={`w-full ${!isMobile && !isTablet ? 'md:w-1/2' : ''} ${isMobile ? '' : 'overflow-x-auto'}`}>
+          <div className={`w-full ${!effectiveIsMobile && !effectiveIsTablet ? 'md:w-1/2' : ''} ${effectiveIsMobile ? 'overflow-hidden' : 'overflow-x-auto'}`}>
             {/* Responsive accordion container */}
-            <div className={`flex flex-row items-center ${isMobile ? 'justify-center gap-1 overflow-x-auto' : isTablet ? 'justify-center gap-2' : 'justify-center gap-4'} ${isMobile ? 'p-2' : isTablet ? 'p-3' : 'p-4'} ${isMobile ? '' : 'min-w-max'}`}>
+            <div className={`flex flex-row items-center ${effectiveIsMobile ? 'justify-center gap-1' : effectiveIsTablet ? 'justify-center gap-2' : 'justify-center gap-4'} ${effectiveIsMobile ? 'px-2' : effectiveIsTablet ? 'p-3' : 'p-4'} ${effectiveIsMobile ? 'max-w-full' : 'min-w-max'}`}>
               {accordionItems.map((item, index) => (
                 <AccordionItem
                   key={item.id}
@@ -210,8 +235,8 @@ export function LandingAccordionItem() {
                   isActive={index === activeIndex}
                   onMouseEnter={() => handleItemHover(index)}
                   onClick={() => handleItemClick(index)}
-                  isMobile={isMobile}
-                  isTablet={isTablet}
+                  isMobile={effectiveIsMobile}
+                  isTablet={effectiveIsTablet}
                 />
               ))}
             </div>

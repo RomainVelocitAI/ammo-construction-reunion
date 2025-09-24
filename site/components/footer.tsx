@@ -5,8 +5,24 @@ import { Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 export function Footer() {
-  const [isMobile, setIsMobile] = useState(false);
-  const [isTablet, setIsTablet] = useState(false);
+  // Initialize with actual window width if available
+  const getInitialMobileState = () => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth < 640;
+    }
+    return false;
+  };
+
+  const getInitialTabletState = () => {
+    if (typeof window !== 'undefined') {
+      const width = window.innerWidth;
+      return width >= 640 && width < 1024;
+    }
+    return false;
+  };
+
+  const [isMobile, setIsMobile] = useState(getInitialMobileState);
+  const [isTablet, setIsTablet] = useState(getInitialTabletState);
 
   useEffect(() => {
     const handleResize = () => {

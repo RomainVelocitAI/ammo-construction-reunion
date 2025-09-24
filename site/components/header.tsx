@@ -7,7 +7,16 @@ import Link from 'next/link';
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+
+  // Initialize with actual window width if available
+  const getInitialMobileState = () => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth < 1024;
+    }
+    return false;
+  };
+
+  const [isMobile, setIsMobile] = useState(getInitialMobileState);
 
   useEffect(() => {
     const handleScroll = () => {
