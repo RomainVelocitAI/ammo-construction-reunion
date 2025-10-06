@@ -46,22 +46,13 @@ export function ServicesIntroSection() {
           <h2 className={`${effectiveIsMobile ? 'text-2xl' : effectiveIsTablet ? 'text-3xl' : 'text-6xl'} font-bold text-gray-900 mb-6 leading-tight`}>
             Nos Services de Construction et Rénovation
             <span className={`block ${effectiveIsMobile ? 'text-lg' : effectiveIsTablet ? 'text-xl' : 'text-3xl'} font-light text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-600 mt-2`}>
-              Maison Container • Villa • Extension • Aménagement
+              Villa • Rénovation • Extension • Aménagement • Lodge • Promoteurs
             </span>
           </h2>
 
           {/* Description services avec mots-clés SEO et link previews */}
           <div className={`${effectiveIsMobile ? 'text-base' : effectiveIsTablet ? 'text-lg' : 'text-xl'} text-gray-600 mb-8 leading-relaxed ${effectiveIsMobile ? 'px-2' : effectiveIsTablet ? 'px-4' : 'px-0'}`}>
             Spécialiste de la{" "}
-            <LinkPreview
-              url="#maison-container"
-              isStatic={true}
-              imageSrc="/maison_contener.png"
-              className="font-bold text-gray-900"
-            >
-              maison container
-            </LinkPreview>{" "}
-            et de la{" "}
             <LinkPreview
               url="#villa"
               isStatic={true}
@@ -112,54 +103,8 @@ export function ServicesIntroSection() {
 
         {/* Grille responsive de cartes 3D */}
         <div className="w-full">
-          <div className={`grid ${getGridCols()} ${effectiveIsMobile ? 'gap-4' : effectiveIsTablet ? 'gap-6' : 'gap-8'} max-w-7xl mx-auto`}>
-          {/* Carte 1 - Maison Container */}
-          <CardContainer className="inter-var">
-            <CardBody className={`bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${effectiveIsMobile ? 'p-4' : 'p-6'} border`}>
-              <CardItem
-                translateZ="50"
-                className="text-xl font-bold text-neutral-600 dark:text-white"
-              >
-                Maison Container
-              </CardItem>
-              <CardItem
-                as="p"
-                translateZ="60"
-                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
-              >
-                Construction modulaire écologique et moderne. Solution durable avec isolation optimale RE2020.
-              </CardItem>
-              <CardItem translateZ="100" className="w-full mt-4">
-                <img
-                  src="/maison_contener.png"
-                  height="1000"
-                  width="1000"
-                  className={`${effectiveIsMobile ? 'h-40' : effectiveIsTablet ? 'h-48' : 'h-60'} w-full object-cover rounded-xl group-hover/card:shadow-xl`}
-                  alt="Maison Container La Réunion"
-                />
-              </CardItem>
-              <div className={`flex ${effectiveIsMobile ? 'flex-col gap-2' : 'flex-row justify-between'} items-stretch ${!effectiveIsMobile ? 'items-center' : ''} ${effectiveIsMobile ? 'mt-8' : effectiveIsTablet ? 'mt-12' : 'mt-20'}`}>
-                <CardItem
-                  translateZ={20}
-                  as={Link}
-                  href="/services/maison-container"
-                  className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
-                >
-                  En savoir plus →
-                </CardItem>
-                <CardItem
-                  translateZ={20}
-                  as={Link}
-                  href="#contact"
-                  className="px-4 py-2 rounded-xl bg-gradient-to-r from-amber-600 to-yellow-600 text-white text-xs font-bold"
-                >
-                  Devis gratuit
-                </CardItem>
-              </div>
-            </CardBody>
-          </CardContainer>
-
-          {/* Carte 2 - Villa Contemporaine */}
+          <div className={`grid ${getGridCols()} ${effectiveIsMobile ? 'gap-4' : effectiveIsTablet ? 'gap-x-6 gap-y-3' : 'gap-x-8 gap-y-4'} max-w-7xl mx-auto`}>
+          {/* Carte 1 - Villa Contemporaine */}
           <CardContainer className="inter-var">
             <CardBody className={`bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${effectiveIsMobile ? 'p-4' : 'p-6'} border`}>
               <CardItem
@@ -373,6 +318,52 @@ export function ServicesIntroSection() {
                   translateZ={20}
                   as={Link}
                   href="/services/lodge-de-luxe"
+                  className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+                >
+                  En savoir plus →
+                </CardItem>
+                <CardItem
+                  translateZ={20}
+                  as={Link}
+                  href="#contact"
+                  className="px-4 py-2 rounded-xl bg-gradient-to-r from-amber-600 to-yellow-600 text-white text-xs font-bold"
+                >
+                  Devis gratuit
+                </CardItem>
+              </div>
+            </CardBody>
+          </CardContainer>
+
+          {/* Carte 7 - Promoteurs Professionnels */}
+          <CardContainer className="inter-var">
+            <CardBody className={`bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${effectiveIsMobile ? 'p-4' : 'p-6'} border`}>
+              <CardItem
+                translateZ="50"
+                className="text-xl font-bold text-neutral-600 dark:text-white"
+              >
+                Promoteurs Professionnels
+              </CardItem>
+              <CardItem
+                as="p"
+                translateZ="60"
+                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+              >
+                Lotissements écolodge et immeubles de rapport. Expertise technique et financière pour vos projets d'envergure.
+              </CardItem>
+              <CardItem translateZ="100" className="w-full mt-4">
+                <img
+                  src="/lodgedeluxe.png"
+                  height="1000"
+                  width="1000"
+                  className={`${effectiveIsMobile ? 'h-40' : effectiveIsTablet ? 'h-48' : 'h-60'} w-full object-cover rounded-xl group-hover/card:shadow-xl`}
+                  alt="Promoteurs Professionnels La Réunion"
+                />
+              </CardItem>
+              <div className={`flex ${effectiveIsMobile ? 'flex-col gap-2' : 'flex-row justify-between'} items-stretch ${!effectiveIsMobile ? 'items-center' : ''} ${effectiveIsMobile ? 'mt-8' : effectiveIsTablet ? 'mt-12' : 'mt-20'}`}>
+                <CardItem
+                  translateZ={20}
+                  as={Link}
+                  href="/services/promoteurs-professionnels"
                   className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
                 >
                   En savoir plus →
