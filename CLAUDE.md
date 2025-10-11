@@ -78,7 +78,6 @@ D:\Ammo\
 ## Important Context
 
 The site serves AMMO, a construction company in La Réunion specializing in:
-- Container houses (modern, ecological solutions)
 - Contemporary villas (tropical climate adapted)
 - Renovations (modernization with expertise)
 - Exterior landscaping (terraces, outdoor kitchens, kiosks)

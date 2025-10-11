@@ -2,20 +2,69 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ZoomParallaxExtension } from '@/components/zoom-parallax-extension'
 import AnimatedSectionsExtension from '@/components/animated-sections-extension'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Maitrise d\'Oeuvre Extension Maison La Reunion | AMMO 974',
+  description: 'Expert maitrise d\'oeuvre extension maison La Reunion. Agrandissement sur-mesure, suite parentale, veranda. Pilotage complet. Devis gratuit.',
+  keywords: 'maitrise d\'oeuvre extension, agrandissement maison La Reunion, extension 974, maitre d\'oeuvre agrandissement, suite parentale La Reunion, veranda tropicale',
+  openGraph: {
+    title: 'Maitrise d\'Oeuvre Extension Maison La Reunion',
+    description: 'Specialiste maitrise d\'oeuvre pour agrandissement de maison. Coordination complete, respect budget et delais.',
+    url: 'https://ammo.re/maitrise-oeuvre/extension-maison-reunion',
+    siteName: 'AMMO Maitrise d\'Oeuvre',
+    locale: 'fr_FR',
+    type: 'website',
+    images: [{ url: 'https://ammo.re/extension.png', width: 1200, height: 630, alt: 'Extension Maison La Reunion par AMMO' }],
+  },
+  alternates: {
+    canonical: 'https://ammo.re/maitrise-oeuvre/extension-maison-reunion',
+  },
+}
 
 export default function ExtensionSurMesurePage() {
   const images = [
-    { src: '/extension.png', alt: 'Extension Sur-Mesure Vue Principale' },
-    { src: '/extension.png', alt: 'Extension Sur-Mesure Moderne' },
-    { src: '/extension.png', alt: 'Extension Sur-Mesure Véranda' },
-    { src: '/extension.png', alt: 'Extension Sur-Mesure Bureau' },
-    { src: '/extension.png', alt: 'Extension Sur-Mesure Suite Parentale' },
-    { src: '/extension.png', alt: 'Extension Sur-Mesure Salon' },
-    { src: '/extension.png', alt: 'Extension Sur-Mesure Intégration' },
+    { src: '/extension.png', alt: 'Maitrise d\'oeuvre extension maison La Reunion - Vue principale AMMO' },
+    { src: '/extension.png', alt: 'Agrandissement moderne 974 - Pilotage AMMO maitre d\'oeuvre' },
+    { src: '/extension.png', alt: 'Extension veranda tropicale La Reunion - Coordination AMMO' },
+    { src: '/extension.png', alt: 'Bureau extension maison 974 - Maitrise d\'oeuvre AMMO' },
+    { src: '/extension.png', alt: 'Suite parentale extension La Reunion - Suivi chantier AMMO' },
+    { src: '/extension.png', alt: 'Salon extension sur-mesure 974 - Maitre d\'oeuvre' },
+    { src: '/extension.png', alt: 'Integration extension architecture - Qualite AMMO' },
   ]
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            serviceType: 'Maitrise d\'oeuvre extension maison',
+            provider: {
+              '@type': 'GeneralContractor',
+              name: 'AMMO',
+              telephone: '+262693397786',
+              email: 'info@ammo.re',
+            },
+            areaServed: {
+              '@type': 'State',
+              name: 'La Reunion',
+            },
+            description: 'Service complet de maitrise d\'oeuvre pour l\'extension et l\'agrandissement de maisons a La Reunion. Pilotage de projet, coordination artisans, respect budget.',
+            offers: {
+              '@type': 'Offer',
+              availability: 'https://schema.org/InStock',
+              priceSpecification: {
+                '@type': 'PriceSpecification',
+                priceCurrency: 'EUR',
+                price: 'Sur devis',
+              },
+            },
+          }),
+        }}
+      />
       <Header />
       <main className="min-h-screen bg-white">
         <section className="relative">
@@ -155,13 +204,13 @@ export default function ExtensionSurMesurePage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
-                    href="#contact"
+                    href="/#contact"
                     className="inline-block bg-white text-amber-600 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors"
                   >
                     Obtenir une Étude Gratuite
                   </a>
                   <a
-                    href="/portfolio"
+                    href="/#realisations"
                     className="inline-block border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-amber-600 transition-colors"
                   >
                     Voir nos Extensions

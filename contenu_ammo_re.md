@@ -8,37 +8,31 @@ Votre partenaire de confiance pour tous vos projets de construction
 
 ### Projets et Services
 
-#### 1. Maison Conteneur
-**Architecture Moderne**
-Solution moderne et écologique avec innovation
-
-Construction innovante utilisant des conteneurs maritimes recyclés pour créer des habitats modernes, économiques et respectueux de l'environnement.
-
-#### 2. Villa Contemporaine
+#### 1. Villa Contemporaine
 **Design Excellence**
 Élégance et confort moderne
 
 Création de villas contemporaines alliant design raffiné et fonctionnalité, adaptées au climat tropical de La Réunion.
 
-#### 3. Rénovations
+#### 2. Rénovations
 **Transformation**
 Modernisation experte
 
 Transformation et modernisation de votre habitat existant avec expertise technique et respect des normes en vigueur.
 
-#### 4. Aménagement Extérieurs
+#### 3. Aménagement Extérieurs
 **Espaces Extérieurs**
 Créateur d'espaces de vie
 
 Conception et réalisation de vos espaces extérieurs : terrasses, cuisines extérieures, kiosques et aménagements sur mesure.
 
-#### 5. Extensions
+#### 4. Extensions
 **Agrandissement**
 Optimisation de l'espace
 
 Agrandissement et extension de votre habitat pour optimiser votre espace de vie selon vos besoins évolutifs.
 
-#### 6. Lodges Paradise
+#### 5. Lodges Paradise
 **Solutions Immobilières**
 Votre paradis immobilier
 
@@ -64,10 +58,6 @@ Une approche innovante pour valoriser votre patrimoine foncier
 Découvrez nos domaines de compétences adaptés à tous vos projets de construction à La Réunion
 
 #### Domaines de compétences
-
-**Maison conteneur**
-- Constructions neuves
-- Conception et réalisation de maisons à partir de conteneurs maritimes, une solution moderne, écologique et économique pour votre habitat.
 
 **Villa contemporaine**
 - Constructions neuves

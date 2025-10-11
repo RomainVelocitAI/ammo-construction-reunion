@@ -13,11 +13,11 @@ const FaqSection = () => {
         },
         {
             question: "Quels types de constructions réalisez-vous ?",
-            answer: "Nous sommes spécialisés dans les maisons containers modernes, les villas contemporaines, les lodges de luxe, les rénovations complètes, les extensions et les aménagements extérieurs. Chaque projet est personnalisé selon vos besoins.",
+            answer: "Nous sommes spécialisés dans les villas contemporaines, les lodges de luxe, les rénovations complètes, les extensions et les aménagements extérieurs. Chaque projet est personnalisé selon vos besoins.",
         },
         {
             question: "Comment fonctionne votre service d'entretien préventif ?",
-            answer: "Notre service d'entretien préventif inclut des inspections régulières, la détection précoce des problèmes, et un programme de maintenance personnalisé. Cela permet d'économiser jusqu'à 70% sur les réparations futures et d'augmenter la durée de vie de votre bien de 15 ans.",
+            answer: "Notre service d'entretien préventif inclut des inspections régulières, la détection précoce des problèmes, et un programme de maintenance personnalisé. Cela permet d'économiser jusqu'à 70% sur les réparations futures et de prolonger significativement la durée de vie de votre bien.",
         },
         {
             question: "Quelles sont les garanties offertes sur vos constructions ?",
@@ -25,7 +25,7 @@ const FaqSection = () => {
         },
         {
             question: "Combien de temps dure un projet de construction ?",
-            answer: "La durée varie selon le type de projet : 3-4 mois pour une maison container, 6-8 mois pour une villa traditionnelle, 2-3 mois pour une rénovation majeure. Nous respectons scrupuleusement les délais annoncés.",
+            answer: "La durée varie selon le type de projet : 6-8 mois pour une villa contemporaine, 2-3 mois pour une rénovation majeure, 3-5 mois pour une extension. Nous respectons scrupuleusement les délais annoncés.",
         },
         {
             question: "Proposez-vous des solutions de financement ?",

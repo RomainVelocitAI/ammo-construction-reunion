@@ -106,19 +106,19 @@ export function AboutSectionSplit() {
 
             {/* Title */}
             <h2 className={`${isMobile ? 'text-3xl' : isTablet ? 'text-4xl' : 'text-6xl'} font-bold text-gray-900 mb-6 leading-tight`}>
-              AMMO Construction
+              AMMO - Maîtrise d'Œuvre
               <span className={`block ${isMobile ? 'text-xl' : isTablet ? 'text-2xl' : 'text-3xl'} font-light text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-600 mt-2`}>
-                L'excellence à La Réunion
+                De votre vision à la réalité
               </span>
             </h2>
 
             {/* Main Text */}
             <p className={`${isMobile ? 'text-lg' : 'text-xl'} text-gray-700 mb-6 leading-relaxed`}>
-              Leader reconnu du BTP à La Réunion, nous transformons vos projets immobiliers en réalité depuis plus de 15 ans.
+              Expert en maîtrise d'œuvre à La Réunion, nous coordonnons et pilotons l'intégralité de votre projet de construction avec une expertise reconnue dans tous les métiers du bâtiment.
             </p>
 
             <p className={`${isMobile ? 'text-base' : 'text-lg'} text-gray-600 mb-8`}>
-              De la construction neuve à la rénovation complète, nos équipes d'experts maîtrisent chaque aspect de votre projet avec un savoir-faire reconnu et une attention méticuleuse aux détails.
+              De la conception architecturale à la réception des travaux, nous assurons la coordination technique, juridique et administrative de votre projet. Notre expertise garantit le respect des normes RE2020, des délais et de votre budget.
             </p>
 
 

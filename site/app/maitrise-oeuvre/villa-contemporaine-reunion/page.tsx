@@ -2,20 +2,69 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ZoomParallaxVilla } from '@/components/zoom-parallax-villa'
 import AnimatedSectionsVilla from '@/components/animated-sections-villa'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Maitrise d\'Oeuvre Villa Contemporaine La Reunion | AMMO 974',
+  description: 'Specialiste maitrise d\'oeuvre pour construction de villa contemporaine a La Reunion. Architecture bioclimatique tropicale, design sur-mesure. Devis gratuit.',
+  keywords: 'maitrise d\'oeuvre villa contemporaine, construction villa La Reunion, villa moderne 974, architecte villa tropicale, maitre d\'oeuvre construction neuve',
+  openGraph: {
+    title: 'Maitrise d\'Oeuvre Villa Contemporaine La Reunion',
+    description: 'Expert maitrise d\'oeuvre pour votre projet de villa contemporaine tropicale. Pilotage complet de A a Z.',
+    url: 'https://ammo.re/maitrise-oeuvre/villa-contemporaine-reunion',
+    siteName: 'AMMO Maitrise d\'Oeuvre',
+    locale: 'fr_FR',
+    type: 'website',
+    images: [{ url: 'https://ammo.re/villamoderne.png', width: 1200, height: 630, alt: 'Villa Contemporaine La Reunion par AMMO' }],
+  },
+  alternates: {
+    canonical: 'https://ammo.re/maitrise-oeuvre/villa-contemporaine-reunion',
+  },
+}
 
 export default function VillaContemporainePage() {
   const images = [
-    { src: '/villamoderne.png', alt: 'Villa Contemporaine Vue Principale' },
-    { src: '/villamoderne.png', alt: 'Villa Contemporaine Architecture' },
-    { src: '/villamoderne.png', alt: 'Villa Contemporaine Piscine' },
-    { src: '/villamoderne.png', alt: 'Villa Contemporaine Intérieur' },
-    { src: '/villamoderne.png', alt: 'Villa Contemporaine Jardin' },
-    { src: '/villamoderne.png', alt: 'Villa Contemporaine Terrasse' },
-    { src: '/villamoderne.png', alt: 'Villa Contemporaine Nuit' },
+    { src: '/villamoderne.png', alt: 'Maitrise d\'oeuvre villa contemporaine La Reunion - Vue exterieure par AMMO' },
+    { src: '/villamoderne.png', alt: 'Architecture villa moderne tropicale La Reunion - Maitrise d\'oeuvre AMMO' },
+    { src: '/villamoderne.png', alt: 'Construction villa avec piscine La Reunion - Pilotage AMMO' },
+    { src: '/villamoderne.png', alt: 'Interieur villa contemporaine La Reunion - Coordination AMMO' },
+    { src: '/villamoderne.png', alt: 'Amenagement jardin villa tropicale 974 - Maitrise d\'oeuvre' },
+    { src: '/villamoderne.png', alt: 'Terrasse villa contemporaine La Reunion - Suivi chantier AMMO' },
+    { src: '/villamoderne.png', alt: 'Villa moderne illuminee La Reunion - Realisation AMMO maitre d\'oeuvre' },
   ]
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            serviceType: 'Maitrise d\'oeuvre construction villa contemporaine',
+            provider: {
+              '@type': 'GeneralContractor',
+              name: 'AMMO',
+              telephone: '+262693397786',
+              email: 'info@ammo.re',
+            },
+            areaServed: {
+              '@type': 'State',
+              name: 'La Reunion',
+            },
+            description: 'Service complet de maitrise d\'oeuvre pour la construction de villas contemporaines a La Reunion. Architecture bioclimatique adaptee au climat tropical, pilotage de projet de A a Z.',
+            offers: {
+              '@type': 'Offer',
+              availability: 'https://schema.org/InStock',
+              priceSpecification: {
+                '@type': 'PriceSpecification',
+                priceCurrency: 'EUR',
+                price: 'Sur devis',
+              },
+            },
+          }),
+        }}
+      />
       <Header />
       <main className="min-h-screen bg-white">
         <section className="relative">
@@ -145,18 +194,72 @@ export default function VillaContemporainePage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
-                    href="#contact"
+                    href="/#contact"
                     className="inline-block bg-white text-amber-600 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors"
                   >
                     Réserver une Consultation
                   </a>
                   <a
-                    href="/portfolio"
+                    href="/#realisations"
                     className="inline-block border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-amber-600 transition-colors"
                   >
                     Voir nos Villas
                   </a>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section Maitrise d'Oeuvre */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">
+                Notre Role de Maitre d'Oeuvre pour Votre Villa
+              </h2>
+              <div className="bg-white rounded-2xl p-8 shadow-lg mb-12">
+                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                  En tant que <strong>maitre d'oeuvre specialise</strong> dans la construction de villas contemporaines a La Reunion,
+                  AMMO assure le <strong>pilotage complet de votre projet</strong> de construction. De la conception architecturale initiale
+                  jusqu'a la remise des cles, nous coordonnons l'ensemble des intervenants et garantissons le respect des delais,
+                  du budget et de la qualite.
+                </p>
+                <div className="grid md:grid-cols-3 gap-6 mt-8">
+                  <div className="text-center p-6 bg-amber-50 rounded-xl">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">Pilotage de Projet</h3>
+                    <p className="text-gray-600">Coordination de tous les corps de metier et suivi quotidien du chantier</p>
+                  </div>
+                  <div className="text-center p-6 bg-amber-50 rounded-xl">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">Controle Qualite</h3>
+                    <p className="text-gray-600">Verification a chaque etape et respect des normes RE2020</p>
+                  </div>
+                  <div className="text-center p-6 bg-amber-50 rounded-xl">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">Gestion Administrative</h3>
+                    <p className="text-gray-600">Permis de construire, declarations, reception des travaux</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 text-white">
+                <h3 className="text-2xl font-bold mb-4">Les Avantages de la Maitrise d'Oeuvre AMMO</h3>
+                <ul className="grid md:grid-cols-2 gap-4">
+                  <li className="flex items-start">
+                    <span className="text-amber-400 mr-3 text-xl">✓</span>
+                    <span>Interlocuteur unique pour tout votre projet</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-amber-400 mr-3 text-xl">✓</span>
+                    <span>Garantie du respect des delais et du budget</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-amber-400 mr-3 text-xl">✓</span>
+                    <span>Expertise technique et reglementaire locale</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-amber-400 mr-3 text-xl">✓</span>
+                    <span>Suivi personnalise et transparence totale</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

@@ -133,7 +133,7 @@ export function ServicesIntroSection() {
                 <CardItem
                   translateZ={20}
                   as={Link}
-                  href="/services/villa-contemporaine"
+                  href="/maitrise-oeuvre/villa-contemporaine-reunion"
                   className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
                 >
                   En savoir plus →
@@ -179,7 +179,7 @@ export function ServicesIntroSection() {
                 <CardItem
                   translateZ={20}
                   as={Link}
-                  href="/services/renovation-complete"
+                  href="/maitrise-oeuvre/renovation-complete-974"
                   className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
                 >
                   En savoir plus →
@@ -225,7 +225,7 @@ export function ServicesIntroSection() {
                 <CardItem
                   translateZ={20}
                   as={Link}
-                  href="/services/extension-sur-mesure"
+                  href="/maitrise-oeuvre/extension-maison-reunion"
                   className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
                 >
                   En savoir plus →
@@ -271,7 +271,7 @@ export function ServicesIntroSection() {
                 <CardItem
                   translateZ={20}
                   as={Link}
-                  href="/services/amenagement-exterieur"
+                  href="/maitrise-oeuvre/amenagement-exterieur-reunion"
                   className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
                 >
                   En savoir plus →
@@ -317,7 +317,7 @@ export function ServicesIntroSection() {
                 <CardItem
                   translateZ={20}
                   as={Link}
-                  href="/services/lodge-de-luxe"
+                  href="/maitrise-oeuvre/lodge-luxe-reunion"
                   className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
                 >
                   En savoir plus →
@@ -363,7 +363,7 @@ export function ServicesIntroSection() {
                 <CardItem
                   translateZ={20}
                   as={Link}
-                  href="/services/promoteurs-professionnels"
+                  href="/maitrise-oeuvre/promoteurs-reunion"
                   className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
                 >
                   En savoir plus →

@@ -48,15 +48,18 @@ export function Footer() {
         <div className={`grid ${getGridCols()} ${isMobile ? 'gap-6' : 'gap-8'}`}>
           {/* Company Info */}
           <div>
-            <h3 className={`${isMobile ? 'text-xl' : 'text-2xl'} font-bold ${isMobile ? 'mb-3' : 'mb-4'} text-amber-500`}>AMMO.re</h3>
-            <p className={`${isMobile ? 'text-sm' : 'text-base'} text-gray-300 mb-4`}>
-              Expert en construction et rénovation à La Réunion depuis 1993
+            <h3 className={`${isMobile ? 'text-xl' : 'text-2xl'} font-bold ${isMobile ? 'mb-3' : 'mb-4'} text-amber-500`}>AMMO - Maîtrise d'Œuvre</h3>
+            <p className={`${isMobile ? 'text-sm' : 'text-base'} text-gray-300 mb-2 font-semibold`}>
+              Conception à réalisation de vos projets
+            </p>
+            <p className={`${isMobile ? 'text-xs' : 'text-sm'} text-gray-400 mb-4`}>
+              Coordination technique, juridique et administrative • Garantie RE2020 • Depuis 2009
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-amber-500 transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=61572855163213" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-amber-500 transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-amber-500 transition-colors">
+              <a href="https://www.instagram.com/ammo_maitrisedoeuvre974/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-amber-500 transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
@@ -67,32 +70,27 @@ export function Footer() {
             <h4 className={`${isMobile ? 'text-base' : 'text-lg'} font-semibold ${isMobile ? 'mb-3' : 'mb-4'} text-amber-500`}>Nos Services</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/services/container-house" className="text-gray-300 hover:text-amber-500 transition-colors">
-                  Container House
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/villa-contemporaine" className="text-gray-300 hover:text-amber-500 transition-colors">
+                <Link href="/maitrise-oeuvre/villa-contemporaine-reunion" className="text-gray-300 hover:text-amber-500 transition-colors">
                   Villa Contemporaine
                 </Link>
               </li>
               <li>
-                <Link href="/services/renovation" className="text-gray-300 hover:text-amber-500 transition-colors">
+                <Link href="/maitrise-oeuvre/renovation-complete-974" className="text-gray-300 hover:text-amber-500 transition-colors">
                   Rénovation
                 </Link>
               </li>
               <li>
-                <Link href="/services/extension" className="text-gray-300 hover:text-amber-500 transition-colors">
+                <Link href="/maitrise-oeuvre/extension-maison-reunion" className="text-gray-300 hover:text-amber-500 transition-colors">
                   Extension
                 </Link>
               </li>
               <li>
-                <Link href="/services/amenagement-exterieur" className="text-gray-300 hover:text-amber-500 transition-colors">
+                <Link href="/maitrise-oeuvre/amenagement-exterieur-reunion" className="text-gray-300 hover:text-amber-500 transition-colors">
                   Aménagement Extérieur
                 </Link>
               </li>
               <li>
-                <Link href="/services/lodge-de-luxe" className="text-gray-300 hover:text-amber-500 transition-colors">
+                <Link href="/maitrise-oeuvre/lodge-luxe-reunion" className="text-gray-300 hover:text-amber-500 transition-colors">
                   Lodge de Luxe
                 </Link>
               </li>
@@ -104,22 +102,22 @@ export function Footer() {
             <h4 className={`${isMobile ? 'text-base' : 'text-lg'} font-semibold ${isMobile ? 'mb-3' : 'mb-4'} text-amber-500`}>Liens Rapides</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="text-gray-300 hover:text-amber-500 transition-colors">
+                <Link href="/#about" className="text-gray-300 hover:text-amber-500 transition-colors">
                   À Propos
                 </Link>
               </li>
               <li>
-                <Link href="/portfolio" className="text-gray-300 hover:text-amber-500 transition-colors">
+                <Link href="/#realisations" className="text-gray-300 hover:text-amber-500 transition-colors">
                   Portfolio
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-300 hover:text-amber-500 transition-colors">
+                <Link href="/#contact" className="text-gray-300 hover:text-amber-500 transition-colors">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link href="/devis" className="text-gray-300 hover:text-amber-500 transition-colors">
+                <Link href="/#contact" className="text-gray-300 hover:text-amber-500 transition-colors">
                   Devis Gratuit
                 </Link>
               </li>
@@ -133,21 +131,21 @@ export function Footer() {
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
                 <p className={`${isMobile ? 'text-sm' : 'text-base'} text-gray-300`}>
-                  123 Rue de la Construction<br />
-                  97400 Saint-Denis<br />
+                  2 rue Jean Paul Sartre<br />
+                  97419 La Possession<br />
                   La Réunion
                 </p>
               </div>
               <div className="flex items-center">
                 <Phone className="h-5 w-5 text-amber-500 mr-3 flex-shrink-0" />
-                <a href="tel:+262692000000" className="text-gray-300 hover:text-amber-500 transition-colors">
-                  0692 00 00 00
+                <a href="tel:+262693397786" className="text-gray-300 hover:text-amber-500 transition-colors">
+                  +262 693 397 786
                 </a>
               </div>
               <div className="flex items-center">
                 <Mail className="h-5 w-5 text-amber-500 mr-3 flex-shrink-0" />
-                <a href="mailto:contact@ammo.re" className="text-gray-300 hover:text-amber-500 transition-colors">
-                  contact@ammo.re
+                <a href="mailto:info@ammo.re" className="text-gray-300 hover:text-amber-500 transition-colors">
+                  info@ammo.re
                 </a>
               </div>
             </div>

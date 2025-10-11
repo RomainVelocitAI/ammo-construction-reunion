@@ -54,7 +54,7 @@ export function AboutSectionBento() {
             AMMO Construction
           </h2>
           <p className="text-xl text-gray-600 mt-4 max-w-3xl mx-auto">
-            15 ans d'excellence dans le BTP à La Réunion
+            Une équipe d'experts pluridisciplinaires au service de vos projets
           </p>
         </div>
 
@@ -155,7 +155,7 @@ export function AboutSectionBento() {
             </div>
           </div>
 
-          {/* Years Card */}
+          {/* Expertise Card */}
           <div
             data-animate="years"
             className={`relative group bg-gradient-to-br from-amber-50 to-yellow-50 border-2 border-amber-200 rounded-3xl p-6 shadow-xl transition-all duration-700 hover:shadow-2xl hover:-translate-y-2 ${
@@ -164,11 +164,11 @@ export function AboutSectionBento() {
             style={{ transitionDelay: '400ms' }}
           >
             <div className="h-full flex flex-col justify-center items-center text-center">
-              <div className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-600">
-                15
+              <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-600">
+                100%
               </div>
-              <div className="text-gray-700 font-medium mt-2">Années</div>
-              <div className="text-gray-600 text-sm">d'Excellence</div>
+              <div className="text-gray-700 font-medium mt-2">Expertise</div>
+              <div className="text-gray-600 text-sm">Multi-Métiers</div>
             </div>
           </div>
 

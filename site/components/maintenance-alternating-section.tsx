@@ -15,7 +15,7 @@ const maintenanceData = [
   {
     title: "Longévité Maximale",
     description: "Prolongez la durée de vie de votre investissement immobilier avec un entretien régulier et professionnel.",
-    highlight: "+15 ans de durabilité",
+    highlight: "Expertise maintenance préventive",
     src: "/construction.jpg",
     isLeftImage: false
   },

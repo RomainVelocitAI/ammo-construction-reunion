@@ -2,20 +2,69 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ZoomParallaxContainer } from '@/components/zoom-parallax-container'
 import AnimatedSectionsContainer from '@/components/animated-sections-container'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Maitrise d\'Oeuvre Maison Container La Reunion | AMMO 974',
+  description: 'Expert maitrise d\'oeuvre maison container La Reunion. Construction modulaire economique et ecologique. Pilotage projet complet. Devis gratuit.',
+  keywords: 'maitrise d\'oeuvre maison container, construction container La Reunion, maison modulaire 974, maitre d\'oeuvre construction innovante, habitat container',
+  openGraph: {
+    title: 'Maitrise d\'Oeuvre Maison Container La Reunion',
+    description: 'Specialiste maitrise d\'oeuvre construction container. Solution innovante, economique et ecologique.',
+    url: 'https://ammo.re/maitrise-oeuvre/maison-container-974',
+    siteName: 'AMMO Maitrise d\'Oeuvre',
+    locale: 'fr_FR',
+    type: 'website',
+    images: [{ url: 'https://ammo.re/maison_contener.png', width: 1200, height: 630, alt: 'Maison Container La Reunion par AMMO' }],
+  },
+  alternates: {
+    canonical: 'https://ammo.re/maitrise-oeuvre/maison-container-974',
+  },
+}
 
 export default function MaisonContainerPage() {
   const images = [
-    { src: '/maison_contener.png', alt: 'Maison Container Vue Principale' },
-    { src: '/maison_contener.png', alt: 'Maison Container Intérieur' },
-    { src: '/maison_contener.png', alt: 'Maison Container Extérieur' },
-    { src: '/maison_contener.png', alt: 'Maison Container Design' },
-    { src: '/maison_contener.png', alt: 'Maison Container Nuit' },
-    { src: '/maison_contener.png', alt: 'Maison Container Terrasse' },
-    { src: '/maison_contener.png', alt: 'Maison Container Jardin' },
+    { src: '/maison_contener.png', alt: 'Maitrise d\'oeuvre maison container La Reunion - Vue principale AMMO' },
+    { src: '/maison_contener.png', alt: 'Interieur maison container moderne 974 - Pilotage AMMO' },
+    { src: '/maison_contener.png', alt: 'Construction container exterieur La Reunion - Coordination AMMO' },
+    { src: '/maison_contener.png', alt: 'Design maison modulaire 974 - Maitrise d\'oeuvre AMMO' },
+    { src: '/maison_contener.png', alt: 'Maison container illuminee La Reunion - Suivi chantier AMMO' },
+    { src: '/maison_contener.png', alt: 'Terrasse maison container 974 - Maitre d\'oeuvre' },
+    { src: '/maison_contener.png', alt: 'Jardin maison container tropicale - Qualite AMMO' },
   ]
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            serviceType: 'Maitrise d\'oeuvre maison container',
+            provider: {
+              '@type': 'GeneralContractor',
+              name: 'AMMO',
+              telephone: '+262693397786',
+              email: 'info@ammo.re',
+            },
+            areaServed: {
+              '@type': 'State',
+              name: 'La Reunion',
+            },
+            description: 'Service complet de maitrise d\'oeuvre pour la construction de maisons container modulaires a La Reunion. Solution economique, ecologique et innovante.',
+            offers: {
+              '@type': 'Offer',
+              availability: 'https://schema.org/InStock',
+              priceSpecification: {
+                '@type': 'PriceSpecification',
+                priceCurrency: 'EUR',
+                price: 'Sur devis',
+              },
+            },
+          }),
+        }}
+      />
       <Header />
       <main className="min-h-screen bg-white">
         <section className="relative">
@@ -144,13 +193,13 @@ export default function MaisonContainerPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
-                    href="#contact"
+                    href="/#contact"
                     className="inline-block bg-white text-amber-600 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors"
                   >
                     Demander un Devis Gratuit
                   </a>
                   <a
-                    href="tel:+262692000000"
+                    href="tel:+262693397786"
                     className="inline-block border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-amber-600 transition-colors"
                   >
                     Appeler un Expert

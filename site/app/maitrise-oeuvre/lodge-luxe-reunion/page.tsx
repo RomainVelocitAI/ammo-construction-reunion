@@ -2,20 +2,69 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ZoomParallaxLodge } from '@/components/zoom-parallax-lodge'
 import AnimatedSectionsLodge from '@/components/animated-sections-lodge'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Maitrise d\'Oeuvre Lodge de Luxe La Reunion | AMMO Paradise',
+  description: 'Expert maitrise d\'oeuvre lodge de luxe La Reunion. Construction lodge premium, bungalow tropical haut de gamme. Pilotage projet complet.',
+  keywords: 'maitrise d\'oeuvre lodge luxe, construction lodge La Reunion, bungalow premium 974, maitre d\'oeuvre lodge paradise, villa luxe tropicale',
+  openGraph: {
+    title: 'Maitrise d\'Oeuvre Lodge de Luxe La Reunion',
+    description: 'Specialiste maitrise d\'oeuvre pour lodges de luxe tropicaux. Coordination complete, qualite premium.',
+    url: 'https://ammo.re/maitrise-oeuvre/lodge-luxe-reunion',
+    siteName: 'AMMO Maitrise d\'Oeuvre',
+    locale: 'fr_FR',
+    type: 'website',
+    images: [{ url: 'https://ammo.re/lodgedeluxe.png', width: 1200, height: 630, alt: 'Lodge de Luxe La Reunion par AMMO' }],
+  },
+  alternates: {
+    canonical: 'https://ammo.re/maitrise-oeuvre/lodge-luxe-reunion',
+  },
+}
 
 export default function LodgeDeLuxePage() {
   const images = [
-    { src: '/lodgedeluxe.png', alt: 'Lodge de Luxe Vue Panoramique' },
-    { src: '/lodgedeluxe.png', alt: 'Lodge de Luxe Intérieur Premium' },
-    { src: '/lodgedeluxe.png', alt: 'Lodge de Luxe Suite Master' },
-    { src: '/lodgedeluxe.png', alt: 'Lodge de Luxe Terrasse Privée' },
-    { src: '/lodgedeluxe.png', alt: 'Lodge de Luxe Spa' },
-    { src: '/lodgedeluxe.png', alt: 'Lodge de Luxe Vue Océan' },
-    { src: '/lodgedeluxe.png', alt: 'Lodge de Luxe Nuit Étoilée' },
+    { src: '/lodgedeluxe.png', alt: 'Maitrise d\'oeuvre lodge de luxe La Reunion - Vue panoramique AMMO' },
+    { src: '/lodgedeluxe.png', alt: 'Interieur lodge premium 974 - Pilotage AMMO maitre d\'oeuvre' },
+    { src: '/lodgedeluxe.png', alt: 'Suite master lodge tropical La Reunion - Coordination AMMO' },
+    { src: '/lodgedeluxe.png', alt: 'Terrasse privee lodge luxe 974 - Maitrise d\'oeuvre AMMO' },
+    { src: '/lodgedeluxe.png', alt: 'Spa lodge tropical La Reunion - Suivi chantier AMMO' },
+    { src: '/lodgedeluxe.png', alt: 'Vue ocean lodge paradise 974 - Maitre d\'oeuvre' },
+    { src: '/lodgedeluxe.png', alt: 'Lodge luxe illumine La Reunion - Qualite AMMO' },
   ]
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            serviceType: 'Maitrise d\'oeuvre lodge de luxe',
+            provider: {
+              '@type': 'GeneralContractor',
+              name: 'AMMO',
+              telephone: '+262693397786',
+              email: 'info@ammo.re',
+            },
+            areaServed: {
+              '@type': 'State',
+              name: 'La Reunion',
+            },
+            description: 'Service complet de maitrise d\'oeuvre pour la construction de lodges de luxe et bungalows premium a La Reunion. Pilotage projet haut de gamme.',
+            offers: {
+              '@type': 'Offer',
+              availability: 'https://schema.org/InStock',
+              priceSpecification: {
+                '@type': 'PriceSpecification',
+                priceCurrency: 'EUR',
+                price: 'Sur devis',
+              },
+            },
+          }),
+        }}
+      />
       <Header />
       <main className="min-h-screen bg-white">
         <section className="relative">
@@ -147,13 +196,13 @@ export default function LodgeDeLuxePage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
-                    href="#contact"
+                    href="/#contact"
                     className="inline-block bg-white text-amber-600 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors"
                   >
                     Étude de Projet Gratuite
                   </a>
                   <a
-                    href="/portfolio"
+                    href="/#realisations"
                     className="inline-block border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-amber-600 transition-colors"
                   >
                     Découvrir nos Lodges

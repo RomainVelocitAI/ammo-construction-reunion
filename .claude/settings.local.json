@@ -60,7 +60,16 @@
       "Bash(git reset:*)",
       "Bash(git restore:*)",
       "Bash(ipconfig)",
-      "Bash(findstr:*)"
+      "Bash(findstr:*)",
+      "Bash(cmd.exe:*)",
+      "Bash(timeout 2 cat components/services-intro-section.tsx)",
+      "Bash(do echo \"=== $file ===\")",
+      "Bash(do echo \"Directory: $dir\")",
+      "Bash(mv:*)",
+      "Bash(do echo \"Processing: $dir\")",
+      "Bash(do sed -i 's|href=\"\"#contact\"\"|href=\"\"/#contact\"\"|g' \"$dirpage.tsx\")",
+      "Bash(do sed -i 's|https://ammo.re/services/maitrise-oeuvre-|https://ammo.re/maitrise-oeuvre/|g' \"$dirpage.tsx\")",
+      "Bash(del:*)"
     ],
     "deny": [],
     "ask": []

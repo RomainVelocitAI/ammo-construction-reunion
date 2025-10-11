@@ -23,7 +23,7 @@ export function AboutSection() {
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 mb-12">
             <div className="space-y-6">
               <p className="text-xl lg:text-2xl font-medium text-gray-800">
-                Depuis plus de 15 ans, AMMO Construction s'impose comme une référence incontournable dans le secteur du BTP à La Réunion.
+                AMMO Construction s'impose comme une référence incontournable grâce à son équipe d'experts pluridisciplinaires dans le secteur du BTP à La Réunion.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
                 Notre expertise couvre l'ensemble du cycle de vie de vos projets immobiliers. De la construction de maisons individuelles aux projets commerciaux d'envergure, nous maîtrisons chaque étape avec un savoir-faire reconnu.

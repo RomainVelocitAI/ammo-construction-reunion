@@ -182,11 +182,11 @@ export function LandingAccordionItem() {
             </span>
             <h1 className={`${effectiveIsMobile ? 'text-2xl' : effectiveIsTablet ? 'text-4xl' : 'text-6xl'} font-bold leading-tight tracking-tighter`}>
               <span className="bg-gradient-to-r from-amber-500 via-yellow-600 to-amber-700 bg-clip-text text-transparent">
-                Construction & Rénovation
+                Maîtrise d'Œuvre
               </span>
               <br />
               <span className="text-gray-900">
-                à La Réunion
+                Construction & Rénovation à La Réunion
               </span>
             </h1>
             <p className={`mt-6 ${effectiveIsMobile ? 'text-sm' : effectiveIsTablet ? 'text-base' : 'text-lg'} text-gray-600 max-w-xl ${effectiveIsMobile || effectiveIsTablet ? 'mx-auto' : 'mx-0'}`}>

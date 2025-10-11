@@ -66,7 +66,7 @@ export function AboutSectionDynamic() {
               AMMO Construction
               <br />
               <span className="text-2xl md:text-3xl lg:text-4xl font-light text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 mt-2">
-                L'excellence depuis 15 ans
+                L'excellence dans tous les corps de métier
               </span>
             </h2>
           </div>
@@ -166,8 +166,8 @@ export function AboutSectionDynamic() {
                 }`}
               >
                 <div className="bg-white rounded-2xl p-8 shadow-lg">
-                  <div className="text-4xl font-bold text-amber-500 mb-2">15+</div>
-                  <div className="text-gray-600 font-medium mb-6">Années d'Excellence</div>
+                  <div className="text-4xl font-bold text-amber-500 mb-2">100%</div>
+                  <div className="text-gray-600 font-medium mb-6">Expertise Multi-Métiers</div>
 
                   <div className="space-y-4">
                     <div className="flex justify-between items-center">

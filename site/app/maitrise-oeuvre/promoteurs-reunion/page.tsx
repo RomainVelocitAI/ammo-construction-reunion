@@ -2,20 +2,69 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ZoomParallaxPromoteurs } from '@/components/zoom-parallax-promoteurs'
 import AnimatedSectionsPromoteurs from '@/components/animated-sections-promoteurs'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Maitrise d\'Oeuvre Promoteurs Immobiliers La Reunion | AMMO',
+  description: 'Expert maitrise d\'oeuvre pour promoteurs immobiliers La Reunion. Lotissements, immeubles rapport, ecolodges. Pilotage projets grande envergure.',
+  keywords: 'maitrise d\'oeuvre promoteur, lotissement La Reunion, immeuble rapport 974, maitre d\'oeuvre promotion immobiliere, ecolodge La Reunion',
+  openGraph: {
+    title: 'Maitrise d\'Oeuvre Promoteurs Immobiliers La Reunion',
+    description: 'Specialiste maitrise d\'oeuvre pour projets immobiliers professionnels. Coordination multi-lots, respect planning et budget.',
+    url: 'https://ammo.re/maitrise-oeuvre/promoteurs-reunion',
+    siteName: 'AMMO Maitrise d\'Oeuvre',
+    locale: 'fr_FR',
+    type: 'website',
+    images: [{ url: 'https://ammo.re/lodgedeluxe.png', width: 1200, height: 630, alt: 'Projets Promoteurs La Reunion par AMMO' }],
+  },
+  alternates: {
+    canonical: 'https://ammo.re/maitrise-oeuvre/promoteurs-reunion',
+  },
+}
 
 export default function PromoteursProfessionnelsPage() {
   const images = [
-    { src: '/lodgedeluxe.png', alt: 'Lotissement Écolodge Vue Principale' },
-    { src: '/lodgedeluxe.png', alt: 'Écolodge Architecture' },
-    { src: '/villamoderne.png', alt: 'Immeuble de Rapport Moderne' },
-    { src: '/villamoderne.png', alt: 'Lotissement Vue Aérienne' },
-    { src: '/exterieur.jpg', alt: 'Aménagements Communs' },
-    { src: '/construction.jpg', alt: 'Construction Lotissement' },
-    { src: '/villa.png', alt: 'Villa Promoteur' },
+    { src: '/lodgedeluxe.png', alt: 'Maitrise d\'oeuvre lotissement ecolodge La Reunion - Vue principale AMMO' },
+    { src: '/lodgedeluxe.png', alt: 'Architecture ecolodge promotion immobiliere 974 - Pilotage AMMO' },
+    { src: '/villamoderne.png', alt: 'Immeuble de rapport moderne La Reunion - Coordination AMMO maitre d\'oeuvre' },
+    { src: '/villamoderne.png', alt: 'Lotissement vue aerienne 974 - Maitrise d\'oeuvre AMMO' },
+    { src: '/exterieur.jpg', alt: 'Amenagements communs lotissement La Reunion - Suivi chantier AMMO' },
+    { src: '/construction.jpg', alt: 'Construction lotissement promotion 974 - Maitre d\'oeuvre' },
+    { src: '/villa.png', alt: 'Villa promoteur immobilier La Reunion - Qualite AMMO' },
   ]
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            serviceType: 'Maitrise d\'oeuvre promotion immobiliere',
+            provider: {
+              '@type': 'GeneralContractor',
+              name: 'AMMO',
+              telephone: '+262693397786',
+              email: 'info@ammo.re',
+            },
+            areaServed: {
+              '@type': 'State',
+              name: 'La Reunion',
+            },
+            description: 'Service complet de maitrise d\'oeuvre pour promoteurs immobiliers a La Reunion. Pilotage de projets grande envergure, lotissements, immeubles de rapport, ecolodges.',
+            offers: {
+              '@type': 'Offer',
+              availability: 'https://schema.org/InStock',
+              priceSpecification: {
+                '@type': 'PriceSpecification',
+                priceCurrency: 'EUR',
+                price: 'Sur devis',
+              },
+            },
+          }),
+        }}
+      />
       <Header />
       <main className="min-h-screen bg-white">
         <section className="relative">
@@ -146,13 +195,13 @@ export default function PromoteursProfessionnelsPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
-                    href="#contact"
+                    href="/#contact"
                     className="inline-block bg-white text-amber-600 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors"
                   >
                     Étude de Faisabilité
                   </a>
                   <a
-                    href="/portfolio"
+                    href="/#realisations"
                     className="inline-block border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-amber-600 transition-colors"
                   >
                     Nos Réalisations

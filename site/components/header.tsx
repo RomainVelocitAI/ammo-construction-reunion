@@ -39,11 +39,11 @@ export function Header() {
   }, []);
 
   const navLinks = [
-    { label: 'Accueil', href: '#' },
-    { label: 'Services', href: '#services' },
-    { label: 'Réalisations', href: '#realisations' },
-    { label: 'À propos', href: '#about' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Accueil', href: '/' },
+    { label: 'Services', href: '/#services' },
+    { label: 'Réalisations', href: '/#realisations' },
+    { label: 'À propos', href: '/#about' },
+    { label: 'Contact', href: '/#contact' },
   ];
 
   return (
@@ -91,7 +91,7 @@ export function Header() {
             </div>
 
             {/* CTA Button - Ultra premium avec effet de luxe */}
-            <button className="relative px-12 py-5 overflow-hidden group ml-12 transform hover:scale-[1.02] transition-transform duration-500">
+            <Link href="/#contact" className="relative px-12 py-5 overflow-hidden group ml-12 transform hover:scale-[1.02] transition-transform duration-500 inline-block">
               <span className="absolute inset-0 bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600"></span>
               <span className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 opacity-0 group-hover:opacity-100 transition-all duration-700"></span>
               {/* Shimmer effect premium */}
@@ -103,7 +103,7 @@ export function Header() {
               <span className="relative text-white font-medium text-sm lg:text-base xl:text-lg tracking-[0.3em] uppercase">
                 Devis Gratuit
               </span>
-            </button>
+            </Link>
           </div>
           )}
 
@@ -142,12 +142,12 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            <button className="mt-6 mx-4 w-[calc(100%-2rem)] py-3 bg-gradient-to-r from-amber-500 to-yellow-500 text-white font-medium text-sm tracking-[0.2em] uppercase hover:from-amber-400 hover:to-yellow-400 transition-all duration-500 relative overflow-hidden group">
+            <Link href="/#contact" className="mt-6 mx-4 w-[calc(100%-2rem)] py-3 bg-gradient-to-r from-amber-500 to-yellow-500 text-white font-medium text-sm tracking-[0.2em] uppercase hover:from-amber-400 hover:to-yellow-400 transition-all duration-500 relative overflow-hidden group block text-center" onClick={() => setIsMobileMenuOpen(false)}>
               <span className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-500">
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent -skew-x-12 group-hover:animate-[shimmer_2s_ease-in-out_infinite]"></span>
               </span>
               <span className="relative">DEVIS GRATUIT</span>
-            </button>
+            </Link>
           </div>
         </div>
         )}

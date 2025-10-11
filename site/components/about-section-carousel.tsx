@@ -207,7 +207,7 @@ export function AboutSectionCarousel() {
 
             {/* Description */}
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Depuis plus de 15 ans, AMMO Construction façonne le paysage immobilier de La Réunion avec passion et expertise.
+              AMMO Construction, une équipe d'experts qui façonne le paysage immobilier de La Réunion avec passion et maîtrise de tous les corps de métier.
             </p>
 
             {/* Services List */}

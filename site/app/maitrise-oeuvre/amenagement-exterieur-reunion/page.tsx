@@ -2,20 +2,69 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ZoomParallaxAmenagement } from '@/components/zoom-parallax-amenagement'
 import AnimatedSectionsAmenagement from '@/components/animated-sections-amenagement'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Maitrise d\'Oeuvre Amenagement Exterieur La Reunion | AMMO',
+  description: 'Expert maitrise d\'oeuvre amenagement exterieur La Reunion. Terrasses, piscines, jardins tropicaux. Pilotage projet complet. Devis gratuit.',
+  keywords: 'maitrise d\'oeuvre amenagement exterieur, terrasse La Reunion, piscine 974, jardin tropical, maitre d\'oeuvre paysagiste, cuisine exterieure La Reunion',
+  openGraph: {
+    title: 'Maitrise d\'Oeuvre Amenagement Exterieur La Reunion',
+    description: 'Specialiste maitrise d\'oeuvre pour vos espaces exterieurs tropicaux. Coordination complete, respect budget et delais.',
+    url: 'https://ammo.re/maitrise-oeuvre/amenagement-exterieur-reunion',
+    siteName: 'AMMO Maitrise d\'Oeuvre',
+    locale: 'fr_FR',
+    type: 'website',
+    images: [{ url: 'https://ammo.re/amenagement exterieur.png', width: 1200, height: 630, alt: 'Amenagement Exterieur La Reunion par AMMO' }],
+  },
+  alternates: {
+    canonical: 'https://ammo.re/maitrise-oeuvre/amenagement-exterieur-reunion',
+  },
+}
 
 export default function AmenagementExterieurPage() {
   const images = [
-    { src: '/amenagement exterieur.png', alt: 'Aménagement Extérieur Vue d\'ensemble' },
-    { src: '/amenagement exterieur.png', alt: 'Aménagement Extérieur Piscine' },
-    { src: '/amenagement exterieur.png', alt: 'Aménagement Extérieur Jardin Tropical' },
-    { src: '/amenagement exterieur.png', alt: 'Aménagement Extérieur Terrasse Bois' },
-    { src: '/amenagement exterieur.png', alt: 'Aménagement Extérieur Éclairage' },
-    { src: '/amenagement exterieur.png', alt: 'Aménagement Extérieur Pergola' },
-    { src: '/amenagement exterieur.png', alt: 'Aménagement Extérieur Espace Détente' },
+    { src: '/amenagement exterieur.png', alt: 'Maitrise d\'oeuvre amenagement exterieur La Reunion - Vue ensemble AMMO' },
+    { src: '/amenagement exterieur.png', alt: 'Construction piscine tropicale 974 - Pilotage AMMO maitre d\'oeuvre' },
+    { src: '/amenagement exterieur.png', alt: 'Jardin tropical paysage La Reunion - Coordination travaux AMMO' },
+    { src: '/amenagement exterieur.png', alt: 'Terrasse bois exotique 974 - Maitrise d\'oeuvre AMMO' },
+    { src: '/amenagement exterieur.png', alt: 'Eclairage exterieur jardin La Reunion - Suivi chantier AMMO' },
+    { src: '/amenagement exterieur.png', alt: 'Pergola sur-mesure 974 - Maitre d\'oeuvre La Reunion' },
+    { src: '/amenagement exterieur.png', alt: 'Espace detente exterieur tropical - Qualite AMMO' },
   ]
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            serviceType: 'Maitrise d\'oeuvre amenagement exterieur',
+            provider: {
+              '@type': 'GeneralContractor',
+              name: 'AMMO',
+              telephone: '+262693397786',
+              email: 'info@ammo.re',
+            },
+            areaServed: {
+              '@type': 'State',
+              name: 'La Reunion',
+            },
+            description: 'Service complet de maitrise d\'oeuvre pour l\'amenagement d\'espaces exterieurs a La Reunion. Conception et realisation de terrasses, piscines, jardins tropicaux et cuisines exterieures.',
+            offers: {
+              '@type': 'Offer',
+              availability: 'https://schema.org/InStock',
+              priceSpecification: {
+                '@type': 'PriceSpecification',
+                priceCurrency: 'EUR',
+                price: 'Sur devis',
+              },
+            },
+          }),
+        }}
+      />
       <Header />
       <main className="min-h-screen bg-white">
         <section className="relative">
@@ -56,7 +105,7 @@ export default function AmenagementExterieurPage() {
                     résister aux cyclones tout en offrant un espace de vie exceptionnel.
                   </p>
                   <p className="text-lg text-gray-600 leading-relaxed">
-                    Avec plus de 15 ans d'expérience dans l'aménagement extérieur à La Réunion, nous
+                    Grâce à notre équipe d'experts qualifiés dans l'aménagement extérieur à La Réunion, nous
                     maîtrisons parfaitement les contraintes techniques et réglementaires locales pour
                     transformer votre vision en réalité.
                   </p>
@@ -110,7 +159,7 @@ export default function AmenagementExterieurPage() {
                     <li className="flex items-start">
                       <span className="text-amber-600 mr-3">•</span>
                       <div>
-                        <strong className="text-gray-900">15 ans d'expertise</strong>
+                        <strong className="text-gray-900">Expertise tous corps de métier</strong>
                         <p className="text-gray-600">Connaissance parfaite du climat réunionnais</p>
                       </div>
                     </li>
@@ -147,13 +196,13 @@ export default function AmenagementExterieurPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
-                    href="#contact"
+                    href="/#contact"
                     className="inline-block bg-white text-amber-600 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors"
                   >
                     Demander un Devis Gratuit
                   </a>
                   <a
-                    href="tel:+262692000000"
+                    href="tel:+262693397786"
                     className="inline-block border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-amber-600 transition-colors"
                   >
                     Appeler un Expert
