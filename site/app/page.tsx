@@ -5,7 +5,7 @@ import { MethodologySection } from '@/components/methodology-section'
 import MaintenanceAlternatingSection from '@/components/maintenance-alternating-section'
 import { ServicesIntroSection } from '@/components/services-intro-section'
 import FaqSection from '@/components/faq-sections'
-import { ContactSection } from '@/components/contact-section'
+import { ContactSectionV3 } from '@/components/contact-section-v3'
 import { Footer } from '@/components/footer'
 import type { Metadata } from 'next'
 
@@ -114,7 +114,7 @@ export default function Home() {
         </div>
         <FaqSection />
         <div id="contact">
-          <ContactSection />
+          <ContactSectionV3 />
         </div>
       </main>
       <Footer />
