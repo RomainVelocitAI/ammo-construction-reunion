@@ -20,8 +20,8 @@ export default function MentionsLegales() {
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">Éditeur du site</h2>
               <p>
                 <strong>AMMO - Maîtrise d'Œuvre</strong><br />
-                2 rue Jean Paul Sartre<br />
-                97419 La Possession<br />
+                8 ruelle Boulot<br />
+                97400 Saint-Denis<br />
                 La Réunion<br />
                 <br />
                 <strong>Téléphone :</strong> +262 693 397 786<br />

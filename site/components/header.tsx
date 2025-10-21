@@ -41,9 +41,7 @@ export function Header() {
   const navLinks = [
     { label: 'Accueil', href: '/' },
     { label: 'Services', href: '/#services' },
-    { label: 'Réalisations', href: '/#realisations' },
-    { label: 'À propos', href: '/#about' },
-    { label: 'Contact', href: '/#contact' },
+    { label: 'À propos', href: '/equipe' },
   ];
 
   return (

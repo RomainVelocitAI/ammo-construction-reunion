@@ -53,7 +53,7 @@ export function Footer() {
               Conception à réalisation de vos projets
             </p>
             <p className={`${isMobile ? 'text-xs' : 'text-sm'} text-gray-400 mb-4`}>
-              Coordination technique, juridique et administrative • Garantie RE2020 • Depuis 2009
+              Coordination technique, juridique et administrative • Garantie RE2020 • 10+ ans d'expérience
             </p>
             <div className="flex space-x-4">
               <a href="https://www.facebook.com/profile.php?id=61572855163213" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-amber-500 transition-colors">
@@ -107,11 +107,6 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/#realisations" className="text-gray-300 hover:text-amber-500 transition-colors">
-                  Portfolio
-                </Link>
-              </li>
-              <li>
                 <Link href="/#contact" className="text-gray-300 hover:text-amber-500 transition-colors">
                   Contact
                 </Link>
@@ -131,8 +126,8 @@ export function Footer() {
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
                 <p className={`${isMobile ? 'text-sm' : 'text-base'} text-gray-300`}>
-                  2 rue Jean Paul Sartre<br />
-                  97419 La Possession<br />
+                  8 ruelle Boulot<br />
+                  97400 Saint-Denis<br />
                   La Réunion
                 </p>
               </div>

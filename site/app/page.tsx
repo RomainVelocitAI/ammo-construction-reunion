@@ -65,7 +65,7 @@ export default function Home() {
             email: 'info@ammo.re',
             address: {
               '@type': 'PostalAddress',
-              streetAddress: '2 rue Jean Paul Sartre',
+              streetAddress: '8 ruelle Boulot',
               addressLocality: 'La Possession',
               postalCode: '97419',
               addressRegion: 'La Reunion',

@@ -100,7 +100,7 @@ export default function PolitiqueConfidentialite() {
               <p className="mt-4">
                 <strong>Par email :</strong> info@ammo.re<br />
                 <strong>Par téléphone :</strong> +262 693 397 786<br />
-                <strong>Par courrier :</strong> AMMO, 2 rue Jean Paul Sartre, 97419 La Possession, La Réunion
+                <strong>Par courrier :</strong> AMMO, 8 ruelle Boulot, 97400 Saint-Denis, La Réunion
               </p>
             </section>
           </div>

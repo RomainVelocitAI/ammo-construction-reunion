@@ -105,8 +105,8 @@ export function ContactSection() {
                 <div className="flex-1">
                   <p className="text-sm font-medium text-gray-500 mb-2">Adresse</p>
                   <p className="text-base font-semibold text-gray-900 leading-relaxed">
-                    2 rue Jean Paul Sartre<br />
-                    97419 La Possession<br />
+                    8 ruelle Boulot<br />
+                    97400 Saint-Denis<br />
                     La Réunion
                   </p>
                 </div>

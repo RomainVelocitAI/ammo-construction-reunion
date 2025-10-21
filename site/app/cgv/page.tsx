@@ -119,8 +119,8 @@ export default function CGV() {
               </p>
               <p className="mt-4">
                 <strong>AMMO - Maîtrise d'Œuvre</strong><br />
-                2 rue Jean Paul Sartre<br />
-                97419 La Possession, La Réunion<br />
+                8 ruelle Boulot<br />
+                97400 Saint-Denis, La Réunion<br />
                 <br />
                 <strong>Téléphone :</strong> +262 693 397 786<br />
                 <strong>Email :</strong> info@ammo.re
