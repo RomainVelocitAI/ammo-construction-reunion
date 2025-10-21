@@ -24,13 +24,13 @@ export const metadata: Metadata = {
 
 export default function PromoteursProfessionnelsPage() {
   const images = [
-    { src: '/lodgedeluxe.png', alt: 'Maitrise d\'oeuvre lotissement ecolodge La Reunion - Vue principale AMMO' },
-    { src: '/lodgedeluxe.png', alt: 'Architecture ecolodge promotion immobiliere 974 - Pilotage AMMO' },
-    { src: '/villamoderne.png', alt: 'Immeuble de rapport moderne La Reunion - Coordination AMMO maitre d\'oeuvre' },
-    { src: '/villamoderne.png', alt: 'Lotissement vue aerienne 974 - Maitrise d\'oeuvre AMMO' },
-    { src: '/exterieur.jpg', alt: 'Amenagements communs lotissement La Reunion - Suivi chantier AMMO' },
-    { src: '/construction.jpg', alt: 'Construction lotissement promotion 974 - Maitre d\'oeuvre' },
-    { src: '/villa.png', alt: 'Villa promoteur immobilier La Reunion - Qualite AMMO' },
+    { src: '/promoteur-1.jpg', alt: 'Maitrise d\'oeuvre lotissement ecolodge La Reunion - Vue isometrique 3D AMMO' },
+    { src: '/promoteur-2.jpg', alt: 'Architecture ecolodge promotion immobiliere 974 - Lodge moderne AMMO' },
+    { src: '/promoteur-3.jpg', alt: 'Lotissement eco-lodge tropical 974 - Visualisation 3D AMMO' },
+    { src: '/promoteur-4.jpg', alt: 'Lotissement vue aerienne isometrique 974 - Maitrise d\'oeuvre AMMO' },
+    { src: '/promoteur-5.jpg', alt: 'Eco-lodge luxe La Reunion - Conception durable AMMO' },
+    { src: '/promoteur-6.jpg', alt: 'Plan masse lotissement eco-lodge 974 - Coordination AMMO maitre d\'oeuvre' },
+    { src: '/promoteur-7.jpg', alt: 'Architecture tropicale eco-lodge La Reunion - Expertise AMMO' },
   ]
 
   return (
@@ -93,7 +93,7 @@ export default function PromoteursProfessionnelsPage() {
               <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
                 <div className="relative h-96 rounded-xl overflow-hidden shadow-2xl">
                   <img
-                    src="/lodgedeluxe.png"
+                    src="/promoteur-1.jpg"
                     alt="Lotissement écolodge La Réunion"
                     className="w-full h-full object-cover"
                   />
