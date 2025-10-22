@@ -9,13 +9,15 @@ const maintenanceData = [
     title: "Protection Préventive",
     description: "Anticipez les problèmes avant qu'ils ne deviennent critiques. Notre service d'inspection régulière détecte les signes avant-coureurs.",
     highlight: "70% d'économies",
-    src: "/exterieur.jpg",
+    badge: "Données clients vérifiées",
+    src: "/protection-preventive.jpg",
     isLeftImage: true
   },
   {
     title: "Longévité Maximale",
     description: "Prolongez la durée de vie de votre investissement immobilier avec un entretien régulier et professionnel.",
     highlight: "Expertise maintenance préventive",
+    badge: "10+ années d'expérience",
     src: "/longevite-maximale.jpg",
     isLeftImage: false
   },
@@ -23,21 +25,24 @@ const maintenanceData = [
     title: "Rentabilité Optimisée",
     description: "Transformez les dépenses imprévues en investissement planifié pour réduire drastiquement les coûts.",
     highlight: "ROI garanti",
-    src: "/villamoderne.png",
+    badge: "Analyse financière incluse",
+    src: "/rentabilite-optimisee.jpg",
     isLeftImage: true
   },
   {
     title: "Valeur Préservée",
     description: "Maintenez et augmentez la valeur de votre patrimoine grâce à un suivi professionnel continu.",
     highlight: "+25% de valeur",
-    src: "/villa.png",
+    badge: "Étude de marché 2024",
+    src: "/valeur-preservee.jpg",
     isLeftImage: false
   },
   {
     title: "Tranquillité d'Esprit",
     description: "Confiez l'entretien à des professionnels avec rapports réguliers et interventions planifiées.",
     highlight: "Suivi 24/7",
-    src: "/lodgedeluxe.png",
+    badge: "Service premium garanti",
+    src: "/tranquillite-esprit.jpg",
     isLeftImage: true
   }
 ]
@@ -47,6 +52,7 @@ const MaintenanceCard = ({
   title,
   description,
   highlight,
+  badge,
   src,
   isLeftImage,
   progress,
@@ -57,6 +63,7 @@ const MaintenanceCard = ({
   title: string
   description: string
   highlight: string
+  badge: string
   src: string
   isLeftImage: boolean
   progress: any
@@ -138,7 +145,7 @@ const MaintenanceCard = ({
                 {highlight}
               </div>
               <div className={`${isMobile ? 'text-xs' : 'text-sm'} text-gray-500 mt-1`}>
-                Résultat prouvé
+                {badge}
               </div>
             </div>
           </div>
