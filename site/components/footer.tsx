@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import { Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Mail, Phone, MapPin } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 export function Footer() {
@@ -56,11 +56,8 @@ export function Footer() {
               Coordination technique, juridique et administrative • Garantie RE2020 • 10+ ans d'expérience
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/profile.php?id=61572855163213" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-amber-500 transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=61572855163213&locale=fr_FR" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-amber-500 transition-colors">
                 <Facebook className="h-5 w-5" />
-              </a>
-              <a href="https://www.instagram.com/ammo_maitrisedoeuvre974/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-amber-500 transition-colors">
-                <Instagram className="h-5 w-5" />
               </a>
             </div>
           </div>
