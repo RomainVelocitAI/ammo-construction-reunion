@@ -4,103 +4,85 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Politique de Confidentialité - AMMO',
-  description: 'Politique de confidentialité et protection des données personnelles - AMMO',
+  description: 'Politique de confidentialité du site AMMO - Maîtrise d\'œuvre à La Réunion',
 }
 
 export default function PolitiqueConfidentialite() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-white pt-32 pb-16">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Politique de Confidentialité</h1>
+      <main className="min-h-screen bg-white pt-56 pb-16">
+        <div className="container mx-auto px-6 mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 text-center">Politique de Confidentialité</h1>
+        </div>
 
+        <div className="container mx-auto px-6 max-w-4xl">
           <div className="space-y-8 text-gray-700">
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Collecte des données personnelles</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Collecte des données</h2>
               <p>
-                Nous collectons les données personnelles suivantes lorsque vous utilisez notre site ou nous contactez :
-              </p>
-              <ul className="list-disc list-inside mt-4 space-y-2">
-                <li>Nom et prénom</li>
-                <li>Adresse email</li>
-                <li>Numéro de téléphone</li>
-                <li>Informations relatives à votre projet</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Utilisation des données</h2>
-              <p>
-                Les données collectées sont utilisées pour :
-              </p>
-              <ul className="list-disc list-inside mt-4 space-y-2">
-                <li>Répondre à vos demandes de contact et de devis</li>
-                <li>Gérer la relation client</li>
-                <li>Améliorer nos services</li>
-                <li>Vous envoyer des informations sur nos services (avec votre consentement)</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">3. Conservation des données</h2>
-              <p>
-                Vos données personnelles sont conservées pendant la durée nécessaire à la gestion de votre demande
-                et pendant une durée maximale de 3 ans à compter de notre dernier contact.
+                AMMO s'engage à protéger la vie privée de ses utilisateurs. Les données personnelles collectées via le formulaire
+                de contact (nom, prénom, email, téléphone) sont utilisées uniquement pour répondre à vos demandes de devis et
+                vous contacter dans le cadre de nos services.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. Vos droits</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Utilisation des données</h2>
               <p>
-                Conformément au RGPD, vous disposez des droits suivants :
+                Les informations collectées sont destinées à un usage interne uniquement et ne seront jamais vendues, louées
+                ou partagées avec des tiers sans votre consentement explicite, sauf obligation légale.
               </p>
-              <ul className="list-disc list-inside mt-4 space-y-2">
-                <li>Droit d'accès à vos données</li>
-                <li>Droit de rectification</li>
-                <li>Droit à l'effacement</li>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Vos droits RGPD</h2>
+              <p>
+                Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :
+              </p>
+              <ul className="list-disc ml-6 mt-4 space-y-2">
+                <li>Droit d'accès à vos données personnelles</li>
+                <li>Droit de rectification de vos données</li>
+                <li>Droit à l'effacement (« droit à l'oubli »)</li>
                 <li>Droit à la limitation du traitement</li>
-                <li>Droit d'opposition</li>
-                <li>Droit à la portabilité</li>
+                <li>Droit d'opposition au traitement</li>
+                <li>Droit à la portabilité de vos données</li>
               </ul>
               <p className="mt-4">
-                Pour exercer ces droits, contactez-nous à : <strong>info@ammo.re</strong>
+                Pour exercer ces droits, vous pouvez nous contacter à l'adresse : info@ammo.re
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Sécurité des données</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Durée de conservation</h2>
               <p>
-                Nous mettons en œuvre toutes les mesures techniques et organisationnelles appropriées pour assurer
-                la sécurité de vos données personnelles et empêcher leur altération, leur perte ou l'accès non autorisé.
+                Vos données personnelles sont conservées pendant la durée nécessaire à la réalisation de la finalité pour
+                laquelle elles ont été collectées, puis archivées conformément aux obligations légales.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">6. Cookies</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Sécurité des données</h2>
+              <p>
+                AMMO met en œuvre toutes les mesures techniques et organisationnelles appropriées pour protéger vos données
+                personnelles contre tout accès non autorisé, modification, divulgation ou destruction.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Cookies</h2>
               <p>
                 Notre site utilise des cookies pour améliorer votre expérience de navigation et analyser le trafic.
-                Vous pouvez paramétrer votre navigateur pour refuser les cookies.
+                Vous pouvez configurer votre navigateur pour refuser les cookies, mais cela peut affecter certaines
+                fonctionnalités du site.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Modifications</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Modifications</h2>
               <p>
-                Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment.
-                Les modifications seront publiées sur cette page.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. Contact</h2>
-              <p>
-                Pour toute question concernant cette politique de confidentialité, vous pouvez nous contacter :
-              </p>
-              <p className="mt-4">
-                <strong>Par email :</strong> info@ammo.re<br />
-                <strong>Par téléphone :</strong> +262 693 397 786<br />
-                <strong>Par courrier :</strong> AMMO, 8 ruelle Boulot, 97400 Saint-Denis, La Réunion
+                AMMO se réserve le droit de modifier cette politique de confidentialité à tout moment.
+                Les modifications seront publiées sur cette page avec une date de mise à jour.
               </p>
             </section>
           </div>

@@ -11,10 +11,12 @@ export default function MentionsLegales() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-white pt-32 pb-16">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Mentions Légales</h1>
+      <main className="min-h-screen bg-white pt-56 pb-16">
+        <div className="container mx-auto px-6 mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 text-center">Mentions Légales</h1>
+        </div>
 
+        <div className="container mx-auto px-6 max-w-4xl">
           <div className="space-y-8 text-gray-700">
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">Éditeur du site</h2>
@@ -25,7 +27,9 @@ export default function MentionsLegales() {
                 La Réunion<br />
                 <br />
                 <strong>Téléphone :</strong> +262 693 397 786<br />
-                <strong>Email :</strong> info@ammo.re
+                <strong>Email :</strong> info@ammo.re<br />
+                <br />
+                <strong>Conception et développement :</strong> <a href="https://digiqo.fr" className="text-amber-600 hover:text-amber-700 underline">digiqo.fr</a>
               </p>
             </section>
 
@@ -33,8 +37,10 @@ export default function MentionsLegales() {
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">Hébergement</h2>
               <p>
                 Le site est hébergé par :<br />
-                [Nom de l'hébergeur]<br />
-                [Adresse de l'hébergeur]
+                <strong>Netlify, Inc.</strong><br />
+                610 22nd Street, Suite 315<br />
+                San Francisco, CA 94107<br />
+                États-Unis
               </p>
             </section>
 

@@ -4,126 +4,105 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Conditions Générales de Vente - AMMO',
-  description: 'Conditions générales de vente des prestations de maîtrise d\'œuvre - AMMO',
+  description: 'Conditions générales de vente d\'AMMO - Maîtrise d\'œuvre à La Réunion',
 }
 
 export default function CGV() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-white pt-32 pb-16">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Conditions Générales de Vente</h1>
+      <main className="min-h-screen bg-white pt-56 pb-16">
+        <div className="container mx-auto px-6 mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 text-center">Conditions Générales de Vente</h1>
+        </div>
 
+        <div className="container mx-auto px-6 max-w-4xl">
           <div className="space-y-8 text-gray-700">
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Objet</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Article 1 - Objet</h2>
               <p>
-                Les présentes conditions générales de vente (CGV) régissent les relations contractuelles entre AMMO
-                et ses clients dans le cadre de prestations de maîtrise d'œuvre pour des projets de construction,
-                rénovation et aménagement.
+                Les présentes conditions générales de vente (CGV) régissent les relations contractuelles entre AMMO - Maîtrise d'Œuvre
+                et ses clients dans le cadre de la fourniture de services de maîtrise d'œuvre pour des projets de construction,
+                rénovation et aménagement à La Réunion.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Prestations</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Article 2 - Services proposés</h2>
               <p>
-                AMMO propose des prestations de maîtrise d'œuvre comprenant :
+                AMMO propose les services suivants :
               </p>
-              <ul className="list-disc list-inside mt-4 space-y-2">
-                <li>Conception et études de projet</li>
-                <li>Coordination technique, juridique et administrative</li>
-                <li>Suivi et contrôle des travaux</li>
-                <li>Réception des travaux</li>
-                <li>Conformité aux normes RE2020</li>
+              <ul className="list-disc ml-6 mt-4 space-y-2">
+                <li>Conception et suivi de projets de construction de villas contemporaines</li>
+                <li>Rénovation complète et modernisation d'habitations</li>
+                <li>Extension et agrandissement de maisons</li>
+                <li>Aménagement extérieur (terrasses, cuisines extérieures, kiosques)</li>
+                <li>Réalisation de lodges de luxe</li>
               </ul>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">3. Devis et commande</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Article 3 - Devis</h2>
               <p>
-                Toute prestation fait l'objet d'un devis détaillé établi gratuitement sur demande du client.
-                Le devis est valable 30 jours à compter de sa date d'émission. La commande est considérée comme
-                définitive après signature du devis par le client et versement de l'acompte.
+                Tout projet débute par l'établissement d'un devis gratuit et sans engagement. Le devis est valable 30 jours
+                à compter de sa date d'émission. Passé ce délai, AMMO se réserve le droit de réviser les prix en fonction
+                des variations du marché.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. Tarifs et modalités de paiement</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Article 4 - Commande et acceptation</h2>
               <p>
-                Les tarifs sont indiqués en euros et hors taxes. Ils sont fermes et définitifs pour la durée
-                mentionnée dans le devis. Les modalités de paiement sont précisées dans chaque devis et
-                peuvent inclure :
+                La commande est formalisée par la signature du devis accompagnée du versement d'un acompte de 30% du montant total.
+                Cette signature vaut acceptation pleine et entière des présentes conditions générales de vente.
               </p>
-              <ul className="list-disc list-inside mt-4 space-y-2">
-                <li>Un acompte à la signature du contrat</li>
-                <li>Des paiements échelonnés selon l'avancement du projet</li>
-                <li>Un solde à la livraison du projet</li>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Article 5 - Prix et paiement</h2>
+              <p>
+                Les prix sont exprimés en euros, hors taxes. Le paiement s'effectue selon l'échéancier suivant :
+              </p>
+              <ul className="list-disc ml-6 mt-4 space-y-2">
+                <li>30% à la signature du contrat</li>
+                <li>40% au démarrage des travaux</li>
+                <li>20% à mi-parcours du chantier</li>
+                <li>10% à la réception des travaux</li>
               </ul>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Délais d'exécution</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Article 6 - Délais d'exécution</h2>
               <p>
-                Les délais d'exécution sont indiqués à titre indicatif dans le devis. AMMO s'efforce de respecter
-                ces délais mais ne peut être tenu responsable des retards dus à des causes indépendantes de sa volonté
-                (intempéries, cas de force majeure, retards des fournisseurs, etc.).
+                Les délais d'exécution sont donnés à titre indicatif. Tout retard dans la réalisation ne peut donner lieu à
+                des pénalités ou à l'annulation de la commande, sauf si ce retard dépasse 60 jours calendaires et n'est pas
+                imputable à des causes indépendantes de la volonté d'AMMO.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">6. Responsabilité</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Article 7 - Responsabilité</h2>
               <p>
-                AMMO est soumis à une obligation de moyens dans le cadre de ses prestations de maîtrise d'œuvre.
-                Sa responsabilité ne peut être engagée que pour les dommages directs causés par une faute prouvée
-                dans l'exécution de ses missions.
+                AMMO souscrit une assurance responsabilité civile professionnelle et une garantie décennale conformément à la
+                réglementation en vigueur. La responsabilité d'AMMO ne peut être engagée en cas de non-respect des règles
+                d'urbanisme par le client ou en cas de force majeure.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Assurances</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Article 8 - Résiliation</h2>
               <p>
-                AMMO est couvert par une assurance responsabilité civile professionnelle et décennale conformément
-                à la réglementation en vigueur. Les attestations d'assurance sont disponibles sur demande.
+                En cas de résiliation du contrat par le client avant l'achèvement des travaux, celui-ci sera redevable des
+                sommes correspondant aux prestations déjà effectuées, ainsi que d'une indemnité forfaitaire de 20% du montant
+                restant dû.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. Propriété intellectuelle</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Article 9 - Litiges</h2>
               <p>
-                Les études, plans et documents techniques réalisés par AMMO restent sa propriété exclusive.
-                Le client dispose d'un droit d'utilisation de ces documents uniquement dans le cadre de son projet.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. Litiges</h2>
-              <p>
-                En cas de litige, les parties s'engagent à rechercher une solution amiable avant toute action judiciaire.
-                À défaut d'accord amiable, le litige sera porté devant les tribunaux compétents de La Réunion.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Droit applicable</h2>
-              <p>
-                Les présentes CGV sont soumises au droit français. En cas de contradiction entre ces CGV et toute
-                autre disposition contractuelle, les présentes CGV prévalent.
-              </p>
-            </section>
-
-            <section className="bg-gray-50 p-6 rounded-lg">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Contact</h2>
-              <p>
-                Pour toute question concernant ces conditions générales de vente :
-              </p>
-              <p className="mt-4">
-                <strong>AMMO - Maîtrise d'Œuvre</strong><br />
-                8 ruelle Boulot<br />
-                97400 Saint-Denis, La Réunion<br />
-                <br />
-                <strong>Téléphone :</strong> +262 693 397 786<br />
-                <strong>Email :</strong> info@ammo.re
+                En cas de litige, une solution amiable sera recherchée avant toute action judiciaire. À défaut, les tribunaux
+                de Saint-Denis de La Réunion seront seuls compétents.
               </p>
             </section>
           </div>
