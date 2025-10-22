@@ -25,11 +25,7 @@ const FaqSection = () => {
         },
         {
             question: "Combien de temps dure un projet de construction ?",
-            answer: "La durée varie selon le type de projet : 6-8 mois pour une villa contemporaine, 2-3 mois pour une rénovation majeure, 3-5 mois pour une extension. Nous respectons scrupuleusement les délais annoncés.",
-        },
-        {
-            question: "Proposez-vous des solutions de financement ?",
-            answer: "Oui, nous travaillons avec plusieurs partenaires financiers pour vous proposer des solutions adaptées. Nous vous accompagnons dans le montage de votre dossier et l'optimisation de votre plan de financement.",
+            answer: "La durée varie selon le type de projet : 12 mois pour une villa contemporaine, 3 à 5 mois pour une rénovation majeure, 5-6 mois pour une extension. Nous respectons scrupuleusement les délais annoncés.",
         },
     ];
     return (

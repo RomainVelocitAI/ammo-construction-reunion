@@ -2,6 +2,7 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ZoomParallaxExtension } from '@/components/zoom-parallax-extension'
 import AnimatedSectionsExtension from '@/components/animated-sections-extension'
+import { RelatedServices } from '@/components/related-services'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -222,6 +223,28 @@ export default function ExtensionSurMesurePage() {
         </section>
 
         {/* Animated Sections */}
+
+        {/* Services Complémentaires */}
+        <RelatedServices
+          services={[
+            {
+              title: "Rénovation Complète",
+              description: "Votre extension s'inscrit dans un projet plus large ? Profitez-en pour rénover entièrement votre maison existante. Isolation, électricité, plomberie, aménagements. Une cohérence parfaite entre ancien et nouveau.",
+              linkText: "Rénover en Profondeur",
+              href: "/maitrise-oeuvre/renovation-complete-974",
+              image: "/renovation.png",
+              imageAlt: "Renovation complete La Reunion - Avec extension"
+            },
+            {
+              title: "Aménagement Extérieur",
+              description: "Votre extension créée, pensez aux extérieurs : nouvelle terrasse pour profiter de l'espace gagné, pergola bioclimatique, jardin paysager. Prolongez votre nouvel espace de vie vers l'extérieur.",
+              linkText: "Aménager vos Nouveaux Extérieurs",
+              href: "/maitrise-oeuvre/amenagement-exterieur-reunion",
+              image: "/amenagement exterieur.png",
+              imageAlt: "Amenagement exterieur extension La Reunion - Terrasse et jardin"
+            }
+          ]}
+        />
         <AnimatedSectionsExtension />
       </main>
       <Footer />

@@ -2,12 +2,13 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ZoomParallaxAmenagement } from '@/components/zoom-parallax-amenagement'
 import AnimatedSectionsAmenagement from '@/components/animated-sections-amenagement'
+import { RelatedServices } from '@/components/related-services'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Maitrise d\'Oeuvre Amenagement Exterieur La Reunion | AMMO',
-  description: 'Expert maitrise d\'oeuvre amenagement exterieur La Reunion. Terrasses, piscines, jardins tropicaux. Pilotage projet complet. Devis gratuit.',
-  keywords: 'maitrise d\'oeuvre amenagement exterieur, terrasse La Reunion, piscine 974, jardin tropical, maitre d\'oeuvre paysagiste, cuisine exterieure La Reunion',
+  description: 'Expert maitrise d\'oeuvre amenagement exterieur La Reunion. Terrasses, piscines, jardins tropicaux, kiosques. Pilotage projet complet. Devis gratuit.',
+  keywords: 'maitrise d\'oeuvre amenagement exterieur, terrasse La Reunion, piscine 974, jardin tropical, maitre d\'oeuvre paysagiste, cuisine exterieure La Reunion, kiosque tropical',
   openGraph: {
     title: 'Maitrise d\'Oeuvre Amenagement Exterieur La Reunion',
     description: 'Specialiste maitrise d\'oeuvre pour vos espaces exterieurs tropicaux. Coordination complete, respect budget et delais.',
@@ -52,7 +53,7 @@ export default function AmenagementExterieurPage() {
               '@type': 'State',
               name: 'La Reunion',
             },
-            description: 'Service complet de maitrise d\'oeuvre pour l\'amenagement d\'espaces exterieurs a La Reunion. Conception et realisation de terrasses, piscines, jardins tropicaux et cuisines exterieures.',
+            description: 'Service complet de maitrise d\'oeuvre pour l\'amenagement d\'espaces exterieurs a La Reunion. Conception et realisation de terrasses, piscines, jardins tropicaux et cuisines exterieures et kiosques.',
             offers: {
               '@type': 'Offer',
               availability: 'https://schema.org/InStock',
@@ -77,7 +78,7 @@ export default function AmenagementExterieurPage() {
                 Aménagement Extérieur
               </h1>
               <p className="text-xl lg:text-2xl text-amber-600 mb-12">
-                Terrasses, piscines et jardins paysagers
+                Terrasses, piscines, jardins paysagers et kiosques tropicaux
               </p>
             </div>
           </div>
@@ -151,6 +152,13 @@ export default function AmenagementExterieurPage() {
                         <p className="text-gray-600">Aménagements conviviaux pour recevoir</p>
                       </div>
                     </li>
+                    <li className="flex items-start">
+                      <span className="text-green-600 mr-3 text-xl">✓</span>
+                      <div>
+                        <strong className="text-gray-900">Kiosques Tropicaux</strong>
+                        <p className="text-gray-600">Abris en bois exotique pour se détendre</p>
+                      </div>
+                    </li>
                   </ul>
                 </div>
                 <div className="bg-amber-50 p-8 rounded-xl hover:shadow-xl transition-shadow duration-300">
@@ -212,6 +220,54 @@ export default function AmenagementExterieurPage() {
             </div>
           </div>
         </section>
+        {/* Services Complémentaires */}
+        <RelatedServices
+          carousel={true}
+          sectionTitle="Tous Nos Services de Maîtrise d'Oeuvre"
+          services={[
+            {
+              title: "Villa Contemporaine",
+              description: "Construction de villas modernes avec architecture bioclimatique. Nos aménagements extérieurs complètent naturellement vos projets de villa : piscine intégrée, terrasses et jardins tropicaux.",
+              linkText: "Construire votre Villa",
+              href: "/maitrise-oeuvre/villa-contemporaine-reunion",
+              image: "/villamoderne.png",
+              imageAlt: "Villa contemporaine La Reunion - Construction avec amenagements"
+            },
+            {
+              title: "Lodge de Luxe",
+              description: "Hébergements touristiques premium. Les aménagements extérieurs sont l'atout majeur d'un lodge : piscine chauffée, spa tropical, terrasse sunset. Ce qui fait la différence pour vos hôtes.",
+              linkText: "Projets Lodges Paradise",
+              href: "/maitrise-oeuvre/lodge-luxe-reunion",
+              image: "/lodgedeluxe.png",
+              imageAlt: "Lodge de luxe La Reunion - Avec amenagements premium"
+            },
+            {
+              title: "Promoteurs Professionnels",
+              description: "Solutions pour programmes immobiliers. Piscines collectives, jardins partagés, espaces communs design : nos aménagements valorisent vos commercialisations et fidélisent vos acquéreurs.",
+              linkText: "Services Promoteurs",
+              href: "/maitrise-oeuvre/promoteurs-reunion",
+              image: "/promoteurs.png",
+              imageAlt: "Promoteurs La Reunion - Amenagements collectifs"
+            },
+            {
+              title: "Rénovation Complète",
+              description: "Modernisation intérieure de votre maison. Après avoir rénové l'intérieur, sublimez vos extérieurs : nouvelle terrasse, piscine moderne, jardin paysager. La cohérence parfaite dedans-dehors.",
+              linkText: "Rénover votre Maison",
+              href: "/maitrise-oeuvre/renovation-complete-974",
+              image: "/renovation.png",
+              imageAlt: "Renovation complete La Reunion - Avec exterieurs"
+            },
+            {
+              title: "Extension Maison",
+              description: "Agrandissement de votre habitation. Votre extension gagne à être prolongée vers l'extérieur : nouvelle terrasse attenante, pergola bioclimatique, jardin zen. Profitez pleinement de l'espace créé.",
+              linkText: "Agrandir votre Maison",
+              href: "/maitrise-oeuvre/extension-maison-reunion",
+              image: "/extension.png",
+              imageAlt: "Extension maison La Reunion - Avec nouveaux exterieurs"
+            }
+          ]}
+        />
+
 
         {/* Animated Sections */}
         <AnimatedSectionsAmenagement />

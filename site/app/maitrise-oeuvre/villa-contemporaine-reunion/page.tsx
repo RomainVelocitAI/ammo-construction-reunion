@@ -2,6 +2,7 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ZoomParallaxVilla } from '@/components/zoom-parallax-villa'
 import AnimatedSectionsVilla from '@/components/animated-sections-villa'
+import { RelatedServices } from '@/components/related-services'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -264,6 +265,28 @@ export default function VillaContemporainePage() {
             </div>
           </div>
         </section>
+
+        {/* Services Complémentaires */}
+        <RelatedServices
+          services={[
+            {
+              title: "Lodge de Luxe",
+              description: "Passez de la villa personnelle au lodge locatif haut de gamme. Notre expertise en construction de villas contemporaines s'étend naturellement aux lodges Paradise : hébergements touristiques premium avec ROI de 15-20% par an.",
+              linkText: "Découvrir les Lodges Paradise",
+              href: "/maitrise-oeuvre/lodge-luxe-reunion",
+              image: "/lodgedeluxe.png",
+              imageAlt: "Lodge de luxe La Reunion - Investissement locatif premium"
+            },
+            {
+              title: "Aménagement Extérieur",
+              description: "Sublimez votre villa contemporaine avec des aménagements extérieurs sur-mesure : piscine à débordement, terrasse bois exotique, cuisine d'été, kiosque tropical. L'écrin parfait pour votre architecture moderne.",
+              linkText: "Explorer nos Aménagements",
+              href: "/maitrise-oeuvre/amenagement-exterieur-reunion",
+              image: "/amenagement exterieur.png",
+              imageAlt: "Amenagement exterieur villa La Reunion - Piscine et terrasse"
+            }
+          ]}
+        />
 
         {/* Animated Sections */}
         <AnimatedSectionsVilla />

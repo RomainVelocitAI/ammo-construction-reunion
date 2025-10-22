@@ -36,7 +36,7 @@ export function AboutSectionSplit() {
         const progress = currentStep / steps;
 
         setStats({
-          years: Math.floor(15 * progress),
+          years: Math.floor(10 * progress),
           projects: 0,
           satisfaction: 0
         });
@@ -99,10 +99,6 @@ export function AboutSectionSplit() {
         {/* Right Side - Content */}
         <div className={`${isMobile || isTablet ? 'w-full' : 'w-1/2'} flex items-center justify-center ${isMobile ? 'p-6' : isTablet ? 'p-8' : 'p-16'} bg-white`}>
           <div className={`max-w-2xl transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-            {/* Badge */}
-            <span className={`inline-block px-6 py-2 bg-gradient-to-r from-amber-600/10 to-yellow-600/10 backdrop-blur-sm border border-amber-600/40 rounded-full text-amber-600 ${isMobile ? 'text-xs' : 'text-sm'} font-bold mb-8 uppercase tracking-wider`}>
-              Depuis 2009
-            </span>
 
             {/* Title */}
             <h2 className={`${isMobile ? 'text-3xl' : isTablet ? 'text-4xl' : 'text-6xl'} font-bold text-gray-900 mb-6 leading-tight`}>

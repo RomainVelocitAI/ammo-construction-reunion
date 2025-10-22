@@ -2,6 +2,7 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ZoomParallaxRenovation } from '@/components/zoom-parallax-renovation'
 import AnimatedSectionsRenovation from '@/components/animated-sections-renovation'
+import { RelatedServices } from '@/components/related-services'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -279,6 +280,28 @@ export default function RenovationCompletePage() {
         </section>
 
         {/* Animated Sections */}
+
+        {/* Services Complémentaires */}
+        <RelatedServices
+          services={[
+            {
+              title: "Extension Maison",
+              description: "Votre rénovation complète ne suffit plus ? Gagnez de l'espace avec une extension. Suite parentale, bureau indépendant, pool house. Même expertise, mêmes garanties, continuité parfaite avec votre rénovation.",
+              linkText: "Agrandir votre Maison",
+              href: "/maitrise-oeuvre/extension-maison-reunion",
+              image: "/extension.png",
+              imageAlt: "Extension maison La Reunion - Agrandissement apres renovation"
+            },
+            {
+              title: "Aménagement Extérieur",
+              description: "Complétez votre rénovation intérieure par des extérieurs à la hauteur. Terrasse bois composite, piscine moderne, jardin zen. L'harmonie parfaite entre votre maison rénovée et son écrin extérieur.",
+              linkText: "Rénover vos Extérieurs",
+              href: "/maitrise-oeuvre/amenagement-exterieur-reunion",
+              image: "/amenagement exterieur.png",
+              imageAlt: "Amenagement exterieur renovation La Reunion - Terrasse et jardin"
+            }
+          ]}
+        />
         <AnimatedSectionsRenovation />
       </main>
       <Footer />

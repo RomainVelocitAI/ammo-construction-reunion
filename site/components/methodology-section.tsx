@@ -9,7 +9,7 @@ export function MethodologySection() {
       title: "Diagnostic & Analyse",
       summary: "Analyse approfondie de votre projet et de vos besoins spécifiques. Visite technique du site et évaluation des contraintes réglementaires.",
       url: "#contact",
-      image: "/construction.jpg"
+      image: "/diagnostic.webp"
     },
     {
       id: "step-2",

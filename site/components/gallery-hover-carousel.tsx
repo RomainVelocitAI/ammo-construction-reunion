@@ -47,7 +47,7 @@ export default function GalleryHoverCarousel({
             <Link key={item.id} href={item.url} className="group block relative w-full h-[300px] md:h-[400px]">
               <Card className="overflow-hidden rounded-xl h-full w-full rounded-3xl">
                 {/* Image */}
-                <div className="relative h-full w-full transition-all duration-500 group-hover:h-1/2">
+                <div className="relative h-full w-full ">
                   <Image
                     width={600}
                     height={400}

@@ -2,6 +2,7 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ZoomParallaxPromoteurs } from '@/components/zoom-parallax-promoteurs'
 import AnimatedSectionsPromoteurs from '@/components/animated-sections-promoteurs'
+import { RelatedServices } from '@/components/related-services'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -213,6 +214,28 @@ export default function PromoteursProfessionnelsPage() {
         </section>
 
         {/* Animated Sections */}
+
+        {/* Services Complémentaires */}
+        <RelatedServices
+          services={[
+            {
+              title: "Lodge de Luxe",
+              description: "Diversifiez votre offre promoteur avec des lodges Paradise. Nous vous accompagnons sur des projets clé en main : du permis de construire à la commercialisation. Marges optimisées et demande forte sur le marché du tourisme de luxe.",
+              linkText: "Projets Lodges en Série",
+              href: "/maitrise-oeuvre/lodge-luxe-reunion",
+              image: "/lodgedeluxe.png",
+              imageAlt: "Lodge de luxe La Reunion - Projets promoteurs"
+            },
+            {
+              title: "Aménagement Extérieur",
+              description: "Valorisez vos programmes immobiliers avec des aménagements extérieurs premium. Piscines collectives, jardins tropicaux, espaces communs design. L'atout différenciant pour vos commercialisations.",
+              linkText: "Aménagements Collectifs",
+              href: "/maitrise-oeuvre/amenagement-exterieur-reunion",
+              image: "/amenagement exterieur.png",
+              imageAlt: "Amenagement exterieur programme immobilier La Reunion"
+            }
+          ]}
+        />
         <AnimatedSectionsPromoteurs />
       </main>
       <Footer />

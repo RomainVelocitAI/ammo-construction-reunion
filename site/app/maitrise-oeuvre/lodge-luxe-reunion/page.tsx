@@ -2,6 +2,7 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ZoomParallaxLodge } from '@/components/zoom-parallax-lodge'
 import AnimatedSectionsLodge from '@/components/animated-sections-lodge'
+import { RelatedServices } from '@/components/related-services'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -214,6 +215,36 @@ export default function LodgeDeLuxePage() {
         </section>
 
         {/* Animated Sections */}
+
+        {/* Services Complémentaires */}
+        <RelatedServices
+          services={[
+            {
+              title: "Villa Contemporaine",
+              description: "Avant d'investir dans un lodge locatif, découvrez nos villas contemporaines. Les mêmes standards d'excellence architecturale, adaptés à votre résidence principale. Architecture tropicale bioclimatique et design sur-mesure.",
+              linkText: "Découvrir nos Villas",
+              href: "/maitrise-oeuvre/villa-contemporaine-reunion",
+              image: "/villamoderne.png",
+              imageAlt: "Villa contemporaine La Reunion - Architecture moderne tropicale"
+            },
+            {
+              title: "Promoteurs Professionnels",
+              description: "Vous êtes promoteur immobilier ? Nous accompagnons vos projets de lodges en série. Expertise en maitrise d'oeuvre pour promoteurs, optimisation des coûts et respect des délais.",
+              linkText: "Solutions pour Promoteurs",
+              href: "/maitrise-oeuvre/promoteurs-reunion",
+              image: "/promoteurs.png",
+              imageAlt: "Maitrise oeuvre promoteurs La Reunion - Projets immobiliers"
+            },
+            {
+              title: "Aménagement Extérieur",
+              description: "Maximisez l'attrait touristique de votre lodge avec des aménagements extérieurs premium : piscine chauffée, spa tropical, terrasse sunset, barbecue professionnel. L'argument qui fait la différence.",
+              linkText: "Explorer nos Aménagements",
+              href: "/maitrise-oeuvre/amenagement-exterieur-reunion",
+              image: "/amenagement exterieur.png",
+              imageAlt: "Amenagement exterieur lodge La Reunion - Piscine et spa"
+            }
+          ]}
+        />
         <AnimatedSectionsLodge />
       </main>
       <Footer />
