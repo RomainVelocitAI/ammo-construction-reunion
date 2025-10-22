@@ -23,7 +23,7 @@ export function MethodologySection() {
       title: "Planification & Coordination",
       summary: "Planification détaillée des travaux et sélection des entreprises qualifiées. Coordination des corps de métier et établissement du planning.",
       url: "#contact",
-      image: "/villa.png"
+      image: "/planification-coordination.jpeg"
     },
     {
       id: "step-4",
