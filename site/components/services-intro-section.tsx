@@ -352,7 +352,7 @@ export function ServicesIntroSection() {
               </CardItem>
               <CardItem translateZ="100" className="w-full mt-4">
                 <img
-                  src="/lotissement-eco-lodge.jpg"
+                  src="/promoteurs-professionnels.jpg"
                   height="1000"
                   width="1000"
                   className={`${effectiveIsMobile ? 'h-40' : effectiveIsTablet ? 'h-48' : 'h-60'} w-full object-cover rounded-xl group-hover/card:shadow-xl`}
