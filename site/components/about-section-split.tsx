@@ -79,7 +79,7 @@ export function AboutSectionSplit() {
               style={{ transform: `translateY(${-parallaxOffset * 0.3}px) scale(1.1)` }}
             >
               <img
-                src="/construction.jpg"
+                src="/construction-metal.jpg"
                 alt="AMMO Construction site"
                 className="w-full h-full object-cover"
               />

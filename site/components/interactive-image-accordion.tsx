@@ -11,7 +11,7 @@ const accordionItems = [
     subtitle: 'Bâtissons votre avenir',
     description: 'Construction complète de maisons individuelles, villas de luxe et bâtiments commerciaux. Expertise en construction traditionnelle et modulaire à La Réunion.',
     features: ['Maisons individuelles', 'Villas de luxe', 'Bâtiments commerciaux', 'Construction modulaire'],
-    imageUrl: '/construction.jpg',
+    imageUrl: '/construction-metal.jpg',
   },
   {
     id: 2,
