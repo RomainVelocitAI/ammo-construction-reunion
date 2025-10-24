@@ -24,7 +24,7 @@ export default function EquipePage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen bg-white pt-24 sm:pt-28 lg:pt-36 xl:pt-44">
         <FinancialHero
           title={
             <>
