@@ -131,8 +131,8 @@ Que vous souhaitiez construire votre maison familiale, rénover votre logement o
 - Lun - Sam : 8h - 18h
 
 **Notre Adresse**
-- 2 rue Jean Paul Sartre
-- 97419 La Possession
+- 8 Ruelle Boulot
+- 97400 Saint-Denis
 
 ### Notre Engagement
 Nous nous engageons à vous répondre dans les 24h et à vous proposer un rendez-vous personnalisé pour étudier votre projet en détail.
@@ -144,7 +144,7 @@ Nous nous engageons à vous répondre dans les 24h et à vous proposer un rendez
 ### Éditeur du site
 - **Dénomination sociale :** AMMO
 - **Activité :** Maîtrise d'œuvre et construction
-- **Adresse :** 2 rue Jean Paul Sartre, 97419 La Possession, La Réunion
+- **Adresse :** 8 Ruelle Boulot, 97400 Saint-Denis, La Réunion
 - **Téléphone :** +262 693 397 786
 - **Email :** info@ammo.re
 - **Juridiction :** Tribunal de commerce de Saint-Denis de La Réunion
@@ -176,7 +176,7 @@ Le présent site et les modalités de son utilisation sont régis par le droit f
 
 ### Responsable du traitement
 - **Responsable :** AMMO
-- **Adresse :** 2 rue Jean Paul Sartre, 97419 La Possession, La Réunion
+- **Adresse :** 8 Ruelle Boulot, 97400 Saint-Denis, La Réunion
 - **Contact DPO :** info@ammo.re
 - Conformément au Règlement Général sur la Protection des Données (RGPD) applicable en France métropolitaine et outre-mer.
 
@@ -224,7 +224,7 @@ Si vous estimez que le traitement de vos données ne respecte pas la réglementa
 Pour toute question concernant cette politique de confidentialité ou vos données personnelles :
 - **Email :** info@ammo.re
 - **Téléphone :** +262 693 397 786
-- **Adresse :** 2 rue Jean Paul Sartre, 97419 La Possession, La Réunion
+- **Adresse :** 8 Ruelle Boulot, 97400 Saint-Denis, La Réunion
 
 Cette politique peut être mise à jour. La date de dernière modification sera indiquée en cas de changement.
 
@@ -249,7 +249,7 @@ Lodges de luxe, maisons individuelles et aménagements exceptionnels.
 ### Contact
 - **Téléphone :** +262 693 397 786
 - **Email :** info@ammo.re
-- **Adresse :** 2 rue Jean Paul Sartre, 97419 La Possession
+- **Adresse :** 8 Ruelle Boulot, 97400 Saint-Denis
 - **Horaires :** Lun - Sam : 8h - 18h
 
 **Devis gratuit sous 48h**

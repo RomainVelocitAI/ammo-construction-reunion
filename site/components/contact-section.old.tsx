@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
 
-export function ContactSectionV3() {
+export function ContactSection() {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [formData, setFormData] = useState({
@@ -27,6 +27,7 @@ export function ContactSectionV3() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // TODO: Implement form submission
     console.log('Form submitted:', formData);
   };
 
@@ -39,13 +40,15 @@ export function ContactSectionV3() {
 
   return (
     <section id="contact" className={`${isMobile ? 'py-12' : isTablet ? 'py-16' : 'py-24'} bg-gradient-to-br from-gray-50 via-white to-amber-50 relative overflow-hidden`}>
+      {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-amber-200/20 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-200/20 rounded-full blur-3xl"></div>
       </div>
 
-      <div className={`container mx-auto ${isMobile ? 'px-4' : 'px-6'} relative z-10 flex flex-col`}>
-        <div className="w-full text-center mb-20 block">
+      <div className={`container mx-auto ${isMobile ? 'px-4' : 'px-6'} relative z-10`}>
+        {/* Header */}
+        <div className="text-center mb-16">
           <h2 className={`${isMobile ? 'text-3xl' : isTablet ? 'text-4xl' : 'text-5xl'} font-bold text-gray-900 mb-4`}>
             Contactez-nous
           </h2>
@@ -54,8 +57,10 @@ export function ContactSectionV3() {
           </p>
         </div>
 
-        <div className={`grid ${isMobile ? 'grid-cols-1' : 'grid-cols-1 lg:grid-cols-2'} gap-8`}>
-          <div className={`${isMobile ? 'order-2' : ''} space-y-6`}>
+        <div className={`grid ${isMobile ? 'grid-cols-1' : 'grid-cols-1 lg:grid-cols-3'} gap-8`}>
+          {/* Contact Cards - Top on mobile, Left column on desktop */}
+          <div className={`${isMobile ? 'order-2' : 'lg:col-span-1'} space-y-6`}>
+            {/* Phone Card */}
             <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-amber-500 to-yellow-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
@@ -63,13 +68,17 @@ export function ContactSectionV3() {
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-medium text-gray-500 mb-1">Téléphone</p>
-                  <a href="tel:+262693397786" className="text-lg font-bold text-gray-900 hover:text-amber-600 transition-colors block break-words">
+                  <a
+                    href="tel:+262693397786"
+                    className="text-lg font-bold text-gray-900 hover:text-amber-600 transition-colors block break-words"
+                  >
                     +262 693 397 786
                   </a>
                 </div>
               </div>
             </div>
 
+            {/* Email Card */}
             <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-amber-500 to-yellow-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
@@ -77,13 +86,17 @@ export function ContactSectionV3() {
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-medium text-gray-500 mb-1">Email</p>
-                  <a href="mailto:info@ammo.re" className="text-lg font-bold text-gray-900 hover:text-amber-600 transition-colors block break-words">
+                  <a
+                    href="mailto:info@ammo.re"
+                    className="text-lg font-bold text-gray-900 hover:text-amber-600 transition-colors block break-words"
+                  >
                     info@ammo.re
                   </a>
                 </div>
               </div>
             </div>
 
+            {/* Address Card */}
             <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-amber-500 to-yellow-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
@@ -100,6 +113,7 @@ export function ContactSectionV3() {
               </div>
             </div>
 
+            {/* Opening Hours Card */}
             <div className="bg-gradient-to-br from-amber-500 to-yellow-500 p-6 rounded-2xl shadow-lg text-white">
               <h4 className="text-lg font-bold mb-4 flex items-center">
                 <span className="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></span>
@@ -122,7 +136,8 @@ export function ContactSectionV3() {
             </div>
           </div>
 
-          <div className={`${isMobile ? 'order-1' : ''}`}>
+          {/* Contact Form - Right side, spans 2 columns */}
+          <div className={`${isMobile ? 'order-1' : 'lg:col-span-2'}`}>
             <div className="bg-white p-8 lg:p-10 rounded-3xl shadow-2xl border border-gray-100 h-full">
               <div className="mb-8">
                 <h3 className={`${isMobile ? 'text-2xl' : 'text-3xl'} font-bold text-gray-900 mb-2`}>

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
 
-export function ContactSectionV3() {
+export function ContactSectionV2() {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [formData, setFormData] = useState({
@@ -44,16 +44,7 @@ export function ContactSectionV3() {
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-200/20 rounded-full blur-3xl"></div>
       </div>
 
-      <div className={`container mx-auto ${isMobile ? 'px-4' : 'px-6'} relative z-10 flex flex-col`}>
-        <div className="w-full text-center mb-20 block">
-          <h2 className={`${isMobile ? 'text-3xl' : isTablet ? 'text-4xl' : 'text-5xl'} font-bold text-gray-900 mb-4`}>
-            Contactez-nous
-          </h2>
-          <p className={`${isMobile ? 'text-base' : 'text-lg'} text-gray-600 max-w-2xl mx-auto`}>
-            Un projet en tête ? Notre équipe est à votre écoute pour vous accompagner dans sa réalisation.
-          </p>
-        </div>
-
+      <div className={`container mx-auto ${isMobile ? 'px-4' : 'px-6'} relative z-10`}>
         <div className={`grid ${isMobile ? 'grid-cols-1' : 'grid-cols-1 lg:grid-cols-2'} gap-8`}>
           <div className={`${isMobile ? 'order-2' : ''} space-y-6`}>
             <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
@@ -122,7 +113,16 @@ export function ContactSectionV3() {
             </div>
           </div>
 
-          <div className={`${isMobile ? 'order-1' : ''}`}>
+          <div className={`${isMobile ? 'order-1' : ''} flex flex-col`}>
+            <div className="mb-8">
+              <h2 className={`${isMobile ? 'text-3xl' : isTablet ? 'text-4xl' : 'text-5xl'} font-bold text-gray-900 mb-4`}>
+                Contactez-nous
+              </h2>
+              <p className={`${isMobile ? 'text-base' : 'text-lg'} text-gray-600`}>
+                Un projet en tête ? Notre équipe est à votre écoute pour vous accompagner dans sa réalisation.
+              </p>
+            </div>
+
             <div className="bg-white p-8 lg:p-10 rounded-3xl shadow-2xl border border-gray-100 h-full">
               <div className="mb-8">
                 <h3 className={`${isMobile ? 'text-2xl' : 'text-3xl'} font-bold text-gray-900 mb-2`}>

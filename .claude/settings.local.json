@@ -69,7 +69,17 @@
       "Bash(do echo \"Processing: $dir\")",
       "Bash(do sed -i 's|href=\"\"#contact\"\"|href=\"\"/#contact\"\"|g' \"$dirpage.tsx\")",
       "Bash(do sed -i 's|https://ammo.re/services/maitrise-oeuvre-|https://ammo.re/maitrise-oeuvre/|g' \"$dirpage.tsx\")",
-      "Bash(del:*)"
+      "Bash(del:*)",
+      "Bash(timeout 3 cat d:/Ammo/site/components/contact-section.tsx)",
+      "Bash(taskkill:*)",
+      "Bash(timeout 2 cat \"d:/Ammo/site/components/contact-section.tsx\")",
+      "Bash(tasklist)",
+      "Bash(cat:*)",
+      "Bash(if exist .next rmdir /s /q .next)",
+      "Bash(timeout:*)",
+      "Bash(cp:*)",
+      "Bash(netstat:*)",
+      "Bash(rm:*)"
     ],
     "deny": [],
     "ask": []
