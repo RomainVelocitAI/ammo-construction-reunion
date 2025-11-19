@@ -79,7 +79,9 @@
       "Bash(timeout:*)",
       "Bash(cp:*)",
       "Bash(netstat:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(nul)",
+      "Bash(PORT=3001 npm run dev:*)"
     ],
     "deny": [],
     "ask": []

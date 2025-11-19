@@ -306,7 +306,7 @@ const AnimatedSectionsLodge: React.FC = () => {
   return (
     <div
       ref={containerRef}
-      className="relative h-screen w-full overflow-hidden bg-black text-white uppercase font-sans"
+      className="relative h-screen w-full overflow-hidden bg-[var(--ammo-noir)] text-white uppercase font-sans"
     >
       {/* Section preview thumbnails */}
       <div className="absolute bottom-4 right-6 z-30 flex items-center gap-4">
@@ -328,7 +328,7 @@ const AnimatedSectionsLodge: React.FC = () => {
                 className="w-full h-full object-cover"
               />
               <div
-                 className={`absolute inset-0 bg-black transition-opacity duration-1000 ease-in-out ${
+                 className={`absolute inset-0 bg-[var(--ammo-noir)] transition-opacity duration-1000 ease-in-out ${
                    currentIndex !== i ? 'opacity-50' : 'opacity-0'
                  }`}
                />
@@ -358,7 +358,7 @@ const AnimatedSectionsLodge: React.FC = () => {
                 className="bg flex items-center justify-center absolute top-0 h-full w-full bg-cover bg-center"
                 ref={(el) => { if (el) imagesRefs.current[i] = el; }}
                 style={{
-                  backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.8) 100%), url("${section.img}")`
+                  backgroundImage: `linear-gradient(180deg, rgb(0 0 0 / 0.6) 0%, rgb(0 0 0 / 0.8) 100%), url("${section.img}")`
                 }}
               >
                 <h2 className="section-heading text-white text-center font-semibold w-[90vw] max-w-[1200px] text-[clamp(1rem,4vw,9rem)] normal-case leading-none z-10" ref={(el) => { if (el) headingRefs.current[i] = el; }}>

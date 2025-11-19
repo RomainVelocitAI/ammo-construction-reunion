@@ -25,17 +25,17 @@ export default function GalleryHoverCarousel({
 }) {
 
   return (
-    <section className="py-32 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-32 bg-gradient-to-b from-background to-muted/20">
       <div className="container mx-auto px-6">
         <div className="mb-12 md:mb-16 lg:mb-20 text-center">
-          <span className="inline-block px-6 py-2 bg-gradient-to-r from-amber-600/10 to-yellow-600/10 backdrop-blur-sm border border-amber-600/40 rounded-full text-amber-600 text-sm font-bold mb-6 uppercase tracking-wider">
+          <span className="inline-block px-6 py-2 bg-gradient-to-r from-secondary/10 to-accent/10 backdrop-blur-sm border border-secondary/40 rounded-full text-secondary text-sm font-bold mb-6 uppercase tracking-wider">
             Notre Méthodologie
           </span>
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight mb-4 max-w-3xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-bold text-foreground leading-tight mb-4 max-w-3xl mx-auto">
             {heading}
           </h2>
           {subtitle && (
-            <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
               {subtitle}
             </p>
           )}
@@ -68,7 +68,7 @@ export default function GalleryHoverCarousel({
                   <Button
                     variant="outline"
                     size="icon"
-                    className="absolute bottom-4 right-4 border border-gray-200 dark:border-gray-800 hover:-rotate-45 transition-all duration-500 rounded-full mt-2 px-0 flex items-center gap-1 text-primary hover:text-primary/80"
+                    className="absolute bottom-4 right-4 border border-border dark:border-border hover:-rotate-45 transition-all duration-500 rounded-full mt-2 px-0 flex items-center gap-1 text-primary hover:text-primary/80"
                   >
                     <ArrowRight className="size-4" />
                   </Button>

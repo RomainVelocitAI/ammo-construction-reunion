@@ -1,15 +1,35 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Big_Shoulders_Inline, Sofia_Sans_Extra_Condensed, Bellota_Text, Rajdhani } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// GROS TITRE - BIG SHOULDERS INLINE
+const bigShouldersInline = Big_Shoulders_Inline({
+  variable: "--font-heading",
   subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// Sous titre - Sofia Sans Extra Condensed
+const sofiaSans = Sofia_Sans_Extra_Condensed({
+  variable: "--font-subheading",
   subsets: ["latin"],
+  weight: ["400", "600"],
+  style: ["normal", "italic"],
+});
+
+// CORPS DE TEXTE - Bellota Text
+const bellotaText = Bellota_Text({
+  variable: "--font-body",
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+  style: ["normal", "italic"],
+});
+
+// NOTES - Rajdhani
+const rajdhani = Rajdhani({
+  variable: "--font-notes",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -68,13 +88,13 @@ export default function RootLayout({
   return (
     <html lang="fr-FR">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/logo.png" />
-        <meta name="theme-color" content="#d97706" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
+        <meta name="theme-color" content="#D6B363" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${bigShouldersInline.variable} ${sofiaSans.variable} ${bellotaText.variable} ${rajdhani.variable} antialiased`}
       >
         {children}
       </body>

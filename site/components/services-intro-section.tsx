@@ -37,27 +37,27 @@ export function ServicesIntroSection() {
   };
 
   return (
-    <section className={`${effectiveIsMobile ? 'py-12' : effectiveIsTablet ? 'py-16' : 'py-24'} bg-gradient-to-b from-white via-gray-50 to-white`}>
+    <section className={`${effectiveIsMobile ? 'py-12' : effectiveIsTablet ? 'py-16' : 'py-24'} bg-gradient-to-b from-background via-muted/30 to-background`}>
       <div className={`container mx-auto ${effectiveIsMobile ? 'px-4' : 'px-6'} flex flex-col`}>
         {/* Section Header avec SEO et Copywriting optimisés pour les services */}
         <div className="w-full mb-16">
           <div className="max-w-6xl mx-auto text-center">
           {/* Titre principal H2 optimisé SEO services */}
-          <h2 className={`${effectiveIsMobile ? 'text-2xl' : effectiveIsTablet ? 'text-3xl' : 'text-6xl'} font-bold text-gray-900 mb-6 leading-tight`}>
+          <h2 className={`${effectiveIsMobile ? 'text-2xl' : effectiveIsTablet ? 'text-3xl' : 'text-6xl'} font-bold text-foreground mb-6 leading-tight`}>
             Nos Services de Construction et Rénovation
-            <span className={`block ${effectiveIsMobile ? 'text-lg' : effectiveIsTablet ? 'text-xl' : 'text-3xl'} font-light text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-600 mt-2`}>
+            <span className={`block ${effectiveIsMobile ? 'text-lg' : effectiveIsTablet ? 'text-xl' : 'text-3xl'} font-light text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent mt-2`}>
               Villa • Rénovation • Extension • Aménagement • Lodge • Promoteurs
             </span>
           </h2>
 
           {/* Description services avec mots-clés SEO et link previews */}
-          <div className={`${effectiveIsMobile ? 'text-base' : effectiveIsTablet ? 'text-lg' : 'text-xl'} text-gray-600 mb-8 leading-relaxed ${effectiveIsMobile ? 'px-2' : effectiveIsTablet ? 'px-4' : 'px-0'}`}>
+          <div className={`${effectiveIsMobile ? 'text-base' : effectiveIsTablet ? 'text-lg' : 'text-xl'} text-muted-foreground mb-8 leading-relaxed ${effectiveIsMobile ? 'px-2' : effectiveIsTablet ? 'px-4' : 'px-0'}`}>
             Spécialiste de la{" "}
             <LinkPreview
               url="#villa"
               isStatic={true}
               imageSrc="/villamoderne.png"
-              className="font-bold text-gray-900"
+              className="font-bold text-foreground"
             >
               villa contemporaine
             </LinkPreview>{" "}
@@ -66,7 +66,7 @@ export function ServicesIntroSection() {
               url="#renovation"
               isStatic={true}
               imageSrc="/renovation.png"
-              className="font-bold text-gray-900"
+              className="font-bold text-foreground"
             >
               rénovation complète
             </LinkPreview>,{" "}
@@ -74,7 +74,7 @@ export function ServicesIntroSection() {
               url="#extension"
               isStatic={true}
               imageSrc="/extension.png"
-              className="font-bold text-gray-900"
+              className="font-bold text-foreground"
             >
               extension sur-mesure
             </LinkPreview>,{" "}
@@ -82,7 +82,7 @@ export function ServicesIntroSection() {
               url="#amenagement"
               isStatic={true}
               imageSrc="/amenagement exterieur.png"
-              className="font-bold text-gray-900"
+              className="font-bold text-foreground"
             >
               aménagement extérieur
             </LinkPreview>{" "}
@@ -91,7 +91,7 @@ export function ServicesIntroSection() {
               url="#lodge"
               isStatic={true}
               imageSrc="/lodgedeluxe.png"
-              className="font-bold text-gray-900"
+              className="font-bold text-foreground"
             >
               lodge de luxe
             </LinkPreview>.
@@ -106,17 +106,17 @@ export function ServicesIntroSection() {
           <div className={`grid ${getGridCols()} ${effectiveIsMobile ? 'gap-4' : effectiveIsTablet ? 'gap-x-6 gap-y-3' : 'gap-x-8 gap-y-4'} max-w-7xl mx-auto`}>
           {/* Carte 1 - Villa Contemporaine */}
           <CardContainer className="inter-var">
-            <CardBody className={`bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${effectiveIsMobile ? 'p-4' : 'p-6'} border`}>
+            <CardBody className={`bg-muted/20 relative group/card dark:hover:shadow-2xl dark:hover:shadow-accent/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${effectiveIsMobile ? 'p-4' : 'p-6'} border`}>
               <CardItem
                 translateZ="50"
-                className="text-xl font-bold text-neutral-600 dark:text-white"
+                className="text-xl font-bold text-foreground dark:text-white"
               >
                 Villa Contemporaine
               </CardItem>
               <CardItem
                 as="p"
                 translateZ="60"
-                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                className="text-muted-foreground text-sm max-w-sm mt-2 dark:text-neutral-300"
               >
                 Architecture moderne et design personnalisé. Villas d'exception adaptées au climat tropical.
               </CardItem>
@@ -142,7 +142,7 @@ export function ServicesIntroSection() {
                   translateZ={20}
                   as={Link}
                   href="#contact"
-                  className="px-4 py-2 rounded-xl bg-gradient-to-r from-amber-600 to-yellow-600 text-white text-xs font-bold"
+                  className="px-4 py-2 rounded-xl bg-gradient-to-r from-secondary to-accent text-primary-foreground text-xs font-bold"
                 >
                   Devis gratuit
                 </CardItem>
@@ -152,17 +152,17 @@ export function ServicesIntroSection() {
 
           {/* Carte 3 - Rénovation Complète */}
           <CardContainer className="inter-var">
-            <CardBody className={`bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${effectiveIsMobile ? 'p-4' : 'p-6'} border`}>
+            <CardBody className={`bg-muted/20 relative group/card dark:hover:shadow-2xl dark:hover:shadow-accent/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${effectiveIsMobile ? 'p-4' : 'p-6'} border`}>
               <CardItem
                 translateZ="50"
-                className="text-xl font-bold text-neutral-600 dark:text-white"
+                className="text-xl font-bold text-foreground dark:text-white"
               >
                 Rénovation Complète
               </CardItem>
               <CardItem
                 as="p"
                 translateZ="60"
-                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                className="text-muted-foreground text-sm max-w-sm mt-2 dark:text-neutral-300"
               >
                 Transformation totale de votre habitat. Mise aux normes et modernisation énergétique.
               </CardItem>
@@ -188,7 +188,7 @@ export function ServicesIntroSection() {
                   translateZ={20}
                   as={Link}
                   href="#contact"
-                  className="px-4 py-2 rounded-xl bg-gradient-to-r from-amber-600 to-yellow-600 text-white text-xs font-bold"
+                  className="px-4 py-2 rounded-xl bg-gradient-to-r from-secondary to-accent text-primary-foreground text-xs font-bold"
                 >
                   Devis gratuit
                 </CardItem>
@@ -198,17 +198,17 @@ export function ServicesIntroSection() {
 
           {/* Carte 4 - Extension Sur-Mesure */}
           <CardContainer className="inter-var">
-            <CardBody className={`bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${effectiveIsMobile ? 'p-4' : 'p-6'} border`}>
+            <CardBody className={`bg-muted/20 relative group/card dark:hover:shadow-2xl dark:hover:shadow-accent/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${effectiveIsMobile ? 'p-4' : 'p-6'} border`}>
               <CardItem
                 translateZ="50"
-                className="text-xl font-bold text-neutral-600 dark:text-white"
+                className="text-xl font-bold text-foreground dark:text-white"
               >
                 Extension Sur-Mesure
               </CardItem>
               <CardItem
                 as="p"
                 translateZ="60"
-                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                className="text-muted-foreground text-sm max-w-sm mt-2 dark:text-neutral-300"
               >
                 Agrandissement harmonieux de votre espace. Solutions créatives pour optimiser votre habitat.
               </CardItem>
@@ -234,7 +234,7 @@ export function ServicesIntroSection() {
                   translateZ={20}
                   as={Link}
                   href="#contact"
-                  className="px-4 py-2 rounded-xl bg-gradient-to-r from-amber-600 to-yellow-600 text-white text-xs font-bold"
+                  className="px-4 py-2 rounded-xl bg-gradient-to-r from-secondary to-accent text-primary-foreground text-xs font-bold"
                 >
                   Devis gratuit
                 </CardItem>
@@ -244,17 +244,17 @@ export function ServicesIntroSection() {
 
           {/* Carte 5 - Aménagement Extérieur */}
           <CardContainer className="inter-var">
-            <CardBody className={`bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${effectiveIsMobile ? 'p-4' : 'p-6'} border`}>
+            <CardBody className={`bg-muted/20 relative group/card dark:hover:shadow-2xl dark:hover:shadow-accent/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${effectiveIsMobile ? 'p-4' : 'p-6'} border`}>
               <CardItem
                 translateZ="50"
-                className="text-xl font-bold text-neutral-600 dark:text-white"
+                className="text-xl font-bold text-foreground dark:text-white"
               >
                 Aménagement Extérieur
               </CardItem>
               <CardItem
                 as="p"
                 translateZ="60"
-                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                className="text-muted-foreground text-sm max-w-sm mt-2 dark:text-neutral-300"
               >
                 Terrasses, piscines et jardins paysagers. Création d'espaces de vie extérieurs exceptionnels.
               </CardItem>
@@ -280,7 +280,7 @@ export function ServicesIntroSection() {
                   translateZ={20}
                   as={Link}
                   href="#contact"
-                  className="px-4 py-2 rounded-xl bg-gradient-to-r from-amber-600 to-yellow-600 text-white text-xs font-bold"
+                  className="px-4 py-2 rounded-xl bg-gradient-to-r from-secondary to-accent text-primary-foreground text-xs font-bold"
                 >
                   Devis gratuit
                 </CardItem>
@@ -290,17 +290,17 @@ export function ServicesIntroSection() {
 
           {/* Carte 6 - Lodge de Luxe */}
           <CardContainer className="inter-var">
-            <CardBody className={`bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${effectiveIsMobile ? 'p-4' : 'p-6'} border`}>
+            <CardBody className={`bg-muted/20 relative group/card dark:hover:shadow-2xl dark:hover:shadow-accent/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${effectiveIsMobile ? 'p-4' : 'p-6'} border`}>
               <CardItem
                 translateZ="50"
-                className="text-xl font-bold text-neutral-600 dark:text-white"
+                className="text-xl font-bold text-foreground dark:text-white"
               >
                 Lodge de Luxe
               </CardItem>
               <CardItem
                 as="p"
                 translateZ="60"
-                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                className="text-muted-foreground text-sm max-w-sm mt-2 dark:text-neutral-300"
               >
                 Hébergements touristiques haut de gamme. Lodge Paradise et locations saisonnières d'exception.
               </CardItem>
@@ -326,7 +326,7 @@ export function ServicesIntroSection() {
                   translateZ={20}
                   as={Link}
                   href="#contact"
-                  className="px-4 py-2 rounded-xl bg-gradient-to-r from-amber-600 to-yellow-600 text-white text-xs font-bold"
+                  className="px-4 py-2 rounded-xl bg-gradient-to-r from-secondary to-accent text-primary-foreground text-xs font-bold"
                 >
                   Devis gratuit
                 </CardItem>
@@ -336,17 +336,17 @@ export function ServicesIntroSection() {
 
           {/* Carte 7 - Promoteurs Professionnels */}
           <CardContainer className="inter-var">
-            <CardBody className={`bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-amber-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${effectiveIsMobile ? 'p-4' : 'p-6'} border`}>
+            <CardBody className={`bg-muted/20 relative group/card dark:hover:shadow-2xl dark:hover:shadow-accent/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl ${effectiveIsMobile ? 'p-4' : 'p-6'} border`}>
               <CardItem
                 translateZ="50"
-                className="text-xl font-bold text-neutral-600 dark:text-white"
+                className="text-xl font-bold text-foreground dark:text-white"
               >
                 Promoteurs Professionnels
               </CardItem>
               <CardItem
                 as="p"
                 translateZ="60"
-                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                className="text-muted-foreground text-sm max-w-sm mt-2 dark:text-neutral-300"
               >
                 Lotissements écolodge et immeubles de rapport. Expertise technique et financière pour vos projets d'envergure.
               </CardItem>
@@ -372,7 +372,7 @@ export function ServicesIntroSection() {
                   translateZ={20}
                   as={Link}
                   href="#contact"
-                  className="px-4 py-2 rounded-xl bg-gradient-to-r from-amber-600 to-yellow-600 text-white text-xs font-bold"
+                  className="px-4 py-2 rounded-xl bg-gradient-to-r from-secondary to-accent text-primary-foreground text-xs font-bold"
                 >
                   Devis gratuit
                 </CardItem>

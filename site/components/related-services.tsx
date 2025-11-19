@@ -77,33 +77,33 @@ export function RelatedServices({
 
   if (carousel && services.length > 3) {
     return (
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+      <section className="py-20 bg-gradient-to-b from-muted/30 to-background overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
+            <h2 className="text-4xl font-bold text-foreground mb-4 text-center">
               {sectionTitle}
             </h2>
-            <p className="text-lg text-gray-600 text-center mb-12">
+            <p className="text-lg text-muted-foreground text-center mb-12">
               AMMO vous accompagne sur l'ensemble de vos projets de construction et rénovation
             </p>
 
             <div className="relative">
               <button
                 onClick={handlePrev}
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white/90 hover:bg-white p-4 rounded-full shadow-xl hover:shadow-2xl transition-all transform hover:scale-110"
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-background/90 hover:bg-background p-4 rounded-full shadow-xl hover:shadow-2xl transition-all transform hover:scale-110"
                 aria-label="Service précédent"
               >
-                <svg className="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-6 h-6 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
 
               <button
                 onClick={handleNext}
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white/90 hover:bg-white p-4 rounded-full shadow-xl hover:shadow-2xl transition-all transform hover:scale-110"
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-background/90 hover:bg-background p-4 rounded-full shadow-xl hover:shadow-2xl transition-all transform hover:scale-110"
                 aria-label="Service suivant"
               >
-                <svg className="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-6 h-6 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
@@ -118,7 +118,7 @@ export function RelatedServices({
                   {[...services, ...services].map((service, index) => (
                     <div
                       key={index}
-                      className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex-shrink-0 w-[400px]"
+                      className="group bg-background rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex-shrink-0 w-[400px]"
                     >
                       <div className="relative h-64 overflow-hidden">
                         <img
@@ -126,20 +126,20 @@ export function RelatedServices({
                           alt={service.imageAlt}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       </div>
 
                       <div className="p-8">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-amber-600 transition-colors">
+                        <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-secondary transition-colors">
                           {service.title}
                         </h3>
-                        <p className="text-gray-600 leading-relaxed mb-6 line-clamp-3">
+                        <p className="text-muted-foreground leading-relaxed mb-6 line-clamp-3">
                           {service.description}
                         </p>
 
                         <Link
                           href={service.href}
-                          className="inline-flex items-center gap-2 text-amber-600 font-semibold hover:text-amber-700 transition-colors group/link"
+                          className="inline-flex items-center gap-2 text-secondary font-semibold hover:text-accent transition-colors group/link"
                         >
                           <span>{service.linkText}</span>
                           <svg
@@ -159,7 +159,7 @@ export function RelatedServices({
             </div>
 
             <div className="text-center mt-8">
-              <p className="text-sm text-gray-500 mb-4">Utilisez les flèches pour naviguer ou survolez pour mettre en pause</p>
+              <p className="text-sm text-muted-foreground mb-4">Utilisez les flèches pour naviguer ou survolez pour mettre en pause</p>
 
               <div className="flex justify-center gap-2 mb-4">
                 {services.map((_, index) => (
@@ -168,8 +168,8 @@ export function RelatedServices({
                     onClick={() => scrollToIndex(index)}
                     className={`w-3 h-3 rounded-full transition-all ${
                       index === currentIndex
-                        ? 'bg-amber-600 w-8'
-                        : 'bg-gray-300 hover:bg-gray-400'
+                        ? 'bg-secondary w-8'
+                        : 'bg-muted hover:bg-muted-foreground'
                     }`}
                     aria-label={`Aller au service ${index + 1}`}
                   />
@@ -180,7 +180,7 @@ export function RelatedServices({
             <div className="text-center mt-8">
               <Link
                 href="/#services"
-                className="inline-block bg-gradient-to-r from-amber-600 to-yellow-600 text-white font-bold py-4 px-8 rounded-lg hover:from-amber-700 hover:to-yellow-700 transition-all shadow-lg hover:shadow-xl"
+                className="inline-block bg-gradient-to-r from-secondary to-accent text-primary-foreground font-bold py-4 px-8 rounded-lg hover:from-accent hover:to-secondary transition-all shadow-lg hover:shadow-xl"
               >
                 Voir Tous Nos Services
               </Link>
@@ -192,13 +192,13 @@ export function RelatedServices({
   }
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
+          <h2 className="text-4xl font-bold text-foreground mb-4 text-center">
             {sectionTitle}
           </h2>
-          <p className="text-lg text-gray-600 text-center mb-12">
+          <p className="text-lg text-muted-foreground text-center mb-12">
             AMMO vous accompagne sur l'ensemble de vos projets de construction et rénovation
           </p>
 
@@ -206,7 +206,7 @@ export function RelatedServices({
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                className="group bg-background rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
               >
                 <div className="relative h-64 overflow-hidden">
                   <img
@@ -214,20 +214,20 @@ export function RelatedServices({
                     alt={service.imageAlt}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
 
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-amber-600 transition-colors">
+                  <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-secondary transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed mb-6">
+                  <p className="text-muted-foreground leading-relaxed mb-6">
                     {service.description}
                   </p>
 
                   <Link
                     href={service.href}
-                    className="inline-flex items-center gap-2 text-amber-600 font-semibold hover:text-amber-700 transition-colors group/link"
+                    className="inline-flex items-center gap-2 text-secondary font-semibold hover:text-accent transition-colors group/link"
                   >
                     <span>{service.linkText}</span>
                     <svg
@@ -247,7 +247,7 @@ export function RelatedServices({
           <div className="text-center mt-12">
             <Link
               href="/#services"
-              className="inline-block bg-gradient-to-r from-amber-600 to-yellow-600 text-white font-bold py-4 px-8 rounded-lg hover:from-amber-700 hover:to-yellow-700 transition-all shadow-lg hover:shadow-xl"
+              className="inline-block bg-gradient-to-r from-secondary to-accent text-primary-foreground font-bold py-4 px-8 rounded-lg hover:from-accent hover:to-secondary transition-all shadow-lg hover:shadow-xl"
             >
               Voir Tous Nos Services
             </Link>

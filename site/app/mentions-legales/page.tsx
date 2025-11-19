@@ -11,15 +11,15 @@ export default function MentionsLegales() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-white pt-56 pb-16">
+      <main className="min-h-screen bg-background pt-56 pb-16">
         <div className="container mx-auto px-6 mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 text-center">Mentions Légales</h1>
+          <h1 className="text-4xl font-bold text-foreground text-center">Mentions Légales</h1>
         </div>
 
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="space-y-8 text-gray-700">
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Éditeur du site</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">Éditeur du site</h2>
               <p>
                 <strong>AMMO - Maîtrise d'Œuvre</strong><br />
                 8 ruelle Boulot<br />
@@ -29,12 +29,12 @@ export default function MentionsLegales() {
                 <strong>Téléphone :</strong> +262 693 397 786<br />
                 <strong>Email :</strong> info@ammo.re<br />
                 <br />
-                <strong>Conception et développement :</strong> <a href="https://digiqo.fr" className="text-amber-600 hover:text-amber-700 underline">digiqo.fr</a>
+                <strong>Conception et développement :</strong> <a href="https://digiqo.fr" className="text-secondary hover:text-amber-700 underline">digiqo.fr</a>
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Hébergement</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">Hébergement</h2>
               <p>
                 Le site est hébergé par :<br />
                 <strong>Netlify, Inc.</strong><br />
@@ -45,7 +45,7 @@ export default function MentionsLegales() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Propriété intellectuelle</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">Propriété intellectuelle</h2>
               <p>
                 L'ensemble du contenu de ce site (textes, images, vidéos, logos, icônes) est la propriété exclusive d'AMMO,
                 sauf mention contraire. Toute reproduction, distribution, modification, adaptation, retransmission ou publication,
@@ -54,7 +54,7 @@ export default function MentionsLegales() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Données personnelles</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">Données personnelles</h2>
               <p>
                 Conformément à la loi « informatique et libertés » du 6 janvier 1978 modifiée et au Règlement Général sur
                 la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification, de suppression et
@@ -66,7 +66,7 @@ export default function MentionsLegales() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Cookies</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">Cookies</h2>
               <p>
                 Ce site utilise des cookies pour améliorer l'expérience utilisateur et analyser le trafic.
                 En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies.
@@ -74,7 +74,7 @@ export default function MentionsLegales() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Limitation de responsabilité</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">Limitation de responsabilité</h2>
               <p>
                 AMMO s'efforce d'assurer au mieux de ses possibilités, l'exactitude et la mise à jour des informations
                 diffusées sur ce site. Toutefois, AMMO ne peut garantir l'exactitude, la précision ou l'exhaustivité des

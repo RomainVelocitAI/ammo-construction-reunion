@@ -67,13 +67,13 @@ export function AboutSectionSplit() {
   const parallaxOffset = scrollY * 0.5;
 
   return (
-    <section ref={sectionRef} className={`relative ${isMobile ? 'min-h-[600px]' : 'min-h-screen'} flex items-center overflow-hidden bg-white`}>
+    <section ref={sectionRef} className={`relative ${isMobile ? 'min-h-[600px]' : 'min-h-screen'} flex items-center overflow-hidden bg-background`}>
       {/* Split Layout Container */}
       <div className={`w-full h-full flex ${isMobile || isTablet ? 'flex-col' : 'flex-row'}`}>
 
         {/* Left Side - Image with Parallax */}
-        <div className={`relative ${isMobile || isTablet ? 'w-full' : 'w-1/2'} ${isMobile ? 'h-[40vh]' : isTablet ? 'h-[50vh]' : 'h-screen'} bg-white`}>
-          <div className="absolute inset-0 overflow-hidden bg-white">
+        <div className={`relative ${isMobile || isTablet ? 'w-full' : 'w-1/2'} ${isMobile ? 'h-[40vh]' : isTablet ? 'h-[50vh]' : 'h-screen'} bg-background`}>
+          <div className="absolute inset-0 overflow-hidden bg-background">
             <div
               className="absolute inset-0 scale-110"
               style={{ transform: `translateY(${-parallaxOffset * 0.3}px) scale(1.1)` }}
@@ -89,15 +89,15 @@ export function AboutSectionSplit() {
 
           {/* Floating Stats Cards - Outside of overflow container */}
           <div className={`absolute ${isMobile ? 'bottom-4 left-4' : isTablet ? 'bottom-6 left-6' : 'bottom-10 left-10'} z-10 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className={`bg-white/95 backdrop-blur-md ${isMobile ? 'p-4' : isTablet ? 'p-5' : 'p-6'} rounded-2xl shadow-2xl`}>
-              <div className={`${isMobile ? 'text-3xl' : isTablet ? 'text-4xl' : 'text-5xl'} font-bold text-amber-500`}>{stats.years}+</div>
-              <div className="text-gray-700 font-medium">Années d'excellence</div>
+            <div className={`bg-background/95 backdrop-blur-md ${isMobile ? 'p-4' : isTablet ? 'p-5' : 'p-6'} rounded-2xl shadow-2xl`}>
+              <div className={`${isMobile ? 'text-3xl' : isTablet ? 'text-4xl' : 'text-5xl'} font-bold text-accent`}>{stats.years}+</div>
+              <div className="text-foreground font-medium">Années d'excellence</div>
             </div>
           </div>
         </div>
 
         {/* Right Side - Content */}
-        <div className={`${isMobile || isTablet ? 'w-full' : 'w-1/2'} flex items-center justify-center ${isMobile ? 'p-6' : isTablet ? 'p-8' : 'p-16'} bg-white`}>
+        <div className={`${isMobile || isTablet ? 'w-full' : 'w-1/2'} flex items-center justify-center ${isMobile ? 'p-6' : isTablet ? 'p-8' : 'p-16'} bg-background`}>
           <div className={`max-w-2xl transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
 
             {/* Title */}

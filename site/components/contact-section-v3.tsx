@@ -38,60 +38,60 @@ export function ContactSectionV3() {
   };
 
   return (
-    <section id="contact" className={`${isMobile ? 'py-12' : isTablet ? 'py-16' : 'py-24'} bg-gradient-to-br from-gray-50 via-white to-amber-50 relative overflow-hidden`}>
+    <section id="contact" className={`${isMobile ? 'py-12' : isTablet ? 'py-16' : 'py-24'} bg-gradient-to-br from-muted/20 via-background to-secondary/10 relative overflow-hidden`}>
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-amber-200/20 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-200/20 rounded-full blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-secondary/10 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className={`container mx-auto ${isMobile ? 'px-4' : 'px-6'} relative z-10 flex flex-col`}>
         <div className="w-full text-center mb-20 block">
-          <h2 className={`${isMobile ? 'text-3xl' : isTablet ? 'text-4xl' : 'text-5xl'} font-bold text-gray-900 mb-4`}>
+          <h2 className={`${isMobile ? 'text-3xl' : isTablet ? 'text-4xl' : 'text-5xl'} font-bold text-foreground mb-4`}>
             Contactez-nous
           </h2>
-          <p className={`${isMobile ? 'text-base' : 'text-lg'} text-gray-600 max-w-2xl mx-auto`}>
+          <p className={`${isMobile ? 'text-base' : 'text-lg'} text-muted-foreground max-w-2xl mx-auto`}>
             Un projet en tête ? Notre équipe est à votre écoute pour vous accompagner dans sa réalisation.
           </p>
         </div>
 
         <div className={`grid ${isMobile ? 'grid-cols-1' : 'grid-cols-1 lg:grid-cols-2'} gap-8`}>
           <div className={`${isMobile ? 'order-2' : ''} space-y-6`}>
-            <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+            <div className="bg-background p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-border group">
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-amber-500 to-yellow-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <Phone className="h-7 w-7 text-white" />
+                <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-secondary to-accent rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <Phone className="h-7 w-7 text-primary-foreground" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium text-gray-500 mb-1">Téléphone</p>
-                  <a href="tel:+262693397786" className="text-lg font-bold text-gray-900 hover:text-amber-600 transition-colors block break-words">
+                  <p className="text-sm font-medium text-muted-foreground mb-1">Téléphone</p>
+                  <a href="tel:+262693397786" className="text-lg font-bold text-foreground hover:text-secondary transition-colors block break-words">
                     +262 693 397 786
                   </a>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+            <div className="bg-background p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-border group">
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-amber-500 to-yellow-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <Mail className="h-7 w-7 text-white" />
+                <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-secondary to-accent rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <Mail className="h-7 w-7 text-primary-foreground" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium text-gray-500 mb-1">Email</p>
-                  <a href="mailto:info@ammo.re" className="text-lg font-bold text-gray-900 hover:text-amber-600 transition-colors block break-words">
+                  <p className="text-sm font-medium text-muted-foreground mb-1">Email</p>
+                  <a href="mailto:info@ammo.re" className="text-lg font-bold text-foreground hover:text-secondary transition-colors block break-words">
                     info@ammo.re
                   </a>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+            <div className="bg-background p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-border group">
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-amber-500 to-yellow-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <MapPin className="h-7 w-7 text-white" />
+                <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-secondary to-accent rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <MapPin className="h-7 w-7 text-primary-foreground" />
                 </div>
                 <div className="flex-1">
-                  <p className="text-sm font-medium text-gray-500 mb-2">Adresse</p>
-                  <p className="text-base font-semibold text-gray-900 leading-relaxed">
+                  <p className="text-sm font-medium text-muted-foreground mb-2">Adresse</p>
+                  <p className="text-base font-semibold text-foreground leading-relaxed">
                     8 Ruelle Boulot<br />
                     97400 Saint-Denis<br />
                     La Réunion
@@ -100,7 +100,7 @@ export function ContactSectionV3() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-amber-500 to-yellow-500 p-6 rounded-2xl shadow-lg text-white">
+            <div className="bg-gradient-to-br from-secondary to-accent p-6 rounded-2xl shadow-lg text-primary-foreground">
               <h4 className="text-lg font-bold mb-4 flex items-center">
                 <span className="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></span>
                 Horaires d'ouverture
@@ -123,18 +123,18 @@ export function ContactSectionV3() {
           </div>
 
           <div className={`${isMobile ? 'order-1' : ''}`}>
-            <div className="bg-white p-8 lg:p-10 rounded-3xl shadow-2xl border border-gray-100 h-full">
+            <div className="bg-background p-8 lg:p-10 rounded-3xl shadow-2xl border border-border h-full">
               <div className="mb-8">
-                <h3 className={`${isMobile ? 'text-2xl' : 'text-3xl'} font-bold text-gray-900 mb-2`}>
+                <h3 className={`${isMobile ? 'text-2xl' : 'text-3xl'} font-bold text-foreground mb-2`}>
                   Demande de devis gratuit
                 </h3>
-                <p className="text-gray-600">Remplissez le formulaire ci-dessous, nous vous répondons sous 48h</p>
+                <p className="text-muted-foreground">Remplissez le formulaire ci-dessous, nous vous répondons sous 48h</p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-2">
                       Nom complet *
                     </label>
                     <input
@@ -144,13 +144,13 @@ export function ContactSectionV3() {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 focus:bg-white transition-all outline-none"
+                      className="w-full px-4 py-3.5 bg-muted/20 border border-border rounded-xl focus:ring-2 focus:ring-secondary focus:border-secondary focus:bg-background transition-all outline-none"
                       placeholder="Votre nom"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="phone" className="block text-sm font-semibold text-foreground mb-2">
                       Téléphone *
                     </label>
                     <input
@@ -160,14 +160,14 @@ export function ContactSectionV3() {
                       required
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 focus:bg-white transition-all outline-none"
+                      className="w-full px-4 py-3.5 bg-muted/20 border border-border rounded-xl focus:ring-2 focus:ring-secondary focus:border-secondary focus:bg-background transition-all outline-none"
                       placeholder="+262 693 XXX XXX"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-2">
                     Email *
                   </label>
                   <input
@@ -177,13 +177,13 @@ export function ContactSectionV3() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 focus:bg-white transition-all outline-none"
+                    className="w-full px-4 py-3.5 bg-muted/20 border border-border rounded-xl focus:ring-2 focus:ring-secondary focus:border-secondary focus:bg-background transition-all outline-none"
                     placeholder="votre@email.com"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-semibold text-foreground mb-2">
                     Votre projet *
                   </label>
                   <textarea
@@ -193,20 +193,20 @@ export function ContactSectionV3() {
                     rows={6}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 focus:bg-white transition-all resize-none outline-none"
+                    className="w-full px-4 py-3.5 bg-muted/20 border border-border rounded-xl focus:ring-2 focus:ring-secondary focus:border-secondary focus:bg-background transition-all resize-none outline-none"
                     placeholder="Décrivez-nous votre projet en quelques lignes..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-amber-500 to-yellow-500 text-white font-bold py-4 px-8 rounded-xl hover:from-amber-600 hover:to-yellow-600 hover:shadow-xl transition-all duration-300 flex items-center justify-center group text-lg"
+                  className="w-full bg-gradient-to-r from-secondary to-accent text-primary-foreground font-bold py-4 px-8 rounded-xl hover:from-secondary/90 hover:to-accent/90 hover:shadow-xl transition-all duration-300 flex items-center justify-center group text-lg"
                 >
                   <span>Envoyer ma demande</span>
                   <Send className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </button>
 
-                <p className="text-sm text-gray-500 text-center pt-2">
+                <p className="text-sm text-muted-foreground text-center pt-2">
                   * Champs obligatoires - Réponse garantie sous 48h
                 </p>
               </form>

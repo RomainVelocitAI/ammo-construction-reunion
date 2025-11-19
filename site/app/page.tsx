@@ -100,7 +100,7 @@ export default function Home() {
         }}
       />
       <Header />
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen bg-background">
         <LandingAccordionItem />
         <div id="about">
           <AboutSectionSplit />

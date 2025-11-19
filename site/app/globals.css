@@ -6,8 +6,11 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-heading);
+  --font-subheading: var(--font-subheading);
+  --font-body: var(--font-body);
+  --font-notes: var(--font-notes);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -210,71 +213,83 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+
+  /* Palette AMMO - Chantier Premium */
+  --ammo-noir: #000000;
+  --ammo-anthracite: #605E5B;
+  --ammo-ciment: #B2ADA6;
+  --ammo-sable: #C5BA9F;
+  --ammo-camel: #BD9C69;
+  --ammo-creme: #F2ECE7;
+  --ammo-gold: #D6B363;
+
+  /* Variables sémantiques basées sur la palette AMMO */
+  --background: var(--ammo-creme);
+  --foreground: var(--ammo-noir);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: var(--ammo-noir);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --popover-foreground: var(--ammo-noir);
+  --primary: var(--ammo-noir);
+  --primary-foreground: var(--ammo-creme);
+  --secondary: var(--ammo-camel);
+  --secondary-foreground: var(--ammo-creme);
+  --muted: var(--ammo-ciment);
+  --muted-foreground: var(--ammo-anthracite);
+  --accent: var(--ammo-gold);
+  --accent-foreground: var(--ammo-noir);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --border: var(--ammo-sable);
+  --input: var(--ammo-ciment);
+  --ring: var(--ammo-camel);
+  --chart-1: var(--ammo-camel);
+  --chart-2: var(--ammo-sable);
+  --chart-3: var(--ammo-ciment);
+  --chart-4: var(--ammo-gold);
+  --chart-5: var(--ammo-anthracite);
+  --sidebar: var(--ammo-creme);
+  --sidebar-foreground: var(--ammo-noir);
+  --sidebar-primary: var(--ammo-camel);
+  --sidebar-primary-foreground: var(--ammo-creme);
+  --sidebar-accent: var(--ammo-sable);
+  --sidebar-accent-foreground: var(--ammo-noir);
+  --sidebar-border: var(--ammo-ciment);
+  --sidebar-ring: var(--ammo-camel);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  /* Mode sombre avec palette AMMO inversée */
+  --background: var(--ammo-noir);
+  --foreground: var(--ammo-creme);
+  --card: var(--ammo-anthracite);
+  --card-foreground: var(--ammo-creme);
+  --popover: var(--ammo-anthracite);
+  --popover-foreground: var(--ammo-creme);
+  --primary: var(--ammo-gold);
+  --primary-foreground: var(--ammo-noir);
+  --secondary: var(--ammo-camel);
+  --secondary-foreground: var(--ammo-noir);
+  --muted: var(--ammo-anthracite);
+  --muted-foreground: var(--ammo-ciment);
+  --accent: var(--ammo-gold);
+  --accent-foreground: var(--ammo-noir);
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --border: var(--ammo-anthracite);
+  --input: var(--ammo-anthracite);
+  --ring: var(--ammo-camel);
+  --chart-1: var(--ammo-camel);
+  --chart-2: var(--ammo-sable);
+  --chart-3: var(--ammo-ciment);
+  --chart-4: var(--ammo-gold);
+  --chart-5: var(--ammo-anthracite);
+  --sidebar: var(--ammo-noir);
+  --sidebar-foreground: var(--ammo-creme);
+  --sidebar-primary: var(--ammo-camel);
+  --sidebar-primary-foreground: var(--ammo-noir);
+  --sidebar-accent: var(--ammo-anthracite);
+  --sidebar-accent-foreground: var(--ammo-creme);
+  --sidebar-border: var(--ammo-anthracite);
+  --sidebar-ring: var(--ammo-camel);
 }
 
 @layer base {
@@ -283,25 +298,45 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
   }
 }
 
-/* Custom scrollbar */
+@layer utilities {
+  /* Charte typographique AMMO */
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+  .font-subheading {
+    font-family: var(--font-subheading);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+  .font-notes {
+    font-family: var(--font-notes);
+  }
+}
+
+/* Custom scrollbar - Palette AMMO */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #111111;
+  background: var(--ammo-creme);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #D4A574, #B8860B);
+  background: linear-gradient(180deg, var(--ammo-camel), var(--ammo-gold));
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #FFD700, #D4A574);
+  background: linear-gradient(180deg, var(--ammo-gold), var(--ammo-camel));
 }
 
 /* 3D Animation Styles */

@@ -11,15 +11,15 @@ export default function CGV() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-white pt-56 pb-16">
+      <main className="min-h-screen bg-background pt-56 pb-16">
         <div className="container mx-auto px-6 mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 text-center">Conditions Générales de Vente</h1>
+          <h1 className="text-4xl font-bold text-foreground text-center">Conditions Générales de Vente</h1>
         </div>
 
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="space-y-8 text-gray-700">
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Article 1 - Objet</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">Article 1 - Objet</h2>
               <p>
                 Les présentes conditions générales de vente (CGV) régissent les relations contractuelles entre AMMO - Maîtrise d'Œuvre
                 et ses clients dans le cadre de la fourniture de services de maîtrise d'œuvre pour des projets de construction,
@@ -28,7 +28,7 @@ export default function CGV() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Article 2 - Services proposés</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">Article 2 - Services proposés</h2>
               <p>
                 AMMO propose les services suivants :
               </p>
@@ -42,7 +42,7 @@ export default function CGV() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Article 3 - Devis</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">Article 3 - Devis</h2>
               <p>
                 Tout projet débute par l'établissement d'un devis gratuit et sans engagement. Le devis est valable 30 jours
                 à compter de sa date d'émission. Passé ce délai, AMMO se réserve le droit de réviser les prix en fonction
@@ -51,7 +51,7 @@ export default function CGV() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Article 4 - Commande et acceptation</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">Article 4 - Commande et acceptation</h2>
               <p>
                 La commande est formalisée par la signature du devis accompagnée du versement d'un acompte de 30% du montant total.
                 Cette signature vaut acceptation pleine et entière des présentes conditions générales de vente.
@@ -59,7 +59,7 @@ export default function CGV() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Article 5 - Prix et paiement</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">Article 5 - Prix et paiement</h2>
               <p>
                 Les prix sont exprimés en euros, hors taxes. Le paiement s'effectue selon l'échéancier suivant :
               </p>
@@ -72,7 +72,7 @@ export default function CGV() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Article 6 - Délais d'exécution</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">Article 6 - Délais d'exécution</h2>
               <p>
                 Les délais d'exécution sont donnés à titre indicatif. Tout retard dans la réalisation ne peut donner lieu à
                 des pénalités ou à l'annulation de la commande, sauf si ce retard dépasse 60 jours calendaires et n'est pas
@@ -81,7 +81,7 @@ export default function CGV() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Article 7 - Responsabilité</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">Article 7 - Responsabilité</h2>
               <p>
                 AMMO souscrit une assurance responsabilité civile professionnelle et une garantie décennale conformément à la
                 réglementation en vigueur. La responsabilité d'AMMO ne peut être engagée en cas de non-respect des règles
@@ -90,7 +90,7 @@ export default function CGV() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Article 8 - Résiliation</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">Article 8 - Résiliation</h2>
               <p>
                 En cas de résiliation du contrat par le client avant l'achèvement des travaux, celui-ci sera redevable des
                 sommes correspondant aux prestations déjà effectuées, ainsi que d'une indemnité forfaitaire de 20% du montant
@@ -99,7 +99,7 @@ export default function CGV() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Article 9 - Litiges</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">Article 9 - Litiges</h2>
               <p>
                 En cas de litige, une solution amiable sera recherchée avant toute action judiciaire. À défaut, les tribunaux
                 de Saint-Denis de La Réunion seront seuls compétents.
