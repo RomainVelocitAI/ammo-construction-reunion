@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Facebook, Mail, Phone, MapPin } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
@@ -48,7 +49,15 @@ export function Footer() {
         <div className={`grid ${getGridCols()} ${isMobile ? 'gap-6' : 'gap-8'}`}>
           {/* Company Info */}
           <div>
-            <h3 className={`${isMobile ? 'text-xl' : 'text-2xl'} font-bold ${isMobile ? 'mb-3' : 'mb-4'} text-accent`}>AMMO - Maîtrise d'Œuvre</h3>
+            <div className="mb-4">
+              <Image
+                src="/logo-horizontal-gold.png"
+                alt="AMMO - Maîtrise d'Œuvre"
+                width={isMobile ? 180 : 240}
+                height={isMobile ? 58 : 77}
+                className="h-auto"
+              />
+            </div>
             <p className={`${isMobile ? 'text-sm' : 'text-base'} text-muted-foreground mb-2 font-semibold`}>
               Conception à réalisation de vos projets
             </p>
@@ -161,6 +170,11 @@ export function Footer() {
                 CGV
               </Link>
             </div>
+          </div>
+          <div className="mt-6 text-center">
+            <p className="text-muted-foreground text-xs">
+              Propulsé par Digiqo - Ladi La Fé Zot Pub
+            </p>
           </div>
         </div>
       </div>
