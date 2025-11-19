@@ -46,7 +46,7 @@ export default function PromoteursProfessionnelsPage() {
             provider: {
               '@type': 'GeneralContractor',
               name: 'AMMO',
-              telephone: '+262693397786',
+              telephone: '+262693638656',
               email: 'info@ammo.re',
             },
             areaServed: {

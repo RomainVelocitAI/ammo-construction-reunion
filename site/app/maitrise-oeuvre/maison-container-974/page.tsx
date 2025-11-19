@@ -45,7 +45,7 @@ export default function MaisonContainerPage() {
             provider: {
               '@type': 'GeneralContractor',
               name: 'AMMO',
-              telephone: '+262693397786',
+              telephone: '+262693638656',
               email: 'info@ammo.re',
             },
             areaServed: {
@@ -199,7 +199,7 @@ export default function MaisonContainerPage() {
                     Demander un Devis Gratuit
                   </a>
                   <a
-                    href="tel:+262693397786"
+                    href="tel:+262693638656"
                     className="inline-block border-2 border-primary-foreground text-primary-foreground font-bold py-4 px-8 rounded-lg hover:bg-background hover:text-secondary transition-colors"
                   >
                     Appeler un Expert

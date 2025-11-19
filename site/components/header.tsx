@@ -3,10 +3,13 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ChevronDown } from 'lucide-react';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
 
   // Initialize with actual window width if available
   const getInitialMobileState = () => {
@@ -38,9 +41,18 @@ export function Header() {
     };
   }, []);
 
+  const serviceLinks = [
+    { label: 'Villa Contemporaine', href: '/maitrise-oeuvre/villa-contemporaine-reunion' },
+    { label: 'Rénovation Complète', href: '/maitrise-oeuvre/renovation-complete-974' },
+    { label: 'Extension Maison', href: '/maitrise-oeuvre/extension-maison-reunion' },
+    { label: 'Aménagement Extérieur', href: '/maitrise-oeuvre/amenagement-exterieur-reunion' },
+    { label: 'Lodge de Luxe', href: '/maitrise-oeuvre/lodge-luxe-reunion' },
+    { label: 'Maison Container', href: '/maitrise-oeuvre/maison-container-974' },
+    { label: 'Pour Promoteurs', href: '/maitrise-oeuvre/promoteurs-reunion' },
+  ];
+
   const navLinks = [
     { label: 'Accueil', href: '/' },
-    { label: 'Services', href: '/#services' },
     { label: 'À propos', href: '/equipe' },
   ];
 
@@ -86,6 +98,38 @@ export function Header() {
                   <span className="absolute -bottom-3 left-0 w-0 h-[2px] bg-gradient-to-r from-secondary via-accent to-secondary transition-all duration-700 group-hover:w-full"></span>
                 </Link>
               ))}
+
+              {/* Services Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+              >
+                <button className="relative text-foreground hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-secondary hover:to-accent transition-all duration-500 group flex items-center gap-2">
+                  <span className="text-sm lg:text-base xl:text-lg font-light tracking-[0.25em] uppercase">
+                    Services
+                  </span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
+                  <span className="absolute -bottom-3 left-0 w-0 h-[2px] bg-gradient-to-r from-secondary via-accent to-secondary transition-all duration-700 group-hover:w-full"></span>
+                </button>
+
+                {/* Dropdown Menu */}
+                <div className={`absolute top-full left-0 mt-2 w-[280px] bg-background/95 backdrop-blur-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] rounded-xl overflow-hidden transition-all duration-300 ${
+                  isServicesOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
+                }`}>
+                  <div className="py-2">
+                    {serviceLinks.map((service) => (
+                      <Link
+                        key={service.label}
+                        href={service.href}
+                        className="block px-6 py-3 text-foreground hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-secondary hover:to-accent hover:bg-secondary/10 transition-all duration-300 text-sm font-light tracking-wide"
+                      >
+                        {service.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* CTA Button - Ultra premium avec effet de luxe */}
@@ -127,7 +171,7 @@ export function Header() {
         {/* Mobile Menu - Premium design */}
         {isMobile && (
         <div className={`transition-all duration-500 overflow-hidden ${
-          isMobileMenuOpen ? 'max-h-[600px] opacity-100 mt-6' : 'max-h-0 opacity-0'
+          isMobileMenuOpen ? 'max-h-[800px] opacity-100 mt-6' : 'max-h-0 opacity-0'
         }`}>
           <div className="py-6 border-t border-secondary/20">
             {navLinks.map((link) => (
@@ -140,6 +184,37 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
+
+            {/* Mobile Services Accordion */}
+            <div className="border-t border-secondary/10 mt-2">
+              <button
+                onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                className="w-full flex items-center justify-between py-3 px-4 text-foreground hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-secondary hover:to-accent transition-all duration-500 font-light tracking-[0.2em] uppercase text-sm"
+              >
+                <span>Services</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              <div className={`transition-all duration-300 overflow-hidden ${
+                isMobileServicesOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+              }`}>
+                <div className="bg-secondary/5 py-2">
+                  {serviceLinks.map((service) => (
+                    <Link
+                      key={service.label}
+                      href={service.href}
+                      className="block py-2 px-8 text-foreground/80 hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-secondary hover:to-accent transition-all duration-300 text-sm font-light"
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        setIsMobileServicesOpen(false);
+                      }}
+                    >
+                      {service.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
             <Link href="/#contact" className="mt-6 mx-4 w-[calc(100%-2rem)] py-3 bg-gradient-to-r from-secondary to-accent text-primary-foreground font-medium text-sm tracking-[0.2em] uppercase hover:from-accent hover:to-secondary transition-all duration-500 relative overflow-hidden group block text-center" onClick={() => setIsMobileMenuOpen(false)}>
               <span className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-500">
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent -skew-x-12 group-hover:animate-[shimmer_2s_ease-in-out_infinite]"></span>

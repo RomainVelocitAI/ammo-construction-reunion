@@ -81,7 +81,9 @@
       "Bash(netstat:*)",
       "Bash(rm:*)",
       "Bash(nul)",
-      "Bash(PORT=3001 npm run dev:*)"
+      "Bash(PORT=3001 npm run dev:*)",
+      "Bash(find:*)",
+      "Bash(do sed -i 's/+262693397786/+262693638656/g; s/+262 693 397 786/+262 693 63 86 56/g; s/0693 397 786/0693 63 86 56/g' \"$file\")"
     ],
     "deny": [],
     "ask": []

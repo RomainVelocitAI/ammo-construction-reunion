@@ -54,8 +54,8 @@ export function ContactSectionV2() {
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-medium text-gray-500 mb-1">Téléphone</p>
-                  <a href="tel:+262693397786" className="text-lg font-bold text-gray-900 hover:text-amber-600 transition-colors block break-words">
-                    +262 693 397 786
+                  <a href="tel:+262693638656" className="text-lg font-bold text-gray-900 hover:text-amber-600 transition-colors block break-words">
+                    +262 693 63 86 56
                   </a>
                 </div>
               </div>

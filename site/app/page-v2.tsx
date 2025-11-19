@@ -11,7 +11,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'AMMO - Maitrise d\'Oeuvre La Reunion | Construction & Renovation 974',
-  description: 'Expert en maitrise d\'oeuvre a La Reunion. AMMO vous accompagne dans vos projets de construction, renovation et amenagement. Devis gratuit sous 48h. Contact : 0693 397 786',
+  description: 'Expert en maitrise d\'oeuvre a La Reunion. AMMO vous accompagne dans vos projets de construction, renovation et amenagement. Devis gratuit sous 48h. Contact : 0693 63 86 56',
   keywords: 'maitrise d\'oeuvre La Reunion, maitre d\'oeuvre 974, construction La Reunion, renovation La Reunion, architecte La Reunion, bureau d\'etudes construction, Saint-Denis',
   authors: [{ name: 'AMMO' }],
   openGraph: {
@@ -61,7 +61,7 @@ export default function Home() {
             url: 'https://ammo.re',
             logo: 'https://ammo.re/logo.png',
             image: 'https://ammo.re/logo.png',
-            telephone: '+262693397786',
+            telephone: '+262693638656',
             email: 'info@ammo.re',
             address: {
               '@type': 'PostalAddress',

@@ -26,7 +26,7 @@ export default function MentionsLegales() {
                 97400 Saint-Denis<br />
                 La Réunion<br />
                 <br />
-                <strong>Téléphone :</strong> +262 693 397 786<br />
+                <strong>Téléphone :</strong> +262 693 63 86 56<br />
                 <strong>Email :</strong> info@ammo.re<br />
                 <br />
                 <strong>Conception et développement :</strong> <a href="https://digiqo.fr" className="text-secondary hover:text-amber-700 underline">digiqo.fr</a>
