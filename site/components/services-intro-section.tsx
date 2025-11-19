@@ -43,9 +43,9 @@ export function ServicesIntroSection() {
         <div className="w-full mb-16">
           <div className="max-w-6xl mx-auto text-center">
           {/* Titre principal H2 optimisé SEO services */}
-          <h2 className={`${effectiveIsMobile ? 'text-2xl' : effectiveIsTablet ? 'text-3xl' : 'text-6xl'} font-bold text-foreground mb-6 leading-tight`}>
+          <h2 className={`${effectiveIsMobile ? 'text-2xl' : effectiveIsTablet ? 'text-3xl' : 'text-6xl'} font-heading font-bold text-foreground mb-6 leading-tight`}>
             Nos Services de Construction et Rénovation
-            <span className={`block ${effectiveIsMobile ? 'text-lg' : effectiveIsTablet ? 'text-xl' : 'text-3xl'} font-light text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent mt-2`}>
+            <span className={`block ${effectiveIsMobile ? 'text-lg' : effectiveIsTablet ? 'text-xl' : 'text-3xl'} font-subheading font-light text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent mt-2`}>
               Villa • Rénovation • Extension • Aménagement • Lodge • Promoteurs
             </span>
           </h2>
@@ -85,8 +85,7 @@ export function ServicesIntroSection() {
               className="font-bold text-foreground"
             >
               aménagement extérieur
-            </LinkPreview>{" "}
-            et{" "}
+            </LinkPreview>,{" "}
             <LinkPreview
               url="#lodge"
               isStatic={true}
@@ -94,6 +93,15 @@ export function ServicesIntroSection() {
               className="font-bold text-foreground"
             >
               lodge de luxe
+            </LinkPreview>{" "}
+            et{" "}
+            <LinkPreview
+              url="#promoteurs"
+              isStatic={true}
+              imageSrc="/promoteurs-professionnels.jpg"
+              className="font-bold text-foreground"
+            >
+              projets pour promoteurs
             </LinkPreview>.
             Chaque réalisation bénéficie de notre expertise technique RE2020 et de notre connaissance
             approfondie du territoire réunionnais.

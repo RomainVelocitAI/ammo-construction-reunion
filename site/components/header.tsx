@@ -44,11 +44,10 @@ export function Header() {
   const serviceLinks = [
     { label: 'Villa Contemporaine', href: '/maitrise-oeuvre/villa-contemporaine-reunion' },
     { label: 'Rénovation Complète', href: '/maitrise-oeuvre/renovation-complete-974' },
-    { label: 'Extension Maison', href: '/maitrise-oeuvre/extension-maison-reunion' },
+    { label: 'Extension Sur-Mesure', href: '/maitrise-oeuvre/extension-maison-reunion' },
     { label: 'Aménagement Extérieur', href: '/maitrise-oeuvre/amenagement-exterieur-reunion' },
     { label: 'Lodge de Luxe', href: '/maitrise-oeuvre/lodge-luxe-reunion' },
-    { label: 'Maison Container', href: '/maitrise-oeuvre/maison-container-974' },
-    { label: 'Pour Promoteurs', href: '/maitrise-oeuvre/promoteurs-reunion' },
+    { label: 'Promoteurs Professionnels', href: '/maitrise-oeuvre/promoteurs-reunion' },
   ];
 
   const navLinks = [
