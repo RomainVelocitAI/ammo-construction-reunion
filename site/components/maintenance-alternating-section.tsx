@@ -132,7 +132,7 @@ const MaintenanceCard = ({
               </span>
             </div>
 
-            <h3 className={`${getTextSize()} font-bold text-foreground`}>
+            <h3 className={`${getTextSize()} font-subheading font-bold text-foreground`}>
               {title}
             </h3>
 
@@ -187,7 +187,7 @@ const MaintenanceAlternatingSection = () => {
     <section className="bg-background">
         {/* Header */}
         <div className={`text-center ${isMobile ? 'py-12 px-4' : isTablet ? 'py-16 px-6' : 'py-20 px-4'}`}>
-          <h2 className={`${getHeaderSize()} font-bold text-foreground mb-6`}>
+          <h2 className={`${getHeaderSize()} font-subheading font-bold text-foreground mb-6`}>
             Service d'Entretien Préventif
             <span className="block text-secondary mt-2">Votre Avantage Décisif</span>
           </h2>
