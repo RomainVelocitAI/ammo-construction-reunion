@@ -91,7 +91,7 @@ export const FinancialHero = ({
         variants={containerVariants}
       >
         {/* Left: Text Content */}
-        <div className="flex flex-col items-center text-center lg:items-start lg:text-left lg:w-1/2">
+        <div className="flex flex-col items-center text-center lg:items-start lg:text-left lg:w-1/2 relative z-10">
           <motion.h1
             className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl"
             variants={itemVariants}
