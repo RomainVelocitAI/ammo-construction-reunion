@@ -265,15 +265,15 @@ export default function EquipePage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-bold text-foreground mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
               Prêt à Démarrer Votre Projet ?
             </h2>
-            <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
               Discutons ensemble de votre projet de construction ou de rénovation. Notre équipe est là pour vous accompagner.
             </p>
             <a
               href="/#contact"
-              className="inline-block px-8 py-4 bg-gradient-to-r from-amber-500 to-yellow-500 text-primary-foreground font-bold text-lg rounded-full hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              className="inline-block px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-amber-500 to-yellow-500 text-primary-foreground font-bold text-base sm:text-lg rounded-full hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               Demander un Devis Gratuit
             </a>
