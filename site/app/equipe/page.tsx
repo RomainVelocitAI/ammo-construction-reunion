@@ -259,21 +259,21 @@ export default function EquipePage() {
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-br from-amber-50 to-yellow-50">
           <motion.div
-            className="container mx-auto px-6 text-center"
+            className="container mx-auto px-6 text-center max-w-4xl"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-6">
               Prêt à Démarrer Votre Projet ?
             </h2>
-            <p className="text-lg sm:text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
               Discutons ensemble de votre projet de construction ou de rénovation. Notre équipe est là pour vous accompagner.
             </p>
             <a
               href="/#contact"
-              className="inline-block px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-amber-500 to-yellow-500 text-primary-foreground font-bold text-base sm:text-lg rounded-full hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              className="inline-block px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-amber-500 to-yellow-500 text-primary-foreground font-bold text-sm sm:text-base lg:text-lg rounded-full hover:shadow-2xl transition-all duration-300 hover:scale-105 whitespace-nowrap"
             >
               Demander un Devis Gratuit
             </a>
