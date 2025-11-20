@@ -88,8 +88,6 @@ export default function RootLayout({
   return (
     <html lang="fr-FR">
       <head>
-        <link rel="icon" href="/favicon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/favicon.png" />
         <meta name="theme-color" content="#D6B363" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
       </head>
