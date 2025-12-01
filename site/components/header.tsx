@@ -83,13 +83,13 @@ export function Header() {
 
           {/* Desktop Navigation - Ultra espacé et premium */}
           {!isMobile && (
-          <div className="flex items-center gap-16 xl:gap-20">
+          <div className="flex items-center gap-16 xl:gap-20 ml-16 xl:ml-24">
             <div className="flex items-center gap-12 xl:gap-16">
               {navLinks.map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="relative text-foreground hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-secondary hover:to-accent transition-all duration-500 group"
+                  className="relative text-foreground hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-secondary hover:to-accent transition-all duration-500 group whitespace-nowrap"
                 >
                   <span className="text-sm lg:text-base xl:text-lg font-light tracking-[0.25em] uppercase">
                     {link.label}
