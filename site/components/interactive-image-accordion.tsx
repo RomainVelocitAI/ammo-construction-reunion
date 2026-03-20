@@ -39,11 +39,11 @@ const accordionItems = [
   },
   {
     id: 5,
-    title: 'Entretien',
-    subtitle: 'Préservez votre patrimoine',
-    description: 'Maintenance préventive et corrective pour préserver la qualité et la valeur de votre bien immobilier dans le temps.',
-    features: ['Maintenance préventive', 'Réparations', 'Ravalement', 'Traitement anti-humidité'],
-    imageUrl: '/entretien.jpg',
+    title: 'Conception',
+    subtitle: 'Donnez forme à vos idées',
+    description: 'Plans architecturaux, modélisation 3D et dossiers de permis de construire. Notre bureau d\'études intégré transforme vos idées en projets concrets.',
+    features: ['Plans architecturaux', 'Modélisation 3D', 'Permis de construire', 'Études techniques'],
+    imageUrl: '/service-conception.jpg',
   },
 ];
 
@@ -182,11 +182,11 @@ export function LandingAccordionItem() {
             </span>
             <h1 className={`${effectiveIsMobile ? 'text-2xl' : effectiveIsTablet ? 'text-4xl' : 'text-6xl'} font-bold leading-tight tracking-tighter`}>
               <span className="bg-gradient-to-r from-secondary via-accent to-secondary bg-clip-text text-transparent">
-                Maîtrise d'Œuvre
+                Votre contractant général
               </span>
               <br />
               <span className="text-foreground">
-                Construction & Rénovation à La Réunion
+                à La Réunion
               </span>
             </h1>
             <p className={`mt-6 ${effectiveIsMobile ? 'text-sm' : effectiveIsTablet ? 'text-base' : 'text-lg'} text-muted-foreground max-w-xl ${effectiveIsMobile || effectiveIsTablet ? 'mx-auto' : 'mx-0'}`}>
@@ -212,14 +212,8 @@ export function LandingAccordionItem() {
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-secondary to-accent transition-transform duration-300 group-hover:scale-105"></span>
                 <span className={`relative text-primary-foreground font-bold tracking-wider ${effectiveIsMobile ? 'text-sm' : 'text-base'}`}>
-                  DEVIS GRATUIT
+                  PRENDRE CONTACT
                 </span>
-              </a>
-              <a
-                href="#realisations"
-                className={`inline-block px-6 sm:px-8 py-3 border-2 border-secondary text-secondary font-bold tracking-wider hover:bg-secondary/10 transition-all duration-300 text-center ${effectiveIsMobile ? 'text-sm' : 'text-base'}`}
-              >
-                NOS PROJETS
               </a>
             </div>
           </div>

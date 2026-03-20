@@ -1,0 +1,253 @@
+import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
+import { ZoomParallaxExtension } from '@/components/zoom-parallax-extension'
+import AnimatedSectionsExtension from '@/components/animated-sections-extension'
+import { RelatedServices } from '@/components/related-services'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Extension Sur-Mesure à La Réunion | AMMO Contractant Général',
+  description: 'Contractant général pour votre extension sur-mesure à La Réunion. Agrandissement harmonieux, suite parentale, véranda. Pilotage complet. Prenez contact.',
+  keywords: 'extension sur-mesure La Réunion, agrandissement maison La Réunion, extension 974, contractant général agrandissement, suite parentale La Réunion, véranda tropicale',
+  openGraph: {
+    title: 'Extension Sur-Mesure à La Réunion | AMMO Contractant Général',
+    description: 'Contractant général pour agrandissement de maison. Coordination complète, respect budget et délais.',
+    url: 'https://ammo.re/services/extension-sur-mesure',
+    siteName: 'AMMO Contractant Général',
+    locale: 'fr_FR',
+    type: 'website',
+    images: [{ url: 'https://ammo.re/extension.png', width: 1200, height: 630, alt: 'Extension Maison La Réunion par AMMO' }],
+  },
+  alternates: {
+    canonical: 'https://ammo.re/services/extension-sur-mesure',
+  },
+}
+
+export default function ExtensionSurMesurePage() {
+  const images = [
+    { src: '/extension.png', alt: 'Extension sur-mesure maison La Réunion - Vue principale AMMO' },
+    { src: '/extension.png', alt: 'Agrandissement moderne 974 - Pilotage AMMO contractant général' },
+    { src: '/extension.png', alt: 'Extension véranda tropicale La Réunion - Coordination AMMO' },
+    { src: '/extension.png', alt: 'Bureau extension maison 974 - AMMO contractant général' },
+    { src: '/extension.png', alt: 'Suite parentale extension La Réunion - Suivi chantier AMMO' },
+    { src: '/extension.png', alt: 'Salon extension sur-mesure 974 - Contractant général' },
+    { src: '/extension.png', alt: 'Intégration extension architecture - Qualité AMMO' },
+  ]
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            serviceType: 'Extension sur-mesure',
+            provider: {
+              '@type': 'GeneralContractor',
+              name: 'AMMO',
+              telephone: '+262693638656',
+              email: 'info@ammo.re',
+            },
+            areaServed: {
+              '@type': 'State',
+              name: 'La Reunion',
+            },
+            description: 'Service complet de contractant général pour l\'extension et l\'agrandissement de maisons à La Réunion. Pilotage de projet, coordination artisans, respect budget.',
+            offers: {
+              '@type': 'Offer',
+              availability: 'https://schema.org/InStock',
+              priceSpecification: {
+                '@type': 'PriceSpecification',
+                priceCurrency: 'EUR',
+                price: 'Sur devis',
+              },
+            },
+          }),
+        }}
+      />
+      <Header />
+      <main className="min-h-screen bg-background">
+        <section className="relative">
+          <ZoomParallaxExtension images={images} />
+        </section>
+        <section className="py-24 bg-gradient-to-b from-background to-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl lg:text-7xl font-bold text-foreground mb-4">
+                Extension Sur-Mesure
+              </h1>
+              <p className="text-xl lg:text-2xl text-secondary mb-12">
+                Agrandissement harmonieux de votre espace
+              </p>
+              <h2 className="text-4xl font-bold text-foreground mb-8">
+                Agrandissez Votre Horizon de Vie
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Votre famille s'agrandit ? Vos besoins évoluent ? Nos extensions sur-mesure sont
+                conçues pour s'intégrer parfaitement à votre habitat existant. Nous créons des
+                espaces supplémentaires qui respectent l'architecture originale tout en apportant
+                modernité et fonctionnalité.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Section Vision */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-4xl font-bold text-foreground mb-8 text-center">
+                L'Extension Idéale pour Votre Mode de Vie
+              </h2>
+              <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div className="relative h-96 rounded-xl overflow-hidden shadow-2xl">
+                  <img
+                    src="/extension.png"
+                    alt="Extension sur-mesure La Réunion"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                    L'extension sur-mesure est la solution parfaite pour adapter votre habitat à l'évolution
+                    de votre vie. Que vous accueilliez un nouveau membre dans la famille, que vous travailliez
+                    depuis chez vous ou que vous souhaitiez simplement plus d'espace, nous créons l'extension
+                    qui s'intègre parfaitement à votre maison existante.
+                  </p>
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                    Notre expertise en architecture tropicale nous permet de concevoir des extensions qui
+                    respectent l'harmonie de votre habitat tout en apportant modernité et confort. Chaque
+                    extension est pensée pour maximiser la luminosité, la ventilation naturelle et l'ouverture
+                    sur l'extérieur.
+                  </p>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    De la simple véranda à l'ajout d'un étage complet, nous maîtrisons toutes les techniques
+                    pour agrandir votre espace de vie sans dénaturer votre propriété.
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8 mb-16">
+                <div className="bg-muted/30 p-8 rounded-xl hover:shadow-xl transition-shadow duration-300">
+                  <h3 className="text-2xl font-bold text-foreground mb-6">Types d'Extensions</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <span className="text-accent mr-3 text-xl">✓</span>
+                      <div>
+                        <strong className="text-foreground">Extension horizontale</strong>
+                        <p className="text-muted-foreground">Agrandissement au sol jusqu'à 40m²</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-3 text-xl">✓</span>
+                      <div>
+                        <strong className="text-foreground">Surélévation</strong>
+                        <p className="text-muted-foreground">Ajout d'un étage complet ou partiel</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-3 text-xl">✓</span>
+                      <div>
+                        <strong className="text-foreground">Véranda moderne</strong>
+                        <p className="text-muted-foreground">Espace lumineux et bioclimatique</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-3 text-xl">✓</span>
+                      <div>
+                        <strong className="text-foreground">Annexe indépendante</strong>
+                        <p className="text-muted-foreground">Studio, bureau ou suite autonome</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-secondary/10 p-8 rounded-xl hover:shadow-xl transition-shadow duration-300">
+                  <h3 className="text-2xl font-bold text-foreground mb-6">Notre Process</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <span className="text-secondary mr-3">•</span>
+                      <div>
+                        <strong className="text-foreground">Étude de faisabilité</strong>
+                        <p className="text-muted-foreground">Analyse technique et réglementaire du projet</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-secondary mr-3">•</span>
+                      <div>
+                        <strong className="text-foreground">Gestion administrative</strong>
+                        <p className="text-muted-foreground">Permis de construire et autorisations</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-secondary mr-3">•</span>
+                      <div>
+                        <strong className="text-foreground">Intégration parfaite</strong>
+                        <p className="text-muted-foreground">Harmonie avec l'existant garantie</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-secondary mr-3">•</span>
+                      <div>
+                        <strong className="text-foreground">Raccordements</strong>
+                        <p className="text-muted-foreground">Intégration complète aux réseaux existants</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* CTA principal */}
+              <div className="bg-gradient-to-r from-secondary to-accent rounded-2xl p-12 text-center text-primary-foreground">
+                <h3 className="text-3xl font-bold mb-4">Agrandissez Votre Espace de Vie</h3>
+                <p className="text-xl mb-8 opacity-95">
+                  Contactez-nous pour discuter de votre projet d'extension
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="/#contact"
+                    className="inline-block bg-background text-secondary font-bold py-4 px-8 rounded-lg hover:bg-muted/50 transition-colors"
+                  >
+                    Prendre Contact
+                  </a>
+                  <a
+                    href="/#realisations"
+                    className="inline-block border-2 border-primary-foreground text-primary-foreground font-bold py-4 px-8 rounded-lg hover:bg-background hover:text-secondary transition-colors"
+                  >
+                    Voir nos Extensions
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Animated Sections */}
+
+        {/* Services Complémentaires */}
+        <RelatedServices
+          services={[
+            {
+              title: "Rénovation Complète",
+              description: "Votre extension s'inscrit dans un projet plus large ? Profitez-en pour rénover entièrement votre maison existante. Isolation, électricité, plomberie, aménagements. Une cohérence parfaite entre ancien et nouveau.",
+              linkText: "Rénover en Profondeur",
+              href: "/services/renovation-complete",
+              image: "/renovation.png",
+              imageAlt: "Rénovation complète La Réunion - Avec extension"
+            },
+            {
+              title: "Aménagement Extérieur",
+              description: "Votre extension créée, pensez aux extérieurs : nouvelle terrasse pour profiter de l'espace gagné, pergola bioclimatique, jardin paysager. Prolongez votre nouvel espace de vie vers l'extérieur.",
+              linkText: "Aménager vos Nouveaux Extérieurs",
+              href: "/services/amenagement-exterieur",
+              image: "/amenagement exterieur.png",
+              imageAlt: "Aménagement extérieur extension La Réunion - Terrasse et jardin"
+            }
+          ]}
+        />
+        <AnimatedSectionsExtension />
+      </main>
+      <Footer />
+    </>
+  )
+}

@@ -36,7 +36,7 @@ export function AboutSectionSplit() {
         const progress = currentStep / steps;
 
         setStats({
-          years: Math.floor(10 * progress),
+          years: Math.floor(15 * progress),
           projects: 0,
           satisfaction: 0
         });
@@ -91,7 +91,7 @@ export function AboutSectionSplit() {
           <div className={`absolute ${isMobile ? 'bottom-4 left-4' : isTablet ? 'bottom-6 left-6' : 'bottom-10 left-10'} z-10 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className={`bg-background/95 backdrop-blur-md ${isMobile ? 'p-4' : isTablet ? 'p-5' : 'p-6'} rounded-2xl shadow-2xl`}>
               <div className={`${isMobile ? 'text-3xl' : isTablet ? 'text-4xl' : 'text-5xl'} font-bold text-accent`}>{stats.years}+</div>
-              <div className="text-foreground font-medium">Années d'excellence</div>
+              <div className="text-foreground font-medium">Années d'expérience</div>
             </div>
           </div>
         </div>
@@ -102,19 +102,19 @@ export function AboutSectionSplit() {
 
             {/* Title */}
             <h2 className={`${isMobile ? 'text-3xl' : isTablet ? 'text-4xl' : 'text-6xl'} font-bold text-gray-900 mb-6 leading-tight`}>
-              AMMO - Maîtrise d'Œuvre
+              Votre contractant général à La Réunion
               <span className={`block ${isMobile ? 'text-xl' : isTablet ? 'text-2xl' : 'text-3xl'} font-light text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-600 mt-2`}>
-                De votre vision à la réalité
+                De la conception à la réalisation
               </span>
             </h2>
 
             {/* Main Text */}
             <p className={`${isMobile ? 'text-lg' : 'text-xl'} text-gray-700 mb-6 leading-relaxed`}>
-              Expert en maîtrise d'œuvre à La Réunion, nous coordonnons et pilotons l'intégralité de votre projet de construction avec une expertise reconnue dans tous les métiers du bâtiment.
+              Contractant général à La Réunion, AMMO coordonne l'intégralité de vos travaux avec une expertise reconnue dans tous les métiers du bâtiment. Un seul interlocuteur, trois pôles d'expertise.
             </p>
 
             <p className={`${isMobile ? 'text-base' : 'text-lg'} text-gray-600 mb-8`}>
-              De la conception architecturale à la réception des travaux, nous assurons la coordination technique, juridique et administrative de votre projet. Notre expertise garantit le respect des normes RE2020, des délais et de votre budget.
+              AMMO BTP pour la rénovation et le gros œuvre, AMMO EXECUTION pour le bois et les extérieurs, AMMO CONCEPTION pour les plans et la 3D. Ensemble, nous garantissons le respect des normes RE2020, des délais et de votre budget.
             </p>
 
 
@@ -127,8 +127,8 @@ export function AboutSectionSplit() {
                 Notre Différence
               </h3>
               <p className={`${isMobile ? 'text-base' : 'text-lg'} text-gray-700 font-medium`}>
-                L'Entretien Patrimonial : Contrairement à nos concurrents, nous restons à vos côtés après la livraison.
-                Un service unique de maintenance préventive qui protège et valorise votre investissement année après année.
+                Votre projet ne s'arrête pas à la livraison. AMMO assure le suivi et l'entretien de vos réalisations.
+                Un interlocuteur unique de la conception à la maintenance, pour protéger et valoriser votre investissement.
               </p>
             </div>
 
@@ -140,7 +140,7 @@ export function AboutSectionSplit() {
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-500"></span>
                 <span className="relative text-white font-bold tracking-wider flex items-center justify-center">
-                  DEVIS GRATUIT
+                  PRENDRE CONTACT
                   <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>

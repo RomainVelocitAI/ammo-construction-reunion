@@ -59,7 +59,7 @@ export default function EquipePage() {
                   <div className="relative group">
                     <div className="absolute -inset-4 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-2xl blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
                     <Image
-                      src="/maxence.jpg"
+                      src="/pdp-maxence.jpeg"
                       alt="Maxence Fontaine - Président-Directeur Général AMMO"
                       width={500}
                       height={600}
@@ -165,7 +165,7 @@ export default function EquipePage() {
                   <div className="relative group">
                     <div className="absolute -inset-4 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-2xl blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
                     <Image
-                      src="/andrew.jpg"
+                      src="/pdp-andrew.jpeg"
                       alt="Andrew Duchenne - Directeur Général AMMO"
                       width={500}
                       height={600}
@@ -256,6 +256,204 @@ export default function EquipePage() {
           </div>
         </section>
 
+        {/* Section Angelo Rapazzini */}
+        <section className="py-20 bg-muted/30">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex flex-col lg:flex-row items-center gap-12">
+                <motion.div
+                  className="lg:w-2/5"
+                  initial={{ opacity: 0, x: -60 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8 }}
+                >
+                  <div className="relative group">
+                    <div className="absolute -inset-4 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-2xl blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+                    <Image
+                      src="/pdp-angelo.jpeg"
+                      alt="Angelo Rapazzini - Directeur Général AMMO"
+                      width={500}
+                      height={600}
+                      className="relative rounded-2xl shadow-2xl object-cover w-full transform group-hover:scale-[1.02] transition-transform duration-500"
+                    />
+                  </div>
+                </motion.div>
+                <motion.div
+                  className="lg:w-3/5"
+                  variants={staggerContainer}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{ once: true }}
+                >
+                  <motion.span
+                    variants={fadeInUp}
+                    className="inline-block px-6 py-2 bg-gradient-to-r from-secondary/10 to-accent/10 backdrop-blur-sm border border-amber-600/40 rounded-full text-secondary text-sm font-bold mb-6 uppercase tracking-wider hover:border-amber-600/60 transition-colors duration-300"
+                  >
+                    Direction
+                  </motion.span>
+                  <motion.h2
+                    variants={fadeInUp}
+                    className="text-4xl font-bold text-foreground mb-4"
+                  >
+                    Angelo Rapazzini
+                  </motion.h2>
+                  <motion.p
+                    variants={fadeInUp}
+                    className="text-2xl text-secondary font-semibold mb-6"
+                  >
+                    Directeur Général
+                  </motion.p>
+
+                  <motion.div variants={fadeInUp} className="space-y-4 text-gray-700 text-lg">
+                    <p className="hover:text-foreground transition-colors duration-300">
+                      Angelo pilote la stratégie commerciale et le développement d'AMMO. Responsable du marketing, des relations institutionnelles et du positionnement de l'entreprise, il assure le lien entre les ambitions de nos clients et les compétences de nos équipes.
+                    </p>
+                    <p className="hover:text-foreground transition-colors duration-300">
+                      Son approche allie rigueur de gestion et vision entrepreneuriale pour accompagner la croissance d'AMMO à La Réunion.
+                    </p>
+                  </motion.div>
+
+                  <motion.div
+                    variants={fadeInUp}
+                    className="mt-8 bg-gradient-to-br from-amber-50 to-yellow-50 p-6 rounded-xl border border-amber-200 hover:border-amber-300 hover:shadow-lg transition-all duration-300"
+                  >
+                    <h3 className="text-xl font-bold text-foreground mb-4">Marketing & Développement</h3>
+                    <ul className="space-y-2 text-gray-700">
+                      <li className="flex items-start hover:translate-x-2 transition-transform duration-300">
+                        <span className="text-accent mr-2 mt-1">•</span>
+                        Marketing et communication
+                      </li>
+                      <li className="flex items-start hover:translate-x-2 transition-transform duration-300">
+                        <span className="text-accent mr-2 mt-1">•</span>
+                        Développement commercial
+                      </li>
+                      <li className="flex items-start hover:translate-x-2 transition-transform duration-300">
+                        <span className="text-accent mr-2 mt-1">•</span>
+                        Relations institutionnelles
+                      </li>
+                      <li className="flex items-start hover:translate-x-2 transition-transform duration-300">
+                        <span className="text-accent mr-2 mt-1">•</span>
+                        Positionnement stratégique
+                      </li>
+                    </ul>
+                  </motion.div>
+
+                  <motion.div
+                    variants={fadeInUp}
+                    className="mt-6 p-6 bg-background rounded-xl border-l-4 border-amber-500 shadow-md hover:shadow-xl hover:border-l-8 transition-all duration-300"
+                  >
+                    <p className="text-lg font-semibold text-foreground">
+                      Son ambition :
+                    </p>
+                    <p className="text-gray-700 mt-2">
+                      Structurer et positionner AMMO comme le contractant général de référence à La Réunion.
+                    </p>
+                  </motion.div>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section Steve Lesgardeur */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
+                <motion.div
+                  className="lg:w-2/5"
+                  initial={{ opacity: 0, x: 60 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8 }}
+                >
+                  <div className="relative group">
+                    <div className="absolute -inset-4 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-2xl blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+                    <div className="relative rounded-2xl shadow-2xl w-full aspect-[5/6] bg-gradient-to-r from-secondary to-accent flex items-center justify-center">
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-r from-secondary to-accent text-primary-foreground font-bold text-3xl flex items-center justify-center border-4 border-white/30">
+                        SL
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+                <motion.div
+                  className="lg:w-3/5"
+                  variants={staggerContainer}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{ once: true }}
+                >
+                  <motion.span
+                    variants={fadeInUp}
+                    className="inline-block px-6 py-2 bg-gradient-to-r from-secondary/10 to-accent/10 backdrop-blur-sm border border-amber-600/40 rounded-full text-secondary text-sm font-bold mb-6 uppercase tracking-wider hover:border-amber-600/60 transition-colors duration-300"
+                  >
+                    Terrain
+                  </motion.span>
+                  <motion.h2
+                    variants={fadeInUp}
+                    className="text-4xl font-bold text-foreground mb-4"
+                  >
+                    Steve Lesgardeur
+                  </motion.h2>
+                  <motion.p
+                    variants={fadeInUp}
+                    className="text-2xl text-secondary font-semibold mb-6"
+                  >
+                    Chef de chantier — AMMO EXECUTION
+                  </motion.p>
+
+                  <motion.div variants={fadeInUp} className="space-y-4 text-gray-700 text-lg">
+                    <p className="hover:text-foreground transition-colors duration-300">
+                      Diplômé ébéniste-menuisier, Steve apporte à AMMO EXECUTION un savoir-faire artisanal et une expertise terrain inégalée.
+                    </p>
+                    <p className="hover:text-foreground transition-colors duration-300">
+                      En tant que chef de chantier, il assure la coordination des travaux, le suivi qualité et la relation client au quotidien. Sa maîtrise du bois et des aménagements extérieurs garantit des réalisations alliant précision technique et finition haut de gamme.
+                    </p>
+                  </motion.div>
+
+                  <motion.div
+                    variants={fadeInUp}
+                    className="mt-8 bg-gradient-to-br from-amber-50 to-yellow-50 p-6 rounded-xl border border-amber-200 hover:border-amber-300 hover:shadow-lg transition-all duration-300"
+                  >
+                    <h3 className="text-xl font-bold text-foreground mb-4">Expertise terrain</h3>
+                    <ul className="space-y-2 text-gray-700">
+                      <li className="flex items-start hover:translate-x-2 transition-transform duration-300">
+                        <span className="text-accent mr-2 mt-1">•</span>
+                        Coordination de chantier
+                      </li>
+                      <li className="flex items-start hover:translate-x-2 transition-transform duration-300">
+                        <span className="text-accent mr-2 mt-1">•</span>
+                        Relation client
+                      </li>
+                      <li className="flex items-start hover:translate-x-2 transition-transform duration-300">
+                        <span className="text-accent mr-2 mt-1">•</span>
+                        Suivi qualité
+                      </li>
+                      <li className="flex items-start hover:translate-x-2 transition-transform duration-300">
+                        <span className="text-accent mr-2 mt-1">•</span>
+                        Menuiserie et bois
+                      </li>
+                    </ul>
+                  </motion.div>
+
+                  <motion.div
+                    variants={fadeInUp}
+                    className="mt-6 p-6 bg-background rounded-xl border-l-4 border-amber-500 shadow-md hover:shadow-xl hover:border-l-8 transition-all duration-300"
+                  >
+                    <p className="text-lg font-semibold text-foreground">
+                      Son ambition :
+                    </p>
+                    <p className="text-gray-700 mt-2">
+                      Garantir l'excellence artisanale et la satisfaction client sur chaque chantier AMMO EXECUTION.
+                    </p>
+                  </motion.div>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-br from-amber-50 to-yellow-50">
           <motion.div
@@ -276,7 +474,7 @@ export default function EquipePage() {
                 href="/#contact"
                 className="inline-block px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-amber-500 to-yellow-500 text-primary-foreground font-bold text-sm sm:text-base lg:text-lg rounded-full hover:shadow-2xl transition-all duration-300 hover:scale-105 whitespace-nowrap"
               >
-                Demander un Devis Gratuit
+                Prendre Contact
               </a>
             </div>
           </motion.div>

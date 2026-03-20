@@ -6,31 +6,31 @@ export function MethodologySection() {
   const methodologySteps = [
     {
       id: "step-1",
-      title: "Diagnostic & Analyse",
-      summary: "Analyse approfondie de votre projet et de vos besoins spécifiques. Visite technique du site et évaluation des contraintes réglementaires.",
+      title: "Écoute",
+      summary: "Définition de vos besoins, de votre budget et de vos ambitions. Visite technique du site et évaluation des contraintes réglementaires.",
       url: "#contact",
-      image: "/diagnostic.webp"
+      image: "/methodo-ecoute.jpg"
     },
     {
       id: "step-2",
-      title: "Conseil & Conception",
-      summary: "Élaboration de solutions optimisées adaptées à votre budget. Conception architecturale et études techniques détaillées.",
+      title: "Conception",
+      summary: "Notre bureau d'études réalise vos plans, la modélisation 3D et monte vos dossiers de permis de construire.",
       url: "#contact",
-      image: "/villamoderne.png"
+      image: "/methodo-conception.jpg"
     },
     {
       id: "step-3",
-      title: "Planification & Coordination",
-      summary: "Planification détaillée des travaux et sélection des entreprises qualifiées. Coordination des corps de métier et établissement du planning.",
+      title: "Réalisation",
+      summary: "Coordination des corps de métier, suivi qualité rigoureux et respect du planning. AMMO supervise l'intégralité du chantier.",
       url: "#contact",
-      image: "/planification-coordination.jpeg"
+      image: "/methodo-realisation.jpg"
     },
     {
       id: "step-4",
-      title: "Réalisation & Livraison",
-      summary: "Supervision quotidienne des travaux, contrôle qualité rigoureux et réception avec levée des réserves. Accompagnement post-livraison et garanties décennales.",
+      title: "Livraison",
+      summary: "Vérification finale, réception des travaux et levée des réserves. Accompagnement post-livraison et garanties décennales.",
       url: "#contact",
-      image: "/exterieur.jpg"
+      image: "/methodo-livraison.jpg"
     }
   ];
 

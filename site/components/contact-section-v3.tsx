@@ -1,18 +1,12 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, Send } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
+import { HubSpotForm } from '@/components/hubspot-form';
 
 export function ContactSectionV3() {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-  });
-
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
@@ -24,18 +18,6 @@ export function ContactSectionV3() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
 
   return (
     <section id="contact" className={`${isMobile ? 'py-12' : isTablet ? 'py-16' : 'py-24'} bg-gradient-to-br from-muted/20 via-background to-secondary/10 relative overflow-hidden`}>
@@ -126,90 +108,12 @@ export function ContactSectionV3() {
             <div className="bg-background p-8 lg:p-10 rounded-3xl shadow-2xl border border-border h-full">
               <div className="mb-8">
                 <h3 className={`${isMobile ? 'text-2xl' : 'text-3xl'} font-bold text-foreground mb-2`}>
-                  Demande de devis gratuit
+                  Prendre contact
                 </h3>
                 <p className="text-muted-foreground">Remplissez le formulaire ci-dessous, nous vous répondons sous 48h</p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-2">
-                      Nom complet *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3.5 bg-muted/20 border border-border rounded-xl focus:ring-2 focus:ring-secondary focus:border-secondary focus:bg-background transition-all outline-none"
-                      placeholder="Votre nom"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold text-foreground mb-2">
-                      Téléphone *
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      required
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3.5 bg-muted/20 border border-border rounded-xl focus:ring-2 focus:ring-secondary focus:border-secondary focus:bg-background transition-all outline-none"
-                      placeholder="+262 693 XXX XXX"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-2">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3.5 bg-muted/20 border border-border rounded-xl focus:ring-2 focus:ring-secondary focus:border-secondary focus:bg-background transition-all outline-none"
-                    placeholder="votre@email.com"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-foreground mb-2">
-                    Votre projet *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={6}
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3.5 bg-muted/20 border border-border rounded-xl focus:ring-2 focus:ring-secondary focus:border-secondary focus:bg-background transition-all resize-none outline-none"
-                    placeholder="Décrivez-nous votre projet en quelques lignes..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-secondary to-accent text-primary-foreground font-bold py-4 px-8 rounded-xl hover:from-secondary/90 hover:to-accent/90 hover:shadow-xl transition-all duration-300 flex items-center justify-center group text-lg"
-                >
-                  <span>Envoyer ma demande</span>
-                  <Send className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </button>
-
-                <p className="text-sm text-muted-foreground text-center pt-2">
-                  * Champs obligatoires - Réponse garantie sous 48h
-                </p>
-              </form>
+              <HubSpotForm formId="64245ead-9bd8-4660-8241-3664a6812188" />
             </div>
           </div>
         </div>

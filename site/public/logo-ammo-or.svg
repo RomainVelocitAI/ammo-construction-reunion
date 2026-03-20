@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 203.16 90.59">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clippath-11);
+      }
+
+      .cls-2 {
+        clip-path: url(#clippath-16);
+      }
+
+      .cls-3 {
+        fill: url(#Dégradé_sans_nom_11-8);
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26, .cls-27, .cls-28, .cls-29 {
+        stroke-width: 0px;
+      }
+
+      .cls-4 {
+        fill: url(#Dégradé_sans_nom_4-15);
+      }
+
+      .cls-5 {
+        fill: url(#Dégradé_sans_nom_4-17);
+      }
+
+      .cls-6 {
+        fill: url(#Dégradé_sans_nom_3);
+      }
+
+      .cls-30 {
+        clip-path: url(#clippath-2);
+      }
+
+      .cls-31 {
+        clip-path: url(#clippath-13);
+      }
+
+      .cls-32 {
+        fill: url(#Dégradé_sans_nom_4-16);
+      }
+
+      .cls-7 {
+        fill: url(#Dégradé_sans_nom_7);
+      }
+
+      .cls-33 {
+        fill: url(#Dégradé_sans_nom_11-5);
+      }
+
+      .cls-34 {
+        clip-path: url(#clippath-15);
+      }
+
+      .cls-8 {
+        fill: url(#Dégradé_sans_nom_11-6);
+      }
+
+      .cls-35 {
+        clip-path: url(#clippath-6);
+      }
+
+      .cls-9 {
+        fill: url(#Dégradé_sans_nom_4-11);
+      }
+
+      .cls-10, .cls-36 {
+        fill: url(#Dégradé_sans_nom_4);
+      }
+
+      .cls-37 {
+        fill: url(#Dégradé_sans_nom_4-6);
+      }
+
+      .cls-11 {
+        fill: url(#Dégradé_sans_nom_11-2);
+      }
+
+      .cls-12 {
+        fill: none;
+      }
+
+      .cls-13 {
+        fill: url(#Dégradé_sans_nom_11-4);
+      }
+
+      .cls-38 {
+        clip-path: url(#clippath-7);
+      }
+
+      .cls-39 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-40 {
+        clip-path: url(#clippath-4);
+      }
+
+      .cls-14 {
+        fill: url(#Dégradé_sans_nom_7-2);
+      }
+
+      .cls-41 {
+        fill: url(#Dégradé_sans_nom_4-14);
+      }
+
+      .cls-42 {
+        fill: url(#Dégradé_sans_nom_4-10);
+      }
+
+      .cls-43 {
+        clip-path: url(#clippath-12);
+      }
+
+      .cls-15 {
+        fill: url(#Dégradé_sans_nom_11-10);
+      }
+
+      .cls-16 {
+        fill: url(#Dégradé_sans_nom_4-5);
+      }
+
+      .cls-17 {
+        fill: url(#Dégradé_sans_nom_11);
+      }
+
+      .cls-18 {
+        fill: url(#Dégradé_sans_nom_4-13);
+      }
+
+      .cls-44 {
+        fill: url(#Dégradé_sans_nom_4-12);
+      }
+
+      .cls-45 {
+        clip-path: url(#clippath-9);
+      }
+
+      .cls-46 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-19 {
+        fill: url(#Dégradé_sans_nom_4-9);
+      }
+
+      .cls-20 {
+        fill: url(#Dégradé_sans_nom_35);
+      }
+
+      .cls-47 {
+        clip-path: url(#clippath-3);
+      }
+
+      .cls-21 {
+        fill: url(#Dégradé_sans_nom_11-12);
+      }
+
+      .cls-22 {
+        fill: url(#Dégradé_sans_nom_4-3);
+      }
+
+      .cls-23 {
+        fill: url(#Dégradé_sans_nom_4-7);
+      }
+
+      .cls-48 {
+        clip-path: url(#clippath-8);
+      }
+
+      .cls-49 {
+        fill: url(#Dégradé_sans_nom_4-4);
+      }
+
+      .cls-24 {
+        fill: url(#Dégradé_sans_nom_11-9);
+      }
+
+      .cls-50 {
+        fill: url(#Dégradé_sans_nom_4-2);
+      }
+
+      .cls-51 {
+        clip-path: url(#clippath-18);
+      }
+
+      .cls-52 {
+        clip-path: url(#clippath-14);
+      }
+
+      .cls-53 {
+        clip-path: url(#clippath-17);
+      }
+
+      .cls-54 {
+        clip-path: url(#clippath-5);
+      }
+
+      .cls-55 {
+        fill: url(#Dégradé_sans_nom_4-8);
+      }
+
+      .cls-56 {
+        fill: url(#Dégradé_sans_nom_4-22);
+      }
+
+      .cls-57 {
+        fill: url(#Dégradé_sans_nom_4-20);
+      }
+
+      .cls-58, .cls-29 {
+        fill: url(#Dégradé_sans_nom_6);
+      }
+
+      .cls-25 {
+        fill: url(#Dégradé_sans_nom_4-21);
+      }
+
+      .cls-59 {
+        clip-path: url(#clippath-10);
+      }
+
+      .cls-26 {
+        fill: url(#Dégradé_sans_nom_11-7);
+      }
+
+      .cls-60 {
+        fill: url(#Dégradé_sans_nom_11-3);
+      }
+
+      .cls-27 {
+        fill: url(#Dégradé_sans_nom_4-19);
+      }
+
+      .cls-61 {
+        fill: url(#Dégradé_sans_nom_11-11);
+      }
+
+      .cls-62 {
+        fill: url(#Dégradé_sans_nom_4-18);
+      }
+
+      .cls-28 {
+        fill: url(#Dégradé_sans_nom_4-23);
+      }
+    </style>
+    <linearGradient id="Dégradé_sans_nom_3" data-name="Dégradé sans nom 3" x1="89.41" y1="54.38" x2="89.41" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#916223"/>
+      <stop offset=".28" stop-color="#d6b363"/>
+      <stop offset=".53" stop-color="#e1d391"/>
+      <stop offset=".59" stop-color="#d7c483"/>
+      <stop offset=".72" stop-color="#bd9e61"/>
+      <stop offset=".8" stop-color="#a98046"/>
+      <stop offset="1" stop-color="#a16a30"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_4" data-name="Dégradé sans nom 4" x1="16.33" y1="31.2" x2="17.8" y2="31.2" gradientUnits="userSpaceOnUse">
+      <stop offset=".13" stop-color="#9c6931"/>
+      <stop offset=".3" stop-color="#b08c54"/>
+      <stop offset=".53" stop-color="#e1d391"/>
+      <stop offset=".58" stop-color="#d7c483"/>
+      <stop offset=".68" stop-color="#bd9e61"/>
+      <stop offset=".74" stop-color="#ae884d"/>
+      <stop offset=".9" stop-color="#a98046"/>
+      <stop offset=".96" stop-color="#99682a"/>
+    </linearGradient>
+    <clipPath id="clippath">
+      <polygon class="cls-10" points="16.33 50.34 17.8 50.34 17.8 12.06 16.33 12.93 16.33 50.34"/>
+    </clipPath>
+    <linearGradient id="Dégradé_sans_nom_11" data-name="Dégradé sans nom 11" x1="3.67" y1=".26" x2="97.56" y2="94.15" gradientUnits="userSpaceOnUse">
+      <stop offset=".11" stop-color="#6e4314"/>
+      <stop offset=".26" stop-color="#9c6931"/>
+      <stop offset=".41" stop-color="#b08c54"/>
+      <stop offset=".55" stop-color="#e1d391"/>
+      <stop offset=".6" stop-color="#d7c483"/>
+      <stop offset=".69" stop-color="#bd9e61"/>
+      <stop offset=".74" stop-color="#ae884d"/>
+      <stop offset=".9" stop-color="#a98046"/>
+      <stop offset="1" stop-color="#99682a"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_4-2" data-name="Dégradé sans nom 4" x1="19.16" y1="30.53" x2="20.62" y2="30.53" xlink:href="#Dégradé_sans_nom_4"/>
+    <linearGradient id="Dégradé_sans_nom_4-3" data-name="Dégradé sans nom 4" x1="19.16" y1="30.53" x2="20.62" y2="30.53" xlink:href="#Dégradé_sans_nom_4"/>
+    <clipPath id="clippath-1">
+      <polygon class="cls-22" points="19.16 50.34 20.62 50.34 20.62 10.71 19.16 11.52 19.16 50.34"/>
+    </clipPath>
+    <linearGradient id="Dégradé_sans_nom_11-2" data-name="Dégradé sans nom 11" x1="3.56" y1=".26" x2="97.45" y2="94.15" xlink:href="#Dégradé_sans_nom_11"/>
+    <linearGradient id="Dégradé_sans_nom_11-3" data-name="Dégradé sans nom 11" x1="7.23" y1="30.39" x2="14.95" y2="30.39" xlink:href="#Dégradé_sans_nom_11"/>
+    <linearGradient id="Dégradé_sans_nom_11-4" data-name="Dégradé sans nom 11" x1="7.23" y1="30.39" x2="14.95" y2="30.39" xlink:href="#Dégradé_sans_nom_11"/>
+    <clipPath id="clippath-2">
+      <polygon class="cls-13" points="7.23 32.94 14.95 29.34 14.94 27.84 7.23 31.44 7.23 32.94"/>
+    </clipPath>
+    <linearGradient id="Dégradé_sans_nom_4-4" data-name="Dégradé sans nom 4" x1="7.24" y1="27.56" x2="14.96" y2="27.56" xlink:href="#Dégradé_sans_nom_4"/>
+    <linearGradient id="Dégradé_sans_nom_4-5" data-name="Dégradé sans nom 4" x1="7.24" y1="27.56" x2="14.96" y2="27.56" xlink:href="#Dégradé_sans_nom_4"/>
+    <clipPath id="clippath-3">
+      <polygon class="cls-16" points="7.25 30.11 14.96 26.51 14.95 25 7.24 28.6 7.25 30.11"/>
+    </clipPath>
+    <linearGradient id="Dégradé_sans_nom_4-6" data-name="Dégradé sans nom 4" x1="1.11" y1="43.03" x2="14.95" y2="43.03" xlink:href="#Dégradé_sans_nom_4"/>
+    <linearGradient id="Dégradé_sans_nom_4-7" data-name="Dégradé sans nom 4" x1="1.11" y1="43.03" x2="14.95" y2="43.03" xlink:href="#Dégradé_sans_nom_4"/>
+    <clipPath id="clippath-4">
+      <polygon class="cls-23" points="1.11 46.98 14.93 40.52 14.95 39.08 1.12 45.54 1.11 46.98"/>
+    </clipPath>
+    <linearGradient id="Dégradé_sans_nom_4-8" data-name="Dégradé sans nom 4" x1="1.13" y1="46.1" x2="14.95" y2="46.1" xlink:href="#Dégradé_sans_nom_4"/>
+    <linearGradient id="Dégradé_sans_nom_4-9" data-name="Dégradé sans nom 4" x1="1.13" y1="46.1" x2="14.95" y2="46.1" xlink:href="#Dégradé_sans_nom_4"/>
+    <clipPath id="clippath-5">
+      <polygon class="cls-19" points="1.13 50.34 14.95 50.34 14.95 41.86 1.13 48.31 1.13 50.34"/>
+    </clipPath>
+    <linearGradient id="Dégradé_sans_nom_11-5" data-name="Dégradé sans nom 11" x1="21.99" y1="29.85" x2="23.44" y2="29.85" xlink:href="#Dégradé_sans_nom_11"/>
+    <linearGradient id="Dégradé_sans_nom_11-6" data-name="Dégradé sans nom 11" x1="21.99" y1="29.85" x2="23.44" y2="29.85" xlink:href="#Dégradé_sans_nom_11"/>
+    <clipPath id="clippath-6">
+      <polygon class="cls-8" points="21.99 50.34 23.44 50.34 23.44 9.36 21.99 10.17 21.99 50.34"/>
+    </clipPath>
+    <linearGradient id="Dégradé_sans_nom_11-7" data-name="Dégradé sans nom 11" x1="3.57" y1=".26" x2="97.46" y2="94.15" xlink:href="#Dégradé_sans_nom_11"/>
+    <linearGradient id="Dégradé_sans_nom_4-10" data-name="Dégradé sans nom 4" x1="1.13" y1="37.41" x2="14.95" y2="37.41" xlink:href="#Dégradé_sans_nom_4"/>
+    <linearGradient id="Dégradé_sans_nom_4-11" data-name="Dégradé sans nom 4" x1="1.13" y1="37.41" x2="14.95" y2="37.41" xlink:href="#Dégradé_sans_nom_4"/>
+    <clipPath id="clippath-7">
+      <polygon class="cls-9" points="1.13 41.39 14.95 34.93 14.95 33.43 1.13 39.89 1.13 41.39"/>
+    </clipPath>
+    <linearGradient id="Dégradé_sans_nom_4-12" data-name="Dégradé sans nom 4" x1="1.13" y1="34.61" x2="14.96" y2="34.61" xlink:href="#Dégradé_sans_nom_4"/>
+    <linearGradient id="Dégradé_sans_nom_4-13" data-name="Dégradé sans nom 4" x1="1.13" y1="34.61" x2="14.96" y2="34.61" xlink:href="#Dégradé_sans_nom_4"/>
+    <clipPath id="clippath-8">
+      <polygon class="cls-18" points="1.13 38.56 14.96 32.1 14.96 30.66 1.13 37.12 1.13 38.56"/>
+    </clipPath>
+    <linearGradient id="Dégradé_sans_nom_4-14" data-name="Dégradé sans nom 4" x1="30.46" y1="27.84" x2="31.93" y2="27.84" xlink:href="#Dégradé_sans_nom_4"/>
+    <linearGradient id="Dégradé_sans_nom_4-15" data-name="Dégradé sans nom 4" x1="30.46" y1="27.84" x2="31.93" y2="27.84" xlink:href="#Dégradé_sans_nom_4"/>
+    <clipPath id="clippath-9">
+      <polygon class="cls-4" points="30.46 50.34 31.93 50.34 31.93 5.34 30.46 6.1 30.46 50.34"/>
+    </clipPath>
+    <linearGradient id="Dégradé_sans_nom_11-8" data-name="Dégradé sans nom 11" x1="3.56" y1=".26" x2="97.45" y2="94.15" xlink:href="#Dégradé_sans_nom_11"/>
+    <linearGradient id="Dégradé_sans_nom_4-16" data-name="Dégradé sans nom 4" x1="27.63" y1="28.49" x2="29.1" y2="28.49" xlink:href="#Dégradé_sans_nom_4"/>
+    <linearGradient id="Dégradé_sans_nom_4-17" data-name="Dégradé sans nom 4" x1="27.63" y1="28.49" x2="29.1" y2="28.49" xlink:href="#Dégradé_sans_nom_4"/>
+    <clipPath id="clippath-10">
+      <polygon class="cls-5" points="27.63 50.34 29.1 50.34 29.1 6.64 27.63 7.49 27.63 50.34"/>
+    </clipPath>
+    <linearGradient id="Dégradé_sans_nom_11-9" data-name="Dégradé sans nom 11" x1="3.6" x2="97.49" xlink:href="#Dégradé_sans_nom_11"/>
+    <linearGradient id="Dégradé_sans_nom_4-18" data-name="Dégradé sans nom 4" x1="1.12" y1="40.23" x2="14.95" y2="40.23" xlink:href="#Dégradé_sans_nom_4"/>
+    <linearGradient id="Dégradé_sans_nom_4-19" data-name="Dégradé sans nom 4" x1="1.12" y1="40.23" x2="14.95" y2="40.23" xlink:href="#Dégradé_sans_nom_4"/>
+    <clipPath id="clippath-11">
+      <polygon class="cls-27" points="1.13 44.21 14.95 37.76 14.95 36.25 1.12 42.71 1.13 44.21"/>
+    </clipPath>
+    <linearGradient id="Dégradé_sans_nom_4-20" data-name="Dégradé sans nom 4" x1="33.3" y1="27.1" x2="57.38" y2="27.1" xlink:href="#Dégradé_sans_nom_4"/>
+    <linearGradient id="Dégradé_sans_nom_4-21" data-name="Dégradé sans nom 4" x1="33.3" y1="27.1" x2="57.38" y2="27.1" xlink:href="#Dégradé_sans_nom_4"/>
+    <clipPath id="clippath-12">
+      <polygon class="cls-25" points="49.69 19.76 49.69 13.65 35.15 3.86 33.3 4.79 33.3 50.34 36.81 50.34 36.81 33.23 41.56 30.31 41.56 50.34 44.94 50.34 44.94 22.69 49.69 19.77 49.69 50.34 57.38 50.34 57.38 28.68 49.69 19.76"/>
+    </clipPath>
+    <linearGradient id="Dégradé_sans_nom_35" data-name="Dégradé sans nom 35" x1="3.67" y1=".26" x2="97.56" y2="94.15" gradientUnits="userSpaceOnUse">
+      <stop offset=".11" stop-color="#6e4314"/>
+      <stop offset=".26" stop-color="#9c6931"/>
+      <stop offset=".41" stop-color="#b08c54"/>
+      <stop offset=".55" stop-color="#e1d391"/>
+      <stop offset=".6" stop-color="#d7c483"/>
+      <stop offset=".69" stop-color="#bd9e61"/>
+      <stop offset=".74" stop-color="#ae884d"/>
+      <stop offset=".9" stop-color="#a98046"/>
+      <stop offset="1" stop-color="#99682a"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_4-22" data-name="Dégradé sans nom 4" x1="24.8" y1="29.19" x2="26.28" y2="29.19" xlink:href="#Dégradé_sans_nom_4"/>
+    <linearGradient id="Dégradé_sans_nom_4-23" data-name="Dégradé sans nom 4" x1="24.8" y1="29.19" x2="26.28" y2="29.19" xlink:href="#Dégradé_sans_nom_4"/>
+    <clipPath id="clippath-13">
+      <polygon class="cls-28" points="24.8 50.34 26.28 50.34 26.28 8.03 24.8 8.82 24.8 50.34"/>
+    </clipPath>
+    <linearGradient id="Dégradé_sans_nom_11-10" data-name="Dégradé sans nom 11" x1="3.58" y1=".26" x2="97.47" y2="94.15" xlink:href="#Dégradé_sans_nom_11"/>
+    <linearGradient id="Dégradé_sans_nom_11-11" data-name="Dégradé sans nom 11" x1="7.24" y1="24.69" x2="14.95" y2="24.69" xlink:href="#Dégradé_sans_nom_11"/>
+    <linearGradient id="Dégradé_sans_nom_11-12" data-name="Dégradé sans nom 11" x1="7.24" y1="24.69" x2="14.95" y2="24.69" xlink:href="#Dégradé_sans_nom_11"/>
+    <clipPath id="clippath-14">
+      <polygon class="cls-21" points="7.24 25.66 7.24 27.29 14.95 23.69 14.95 22.09 14.95 22.09 11.72 23.6 7.24 25.66"/>
+    </clipPath>
+    <clipPath id="clippath-15">
+      <path class="cls-12" d="M177.58,36.96l-.06-13.61s-.06-.06-.08-.02l-4.9,9c-.22.37-.57.53-.98.5h0c-.28.02-.65-.21-.84-.58l-4.89-8.96s-.05-.01-.05.01l-.03,13.58c0,.36-.29.66-.66.66h-.38c-.34,0-.61-.27-.61-.61v-17.22c0-.17.13-.3.3-.3h1.13c.14,0,.26.08.33.2l5.67,10.71c.04.08.15.08.2,0l5.84-10.71c.07-.13.2-.21.35-.21h1.04c.16,0,.28.13.28.28v17.23c0,.34-.28.62-.62.62h-.44c-.33,0-.6-.27-.6-.6Z"/>
+    </clipPath>
+    <linearGradient id="Dégradé_sans_nom_7" data-name="Dégradé sans nom 7" x1="114.14" y1="28.51" x2="203.16" y2="28.51" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9c6931"/>
+      <stop offset="1" stop-color="#e9d191"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_6" data-name="Dégradé sans nom 6" x1="188.51" y1="28.49" x2="201.17" y2="28.49" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c49759"/>
+      <stop offset=".18" stop-color="#cba265"/>
+      <stop offset=".52" stop-color="#dec086"/>
+      <stop offset=".97" stop-color="#fdf0bb"/>
+      <stop offset="1" stop-color="#fff4bf"/>
+    </linearGradient>
+    <clipPath id="clippath-16">
+      <path class="cls-29" d="M200.99,23.97c-.25-1.19-1.59-4.83-6.03-4.83h-.24c-4.44,0-5.78,3.65-6.03,4.84-.23,1.11-.23,7.92,0,9.03.25,1.19,1.59,4.83,6.03,4.83h.24c4.44,0,5.92-3.66,6.03-4.83.11-1.17.18-2.87.18-4.53s.05-3.41-.18-4.52ZM199.54,28.5s-.07,2.81-.18,3.7c-.15,1.12-1.1,4.05-4.4,3.96h-.22c-3.3.09-4.25-2.85-4.4-3.97-.12-.89-.18-3.7-.18-3.7,0,0,.07-2.81.18-3.7.15-1.12,1.1-4.07,4.4-3.98h.22c3.3-.1,4.25,2.86,4.4,3.98.12.89.18,3.7.18,3.7h0Z"/>
+    </clipPath>
+    <linearGradient id="Dégradé_sans_nom_7-2" data-name="Dégradé sans nom 7" y1="28.5" y2="28.5" xlink:href="#Dégradé_sans_nom_7"/>
+    <clipPath id="clippath-17">
+      <path class="cls-12" d="M129.82,37.25l-1.66-4.28s-.06-.08-.11-.08h-8.49c-.05,0-.1.03-.11.08l-1.61,4.23c-.08.21-.28.36-.51.36h-.74c-.33,0-.55-.33-.43-.63l6.22-16.94c.13-.34.45-.56.82-.56h.91c.35,0,.67.22.8.54l6.67,17.07c.1.25-.08.51-.35.51h-.96c-.2,0-.38-.12-.45-.31ZM123.55,21.63l-3.48,9.44c-.03.08.03.16.11.16h7.17c.08,0,.14-.08.11-.16l-3.69-9.44c-.04-.1-.19-.1-.22,0Z"/>
+    </clipPath>
+    <clipPath id="clippath-18">
+      <path class="cls-12" d="M152.79,36.96l-.06-13.61s-.06-.06-.08-.02l-4.9,9c-.22.37-.57.53-.98.5h0c-.28.02-.65-.21-.84-.58l-4.89-8.96s-.05-.01-.05.01l-.03,13.58c0,.36-.29.66-.66.66h-.38c-.34,0-.61-.27-.61-.61v-17.22c0-.17.13-.3.3-.3h1.13c.14,0,.26.08.33.2l5.67,10.71c.04.08.15.08.2,0l5.84-10.71c.07-.13.2-.21.35-.21h1.04c.16,0,.28.13.28.28v17.23c0,.34-.28.62-.62.62h-.44c-.33,0-.6-.27-.6-.6Z"/>
+    </clipPath>
+  </defs>
+  <g id="Calque_1-2" data-name="Calque 1">
+    <g>
+      <g>
+        <rect class="cls-6" x="88.36" width="2.11" height="54.38"/>
+        <g>
+          <polygon class="cls-36" points="16.33 50.34 17.8 50.34 17.8 12.06 16.33 12.93 16.33 50.34"/>
+          <g class="cls-46">
+            <rect class="cls-17" x=".11" y="3.82" width="101.01" height="86.77"/>
+          </g>
+        </g>
+        <g>
+          <polygon class="cls-50" points="19.16 50.34 20.62 50.34 20.62 10.71 19.16 11.52 19.16 50.34"/>
+          <g class="cls-39">
+            <rect class="cls-11" y="3.82" width="101.01" height="86.77"/>
+          </g>
+        </g>
+        <g>
+          <polygon class="cls-60" points="7.23 32.94 14.95 29.34 14.94 27.84 7.23 31.44 7.23 32.94"/>
+          <g class="cls-30">
+            <rect class="cls-17" x=".11" y="3.82" width="101.01" height="86.77"/>
+          </g>
+        </g>
+        <g>
+          <polygon class="cls-49" points="7.25 30.11 14.96 26.51 14.95 25 7.24 28.6 7.25 30.11"/>
+          <g class="cls-47">
+            <rect class="cls-17" x=".11" y="3.82" width="101.01" height="86.77"/>
+          </g>
+        </g>
+        <g>
+          <polygon class="cls-37" points="1.11 46.98 14.93 40.52 14.95 39.08 1.12 45.54 1.11 46.98"/>
+          <g class="cls-40">
+            <rect class="cls-17" x=".11" y="3.82" width="101.01" height="86.77"/>
+          </g>
+        </g>
+        <g>
+          <polygon class="cls-55" points="1.13 50.34 14.95 50.34 14.95 41.86 1.13 48.31 1.13 50.34"/>
+          <g class="cls-54">
+            <rect class="cls-17" x=".11" y="3.82" width="101.01" height="86.77"/>
+          </g>
+        </g>
+        <g>
+          <polygon class="cls-33" points="21.99 50.34 23.44 50.34 23.44 9.36 21.99 10.17 21.99 50.34"/>
+          <g class="cls-35">
+            <rect class="cls-26" x=".01" y="3.82" width="101.01" height="86.77"/>
+          </g>
+        </g>
+        <g>
+          <polygon class="cls-42" points="1.13 41.39 14.95 34.93 14.95 33.43 1.13 39.89 1.13 41.39"/>
+          <g class="cls-38">
+            <rect class="cls-17" x=".11" y="3.82" width="101.01" height="86.77"/>
+          </g>
+        </g>
+        <g>
+          <polygon class="cls-44" points="1.13 38.56 14.96 32.1 14.96 30.66 1.13 37.12 1.13 38.56"/>
+          <g class="cls-48">
+            <rect class="cls-17" x=".11" y="3.82" width="101.01" height="86.77"/>
+          </g>
+        </g>
+        <g>
+          <polygon class="cls-41" points="30.46 50.34 31.93 50.34 31.93 5.34 30.46 6.1 30.46 50.34"/>
+          <g class="cls-45">
+            <rect class="cls-3" x="0" y="3.82" width="101.01" height="86.77"/>
+          </g>
+        </g>
+        <g>
+          <polygon class="cls-32" points="27.63 50.34 29.1 50.34 29.1 6.64 27.63 7.49 27.63 50.34"/>
+          <g class="cls-59">
+            <rect class="cls-24" x=".04" y="3.82" width="101.01" height="86.77"/>
+          </g>
+        </g>
+        <g>
+          <polygon class="cls-62" points="1.13 44.21 14.95 37.76 14.95 36.25 1.12 42.71 1.13 44.21"/>
+          <g class="cls-1">
+            <rect class="cls-17" x=".11" y="3.82" width="101.01" height="86.77"/>
+          </g>
+        </g>
+        <g>
+          <polygon class="cls-57" points="49.69 19.76 49.69 13.65 35.15 3.86 33.3 4.79 33.3 50.34 36.81 50.34 36.81 33.23 41.56 30.31 41.56 50.34 44.94 50.34 44.94 22.69 49.69 19.77 49.69 50.34 57.38 50.34 57.38 28.68 49.69 19.76"/>
+          <g class="cls-43">
+            <rect class="cls-20" x=".11" y="3.82" width="101.01" height="86.77"/>
+          </g>
+        </g>
+        <g>
+          <polygon class="cls-56" points="24.8 50.34 26.28 50.34 26.28 8.03 24.8 8.82 24.8 50.34"/>
+          <g class="cls-31">
+            <rect class="cls-15" x=".02" y="3.82" width="101.01" height="86.77"/>
+          </g>
+        </g>
+        <g>
+          <polygon class="cls-61" points="7.24 25.66 7.24 27.29 14.95 23.69 14.95 22.09 14.95 22.09 11.72 23.6 7.24 25.66"/>
+          <g class="cls-52">
+            <rect class="cls-17" x=".11" y="3.82" width="101.01" height="86.77"/>
+          </g>
+        </g>
+      </g>
+      <g class="cls-34">
+        <rect class="cls-7" x="114.14" y="16.81" width="89.02" height="23.39"/>
+      </g>
+      <g>
+        <path class="cls-58" d="M200.99,23.97c-.25-1.19-1.59-4.83-6.03-4.83h-.24c-4.44,0-5.78,3.65-6.03,4.84-.23,1.11-.23,7.92,0,9.03.25,1.19,1.59,4.83,6.03,4.83h.24c4.44,0,5.92-3.66,6.03-4.83.11-1.17.18-2.87.18-4.53s.05-3.41-.18-4.52ZM199.54,28.5s-.07,2.81-.18,3.7c-.15,1.12-1.1,4.05-4.4,3.96h-.22c-3.3.09-4.25-2.85-4.4-3.97-.12-.89-.18-3.7-.18-3.7,0,0,.07-2.81.18-3.7.15-1.12,1.1-4.07,4.4-3.98h.22c3.3-.1,4.25,2.86,4.4,3.98.12.89.18,3.7.18,3.7h0Z"/>
+        <g class="cls-2">
+          <rect class="cls-14" x="114.14" y="16.8" width="89.02" height="23.39"/>
+        </g>
+      </g>
+      <g class="cls-53">
+        <rect class="cls-7" x="114.14" y="16.81" width="89.02" height="23.39"/>
+      </g>
+      <g class="cls-51">
+        <rect class="cls-7" x="114.14" y="16.81" width="89.02" height="23.39"/>
+      </g>
+    </g>
+  </g>
+</svg>

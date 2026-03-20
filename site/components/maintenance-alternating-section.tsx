@@ -188,12 +188,12 @@ const MaintenanceAlternatingSection = () => {
         {/* Header */}
         <div className={`text-center ${isMobile ? 'py-12 px-4' : isTablet ? 'py-16 px-6' : 'py-20 px-4'}`}>
           <h2 className={`${getHeaderSize()} font-subheading font-bold text-foreground mb-6`}>
-            Service d'Entretien Préventif
+            Suivi et Entretien Post-Travaux
             <span className="block text-secondary mt-2">Votre Avantage Décisif</span>
           </h2>
           <p className={`${isMobile ? 'text-lg' : 'text-xl'} text-muted-foreground max-w-3xl mx-auto`}>
-            Maximisez la longévité et la rentabilité de votre bien immobilier
-            en évitant les réparations tardives et coûteuses.
+            Votre projet ne s'arrête pas à la livraison. AMMO assure le suivi
+            et l'entretien de vos réalisations pour protéger votre investissement.
           </p>
         </div>
 

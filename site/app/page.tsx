@@ -10,15 +10,15 @@ import { Footer } from '@/components/footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'AMMO - Maitrise d\'Oeuvre La Reunion | Construction & Renovation 974',
-  description: 'Expert en maitrise d\'oeuvre a La Reunion. AMMO vous accompagne dans vos projets de construction, renovation et amenagement. Devis gratuit sous 48h. Contact : 0693 63 86 56',
-  keywords: 'maitrise d\'oeuvre La Reunion, maitre d\'oeuvre 974, construction La Reunion, renovation La Reunion, architecte La Reunion, bureau d\'etudes construction, Saint-Denis',
+  title: 'AMMO | Contractant Général à La Réunion | Travaux et Conception',
+  description: 'AMMO, votre contractant général à La Réunion. Rénovation, construction bois, conception et aménagements. 15 ans d\'expérience. Contact : 0693 63 86 56',
+  keywords: 'contractant général La Réunion, travaux La Réunion, rénovation 974, construction bois La Réunion, aménagement extérieur, bureau d\'études, conception 3D, Saint-Denis',
   authors: [{ name: 'AMMO' }],
   openGraph: {
-    title: 'AMMO - Maitrise d\'Oeuvre Experte a La Reunion',
-    description: 'Specialiste maitrise d\'oeuvre pour vos projets de construction et renovation a La Reunion. Expertise technique, suivi personnalise, respect des delais.',
+    title: 'AMMO | Contractant Général à La Réunion',
+    description: 'AMMO, votre contractant général à La Réunion. De la conception à la réalisation, un seul interlocuteur pour tous vos travaux. 15 ans d\'expérience.',
     url: 'https://ammo.re',
-    siteName: 'AMMO Maitrise d\'Oeuvre',
+    siteName: 'AMMO Contractant Général',
     locale: 'fr_FR',
     type: 'website',
     images: [
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
         url: 'https://ammo.re/logo.png',
         width: 1200,
         height: 630,
-        alt: 'AMMO - Maitrise d\'Oeuvre La Reunion',
+        alt: 'AMMO Contractant Général La Réunion',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AMMO - Maitrise d\'Oeuvre La Reunion',
-    description: 'Expert maitrise d\'oeuvre construction & renovation La Reunion 974',
+    title: 'AMMO | Contractant Général à La Réunion',
+    description: 'Contractant général travaux et conception La Réunion 974. 15 ans d\'expérience.',
     images: ['https://ammo.re/logo.png'],
   },
   alternates: {
@@ -56,8 +56,8 @@ export default function Home() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'GeneralContractor',
-            name: 'AMMO - Maitrise d\'Oeuvre',
-            description: 'Societe de maitrise d\'oeuvre specialisee en construction et renovation a La Reunion',
+            name: 'AMMO - Contractant Général',
+            description: 'Contractant général à La Réunion. Travaux, conception et aménagements. 15 ans d\'expérience.',
             url: 'https://ammo.re',
             logo: 'https://ammo.re/logo.png',
             image: 'https://ammo.re/logo.png',
@@ -94,7 +94,7 @@ export default function Home() {
             },
             sameAs: [
               'https://www.facebook.com/profile.php?id=61572855163213',
-              'https://www.instagram.com/ammo_maitrisedoeuvre974/',
+              'https://www.instagram.com/ammo_contractantgeneral974/',
             ],
           }),
         }}

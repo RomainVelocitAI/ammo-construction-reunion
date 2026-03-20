@@ -52,17 +52,17 @@ export function Footer() {
             <div className="mb-4">
               <Image
                 src="/logo-horizontal-gold.png"
-                alt="AMMO - Maîtrise d'Œuvre"
+                alt="AMMO - Contractant Général"
                 width={isMobile ? 180 : 240}
                 height={isMobile ? 58 : 77}
                 className="h-auto"
               />
             </div>
             <p className={`${isMobile ? 'text-sm' : 'text-base'} text-muted-foreground mb-2 font-semibold`}>
-              Conception à réalisation de vos projets
+              Contractant général • Travaux et conception à La Réunion
             </p>
             <p className={`${isMobile ? 'text-xs' : 'text-sm'} text-muted-foreground/80 mb-4`}>
-              Coordination technique, juridique et administrative • Garantie RE2020 • 10+ ans d'expérience
+              Coordination technique, juridique et administrative • Garantie RE2020 • 15+ ans d'expérience
             </p>
             <div className="flex space-x-4">
               <a href="https://www.facebook.com/profile.php?id=61572855163213&locale=fr_FR" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors">
@@ -76,28 +76,23 @@ export function Footer() {
             <h4 className={`${isMobile ? 'text-base' : 'text-lg'} font-semibold ${isMobile ? 'mb-3' : 'mb-4'} text-accent`}>Nos Services</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/maitrise-oeuvre/villa-contemporaine-reunion" className="text-muted-foreground hover:text-accent transition-colors">
-                  Villa Contemporaine
+                <Link href="/services/renovation-complete" className="text-muted-foreground hover:text-accent transition-colors">
+                  Rénovation Complète
                 </Link>
               </li>
               <li>
-                <Link href="/maitrise-oeuvre/renovation-complete-974" className="text-muted-foreground hover:text-accent transition-colors">
-                  Rénovation
+                <Link href="/services/extension-sur-mesure" className="text-muted-foreground hover:text-accent transition-colors">
+                  Extension Sur-Mesure
                 </Link>
               </li>
               <li>
-                <Link href="/maitrise-oeuvre/extension-maison-reunion" className="text-muted-foreground hover:text-accent transition-colors">
-                  Extension
-                </Link>
-              </li>
-              <li>
-                <Link href="/maitrise-oeuvre/amenagement-exterieur-reunion" className="text-muted-foreground hover:text-accent transition-colors">
+                <Link href="/services/amenagement-exterieur" className="text-muted-foreground hover:text-accent transition-colors">
                   Aménagement Extérieur
                 </Link>
               </li>
               <li>
-                <Link href="/maitrise-oeuvre/lodge-luxe-reunion" className="text-muted-foreground hover:text-accent transition-colors">
-                  Lodge de Luxe
+                <Link href="/services/projets-envergure" className="text-muted-foreground hover:text-accent transition-colors">
+                  Projets d'envergure
                 </Link>
               </li>
             </ul>
@@ -119,7 +114,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/#contact" className="text-muted-foreground hover:text-accent transition-colors">
-                  Devis Gratuit
+                  Prendre Contact
                 </Link>
               </li>
             </ul>
