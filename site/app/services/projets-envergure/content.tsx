@@ -113,7 +113,7 @@ const sections = [
     label: "Projets professionnels",
     title: "Projets professionnels",
     subtitle: "Commerces, bureaux & locaux d'activité",
-    image: "/projets-professionnels.jpg",
+    image: "/service-construction.jpg",
     paragraphs: [
       "Commerces, bureaux, ateliers, entrepôts : AMMO accompagne les professionnels dans la construction et l'aménagement de leurs locaux d'activité. Nous comprenons les enjeux spécifiques de chaque secteur et adaptons chaque projet à vos contraintes opérationnelles.",
       "De la conception de l'espace de travail à l'installation technique (climatisation, électricité, réseau), nous orchestrons l'intégralité du chantier pour que vous puissiez vous concentrer sur votre activité. Un interlocuteur unique, une vision globale, une exécution sans faille.",
