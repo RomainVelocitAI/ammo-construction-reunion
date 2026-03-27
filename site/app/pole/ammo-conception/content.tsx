@@ -49,11 +49,13 @@ const services = [
     title: 'Études techniques',
     description: 'Études de structure, thermique, acoustique et fluides pour des projets techniquement irréprochables.',
     icon: Calculator,
+    image: '/methodo-conception.jpg',
   },
   {
     title: 'Conseil et accompagnement',
     description: 'Un bureau d\'études à votre écoute à chaque étape, de la faisabilité à la livraison finale du projet.',
     icon: MessageCircle,
+    image: '/methodo-ecoute.jpg',
   },
 ]
 
@@ -167,9 +169,9 @@ export default function AmmoConceptionContent() {
             </p>
           </motion.div>
 
-          {/* Top row: 3 service cards with images */}
+          {/* Row 1: 3 cards with images */}
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-6 lg:mb-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-6 lg:mb-8"
             {...staggerContainer}
           >
             {services.slice(0, 3).map((service) => {
@@ -208,9 +210,9 @@ export default function AmmoConceptionContent() {
             })}
           </motion.div>
 
-          {/* Bottom row: 2 cards without images */}
+          {/* Row 2: 2 cards with images */}
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8"
             {...staggerContainer}
           >
             {services.slice(3).map((service) => {
@@ -218,13 +220,24 @@ export default function AmmoConceptionContent() {
               return (
                 <motion.div
                   key={service.title}
-                  className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 p-8 sm:p-10 flex gap-6 items-start"
+                  className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500"
                   {...staggerItem}
                 >
-                  <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-[#605E5B]/10 to-[#BD9C69]/10 border border-[#605E5B]/20 flex items-center justify-center group-hover:from-[#605E5B] group-hover:to-[#3d3c3a] transition-all duration-500">
-                    <Icon className="w-7 h-7 text-[#605E5B] group-hover:text-[#D6B363] transition-colors duration-500" />
+                  <div className="relative h-56 sm:h-64 overflow-hidden">
+                    <Image
+                      src={service.image!}
+                      alt={service.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#605E5B]/80 via-transparent to-transparent" />
+                    <div className="absolute bottom-4 left-4">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#605E5B] to-[#3d3c3a] flex items-center justify-center shadow-lg border border-[#D6B363]/30">
+                        <Icon className="w-6 h-6 text-[#D6B363]" />
+                      </div>
+                    </div>
                   </div>
-                  <div>
+                  <div className="p-6 sm:p-8">
                     <h3 className="font-heading text-xl sm:text-2xl text-foreground mb-3 tracking-tight">
                       {service.title}
                     </h3>

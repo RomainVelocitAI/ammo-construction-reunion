@@ -49,11 +49,13 @@ const services = [
     title: 'Meubles sur mesure',
     description: 'Création de mobilier unique, parfaitement intégré à votre espace et fabriqué avec des matériaux de qualité.',
     icon: Armchair,
+    image: '/methodo-realisation.jpg',
   },
   {
     title: 'Gros œuvre et second œuvre',
     description: 'Maçonnerie, structure, charpente et tous les corps de métier pour une construction solide et pérenne.',
     icon: Building2,
+    image: '/service-construction.jpg',
   },
 ]
 
@@ -163,9 +165,9 @@ export default function AmmoBtpContent() {
             </p>
           </motion.div>
 
-          {/* Top row: 3 cards with images */}
+          {/* Row 1: 3 cards */}
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-6 lg:mb-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-6 lg:mb-8"
             {...staggerContainer}
           >
             {services.slice(0, 3).map((service) => {
@@ -176,7 +178,6 @@ export default function AmmoBtpContent() {
                   className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500"
                   {...staggerItem}
                 >
-                  {/* Image */}
                   <div className="relative h-56 sm:h-64 overflow-hidden">
                     <Image
                       src={service.image!}
@@ -191,7 +192,6 @@ export default function AmmoBtpContent() {
                       </div>
                     </div>
                   </div>
-                  {/* Content */}
                   <div className="p-6 sm:p-8">
                     <h3 className="font-heading text-xl sm:text-2xl text-foreground mb-3 tracking-tight">
                       {service.title}
@@ -200,16 +200,15 @@ export default function AmmoBtpContent() {
                       {service.description}
                     </p>
                   </div>
-                  {/* Bottom accent line */}
                   <div className="absolute bottom-0 left-0 w-0 h-[3px] bg-gradient-to-r from-[#BD9C69] to-[#D6B363] group-hover:w-full transition-all duration-500" />
                 </motion.div>
               )
             })}
           </motion.div>
 
-          {/* Bottom row: 2 cards without images */}
+          {/* Row 2: 2 cards with images */}
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8"
             {...staggerContainer}
           >
             {services.slice(3).map((service) => {
@@ -217,13 +216,24 @@ export default function AmmoBtpContent() {
               return (
                 <motion.div
                   key={service.title}
-                  className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 p-8 sm:p-10 flex gap-6 items-start"
+                  className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500"
                   {...staggerItem}
                 >
-                  <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-[#BD9C69]/10 to-[#D6B363]/10 border border-[#BD9C69]/20 flex items-center justify-center group-hover:from-[#BD9C69] group-hover:to-[#D6B363] transition-all duration-500">
-                    <Icon className="w-7 h-7 text-[#BD9C69] group-hover:text-white transition-colors duration-500" />
+                  <div className="relative h-56 sm:h-64 overflow-hidden">
+                    <Image
+                      src={service.image!}
+                      alt={service.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                    <div className="absolute bottom-4 left-4">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#BD9C69] to-[#D6B363] flex items-center justify-center shadow-lg">
+                        <Icon className="w-6 h-6 text-white" />
+                      </div>
+                    </div>
                   </div>
-                  <div>
+                  <div className="p-6 sm:p-8">
                     <h3 className="font-heading text-xl sm:text-2xl text-foreground mb-3 tracking-tight">
                       {service.title}
                     </h3>
