@@ -66,7 +66,7 @@ const poles = [
     name: 'AMMO BTP',
     logo: '/logo-ammo-noir.svg',
     description:
-      'Notre pôle construction et gros oeuvre. Coordination de chantiers neufs et réhabilitations lourdes sur toute l\'île.',
+      'Rénovation, gros œuvre et second œuvre. Un interlocuteur unique pour coordonner l\'ensemble de vos travaux.',
     href: '/pole/ammo-btp',
     accent: 'from-[#BD9C69] to-[#D6B363]',
   },
@@ -74,15 +74,15 @@ const poles = [
     name: 'AMMO EXECUTION',
     logo: '/logo-ammo-or.svg',
     description:
-      'Exécution tous corps d\'état : second oeuvre, finitions et livraison clé en main avec un niveau d\'exigence élevé.',
+      'Terrasses, pergolas, carports, bardage et aménagements bois sur mesure. Savoir-faire artisanal à La Réunion.',
     href: '/pole/ammo-execution',
     accent: 'from-[#D6B363] to-[#BD9C69]',
   },
   {
     name: 'AMMO CONCEPTION',
-    logo: '/logo-ammo-or.svg',
+    logo: '/logo-ammo-noir.svg',
     description:
-      'Bureau d\'études et conception architecturale. Plans, permis et ingénierie adaptés au climat tropical réunionnais.',
+      'Plans architecturaux, modélisation 3D, permis de construire et études techniques. Bureau d\'études intégré.',
     href: '/pole/ammo-conception',
     accent: 'from-[#BD9C69] to-[#D6B363]',
   },

@@ -63,7 +63,7 @@ export default function AmmoConceptionContent() {
       {/* ══════════════════════════════════════════════
           HERO SECTION — dark anthracite, white text
           ══════════════════════════════════════════════ */}
-      <section className="relative min-h-[85vh] flex items-end overflow-hidden pt-24 sm:pt-28 lg:pt-36 bg-[#605E5B]">
+      <section className="relative min-h-[85vh] flex items-end overflow-x-hidden pt-24 sm:pt-28 lg:pt-36 bg-[#605E5B]">
         <div className="absolute inset-0">
           <Image
             src="/hero-ammo-conception.jpg"
@@ -98,7 +98,7 @@ export default function AmmoConceptionContent() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <Image
-                src="/logo-ammo-creme.svg"
+                src="/logo-ammo-blanc.svg"
                 alt="AMMO"
                 width={160}
                 height={50}
@@ -116,7 +116,7 @@ export default function AmmoConceptionContent() {
             </motion.span>
 
             <motion.h1
-              className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white leading-[0.9] tracking-tight mb-6"
+              className="font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-white leading-[0.9] tracking-tight mb-6"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5, ease: easeOut }}
@@ -129,7 +129,7 @@ export default function AmmoConceptionContent() {
             </motion.h1>
 
             <motion.p
-              className="font-subheading text-xl sm:text-2xl lg:text-3xl text-white/80 tracking-wide uppercase mb-8"
+              className="font-subheading text-lg sm:text-xl lg:text-3xl text-white/80 tracking-wide uppercase mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
@@ -243,7 +243,7 @@ export default function AmmoConceptionContent() {
       {/* ══════════════════════════════════════════════
           PROCESS — dark anthracite section
           ══════════════════════════════════════════════ */}
-      <section className="py-20 sm:py-28 bg-[#605E5B] relative overflow-hidden">
+      <section className="py-20 sm:py-28 bg-[#605E5B] relative overflow-x-hidden">
         {/* Grid pattern */}
         <div className="absolute inset-0 opacity-[0.04]" style={{
           backgroundImage: `repeating-linear-gradient(0deg, white 0px, white 1px, transparent 1px, transparent 80px),
@@ -262,7 +262,7 @@ export default function AmmoConceptionContent() {
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8"
             {...staggerContainer}
           >
             {[

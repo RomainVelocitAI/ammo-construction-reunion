@@ -111,7 +111,7 @@ export default function AmmoExecutionContent() {
             </motion.span>
 
             <motion.h1
-              className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white leading-[0.9] tracking-tight mb-6"
+              className="font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-white leading-[0.9] tracking-tight mb-6"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5, ease: easeOut }}
@@ -124,7 +124,7 @@ export default function AmmoExecutionContent() {
             </motion.h1>
 
             <motion.p
-              className="font-subheading text-xl sm:text-2xl lg:text-3xl text-white/80 tracking-wide uppercase mb-8"
+              className="font-subheading text-lg sm:text-xl lg:text-3xl text-white/80 tracking-wide uppercase mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
@@ -147,7 +147,7 @@ export default function AmmoExecutionContent() {
       {/* ══════════════════════════════════════════════
           SERVICES — alternating image/text rows
           ══════════════════════════════════════════════ */}
-      <section className="py-20 sm:py-28 lg:py-36 bg-[#F2ECE7]">
+      <section className="py-20 sm:py-28 lg:py-36 bg-[#F2ECE7] overflow-x-hidden">
         <div className="container mx-auto px-6 sm:px-12 lg:px-20">
           <motion.div className="text-center mb-16 sm:mb-20" {...fadeInUp}>
             <span className="inline-block px-5 py-2 bg-gradient-to-r from-[#BD9C69]/10 to-[#D6B363]/10 border border-[#BD9C69]/30 text-[#BD9C69] text-xs sm:text-sm font-bold uppercase tracking-[0.3em] rounded-full mb-6">

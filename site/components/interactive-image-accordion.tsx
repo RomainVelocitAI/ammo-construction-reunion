@@ -171,7 +171,7 @@ export function LandingAccordionItem() {
   const effectiveIsTablet = isTablet;
 
   return (
-    <div className={`bg-background font-sans ${effectiveIsMobile ? 'pt-20' : effectiveIsTablet ? 'pt-28' : 'pt-48 xl:pt-52'}`}>
+    <div className={`bg-background font-sans overflow-x-hidden ${effectiveIsMobile ? 'pt-20' : effectiveIsTablet ? 'pt-28' : 'pt-48 xl:pt-52'}`}>
       <section className={`container mx-auto ${effectiveIsMobile ? 'px-4 py-8' : effectiveIsTablet ? 'px-6 py-12' : 'px-6 py-20'}`}>
         <div className={`flex ${effectiveIsMobile || effectiveIsTablet ? 'flex-col' : 'flex-row'} items-center justify-between ${effectiveIsMobile ? 'gap-8' : effectiveIsTablet ? 'gap-10' : 'gap-12'}`}>
 
@@ -219,9 +219,9 @@ export function LandingAccordionItem() {
           </div>
 
           {/* Right Side: Image Accordion */}
-          <div className={`w-full ${!effectiveIsMobile && !effectiveIsTablet ? 'md:w-1/2' : ''} ${effectiveIsMobile ? 'overflow-hidden' : 'overflow-x-auto'}`}>
+          <div className={`w-full ${!effectiveIsMobile && !effectiveIsTablet ? 'md:w-1/2' : ''} overflow-hidden`}>
             {/* Responsive accordion container */}
-            <div className={`flex flex-row items-center ${effectiveIsMobile ? 'justify-center gap-1' : effectiveIsTablet ? 'justify-center gap-2' : 'justify-center gap-4'} ${effectiveIsMobile ? 'px-2' : effectiveIsTablet ? 'p-3' : 'p-4'} ${effectiveIsMobile ? 'max-w-full' : 'min-w-max'}`}>
+            <div className={`flex flex-row items-center ${effectiveIsMobile ? 'justify-center gap-1' : effectiveIsTablet ? 'justify-center gap-2' : 'justify-center gap-4'} ${effectiveIsMobile ? 'px-2' : effectiveIsTablet ? 'p-3' : 'p-4'}`}>
               {accordionItems.map((item, index) => (
                 <AccordionItem
                   key={item.id}
