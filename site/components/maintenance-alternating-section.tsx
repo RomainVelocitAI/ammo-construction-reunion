@@ -7,41 +7,41 @@ import Image from "next/image"
 const maintenanceData = [
   {
     title: "Protection Préventive",
-    description: "Anticipez les problèmes avant qu'ils ne deviennent critiques. Notre service d'inspection régulière détecte les signes avant-coureurs.",
-    highlight: "70% d'économies",
-    badge: "Données clients vérifiées",
+    description: "Anticipez les problèmes avant qu'ils ne deviennent critiques. Inspection régulière et détection des signes avant-coureurs.",
+    highlight: "Prévention",
+    badge: "Expertise terrain",
     src: "/protection-preventive.jpg",
     isLeftImage: true
   },
   {
     title: "Longévité Maximale",
     description: "Prolongez la durée de vie de votre investissement immobilier avec un entretien régulier et professionnel.",
-    highlight: "Expertise maintenance préventive",
-    badge: "10+ années d'expérience",
+    highlight: "Durabilité",
+    badge: "15+ ans d'expérience",
     src: "/longevite-maximale.jpg",
     isLeftImage: false
   },
   {
     title: "Rentabilité Optimisée",
-    description: "Transformez les dépenses imprévues en investissement planifié pour réduire drastiquement les coûts.",
-    highlight: "ROI garanti",
-    badge: "Analyse financière incluse",
+    description: "Transformez les dépenses imprévues en investissement planifié pour réduire les coûts.",
+    highlight: "Planification",
+    badge: "Suivi budgétaire",
     src: "/rentabilite-optimisee.jpg",
     isLeftImage: true
   },
   {
     title: "Valeur Préservée",
     description: "Maintenez et augmentez la valeur de votre patrimoine grâce à un suivi professionnel continu.",
-    highlight: "+25% de valeur",
-    badge: "Étude de marché 2024",
+    highlight: "Patrimoine",
+    badge: "Suivi continu",
     src: "/valeur-preservee.jpg",
     isLeftImage: false
   },
   {
     title: "Tranquillité d'Esprit",
     description: "Confiez l'entretien à des professionnels avec rapports réguliers et interventions planifiées.",
-    highlight: "Suivi 24/7",
-    badge: "Service premium garanti",
+    highlight: "Sérénité",
+    badge: "Accompagnement complet",
     src: "/tranquillite-esprit.jpg",
     isLeftImage: true
   }
@@ -224,15 +224,12 @@ const MaintenanceAlternatingSection = () => {
               Protégez Votre Investissement
             </h3>
             <p className={`text-muted-foreground ${isMobile ? 'mb-6 text-sm' : 'mb-8'} max-w-2xl mx-auto`}>
-              Demandez votre diagnostic gratuit et découvrez notre programme d'entretien personnalisé.
+              Votre projet ne s'arrête pas à la livraison. AMMO assure le suivi et l'entretien de vos réalisations pour protéger votre investissement.
             </p>
-            <div className={`flex ${isMobile || isTablet ? 'flex-col' : 'flex-row'} gap-4 justify-center`}>
-              <button className={`bg-gradient-to-r from-secondary to-accent text-primary-foreground ${isMobile ? 'px-6 py-3 text-sm' : 'px-8 py-4'} rounded-xl font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300`}>
-                Diagnostic Gratuit
-              </button>
-              <button className={`bg-background text-foreground ${isMobile ? 'px-6 py-3 text-sm' : 'px-8 py-4'} rounded-xl font-semibold border-2 border-border hover:border-secondary transition-colors duration-300`}>
-                Voir nos Contrats
-              </button>
+            <div className="flex justify-center">
+              <a href="/#contact" className={`bg-gradient-to-r from-secondary to-accent text-primary-foreground ${isMobile ? 'px-6 py-3 text-sm' : 'px-8 py-4'} rounded-xl font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300`}>
+                Prendre Contact
+              </a>
             </div>
           </div>
         </div>

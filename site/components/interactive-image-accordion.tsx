@@ -7,43 +7,35 @@ import Image from 'next/image';
 const accordionItems = [
   {
     id: 1,
-    title: 'Construction',
-    subtitle: 'Bâtissons votre avenir',
-    description: 'Construction complète de maisons individuelles, villas de luxe et bâtiments commerciaux. Expertise en construction traditionnelle et modulaire à La Réunion.',
-    features: ['Maisons individuelles', 'Villas de luxe', 'Bâtiments commerciaux', 'Construction modulaire'],
-    imageUrl: '/construction-metal.jpg',
+    title: 'Conception',
+    subtitle: 'Donnez forme à vos idées',
+    description: 'Plans architecturaux, modélisation 3D, permis de construire, études techniques et accompagnement dossiers de subventions.',
+    features: ['Plans architecturaux', 'Modélisation 3D', 'Permis de construire', 'Subventions'],
+    imageUrl: '/service-conception.jpg',
   },
   {
     id: 2,
-    title: 'Rénovation',
-    subtitle: 'Redonnez vie à vos espaces',
-    description: 'Rénovation complète ou partielle de votre habitat. Modernisation, mise aux normes et transformation de vos espaces intérieurs et extérieurs.',
-    features: ['Rénovation complète', 'Mise aux normes', 'Modernisation', 'Économies d\'énergie'],
-    imageUrl: '/renovation.jpg',
+    title: 'Maîtrise d\'Œuvre',
+    subtitle: 'Pilotez votre projet',
+    description: 'Coordination de l\'ensemble des intervenants, OPC, suivi technique et contrôle qualité. Votre projet piloté de A à Z.',
+    features: ['Coordination de projet', 'OPC', 'Suivi de chantier', 'Pilotage technique'],
+    imageUrl: '/construction-metal.jpg',
   },
   {
     id: 3,
-    title: 'Extension',
-    subtitle: 'Agrandissez vos horizons',
-    description: 'Création d\'espaces supplémentaires adaptés à vos besoins. Extensions harmonieuses qui valorisent votre patrimoine immobilier.',
-    features: ['Extension horizontale', 'Surélévation', 'Véranda', 'Garage'],
-    imageUrl: '/extension.jpg',
+    title: 'Contractant Général',
+    subtitle: 'Un seul contrat, tous les métiers',
+    description: 'Rénovation, extension, gros œuvre et projets d\'envergure. Un seul interlocuteur pour l\'ensemble des corps de métier.',
+    features: ['Rénovation complète', 'Extension sur-mesure', 'Gros œuvre', 'Projets d\'envergure'],
+    imageUrl: '/renovation.jpg',
   },
   {
     id: 4,
-    title: 'Extérieur',
-    subtitle: 'Sublimez vos espaces',
-    description: 'Aménagement complet de vos espaces extérieurs. Terrasses, piscines, jardins et clôtures pour un cadre de vie exceptionnel.',
-    features: ['Terrasses', 'Piscines', 'Jardins paysagers', 'Clôtures et portails'],
+    title: 'Second Œuvre & Finitions',
+    subtitle: 'Le détail qui fait la différence',
+    description: 'Peinture, agencement, meubles sur mesure, terrasses, pergolas, carports, bardage, jardins et piscines.',
+    features: ['Peinture', 'Agencement', 'Terrasses & pergolas', 'Jardins & piscines'],
     imageUrl: '/exterieur.jpg',
-  },
-  {
-    id: 5,
-    title: 'Conception',
-    subtitle: 'Donnez forme à vos idées',
-    description: 'Plans architecturaux, modélisation 3D et dossiers de permis de construire. Notre bureau d\'études intégré transforme vos idées en projets concrets.',
-    features: ['Plans architecturaux', 'Modélisation 3D', 'Permis de construire', 'Études techniques'],
-    imageUrl: '/service-conception.jpg',
   },
 ];
 
@@ -182,15 +174,11 @@ export function LandingAccordionItem() {
             </span>
             <h1 className={`${effectiveIsMobile ? 'text-2xl' : effectiveIsTablet ? 'text-4xl' : 'text-6xl'} font-bold leading-tight tracking-tighter`}>
               <span className="bg-gradient-to-r from-secondary via-accent to-secondary bg-clip-text text-transparent">
-                Votre contractant général
-              </span>
-              <br />
-              <span className="text-foreground">
-                à La Réunion
+                Le Groupe AMMO
               </span>
             </h1>
-            <p className={`mt-6 ${effectiveIsMobile ? 'text-sm' : effectiveIsTablet ? 'text-base' : 'text-lg'} text-muted-foreground max-w-xl ${effectiveIsMobile || effectiveIsTablet ? 'mx-auto' : 'mx-0'}`}>
-              {activeItem.description}
+            <p className={`mt-4 ${effectiveIsMobile ? 'text-sm' : effectiveIsTablet ? 'text-base' : 'text-lg'} text-muted-foreground max-w-xl ${effectiveIsMobile || effectiveIsTablet ? 'mx-auto' : 'mx-0'}`}>
+              De la conception à la réalisation, de la réalisation à l'entretien. AMMO maîtrise l'intégralité de la chaîne de valeur de vos projets à La Réunion.
             </p>
 
             {/* Features list */}

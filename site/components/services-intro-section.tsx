@@ -34,32 +34,32 @@ export function ServicesIntroSection() {
 
   const services = [
     {
-      title: "Rénovation Complète",
-      description: "Transformation totale de votre habitat. Mise aux normes et modernisation énergétique.",
+      title: "Conception",
+      description: "Plans architecturaux, modélisation 3D, permis de construire et accompagnement aux subventions. Votre projet prend forme avant le premier coup de pioche.",
+      image: "/service-conception.jpg",
+      href: "/pole/conception",
+      alt: "Conception - Groupe AMMO La Réunion",
+    },
+    {
+      title: "Maîtrise d'Œuvre",
+      description: "Pilotage, coordination et suivi de vos chantiers. Un chef d'orchestre pour tous vos intervenants.",
+      image: "/construction-metal.jpg",
+      href: "/pole/maitrise-oeuvre",
+      alt: "Maîtrise d'Œuvre - Groupe AMMO La Réunion",
+    },
+    {
+      title: "Contractant Général",
+      description: "Rénovation, extension, gros œuvre et projets d'envergure. Un seul contrat, tous les corps de métier.",
       image: "/renovation.png",
-      href: "/services/renovation-complete",
-      alt: "Rénovation Complète La Réunion",
+      href: "/pole/contractant-general",
+      alt: "Contractant Général - Groupe AMMO La Réunion",
     },
     {
-      title: "Extension Sur-Mesure",
-      description: "Agrandissement harmonieux de votre espace. Solutions créatives pour optimiser votre habitat.",
-      image: "/extension.png",
-      href: "/services/extension-sur-mesure",
-      alt: "Extension Sur-Mesure La Réunion",
-    },
-    {
-      title: "Aménagement Extérieur",
-      description: "Terrasses, pergolas, carports et jardins paysagers. Création d'espaces de vie extérieurs exceptionnels.",
-      image: "/amenagement exterieur.png",
-      href: "/services/amenagement-exterieur",
-      alt: "Aménagement Extérieur La Réunion",
-    },
-    {
-      title: "Projets d'envergure",
-      description: "Hébergements touristiques, programmes immobiliers et projets professionnels. Un interlocuteur unique pour vos projets ambitieux.",
-      image: "/projets-envergure-hero.jpg",
-      href: "/services/projets-envergure",
-      alt: "Projets d'envergure La Réunion",
+      title: "Second Œuvre & Finitions",
+      description: "Peinture, agencement, menuiserie, aménagements extérieurs, jardins et piscines. Le détail qui fait la différence.",
+      image: "/exterieur.jpg",
+      href: "/pole/second-oeuvre-finitions",
+      alt: "Second Œuvre & Finitions - Groupe AMMO La Réunion",
     },
   ];
 
@@ -69,15 +69,15 @@ export function ServicesIntroSection() {
         <div className="w-full mb-16">
           <div className="max-w-6xl mx-auto text-center">
           <h2 className={`${effectiveIsMobile ? 'text-2xl' : effectiveIsTablet ? 'text-3xl' : 'text-6xl'} font-heading font-bold text-foreground mb-6 leading-tight`}>
-            Nos Services de Travaux et Conception
+            Nos 4 Pôles d'Expertise
             <span className={`block ${effectiveIsMobile ? 'text-lg' : effectiveIsTablet ? 'text-xl' : 'text-3xl'} font-subheading font-light text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent mt-2`}>
-              Rénovation • Extension • Aménagement • Projets d'envergure
+              Conception • Maîtrise d'Œuvre • Contractant Général • Second Œuvre & Finitions
             </span>
           </h2>
 
           <div className={`${effectiveIsMobile ? 'text-base' : effectiveIsTablet ? 'text-lg' : 'text-xl'} text-muted-foreground mb-8 leading-relaxed ${effectiveIsMobile ? 'px-2' : effectiveIsTablet ? 'px-4' : 'px-0'}`}>
-            Contractant général à La Réunion, AMMO vous accompagne dans tous vos projets de travaux et conception.
-            Chaque réalisation bénéficie de notre expertise technique RE2020 et de notre connaissance
+            Le Groupe AMMO maîtrise toute la chaîne de valeur du bâtiment à La Réunion.
+            Chaque pôle peut intervenir indépendamment ou en synergie, selon la nature de votre projet. Notre connaissance
             approfondie du territoire réunionnais.
           </div>
           </div>

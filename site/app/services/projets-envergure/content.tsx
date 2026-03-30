@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import { ArrowRight, Building2, Palmtree, Briefcase } from "lucide-react";
 
 /* ------------------------------------------------------------------ */
@@ -50,14 +49,11 @@ function AnimatedSection({
   children: React.ReactNode;
   className?: string;
 }) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
-
   return (
     <motion.section
-      ref={ref}
       initial="hidden"
-      animate={inView ? "visible" : "hidden"}
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }}
       variants={stagger}
       className={className}
     >
@@ -349,8 +345,6 @@ function SubSection({
   imageOnLeft: boolean;
   index: number;
 }) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
   const Icon = section.icon;
 
   const bgClass = index % 2 === 0 ? "bg-background" : "bg-[#ebe4db]";
@@ -358,7 +352,6 @@ function SubSection({
   return (
     <section
       id={section.id}
-      ref={ref}
       className={`${bgClass} py-20 sm:py-28 lg:py-36 scroll-mt-24`}
     >
       <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-20">
@@ -370,7 +363,8 @@ function SubSection({
           {/* Image */}
           <motion.div
             initial="hidden"
-            animate={inView ? "visible" : "hidden"}
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
             variants={imageOnLeft ? slideFromLeft : slideFromRight}
             className="relative aspect-[4/3] lg:aspect-[3/4] xl:aspect-[4/3] rounded-2xl overflow-hidden group lg:[direction:ltr]"
           >
@@ -391,7 +385,8 @@ function SubSection({
           {/* Text content */}
           <motion.div
             initial="hidden"
-            animate={inView ? "visible" : "hidden"}
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
             variants={stagger}
             className="lg:[direction:ltr]"
           >

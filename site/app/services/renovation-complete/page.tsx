@@ -6,14 +6,14 @@ import { RelatedServices } from '@/components/related-services'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Rénovation Complète à La Réunion | AMMO Contractant Général',
+  title: 'Rénovation Complète à La Réunion | Groupe AMMO',
   description: 'Contractant général pour votre rénovation complète à La Réunion. Transformation maison, mise aux normes RE2020, pilotage projet. Prenez contact dès maintenant.',
   keywords: 'rénovation complète La Réunion, contractant général rénovation, transformation maison 974, mise aux normes RE2020, rénovation case créole',
   openGraph: {
-    title: 'Rénovation Complète à La Réunion | AMMO Contractant Général',
+    title: 'Rénovation Complète à La Réunion | Groupe AMMO',
     description: 'Contractant général pour votre rénovation complète. Pilotage complet, coordination artisans, respect budget et délais.',
     url: 'https://ammo.re/services/renovation-complete',
-    siteName: 'AMMO Contractant Général',
+    siteName: 'Groupe AMMO',
     locale: 'fr_FR',
     type: 'website',
     images: [{ url: 'https://ammo.re/renovation.png', width: 1200, height: 630, alt: 'Rénovation Complète La Réunion par AMMO' }],
@@ -25,13 +25,13 @@ export const metadata: Metadata = {
 
 export default function RenovationCompletePage() {
   const images = [
-    { src: '/renovation.png', alt: 'Rénovation complète La Réunion - Avant/Après par AMMO contractant général' },
-    { src: '/renovation.png', alt: 'Rénovation intérieur maison La Réunion - Pilotage AMMO' },
-    { src: '/renovation.png', alt: 'Transformation façade La Réunion - Coordination travaux AMMO' },
-    { src: '/renovation.png', alt: 'Rénovation cuisine moderne 974 - AMMO contractant général' },
-    { src: '/renovation.png', alt: 'Rénovation salle de bain La Réunion - Suivi chantier AMMO' },
-    { src: '/renovation.png', alt: 'Aménagement terrasse rénovation - Contractant général La Réunion' },
-    { src: '/renovation.png', alt: 'Finitions rénovation complète 974 - Qualité AMMO' },
+    { src: '/renovation.jpg', alt: 'Rénovation complète La Réunion - Avant/Après par AMMO contractant général' },
+    { src: '/btp-renovation-complete.jpg', alt: 'Rénovation intérieur maison La Réunion - Pilotage AMMO' },
+    { src: '/btp-peinture.jpg', alt: 'Peinture façade rénovation La Réunion - Coordination AMMO' },
+    { src: '/btp-agencement.jpg', alt: 'Agencement intérieur rénovation 974 - AMMO contractant général' },
+    { src: '/methodo-realisation.jpg', alt: 'Réalisation chantier rénovation La Réunion - Suivi AMMO' },
+    { src: '/service-renovation.jpg', alt: 'Service rénovation complète 974 - Contractant général AMMO' },
+    { src: '/construction.jpg', alt: 'Finitions rénovation complète La Réunion - Qualité AMMO' },
   ]
 
   return (

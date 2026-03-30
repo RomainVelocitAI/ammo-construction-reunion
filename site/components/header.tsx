@@ -9,9 +9,9 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isPolesOpen, setIsPolesOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [hoveredPole, setHoveredPole] = useState<number | null>(null);
   const [isMobilePolesOpen, setIsMobilePolesOpen] = useState(false);
-  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [mobilePoleExpanded, setMobilePoleExpanded] = useState<number | null>(null);
 
   const getInitialMobileState = () => {
     if (typeof window !== 'undefined') {
@@ -42,22 +42,54 @@ export function Header() {
   }, []);
 
   const poleLinks = [
-    { label: 'AMMO BTP', href: '/pole/ammo-btp' },
-    { label: 'AMMO EXECUTION', href: '/pole/ammo-execution' },
-    { label: 'AMMO CONCEPTION', href: '/pole/ammo-conception' },
-  ];
-
-  const serviceLinks = [
-    { label: 'Rénovation Complète', href: '/services/renovation-complete' },
-    { label: 'Extension Sur-Mesure', href: '/services/extension-sur-mesure' },
-    { label: 'Aménagement Extérieur', href: '/services/amenagement-exterieur' },
-    { label: 'Projets d\'envergure', href: '/services/projets-envergure' },
+    {
+      label: 'Conception',
+      href: '/pole/conception',
+      services: [
+        { label: 'Plans architecturaux', href: '/pole/conception#services' },
+        { label: 'Modélisation 3D', href: '/pole/conception#services' },
+        { label: 'Permis de construire', href: '/pole/conception#services' },
+        { label: 'Études techniques', href: '/pole/conception#services' },
+        { label: 'Subventions', href: '/pole/conception#services' },
+      ],
+    },
+    {
+      label: 'Maîtrise d\'Œuvre',
+      href: '/pole/maitrise-oeuvre',
+      services: [
+        { label: 'Coordination de projet', href: '/pole/maitrise-oeuvre#services' },
+        { label: 'OPC', href: '/pole/maitrise-oeuvre#services' },
+        { label: 'Suivi de chantier', href: '/pole/maitrise-oeuvre#services' },
+        { label: 'Pilotage technique', href: '/pole/maitrise-oeuvre#services' },
+      ],
+    },
+    {
+      label: 'Contractant Général',
+      href: '/pole/contractant-general',
+      services: [
+        { label: 'Rénovation complète', href: '/services/renovation-complete' },
+        { label: 'Extension sur-mesure', href: '/services/extension-sur-mesure' },
+        { label: 'Gros œuvre', href: '/pole/contractant-general#services' },
+        { label: 'Projets d\'envergure', href: '/services/projets-envergure' },
+      ],
+    },
+    {
+      label: 'Second Œuvre & Finitions',
+      href: '/pole/second-oeuvre-finitions',
+      services: [
+        { label: 'Peinture & Agencement', href: '/pole/second-oeuvre-finitions#services' },
+        { label: 'Meubles sur mesure', href: '/pole/second-oeuvre-finitions#services' },
+        { label: 'Aménagement extérieur', href: '/services/amenagement-exterieur' },
+        { label: 'Terrasses & Pergolas', href: '/pole/second-oeuvre-finitions#services' },
+        { label: 'Jardins & Piscines', href: '/pole/second-oeuvre-finitions#services' },
+      ],
+    },
   ];
 
   const navLinks = [
     { label: 'Accueil', href: '/' },
     { label: 'Espace Pro', href: '/espace-pro' },
-    { label: 'À propos', href: '/equipe' },
+    { label: 'À Propos', href: '/a-propos' },
   ];
 
   return (
@@ -100,11 +132,11 @@ export function Header() {
                 <span className="absolute -bottom-3 left-0 w-0 h-[2px] bg-gradient-to-r from-secondary via-accent to-secondary transition-all duration-700 group-hover:w-full"></span>
               </Link>
 
-              {/* Nos Pôles Dropdown */}
+              {/* Nos Pôles Dropdown — 2 niveaux */}
               <div
                 className="relative"
                 onMouseEnter={() => setIsPolesOpen(true)}
-                onMouseLeave={() => setIsPolesOpen(false)}
+                onMouseLeave={() => { setIsPolesOpen(false); setHoveredPole(null); }}
               >
                 <button className="relative text-foreground hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-secondary hover:to-accent transition-all duration-500 group flex items-center gap-2">
                   <span className="text-sm lg:text-base xl:text-lg font-light tracking-[0.25em] uppercase">
@@ -114,51 +146,40 @@ export function Header() {
                   <span className="absolute -bottom-3 left-0 w-0 h-[2px] bg-gradient-to-r from-secondary via-accent to-secondary transition-all duration-700 group-hover:w-full"></span>
                 </button>
 
-                <div className={`absolute top-full left-0 mt-2 w-[280px] bg-background/95 backdrop-blur-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] rounded-xl overflow-hidden transition-all duration-300 ${
+                <div className={`absolute top-full left-0 mt-2 flex bg-background/95 backdrop-blur-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] rounded-xl overflow-hidden transition-all duration-300 ${
                   isPolesOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
                 }`}>
-                  <div className="py-2">
-                    {poleLinks.map((pole) => (
+                  {/* Colonne pôles */}
+                  <div className="py-2 w-[260px] border-r border-secondary/10">
+                    {poleLinks.map((pole, index) => (
                       <Link
                         key={pole.label}
                         href={pole.href}
-                        className="block px-6 py-3 text-foreground hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-secondary hover:to-accent hover:bg-secondary/10 transition-all duration-300 text-sm font-light tracking-wide"
+                        className={`block px-6 py-3 text-sm font-light tracking-wide transition-all duration-300 ${
+                          hoveredPole === index
+                            ? 'text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent bg-secondary/10'
+                            : 'text-foreground hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-secondary hover:to-accent'
+                        }`}
+                        onMouseEnter={() => setHoveredPole(index)}
                       >
                         {pole.label}
                       </Link>
                     ))}
                   </div>
-                </div>
-              </div>
-
-              {/* Services Dropdown */}
-              <div
-                className="relative"
-                onMouseEnter={() => setIsServicesOpen(true)}
-                onMouseLeave={() => setIsServicesOpen(false)}
-              >
-                <button className="relative text-foreground hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-secondary hover:to-accent transition-all duration-500 group flex items-center gap-2">
-                  <span className="text-sm lg:text-base xl:text-lg font-light tracking-[0.25em] uppercase">
-                    Services
-                  </span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
-                  <span className="absolute -bottom-3 left-0 w-0 h-[2px] bg-gradient-to-r from-secondary via-accent to-secondary transition-all duration-700 group-hover:w-full"></span>
-                </button>
-
-                <div className={`absolute top-full left-0 mt-2 w-[280px] bg-background/95 backdrop-blur-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] rounded-xl overflow-hidden transition-all duration-300 ${
-                  isServicesOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
-                }`}>
-                  <div className="py-2">
-                    {serviceLinks.map((service) => (
-                      <Link
-                        key={service.label}
-                        href={service.href}
-                        className="block px-6 py-3 text-foreground hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-secondary hover:to-accent hover:bg-secondary/10 transition-all duration-300 text-sm font-light tracking-wide"
-                      >
-                        {service.label}
-                      </Link>
-                    ))}
-                  </div>
+                  {/* Colonne services du pôle survolé */}
+                  {hoveredPole !== null && poleLinks[hoveredPole].services && (
+                    <div className="py-2 w-[240px]">
+                      {poleLinks[hoveredPole].services.map((service) => (
+                        <Link
+                          key={service.label}
+                          href={service.href}
+                          className="block px-6 py-2.5 text-foreground/70 hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-secondary hover:to-accent transition-all duration-300 text-sm font-light"
+                        >
+                          {service.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -174,11 +195,11 @@ export function Header() {
               </Link>
 
               <Link
-                href="/equipe"
+                href="/a-propos"
                 className="relative text-foreground hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-secondary hover:to-accent transition-all duration-500 group whitespace-nowrap"
               >
                 <span className="text-sm lg:text-base xl:text-lg font-light tracking-[0.25em] uppercase">
-                  À propos
+                  À Propos
                 </span>
                 <span className="absolute -bottom-3 left-0 w-0 h-[2px] bg-gradient-to-r from-secondary via-accent to-secondary transition-all duration-700 group-hover:w-full"></span>
               </Link>
@@ -242,51 +263,39 @@ export function Header() {
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMobilePolesOpen ? 'rotate-180' : ''}`} />
               </button>
               <div className={`transition-all duration-300 overflow-hidden ${
-                isMobilePolesOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                isMobilePolesOpen ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
               }`}>
                 <div className="bg-secondary/5 py-2">
-                  {poleLinks.map((pole) => (
-                    <Link
-                      key={pole.label}
-                      href={pole.href}
-                      className="block py-2 px-8 text-foreground/80 hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-secondary hover:to-accent transition-all duration-300 text-sm font-light"
-                      onClick={() => {
-                        setIsMobileMenuOpen(false);
-                        setIsMobilePolesOpen(false);
-                      }}
-                    >
-                      {pole.label}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Mobile Services Accordion */}
-            <div className="border-t border-secondary/10 mt-2">
-              <button
-                onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                className="w-full flex items-center justify-between py-3 px-4 text-foreground hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-secondary hover:to-accent transition-all duration-500 font-light tracking-[0.2em] uppercase text-sm"
-              >
-                <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              <div className={`transition-all duration-300 overflow-hidden ${
-                isMobileServicesOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-              }`}>
-                <div className="bg-secondary/5 py-2">
-                  {serviceLinks.map((service) => (
-                    <Link
-                      key={service.label}
-                      href={service.href}
-                      className="block py-2 px-8 text-foreground/80 hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-secondary hover:to-accent transition-all duration-300 text-sm font-light"
-                      onClick={() => {
-                        setIsMobileMenuOpen(false);
-                        setIsMobileServicesOpen(false);
-                      }}
-                    >
-                      {service.label}
-                    </Link>
+                  {poleLinks.map((pole, index) => (
+                    <div key={pole.label}>
+                      <button
+                        onClick={() => setMobilePoleExpanded(mobilePoleExpanded === index ? null : index)}
+                        className="w-full flex items-center justify-between py-2 px-8 text-foreground/80 hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-secondary hover:to-accent transition-all duration-300 text-sm font-light"
+                      >
+                        <Link
+                          href={pole.href}
+                          onClick={(e) => { e.stopPropagation(); setIsMobileMenuOpen(false); setIsMobilePolesOpen(false); }}
+                          className="hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-secondary hover:to-accent"
+                        >
+                          {pole.label}
+                        </Link>
+                        <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${mobilePoleExpanded === index ? 'rotate-180' : ''}`} />
+                      </button>
+                      <div className={`transition-all duration-200 overflow-hidden ${
+                        mobilePoleExpanded === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                      }`}>
+                        {pole.services.map((service) => (
+                          <Link
+                            key={service.label}
+                            href={service.href}
+                            className="block py-1.5 px-12 text-foreground/60 hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-secondary hover:to-accent transition-all duration-300 text-xs font-light"
+                            onClick={() => { setIsMobileMenuOpen(false); setIsMobilePolesOpen(false); }}
+                          >
+                            {service.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -301,11 +310,11 @@ export function Header() {
             </Link>
 
             <Link
-              href="/equipe"
+              href="/a-propos"
               className="block py-3 px-4 text-foreground hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-secondary hover:to-accent transition-all duration-500 font-light tracking-[0.2em] uppercase text-sm border-t border-secondary/10 mt-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              À propos
+              À Propos
             </Link>
 
             <Link href="/#contact" className="mt-6 mx-4 w-[calc(100%-2rem)] py-3 bg-gradient-to-r from-secondary to-accent text-primary-foreground font-medium text-sm tracking-[0.2em] uppercase hover:from-accent hover:to-secondary transition-all duration-500 relative overflow-hidden group block text-center" onClick={() => setIsMobileMenuOpen(false)}>

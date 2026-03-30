@@ -1,16 +1,16 @@
 import { Metadata } from 'next'
-import AmmoConceptionContent from './content'
+import MaitriseOeuvreContent from './content'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 
 export const metadata: Metadata = {
-  title: 'AMMO CONCEPTION | Plans, 3D et Permis de Construire à La Réunion',
-  description: "Bureau d'études intégré : plans architecturaux, modélisation 3D, dossiers permis de construire à La Réunion.",
+  title: 'Maîtrise d\'Œuvre | Groupe AMMO La Réunion',
+  description: 'Pilotage, coordination OPC et suivi de chantier. AMMO assure la maîtrise d\'œuvre de vos projets à La Réunion.',
   openGraph: {
-    title: 'AMMO CONCEPTION | Plans, 3D et Permis de Construire à La Réunion',
-    description: "Bureau d'études intégré : plans architecturaux, modélisation 3D, dossiers permis de construire.",
-    url: 'https://ammo.re/pole/ammo-conception',
-    siteName: 'AMMO Contractant Général',
+    title: 'Maîtrise d\'Œuvre | Groupe AMMO La Réunion',
+    description: 'Pilotage, coordination OPC et suivi de chantier. AMMO assure la maîtrise d\'œuvre de vos projets à La Réunion.',
+    url: 'https://ammo.re/pole/maitrise-oeuvre',
+    siteName: 'Groupe AMMO',
     locale: 'fr_FR',
     type: 'website',
   },
@@ -21,7 +21,7 @@ export default function Page() {
     <>
       <Header />
       <main>
-        <AmmoConceptionContent />
+        <MaitriseOeuvreContent />
       </main>
       <Footer />
       <script
@@ -30,11 +30,11 @@ export default function Page() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Service',
-            name: 'AMMO CONCEPTION',
-            description: "Bureau d'études intégré : plans architecturaux, modélisation 3D, permis de construire à La Réunion.",
+            name: 'Maîtrise d\'Œuvre — Groupe AMMO',
+            description: 'Pilotage, coordination OPC et suivi de chantier à La Réunion.',
             provider: {
               '@type': 'Organization',
-              name: 'AMMO',
+              name: 'Groupe AMMO',
               url: 'https://ammo.re',
               address: {
                 '@type': 'PostalAddress',
@@ -50,11 +50,10 @@ export default function Page() {
               name: 'La Réunion',
             },
             serviceType: [
-              'Plans architecturaux',
-              'Modélisation 3D',
-              'Permis de construire',
-              'Études techniques',
-              'Conseil et accompagnement',
+              'Coordination de projet',
+              'OPC (ordonnancement, pilotage, coordination)',
+              'Suivi de chantier',
+              'Pilotage technique',
             ],
           }),
         }}

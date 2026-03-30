@@ -4,7 +4,7 @@ import { Footer } from '@/components/footer'
 import { EspaceProContent } from './content'
 
 export const metadata: Metadata = {
-  title: 'Espace Pro | Devenir Partenaire AMMO à La Réunion',
+  title: 'Espace Pro | Devenir Partenaire AMMO',
   description: 'Rejoignez le réseau AMMO : sous-traitants et partenaires qualifiés recherchés dans tous les corps de métier à La Réunion.',
 }
 

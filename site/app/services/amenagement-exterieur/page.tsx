@@ -6,14 +6,14 @@ import { RelatedServices } from '@/components/related-services'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Aménagement Extérieur à La Réunion | AMMO Contractant Général',
+  title: 'Aménagement Extérieur à La Réunion | Groupe AMMO',
   description: 'Contractant général pour votre aménagement extérieur à La Réunion. Terrasses, piscines, jardins tropicaux, kiosques. Pilotage projet complet. Prenez contact.',
   keywords: 'aménagement extérieur La Réunion, terrasse La Réunion, piscine 974, jardin tropical, contractant général paysagiste, cuisine extérieure La Réunion, kiosque tropical',
   openGraph: {
-    title: 'Aménagement Extérieur à La Réunion | AMMO Contractant Général',
+    title: 'Aménagement Extérieur à La Réunion | Groupe AMMO',
     description: 'Contractant général pour vos espaces extérieurs tropicaux. Coordination complète, respect budget et délais.',
     url: 'https://ammo.re/services/amenagement-exterieur',
-    siteName: 'AMMO Contractant Général',
+    siteName: 'Groupe AMMO',
     locale: 'fr_FR',
     type: 'website',
     images: [{ url: 'https://ammo.re/amenagement exterieur.png', width: 1200, height: 630, alt: 'Aménagement Extérieur La Réunion par AMMO' }],
@@ -25,13 +25,13 @@ export const metadata: Metadata = {
 
 export default function AmenagementExterieurPage() {
   const images = [
-    { src: '/amenagement exterieur.png', alt: 'Aménagement extérieur La Réunion - Vue ensemble AMMO contractant général' },
-    { src: '/amenagement exterieur.png', alt: 'Construction piscine tropicale 974 - Pilotage AMMO' },
-    { src: '/amenagement exterieur.png', alt: 'Jardin tropical paysage La Réunion - Coordination travaux AMMO' },
-    { src: '/amenagement exterieur.png', alt: 'Terrasse bois exotique 974 - AMMO contractant général' },
-    { src: '/amenagement exterieur.png', alt: 'Éclairage extérieur jardin La Réunion - Suivi chantier AMMO' },
-    { src: '/amenagement exterieur.png', alt: 'Pergola sur-mesure 974 - Contractant général La Réunion' },
-    { src: '/amenagement exterieur.png', alt: 'Espace détente extérieur tropical - Qualité AMMO' },
+    { src: '/exterieur.jpg', alt: 'Aménagement extérieur La Réunion - Vue ensemble AMMO contractant général' },
+    { src: '/execution-terrasse.jpg', alt: 'Terrasse bois exotique 974 - AMMO contractant général' },
+    { src: '/execution-pergola.jpg', alt: 'Pergola sur-mesure La Réunion - Coordination AMMO' },
+    { src: '/execution-carport.jpg', alt: 'Carport bois 974 - AMMO contractant général' },
+    { src: '/execution-bardage.jpg', alt: 'Bardage extérieur La Réunion - Suivi chantier AMMO' },
+    { src: '/service-exterieur.jpg', alt: 'Espaces verts et jardins tropicaux 974 - AMMO' },
+    { src: '/entretien.jpg', alt: 'Entretien extérieur tropical La Réunion - Qualité AMMO' },
   ]
 
   return (

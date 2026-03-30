@@ -102,19 +102,19 @@ export function AboutSectionSplit() {
 
             {/* Title */}
             <h2 className={`${isMobile ? 'text-3xl' : isTablet ? 'text-4xl' : 'text-6xl'} font-bold text-gray-900 mb-6 leading-tight`}>
-              Votre contractant général à La Réunion
+              Un groupe, quatre expertises,
               <span className={`block ${isMobile ? 'text-xl' : isTablet ? 'text-2xl' : 'text-3xl'} font-light text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-600 mt-2`}>
-                De la conception à la réalisation
+                zéro intermédiaire
               </span>
             </h2>
 
             {/* Main Text */}
             <p className={`${isMobile ? 'text-lg' : 'text-xl'} text-gray-700 mb-6 leading-relaxed`}>
-              Contractant général à La Réunion, AMMO coordonne l'intégralité de vos travaux avec une expertise reconnue dans tous les métiers du bâtiment. Un seul interlocuteur, trois pôles d'expertise.
+              À La Réunion, AMMO est le seul groupe à maîtriser l'intégralité de la chaîne de valeur du bâtiment. De la conception de vos plans jusqu'à l'entretien de vos réalisations, en passant par le pilotage de chantier et l'exécution des travaux, vous bénéficiez d'un interlocuteur unique.
             </p>
 
             <p className={`${isMobile ? 'text-base' : 'text-lg'} text-gray-600 mb-8`}>
-              AMMO BTP pour la rénovation et le gros œuvre, AMMO EXECUTION pour le bois et les extérieurs, AMMO CONCEPTION pour les plans et la 3D. Ensemble, nous garantissons le respect des normes RE2020, des délais et de votre budget.
+              Chaque pôle peut intervenir indépendamment ou en synergie avec les autres, selon la nature de votre projet. Conception, Maîtrise d'Œuvre, Contractant Général, Second Œuvre & Finitions — quatre expertises pour garantir le respect des délais et de votre budget.
             </p>
 
 

@@ -1,16 +1,16 @@
 import { Metadata } from 'next'
-import AmmoExecutionContent from './content'
+import ContractantGeneralContent from './content'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 
 export const metadata: Metadata = {
-  title: 'AMMO EXECUTION | Bois et Aménagements Extérieurs à La Réunion',
-  description: 'Terrasses, pergolas, carports, bardage et traitement bois. Savoir-faire artisanal à La Réunion.',
+  title: 'Contractant Général | Groupe AMMO La Réunion',
+  description: 'Rénovation, extension, gros œuvre et projets d\'envergure. Un seul interlocuteur pour tous vos travaux à La Réunion.',
   openGraph: {
-    title: 'AMMO EXECUTION | Bois et Aménagements Extérieurs à La Réunion',
-    description: 'Terrasses, pergolas, carports, bardage et traitement bois. Savoir-faire artisanal à La Réunion.',
-    url: 'https://ammo.re/pole/ammo-execution',
-    siteName: 'AMMO Contractant Général',
+    title: 'Contractant Général | Groupe AMMO La Réunion',
+    description: 'Rénovation, extension, gros œuvre et projets d\'envergure. Un seul interlocuteur pour tous vos travaux à La Réunion.',
+    url: 'https://ammo.re/pole/contractant-general',
+    siteName: 'Groupe AMMO',
     locale: 'fr_FR',
     type: 'website',
   },
@@ -21,7 +21,7 @@ export default function Page() {
     <>
       <Header />
       <main>
-        <AmmoExecutionContent />
+        <ContractantGeneralContent />
       </main>
       <Footer />
       <script
@@ -30,11 +30,11 @@ export default function Page() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Service',
-            name: 'AMMO EXECUTION',
-            description: 'Terrasses, pergolas, carports, bardage et traitement bois à La Réunion.',
+            name: 'Contractant Général — Groupe AMMO',
+            description: 'Rénovation, extension, gros œuvre et projets d\'envergure à La Réunion. Un seul contrat, tous les corps de métier.',
             provider: {
               '@type': 'Organization',
-              name: 'AMMO',
+              name: 'Groupe AMMO',
               url: 'https://ammo.re',
               address: {
                 '@type': 'PostalAddress',
@@ -50,11 +50,10 @@ export default function Page() {
               name: 'La Réunion',
             },
             serviceType: [
-              'Terrasses bois et composite',
-              'Pergolas et carports',
-              'Traitement et protection du bois',
-              'Bardage extérieur',
-              'Abris et aménagements sur mesure',
+              'Rénovation complète et partielle',
+              'Extension sur-mesure',
+              'Gros œuvre',
+              'Projets d\'envergure',
             ],
           }),
         }}

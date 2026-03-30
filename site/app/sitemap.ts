@@ -12,19 +12,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/pole/ammo-btp`,
+      url: `${baseUrl}/pole/conception`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/pole/ammo-execution`,
+      url: `${baseUrl}/pole/maitrise-oeuvre`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/pole/ammo-conception`,
+      url: `${baseUrl}/pole/contractant-general`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/pole/second-oeuvre-finitions`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.9,
@@ -60,7 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/equipe`,
+      url: `${baseUrl}/a-propos`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,

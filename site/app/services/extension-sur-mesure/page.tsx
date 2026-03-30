@@ -6,14 +6,14 @@ import { RelatedServices } from '@/components/related-services'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Extension Sur-Mesure à La Réunion | AMMO Contractant Général',
+  title: 'Extension Sur-Mesure à La Réunion | Groupe AMMO',
   description: 'Contractant général pour votre extension sur-mesure à La Réunion. Agrandissement harmonieux, suite parentale, véranda. Pilotage complet. Prenez contact.',
   keywords: 'extension sur-mesure La Réunion, agrandissement maison La Réunion, extension 974, contractant général agrandissement, suite parentale La Réunion, véranda tropicale',
   openGraph: {
-    title: 'Extension Sur-Mesure à La Réunion | AMMO Contractant Général',
+    title: 'Extension Sur-Mesure à La Réunion | Groupe AMMO',
     description: 'Contractant général pour agrandissement de maison. Coordination complète, respect budget et délais.',
     url: 'https://ammo.re/services/extension-sur-mesure',
-    siteName: 'AMMO Contractant Général',
+    siteName: 'Groupe AMMO',
     locale: 'fr_FR',
     type: 'website',
     images: [{ url: 'https://ammo.re/extension.png', width: 1200, height: 630, alt: 'Extension Maison La Réunion par AMMO' }],
@@ -25,13 +25,13 @@ export const metadata: Metadata = {
 
 export default function ExtensionSurMesurePage() {
   const images = [
-    { src: '/extension.png', alt: 'Extension sur-mesure maison La Réunion - Vue principale AMMO' },
-    { src: '/extension.png', alt: 'Agrandissement moderne 974 - Pilotage AMMO contractant général' },
-    { src: '/extension.png', alt: 'Extension véranda tropicale La Réunion - Coordination AMMO' },
-    { src: '/extension.png', alt: 'Bureau extension maison 974 - AMMO contractant général' },
-    { src: '/extension.png', alt: 'Suite parentale extension La Réunion - Suivi chantier AMMO' },
-    { src: '/extension.png', alt: 'Salon extension sur-mesure 974 - Contractant général' },
-    { src: '/extension.png', alt: 'Intégration extension architecture - Qualité AMMO' },
+    { src: '/extension.jpg', alt: 'Extension sur-mesure maison La Réunion - Vue principale AMMO' },
+    { src: '/service-extension.jpg', alt: 'Agrandissement moderne 974 - Pilotage AMMO contractant général' },
+    { src: '/construction-metal.jpg', alt: 'Structure extension tropicale La Réunion - Coordination AMMO' },
+    { src: '/construction.jpg', alt: 'Chantier extension maison 974 - AMMO contractant général' },
+    { src: '/methodo-realisation.jpg', alt: 'Réalisation extension La Réunion - Suivi chantier AMMO' },
+    { src: '/btp-agencement.jpg', alt: 'Agencement intérieur extension 974 - Contractant général' },
+    { src: '/service-construction.jpg', alt: 'Extension gros œuvre La Réunion - Qualité AMMO' },
   ]
 
   return (

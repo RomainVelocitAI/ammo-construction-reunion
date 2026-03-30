@@ -52,17 +52,17 @@ export function Footer() {
             <div className="mb-4">
               <Image
                 src="/logo-horizontal-gold.png"
-                alt="AMMO - Contractant Général"
+                alt="Groupe AMMO - La Réunion"
                 width={isMobile ? 180 : 240}
                 height={isMobile ? 58 : 77}
                 className="h-auto"
               />
             </div>
             <p className={`${isMobile ? 'text-sm' : 'text-base'} text-muted-foreground mb-2 font-semibold`}>
-              Contractant général • Travaux et conception à La Réunion
+              Groupe AMMO • La Réunion
             </p>
             <p className={`${isMobile ? 'text-xs' : 'text-sm'} text-muted-foreground/80 mb-4`}>
-              Coordination technique, juridique et administrative • Garantie RE2020 • 15+ ans d'expérience
+              De la conception à l'entretien • 15+ ans d'expérience • La Réunion
             </p>
             <div className="flex space-x-4">
               <a href="https://www.facebook.com/profile.php?id=61572855163213&locale=fr_FR" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors">
@@ -71,45 +71,45 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Nos Pôles */}
           <div>
-            <h4 className={`${isMobile ? 'text-base' : 'text-lg'} font-semibold ${isMobile ? 'mb-3' : 'mb-4'} text-accent`}>Nos Services</h4>
+            <h4 className={`${isMobile ? 'text-base' : 'text-lg'} font-semibold ${isMobile ? 'mb-3' : 'mb-4'} text-accent`}>Nos Pôles</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/services/renovation-complete" className="text-muted-foreground hover:text-accent transition-colors">
-                  Rénovation Complète
+                <Link href="/pole/conception" className="text-muted-foreground hover:text-accent transition-colors">
+                  Conception
                 </Link>
               </li>
               <li>
-                <Link href="/services/extension-sur-mesure" className="text-muted-foreground hover:text-accent transition-colors">
-                  Extension Sur-Mesure
+                <Link href="/pole/maitrise-oeuvre" className="text-muted-foreground hover:text-accent transition-colors">
+                  Maîtrise d'Œuvre
                 </Link>
               </li>
               <li>
-                <Link href="/services/amenagement-exterieur" className="text-muted-foreground hover:text-accent transition-colors">
-                  Aménagement Extérieur
+                <Link href="/pole/contractant-general" className="text-muted-foreground hover:text-accent transition-colors">
+                  Contractant Général
                 </Link>
               </li>
               <li>
-                <Link href="/services/projets-envergure" className="text-muted-foreground hover:text-accent transition-colors">
-                  Projets d'envergure
+                <Link href="/pole/second-oeuvre-finitions" className="text-muted-foreground hover:text-accent transition-colors">
+                  Second Œuvre & Finitions
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Quick Links */}
+          {/* Liens Rapides */}
           <div>
             <h4 className={`${isMobile ? 'text-base' : 'text-lg'} font-semibold ${isMobile ? 'mb-3' : 'mb-4'} text-accent`}>Liens Rapides</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/#about" className="text-muted-foreground hover:text-accent transition-colors">
+                <Link href="/a-propos" className="text-muted-foreground hover:text-accent transition-colors">
                   À Propos
                 </Link>
               </li>
               <li>
-                <Link href="/#contact" className="text-muted-foreground hover:text-accent transition-colors">
-                  Contact
+                <Link href="/espace-pro" className="text-muted-foreground hover:text-accent transition-colors">
+                  Espace Pro
                 </Link>
               </li>
               <li>

@@ -58,7 +58,7 @@ const services = [
   },
 ]
 
-export default function AmmoExecutionContent() {
+export default function SecondOeuvreFinitionsContent() {
   return (
     <div className="min-h-screen bg-[#F2ECE7]">
       {/* ══════════════════════════════════════════════
@@ -68,7 +68,7 @@ export default function AmmoExecutionContent() {
         <div className="absolute inset-0">
           <Image
             src="/hero-ammo-execution.jpg"
-            alt="AMMO EXECUTION - Bois et aménagements extérieurs"
+            alt="Second Œuvre & Finitions - Bois et aménagements extérieurs"
             fill
             className="object-cover"
             priority
@@ -138,7 +138,7 @@ export default function AmmoExecutionContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.9 }}
             >
-              AMMO EXECUTION est le pôle dédié aux réalisations extérieures et au travail du bois. Terrasses, pergolas, carports, traitement du bois, bardage et abris — chaque projet est exécuté avec un savoir-faire artisanal et une attention au détail.
+              Second Œuvre & Finitions est le pôle dédié aux réalisations extérieures et au travail du bois. Terrasses, pergolas, carports, traitement du bois, bardage et abris — chaque projet est exécuté avec un savoir-faire artisanal et une attention au détail.
             </motion.p>
           </div>
         </div>
@@ -147,7 +147,7 @@ export default function AmmoExecutionContent() {
       {/* ══════════════════════════════════════════════
           SERVICES — alternating image/text rows
           ══════════════════════════════════════════════ */}
-      <section className="py-20 sm:py-28 lg:py-36 bg-[#F2ECE7] overflow-x-hidden">
+      <section id="services" className="py-20 sm:py-28 lg:py-36 bg-[#F2ECE7] overflow-x-hidden">
         <div className="container mx-auto px-6 sm:px-12 lg:px-20">
           <motion.div className="text-center mb-16 sm:mb-20" {...fadeInUp}>
             <span className="inline-block px-5 py-2 bg-gradient-to-r from-[#BD9C69]/10 to-[#D6B363]/10 border border-[#BD9C69]/30 text-[#BD9C69] text-xs sm:text-sm font-bold uppercase tracking-[0.3em] rounded-full mb-6">
@@ -271,12 +271,12 @@ export default function AmmoExecutionContent() {
                   Steve Lesgardeur
                 </h2>
                 <p className="font-subheading text-xl sm:text-2xl text-[#BD9C69] tracking-wide uppercase mb-8">
-                  Chef de chantier — AMMO EXECUTION
+                  Chef de chantier — Second Œuvre & Finitions
                 </p>
 
                 <div className="space-y-4 font-body text-[#605E5B] text-base sm:text-lg leading-relaxed">
                   <p>
-                    Diplômé ébéniste-menuisier, Steve apporte à AMMO EXECUTION un savoir-faire artisanal et une expertise terrain inégalée. En tant que chef de chantier, il assure la coordination des travaux, le suivi qualité et la relation client au quotidien.
+                    Diplômé ébéniste-menuisier, Steve apporte à Second Œuvre & Finitions un savoir-faire artisanal et une expertise terrain inégalée. En tant que chef de chantier, il assure la coordination des travaux, le suivi qualité et la relation client au quotidien.
                   </p>
                   <p>
                     Sa maîtrise du bois et des aménagements extérieurs garantit des réalisations alliant précision technique et finition haut de gamme.

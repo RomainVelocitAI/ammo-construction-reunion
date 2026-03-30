@@ -7,12 +7,12 @@ const FaqSection = () => {
 
     const faqs = [
         {
-            question: "Qu'est-ce qu'un contractant général ?",
-            answer: "Un contractant général est votre interlocuteur unique pour l'ensemble de votre projet de travaux. AMMO coordonne tous les corps de métier, gère le planning, le budget et la qualité de A à Z. Vous n'avez qu'un seul contact pour tout votre chantier.",
+            question: "Qu'est-ce que le Groupe AMMO ?",
+            answer: "Le Groupe AMMO est votre interlocuteur unique pour l'ensemble de vos projets de travaux à La Réunion. Nous maîtrisons toute la chaîne de valeur du bâtiment : conception des plans, pilotage de chantier, coordination des corps de métier et réalisation des finitions. Un seul contact, quatre pôles d'expertise, de la première esquisse à l'entretien de vos réalisations.",
         },
         {
-            question: "Quelle est la différence entre AMMO BTP, AMMO EXECUTION et AMMO CONCEPTION ?",
-            answer: "AMMO s'organise en 3 pôles complémentaires : AMMO BTP gère la rénovation et le gros œuvre, AMMO EXECUTION se spécialise dans le bois et les aménagements extérieurs, et AMMO CONCEPTION s'occupe des plans, de la modélisation 3D et des permis de construire. Les 3 pôles travaillent ensemble pour couvrir tous vos besoins.",
+            question: "Quels sont les pôles d'expertise d'AMMO ?",
+            answer: "AMMO s'organise en 4 pôles complémentaires qui couvrent toute la chaîne de valeur du bâtiment : la Conception pour vos plans et permis de construire, la Maîtrise d'Œuvre pour le pilotage et la coordination de chantier, le Contractant Général pour la rénovation et le gros œuvre, et le Second Œuvre & Finitions pour la peinture, l'agencement et les aménagements extérieurs. Les 4 pôles travaillent ensemble ou indépendamment selon vos besoins.",
         },
         {
             question: "Dans quelles zones de La Réunion intervenez-vous ?",
@@ -24,11 +24,11 @@ const FaqSection = () => {
         },
         {
             question: "Quelles garanties offrez-vous ?",
-            answer: "Nous offrons une garantie décennale complète sur nos travaux, une garantie de parfait achèvement d'un an, et un suivi post-livraison. Nos constructions respectent les normes RE2020 en vigueur à La Réunion.",
+            answer: "Nous offrons une garantie décennale complète sur nos travaux, une garantie de parfait achèvement d'un an, et un suivi post-livraison. Nos réalisations respectent les normes en vigueur à La Réunion.",
         },
         {
             question: "Comment se déroule un projet avec AMMO ?",
-            answer: "Votre projet suit 5 étapes : Écoute (définition de vos besoins et budget), Conception (plans, 3D, permis si nécessaire), Devis (chiffrage détaillé et sélection des artisans), Travaux (coordination et contrôle qualité), Réception (vérification et livraison). Tout au long du projet, vous bénéficiez de points réguliers et d'un suivi en temps réel.",
+            answer: "Votre projet suit 4 étapes : Écoute (définition de vos besoins et budget), Conception (plans, 3D, permis si nécessaire), Réalisation (coordination et contrôle qualité), Livraison (vérification et réception). Tout au long du projet, vous bénéficiez de points réguliers et d'un suivi en temps réel.",
         },
         {
             question: "Comment devenir partenaire ou sous-traitant d'AMMO ?",
@@ -47,7 +47,7 @@ const FaqSection = () => {
                     <p className="text-secondary text-sm font-semibold uppercase tracking-wider">Questions Fréquentes</p>
                     <h2 className="text-4xl font-bold text-foreground mt-2">Vous avez des questions ?</h2>
                     <p className="text-lg text-muted-foreground mt-4 pb-6">
-                        Découvrez les réponses aux questions les plus fréquentes sur nos services de travaux et conception à La Réunion.
+                        Découvrez les réponses aux questions les plus fréquentes sur nos services à La Réunion.
                     </p>
                     {faqs.map((faq, index) => (
                         <div className="border-b border-border py-4 cursor-pointer" key={index} onClick={() => setOpenIndex(openIndex === index ? null : index)}>

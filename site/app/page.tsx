@@ -10,15 +10,15 @@ import { Footer } from '@/components/footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'AMMO | Contractant Général à La Réunion | Travaux et Conception',
-  description: 'AMMO, votre contractant général à La Réunion. Rénovation, construction bois, conception et aménagements. 15 ans d\'expérience. Contact : 0693 63 86 56',
-  keywords: 'contractant général La Réunion, travaux La Réunion, rénovation 974, construction bois La Réunion, aménagement extérieur, bureau d\'études, conception 3D, Saint-Denis',
-  authors: [{ name: 'AMMO' }],
+  title: 'Groupe AMMO | Bâtiment à La Réunion',
+  description: 'AMMO maîtrise toute la chaîne de valeur du bâtiment à La Réunion : conception, maîtrise d\'œuvre, contractant général, second œuvre. 15+ ans d\'expérience.',
+  keywords: 'groupe AMMO, bâtiment La Réunion, contractant général, maîtrise d\'œuvre, conception, rénovation 974, second œuvre, finitions, Saint-Denis',
+  authors: [{ name: 'Groupe AMMO' }],
   openGraph: {
-    title: 'AMMO | Contractant Général à La Réunion',
-    description: 'AMMO, votre contractant général à La Réunion. De la conception à la réalisation, un seul interlocuteur pour tous vos travaux. 15 ans d\'expérience.',
+    title: 'Groupe AMMO | Bâtiment à La Réunion',
+    description: 'AMMO maîtrise toute la chaîne de valeur du bâtiment à La Réunion : conception, maîtrise d\'œuvre, contractant général, second œuvre. 15+ ans d\'expérience.',
     url: 'https://ammo.re',
-    siteName: 'AMMO Contractant Général',
+    siteName: 'Groupe AMMO',
     locale: 'fr_FR',
     type: 'website',
     images: [
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
         url: 'https://ammo.re/logo.png',
         width: 1200,
         height: 630,
-        alt: 'AMMO Contractant Général La Réunion',
+        alt: 'Groupe AMMO - Bâtiment La Réunion',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AMMO | Contractant Général à La Réunion',
-    description: 'Contractant général travaux et conception La Réunion 974. 15 ans d\'expérience.',
+    title: 'Groupe AMMO | Bâtiment à La Réunion',
+    description: 'AMMO maîtrise toute la chaîne de valeur du bâtiment à La Réunion. 15+ ans d\'expérience.',
     images: ['https://ammo.re/logo.png'],
   },
   alternates: {
@@ -56,8 +56,8 @@ export default function Home() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'GeneralContractor',
-            name: 'AMMO - Contractant Général',
-            description: 'Contractant général à La Réunion. Travaux, conception et aménagements. 15 ans d\'expérience.',
+            name: 'Groupe AMMO',
+            description: 'Groupe AMMO — maîtrise de la chaîne de valeur du bâtiment à La Réunion. Conception, maîtrise d\'œuvre, contractant général, second œuvre. 15+ ans d\'expérience.',
             url: 'https://ammo.re',
             logo: 'https://ammo.re/logo.png',
             image: 'https://ammo.re/logo.png',

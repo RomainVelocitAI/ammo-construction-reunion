@@ -15,6 +15,7 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Anciennes URLs maitrise-oeuvre
       {
         source: '/maitrise-oeuvre/villa-contemporaine-reunion',
         destination: '/',
@@ -48,6 +49,28 @@ const nextConfig: NextConfig = {
       {
         source: '/maitrise-oeuvre/maison-container-974',
         destination: '/',
+        permanent: true,
+      },
+      // Migration pôles 3→4
+      {
+        source: '/pole/ammo-btp',
+        destination: '/pole/contractant-general',
+        permanent: true,
+      },
+      {
+        source: '/pole/ammo-execution',
+        destination: '/pole/second-oeuvre-finitions',
+        permanent: true,
+      },
+      {
+        source: '/pole/ammo-conception',
+        destination: '/pole/conception',
+        permanent: true,
+      },
+      // Equipe → A Propos
+      {
+        source: '/equipe',
+        destination: '/a-propos',
         permanent: true,
       },
     ];

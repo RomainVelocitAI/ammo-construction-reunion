@@ -21,6 +21,7 @@ import {
   TreePine,
   Waves,
   Compass,
+  ClipboardCheck,
   Building2,
   MapPin,
   Users,
@@ -63,28 +64,36 @@ const stats = [
 
 const poles = [
   {
-    name: 'AMMO BTP',
-    logo: '/logo-ammo-noir.svg',
+    name: 'Conception',
+    logo: '/logo-ammo-blanc.svg',
     description:
-      'Rénovation, gros œuvre et second œuvre. Un interlocuteur unique pour coordonner l\'ensemble de vos travaux.',
-    href: '/pole/ammo-btp',
+      'Plans architecturaux, modélisation 3D, permis de construire, études techniques et accompagnement dossiers de subventions.',
+    href: '/pole/conception',
     accent: 'from-[#BD9C69] to-[#D6B363]',
   },
   {
-    name: 'AMMO EXECUTION',
-    logo: '/logo-ammo-or.svg',
+    name: 'Maîtrise d\'Œuvre',
+    logo: '/logo-horizontal-gold.png',
     description:
-      'Terrasses, pergolas, carports, bardage et aménagements bois sur mesure. Savoir-faire artisanal à La Réunion.',
-    href: '/pole/ammo-execution',
+      'Pilotage, coordination et suivi de vos chantiers. Un chef d\'orchestre pour tous vos intervenants.',
+    href: '/pole/maitrise-oeuvre',
     accent: 'from-[#D6B363] to-[#BD9C69]',
   },
   {
-    name: 'AMMO CONCEPTION',
+    name: 'Contractant Général',
     logo: '/logo-ammo-noir.svg',
     description:
-      'Plans architecturaux, modélisation 3D, permis de construire et études techniques. Bureau d\'études intégré.',
-    href: '/pole/ammo-conception',
+      'Rénovation, extension, gros œuvre et projets d\'envergure. Un seul contrat, tous les corps de métier.',
+    href: '/pole/contractant-general',
     accent: 'from-[#BD9C69] to-[#D6B363]',
+  },
+  {
+    name: 'Second Œuvre & Finitions',
+    logo: '/logo-ammo-or.svg',
+    description:
+      'Peinture, agencement, menuiserie, aménagements extérieurs, jardins et piscines. Le détail qui fait la différence.',
+    href: '/pole/second-oeuvre-finitions',
+    accent: 'from-[#D6B363] to-[#BD9C69]',
   },
 ]
 
@@ -127,6 +136,7 @@ const trades = [
   { icon: TreePine, name: 'Espaces verts' },
   { icon: Waves, name: 'Piscines' },
   { icon: Compass, name: 'Architecture / conception' },
+  { icon: ClipboardCheck, name: 'Maîtrise d\'œuvre / pilotage' },
 ]
 
 /* ─── Component ─── */
@@ -223,14 +233,14 @@ export function EspaceProContent() {
             className="mt-16 max-w-3xl"
           >
             <p className="font-body text-base sm:text-lg text-white/70 leading-relaxed border-l-2 border-[#D6B363]/50 pl-6">
-              AMMO est un contractant général implanté à La Réunion, spécialisé dans la coordination technique, juridique et administrative de projets de construction et de rénovation. Nous recherchons en permanence des partenaires fiables pour renforcer notre réseau et répondre à la demande croissante sur l'île.
+              AMMO est un groupe du bâtiment maîtrisant toute la chaîne de valeur à La Réunion. Nous recherchons en permanence des partenaires fiables pour renforcer notre réseau et répondre à la demande croissante sur l'île.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* ════════════════════════════════════════════════
-          SECTION 2 — Nos 3 Pôles
+          SECTION 2 — Nos 4 Pôles
          ════════════════════════════════════════════════ */}
       <section className="py-20 sm:py-28 lg:py-32 bg-background relative overflow-hidden">
         {/* Decorative element */}
@@ -250,10 +260,10 @@ export function EspaceProContent() {
               Notre Structure
             </span>
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground uppercase tracking-wide">
-              Nos 3 Pôles
+              Nos 4 Pôles
             </h2>
             <p className="font-subheading text-lg sm:text-xl lg:text-2xl text-muted-foreground mt-4 max-w-2xl mx-auto">
-              Trois entités complémentaires pour couvrir l'ensemble de vos besoins en construction et conception.
+              Quatre pôles complémentaires pour couvrir l'ensemble de la chaîne de valeur du bâtiment.
             </p>
           </motion.div>
 
@@ -397,8 +407,8 @@ export function EspaceProContent() {
                 custom={5}
                 className="absolute -bottom-6 -left-6 sm:-bottom-8 sm:-left-8 bg-gradient-to-br from-[#BD9C69] to-[#D6B363] text-white rounded-2xl p-5 sm:p-6 shadow-2xl"
               >
-                <p className="font-heading text-3xl sm:text-4xl font-bold">98%</p>
-                <p className="font-body text-xs sm:text-sm text-white/80 mt-1">de partenaires<br />satisfaits</p>
+                <p className="font-heading text-3xl sm:text-4xl font-bold">15+</p>
+                <p className="font-body text-xs sm:text-sm text-white/80 mt-1">années<br />d'expérience</p>
               </motion.div>
             </motion.div>
           </div>

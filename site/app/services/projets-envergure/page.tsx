@@ -4,7 +4,7 @@ import { Footer } from "@/components/footer";
 import { ProjetsEnvergureContent } from "./content";
 
 export const metadata: Metadata = {
-  title: "Projets d'Envergure | AMMO Contractant Général La Réunion",
+  title: "Projets d'Envergure | Groupe AMMO La Réunion",
   description:
     "Lodges touristiques, programmes immobiliers et projets professionnels. Un contractant général, un interlocuteur unique à La Réunion.",
 };
