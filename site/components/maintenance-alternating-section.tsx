@@ -186,7 +186,7 @@ const MaintenanceAlternatingSection = () => {
   return (
     <section className="bg-background">
         {/* Header */}
-        <div className={`text-center ${isMobile ? 'py-12 px-4' : isTablet ? 'py-16 px-6' : 'py-20 px-4'}`}>
+        <div className={`text-center ${isMobile ? 'pt-4 pb-4 px-4' : isTablet ? 'pt-4 pb-6 px-6' : 'pt-4 pb-8 px-4'}`}>
           <h2 className={`${getHeaderSize()} font-subheading font-bold text-foreground mb-6`}>
             Suivi et Entretien Post-Travaux
             <span className="block text-secondary mt-2">Votre Avantage Décisif</span>

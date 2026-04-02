@@ -5,7 +5,7 @@ import { Footer } from '@/components/footer'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Shield, Clock, Users, Compass, MapPin } from 'lucide-react'
+import { Shield, Clock, Users, Compass, MapPin, Award, Scale, FileCheck, Headphones } from 'lucide-react'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -30,7 +30,7 @@ const team = [
   {
     name: 'Maxence Fontaine',
     badge: 'Direction',
-    title: 'Président-Directeur Général',
+    title: 'Président-Directeur Général — Maître d\'Œuvre',
     photo: '/pdp-maxence.png',
     bio: "Formé à l'EBTP de Vincennes (94), Maxence Fontaine est un professionnel passionné du bâtiment, fort de plus de 10 ans d'expérience en métropole dans la conduite de travaux et la maîtrise d'œuvre. Au fil de son parcours, il a contribué à des projets emblématiques, tels que la Tour SFR à Saint-Denis (93), ainsi qu'à de nombreux programmes de logements neufs et rénovés pour de grands acteurs du secteur tel que Vinci, Rénover et Eiffage. Rigoureux, organisé et déterminé, Maxence met un point d'honneur à assurer la qualité d'exécution sur chacun de ses chantiers. Fédérateur et proche de ses équipes, il favorise la collaboration et la communication entre tous les intervenants du projet.",
     skills: ['Constructions à basse consommation', 'Utilisation raisonnée des matériaux', "Réduction de l'empreinte carbone", 'Respect des normes en vigueur et des DTU'],
@@ -57,7 +57,7 @@ const team = [
   {
     name: 'Steve Lesgardeur',
     badge: 'Terrain',
-    title: 'Chef de chantier — Second Œuvre & Finitions',
+    title: 'Associé — Chef de chantier — Second Œuvre & Finitions',
     photo: '/pdp-steve.png',
     bio: "Diplômé en menuiserie depuis plus de 10 ans, Steve a forgé son savoir-faire au fil de projets exigeants, développant une maîtrise complète du travail du bois et des aménagements extérieurs. Installé à La Réunion depuis 2025, il apporte à AMMO une expertise terrain solide et un sens du détail qui se retrouve dans chacune de ses réalisations. En tant que chef de chantier du pôle Second Œuvre & Finitions, Steve assure la coordination des travaux, le suivi qualité et la relation client au quotidien. Passionné et rigoureux, il s'investit personnellement dans chaque projet pour garantir des finitions durables et à la hauteur des attentes.",
     skills: ['Coordination de chantier', 'Menuiserie et travail du bois', 'Relation client', 'Suivi qualité'],
@@ -92,10 +92,10 @@ const values = [
 ]
 
 const engagements = [
-  'Garantie décennale sur tous nos travaux',
-  'Conformité aux normes en vigueur à La Réunion',
-  'Respect des DTU (Documents Techniques Unifiés)',
-  'Suivi post-livraison et accompagnement',
+  { text: 'Garantie décennale sur tous nos travaux', icon: Award },
+  { text: 'Conformité aux normes en vigueur à La Réunion', icon: Scale },
+  { text: 'Respect des DTU (Documents Techniques Unifiés)', icon: FileCheck },
+  { text: 'Suivi post-livraison et accompagnement', icon: Headphones },
 ]
 
 export default function AProposPage() {
@@ -115,9 +115,22 @@ export default function AProposPage() {
               <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8">
                 À La Réunion, AMMO est le seul groupe à maîtriser l'intégralité de la chaîne de valeur du bâtiment. De la conception de vos plans jusqu'à l'entretien de vos réalisations, en passant par le pilotage de chantier et l'exécution des travaux, vous bénéficiez d'un interlocuteur unique.
               </p>
-              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-10">
                 Chaque pôle — Conception, Maîtrise d'Œuvre, Contractant Général, Second Œuvre & Finitions — peut intervenir indépendamment ou en synergie avec les autres, selon la nature de votre projet.
               </p>
+              {/* Map */}
+              <div className="max-w-2xl mx-auto rounded-2xl overflow-hidden shadow-lg border border-secondary/15">
+                <iframe
+                  src="https://www.google.com/maps?q=19+Rue+Patrice+Lumumba,+97419+La+Possession,+La+R%C3%A9union&output=embed"
+                  width="100%"
+                  height="250"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Bureaux AMMO - La Possession"
+                />
+              </div>
             </motion.div>
           </div>
         </section>
@@ -154,12 +167,17 @@ export default function AProposPage() {
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">Nos Engagements</h2>
               <p className="text-lg text-muted-foreground mb-10">Des faits vérifiables, pas des promesses marketing</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {engagements.map((e) => (
-                  <div key={e} className="flex items-start gap-3 bg-muted/20 rounded-xl p-5 text-left">
-                    <Shield className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                    <p className="text-foreground font-medium">{e}</p>
-                  </div>
-                ))}
+                {engagements.map((e) => {
+                  const Icon = e.icon
+                  return (
+                    <div key={e.text} className="flex items-start gap-4 bg-muted/20 rounded-xl p-6 text-left border border-secondary/10 hover:border-secondary/30 transition-colors">
+                      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-secondary/15 to-accent/10 flex items-center justify-center flex-shrink-0">
+                        <Icon className="w-5 h-5 text-secondary" />
+                      </div>
+                      <p className="text-foreground font-medium">{e.text}</p>
+                    </div>
+                  )
+                })}
               </div>
             </motion.div>
           </div>
@@ -168,7 +186,7 @@ export default function AProposPage() {
         {/* ══════════════════════════════════════════════
             SECTION 4 — Notre Équipe
             ══════════════════════════════════════════════ */}
-        <section className="py-16 sm:py-20 lg:py-28 bg-muted/20">
+        <section id="equipe" className="py-16 sm:py-20 lg:py-28 bg-muted/20 scroll-mt-32">
           <div className="container mx-auto px-6 sm:px-12 lg:px-20">
             <motion.div {...fadeInUp} className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">Notre Équipe</h2>
@@ -182,7 +200,7 @@ export default function AProposPage() {
                   {...fadeInUp}
                   className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-12 items-start`}
                 >
-                  {/* Photo */}
+                  {/* Photo + Ambition */}
                   <div className="lg:w-2/5 flex-shrink-0">
                     <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-muted/50 shadow-lg">
                       {member.photo ? (
@@ -200,6 +218,12 @@ export default function AProposPage() {
                         </div>
                       )}
                     </div>
+                    {member.ambition && (
+                      <div className="mt-4 p-5 bg-background rounded-xl border-l-4 border-amber-500 shadow-sm">
+                        <p className="text-sm font-semibold text-foreground">Son ambition :</p>
+                        <p className="text-gray-700 mt-1">{member.ambition}</p>
+                      </div>
+                    )}
                   </div>
 
                   {/* Content */}
@@ -212,7 +236,7 @@ export default function AProposPage() {
                     <p className="text-muted-foreground leading-relaxed mb-6">{member.bio}</p>
 
                     {member.skills.length > 0 && (
-                      <div className="bg-gradient-to-br from-amber-50 to-yellow-50 p-6 rounded-xl border border-amber-200 mb-4">
+                      <div className="bg-gradient-to-br from-amber-50 to-yellow-50 p-6 rounded-xl border border-amber-200">
                         <h4 className="text-lg font-bold text-foreground mb-3">Compétences</h4>
                         <ul className="space-y-1.5">
                           {member.skills.map((skill) => (
@@ -222,13 +246,6 @@ export default function AProposPage() {
                             </li>
                           ))}
                         </ul>
-                      </div>
-                    )}
-
-                    {member.ambition && (
-                      <div className="p-5 bg-background rounded-xl border-l-4 border-amber-500 shadow-sm">
-                        <p className="text-sm font-semibold text-foreground">Son ambition :</p>
-                        <p className="text-gray-700 mt-1">{member.ambition}</p>
                       </div>
                     )}
                   </div>

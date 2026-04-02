@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Facebook, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 export function Footer() {
@@ -68,6 +68,9 @@ export function Footer() {
               <a href="https://www.facebook.com/profile.php?id=61572855163213&locale=fr_FR" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
+              <a href="https://www.instagram.com/ammo_maitrisedoeuvre974/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors">
+                <Instagram className="h-5 w-5" />
+              </a>
             </div>
           </div>
 
@@ -127,8 +130,8 @@ export function Footer() {
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
                 <p className={`${isMobile ? 'text-sm' : 'text-base'} text-muted-foreground`}>
-                  8 ruelle Boulot<br />
-                  97400 Saint-Denis<br />
+                  19 Rue Patrice Lumumba<br />
+                  97419 La Possession<br />
                   La Réunion
                 </p>
               </div>

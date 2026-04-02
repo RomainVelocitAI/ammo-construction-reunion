@@ -64,9 +64,9 @@ export function ServicesIntroSection() {
   ];
 
   return (
-    <section className={`${effectiveIsMobile ? 'py-12' : effectiveIsTablet ? 'py-16' : 'py-24'} bg-gradient-to-b from-background via-muted/30 to-background`}>
+    <section className={`${effectiveIsMobile ? 'pt-8 pb-4' : effectiveIsTablet ? 'pt-10 pb-4' : 'pt-14 pb-4'} bg-gradient-to-b from-background via-muted/30 to-background`}>
       <div className={`container mx-auto ${effectiveIsMobile ? 'px-4' : 'px-6'} flex flex-col`}>
-        <div className="w-full mb-16">
+        <div className="w-full mb-8">
           <div className="max-w-6xl mx-auto text-center">
           <h2 className={`${effectiveIsMobile ? 'text-2xl' : effectiveIsTablet ? 'text-3xl' : 'text-6xl'} font-heading font-bold text-foreground mb-6 leading-tight`}>
             Nos 4 Pôles d'Expertise
@@ -110,7 +110,7 @@ export function ServicesIntroSection() {
                     alt={service.alt}
                   />
                 </CardItem>
-                <div className={`flex ${effectiveIsMobile ? 'flex-col gap-2' : 'flex-row justify-between'} items-stretch ${!effectiveIsMobile ? 'items-center' : ''} ${effectiveIsMobile ? 'mt-8' : effectiveIsTablet ? 'mt-12' : 'mt-20'}`}>
+                <div className={`flex ${effectiveIsMobile ? 'flex-col gap-2' : 'flex-row justify-between'} items-stretch ${!effectiveIsMobile ? 'items-center' : ''} ${effectiveIsMobile ? 'mt-6' : effectiveIsTablet ? 'mt-8' : 'mt-12'}`}>
                   <CardItem
                     translateZ={20}
                     as={Link}

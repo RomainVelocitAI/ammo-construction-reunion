@@ -12,6 +12,7 @@ export function Header() {
   const [hoveredPole, setHoveredPole] = useState<number | null>(null);
   const [isMobilePolesOpen, setIsMobilePolesOpen] = useState(false);
   const [mobilePoleExpanded, setMobilePoleExpanded] = useState<number | null>(null);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
 
   const getInitialMobileState = () => {
     if (typeof window !== 'undefined') {
@@ -96,8 +97,8 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-in-out ${
         isScrolled
-          ? 'bg-background/95 backdrop-blur-2xl shadow-[0_2px_20px_rgba(0,0,0,0.1)] py-3 sm:py-5'
-          : 'bg-background/90 backdrop-blur-md py-4 sm:py-6 lg:py-10'
+          ? 'bg-background/95 backdrop-blur-2xl shadow-[0_2px_20px_rgba(0,0,0,0.1)] py-2 sm:py-3'
+          : 'bg-background/90 backdrop-blur-md py-3 sm:py-4 lg:py-6'
       }`}
     >
       <nav className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-16 xl:px-20">
@@ -111,7 +112,7 @@ export function Header() {
                 alt="AMMO Contractant Général"
                 width={360}
                 height={115}
-                className="h-16 sm:h-20 lg:h-28 xl:h-32 w-auto"
+                className="h-12 sm:h-14 lg:h-20 xl:h-24 w-auto"
                 priority
               />
             </div>
@@ -146,9 +147,10 @@ export function Header() {
                   <span className="absolute -bottom-3 left-0 w-0 h-[2px] bg-gradient-to-r from-secondary via-accent to-secondary transition-all duration-700 group-hover:w-full"></span>
                 </button>
 
-                <div className={`absolute top-full left-0 mt-2 flex bg-background/95 backdrop-blur-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] rounded-xl overflow-hidden transition-all duration-300 ${
+                <div className={`absolute top-full left-0 pt-3 transition-all duration-300 ${
                   isPolesOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
                 }`}>
+                <div className="flex bg-background/95 backdrop-blur-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] rounded-xl overflow-hidden">
                   {/* Colonne pôles */}
                   <div className="py-2 w-[260px] border-r border-secondary/10">
                     {poleLinks.map((pole, index) => (
@@ -181,6 +183,7 @@ export function Header() {
                     </div>
                   )}
                 </div>
+                </div>
               </div>
 
               {/* Espace Pro & À propos */}
@@ -194,15 +197,35 @@ export function Header() {
                 <span className="absolute -bottom-3 left-0 w-0 h-[2px] bg-gradient-to-r from-secondary via-accent to-secondary transition-all duration-700 group-hover:w-full"></span>
               </Link>
 
-              <Link
-                href="/a-propos"
-                className="relative text-foreground hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-secondary hover:to-accent transition-all duration-500 group whitespace-nowrap"
+              {/* À Propos with dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setIsAboutOpen(true)}
+                onMouseLeave={() => setIsAboutOpen(false)}
               >
-                <span className="text-sm lg:text-base xl:text-lg font-light tracking-[0.25em] uppercase">
-                  À Propos
-                </span>
-                <span className="absolute -bottom-3 left-0 w-0 h-[2px] bg-gradient-to-r from-secondary via-accent to-secondary transition-all duration-700 group-hover:w-full"></span>
-              </Link>
+                <Link
+                  href="/a-propos"
+                  className="relative text-foreground hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-secondary hover:to-accent transition-all duration-500 group whitespace-nowrap flex items-center gap-2"
+                >
+                  <span className="text-sm lg:text-base xl:text-lg font-light tracking-[0.25em] uppercase">
+                    À Propos
+                  </span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isAboutOpen ? 'rotate-180' : ''}`} />
+                  <span className="absolute -bottom-3 left-0 w-0 h-[2px] bg-gradient-to-r from-secondary via-accent to-secondary transition-all duration-700 group-hover:w-full"></span>
+                </Link>
+                <div className={`absolute top-full left-0 pt-3 transition-all duration-300 ${
+                  isAboutOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
+                }`}>
+                  <div className="py-2 w-[200px] bg-background/95 backdrop-blur-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] rounded-xl overflow-hidden">
+                    <Link
+                      href="/a-propos#equipe"
+                      className="block px-6 py-3 text-sm font-light tracking-wide text-foreground hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-secondary hover:to-accent transition-all duration-300"
+                    >
+                      Notre équipe
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* CTA Button */}

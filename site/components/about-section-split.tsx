@@ -1,6 +1,12 @@
 "use client";
 
 import { useEffect, useState, useRef } from 'react';
+import dynamic from 'next/dynamic';
+
+const Island3DScene = dynamic(
+  () => import('@/components/island-3d').then(mod => ({ default: mod.Island3DScene })),
+  { ssr: false, loading: () => <div className="w-full h-full bg-background" /> }
+);
 
 export function AboutSectionSplit() {
   const [scrollY, setScrollY] = useState(0);
@@ -71,24 +77,29 @@ export function AboutSectionSplit() {
       {/* Split Layout Container */}
       <div className={`w-full h-full flex ${isMobile || isTablet ? 'flex-col' : 'flex-row'}`}>
 
-        {/* Left Side - Image with Parallax */}
+        {/* Left Side - 3D Island (desktop) / Image (mobile) */}
         <div className={`relative ${isMobile || isTablet ? 'w-full' : 'w-1/2'} ${isMobile ? 'h-[40vh]' : isTablet ? 'h-[50vh]' : 'h-screen'} bg-background`}>
-          <div className="absolute inset-0 overflow-hidden bg-background">
-            <div
-              className="absolute inset-0 scale-110"
-              style={{ transform: `translateY(${-parallaxOffset * 0.3}px) scale(1.1)` }}
-            >
-              <img
-                src="/construction-metal.jpg"
-                alt="AMMO Construction site"
-                className="w-full h-full object-cover"
-              />
+          {!isMobile && !isTablet ? (
+            <div className="absolute inset-0 bg-background">
+              <Island3DScene />
             </div>
-            {/* Overlay with gradient - removed to fix gray background issue */}
-          </div>
+          ) : (
+            <div className="absolute inset-0 overflow-hidden bg-background">
+              <div
+                className="absolute inset-0 scale-110"
+                style={{ transform: `translateY(${-parallaxOffset * 0.3}px) scale(1.1)` }}
+              >
+                <img
+                  src="/construction-metal.jpg"
+                  alt="AMMO Construction site"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          )}
 
           {/* Floating Stats Cards - Outside of overflow container */}
-          <div className={`absolute ${isMobile ? 'bottom-4 left-4' : isTablet ? 'bottom-6 left-6' : 'bottom-10 left-10'} z-10 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className={`absolute ${isMobile ? 'bottom-4 left-1/2 -translate-x-1/2' : isTablet ? 'bottom-6 left-1/2 -translate-x-1/2' : 'bottom-10 left-1/2 -translate-x-1/2'} z-10 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className={`bg-background/95 backdrop-blur-md ${isMobile ? 'p-4' : isTablet ? 'p-5' : 'p-6'} rounded-2xl shadow-2xl`}>
               <div className={`${isMobile ? 'text-3xl' : isTablet ? 'text-4xl' : 'text-5xl'} font-bold text-accent`}>{stats.years}+</div>
               <div className="text-foreground font-medium">Années d'expérience</div>

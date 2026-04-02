@@ -59,7 +59,7 @@ export default function MaitriseOeuvreContent() {
       {/* ══════════════════════════════════════════════
           HERO SECTION — crème background, camel/gold logo
           ══════════════════════════════════════════════ */}
-      <section className="relative min-h-[85vh] flex items-end overflow-x-hidden pt-24 sm:pt-28 lg:pt-36 bg-[#F2ECE7]">
+      <section className="relative min-h-[50vh] flex items-center overflow-x-hidden pt-32 sm:pt-36 lg:pt-44 bg-[#F2ECE7]">
         <div className="absolute inset-0">
           <Image
             src="/construction-metal.jpg"
@@ -127,7 +127,7 @@ export default function MaitriseOeuvreContent() {
       {/* ══════════════════════════════════════════════
           DESCRIPTION SECTION
           ══════════════════════════════════════════════ */}
-      <section className="py-16 sm:py-20 lg:py-28 bg-background">
+      <section className="py-10 sm:py-12 lg:py-16 bg-background">
         <div className="container mx-auto px-6 sm:px-12 lg:px-20">
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto">
             <div className="flex items-center gap-4 mb-8">
@@ -145,7 +145,7 @@ export default function MaitriseOeuvreContent() {
       {/* ══════════════════════════════════════════════
           SERVICES GRID
           ══════════════════════════════════════════════ */}
-      <section id="services" className="py-16 sm:py-20 lg:py-28 bg-muted/20">
+      <section id="services" className="py-10 sm:py-14 lg:py-20 bg-muted/20">
         <div className="container mx-auto px-6 sm:px-12 lg:px-20">
           <motion.div {...fadeInUp} className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">

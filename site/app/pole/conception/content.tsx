@@ -65,7 +65,7 @@ export default function ConceptionContent() {
       {/* ══════════════════════════════════════════════
           HERO SECTION — dark anthracite, white text
           ══════════════════════════════════════════════ */}
-      <section className="relative min-h-[85vh] flex items-end overflow-x-hidden pt-24 sm:pt-28 lg:pt-36 bg-[#605E5B]">
+      <section className="relative min-h-[85vh] flex items-end overflow-x-hidden pt-32 sm:pt-36 lg:pt-44 bg-[#605E5B]">
         <div className="absolute inset-0">
           <Image
             src="/hero-ammo-conception.jpg"
@@ -154,7 +154,7 @@ export default function ConceptionContent() {
       {/* ══════════════════════════════════════════════
           SERVICES — dark section
           ══════════════════════════════════════════════ */}
-      <section id="services" className="py-20 sm:py-28 lg:py-36 bg-[#F2ECE7]">
+      <section id="services" className="py-12 sm:py-16 lg:py-24 bg-[#F2ECE7]">
         <div className="container mx-auto px-6 sm:px-12 lg:px-20">
           <motion.div className="text-center mb-16 sm:mb-20" {...fadeInUp}>
             <span className="inline-block px-5 py-2 bg-gradient-to-r from-[#605E5B]/10 to-[#BD9C69]/10 border border-[#605E5B]/20 text-[#605E5B] text-xs sm:text-sm font-bold uppercase tracking-[0.3em] rounded-full mb-6">

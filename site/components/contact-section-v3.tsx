@@ -27,7 +27,7 @@ export function ContactSectionV3() {
       </div>
 
       <div className={`container mx-auto ${isMobile ? 'px-4' : 'px-6'} relative z-10 flex flex-col`}>
-        <div className="w-full text-center mb-20 block">
+        <div className="w-full text-center mb-10 block">
           <h2 className={`${isMobile ? 'text-3xl' : isTablet ? 'text-4xl' : 'text-5xl'} font-bold text-foreground mb-4`}>
             Contactez-nous
           </h2>
@@ -74,8 +74,8 @@ export function ContactSectionV3() {
                 <div className="flex-1">
                   <p className="text-sm font-medium text-muted-foreground mb-2">Adresse</p>
                   <p className="text-base font-semibold text-foreground leading-relaxed">
-                    8 Ruelle Boulot<br />
-                    97400 Saint-Denis<br />
+                    19 Rue Patrice Lumumba<br />
+                    97419 La Possession<br />
                     La Réunion
                   </p>
                 </div>
@@ -94,7 +94,10 @@ export function ContactSectionV3() {
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-white/20">
                   <span className="font-medium">Samedi</span>
-                  <span className="font-bold">08:00 - 18:00</span>
+                  <div className="text-right">
+                    <span className="font-bold block">08:00 - 18:00</span>
+                    <span className="text-xs text-white/80">Sur rendez-vous seulement</span>
+                  </div>
                 </div>
                 <div className="flex justify-between items-center py-2">
                   <span className="font-medium">Dimanche</span>

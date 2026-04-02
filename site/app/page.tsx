@@ -65,9 +65,9 @@ export default function Home() {
             email: 'info@ammo.re',
             address: {
               '@type': 'PostalAddress',
-              streetAddress: '8 Ruelle Boulot',
-              addressLocality: 'Saint-Denis',
-              postalCode: '97400',
+              streetAddress: '19 Rue Patrice Lumumba',
+              addressLocality: 'La Possession',
+              postalCode: '97419',
               addressRegion: 'La Reunion',
               addressCountry: 'FR',
             },

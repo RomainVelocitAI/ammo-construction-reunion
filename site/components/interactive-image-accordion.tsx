@@ -34,7 +34,7 @@ const accordionItems = [
     title: 'Second Œuvre & Finitions',
     subtitle: 'Le détail qui fait la différence',
     description: 'Peinture, agencement, meubles sur mesure, terrasses, pergolas, carports, bardage, jardins et piscines.',
-    features: ['Peinture', 'Agencement', 'Terrasses & pergolas', 'Jardins & piscines'],
+    features: ['Conception', 'Maîtrise d\'Œuvre', 'Contractant Général', 'Second Œuvre & Finitions'],
     imageUrl: '/exterieur.jpg',
   },
 ];
@@ -170,7 +170,7 @@ export function LandingAccordionItem() {
           {/* Left Side: Text Content - Dynamic based on selection */}
           <div className={`w-full ${!effectiveIsMobile && !effectiveIsTablet ? 'md:w-1/2' : ''} ${effectiveIsMobile || effectiveIsTablet ? 'text-center' : 'text-left'}`}>
             <span className={`inline-block px-4 py-1 bg-gradient-to-r from-secondary/10 to-accent/10 border border-secondary/40 rounded-full text-secondary ${effectiveIsMobile ? 'text-xs' : 'text-sm'} font-semibold mb-6 uppercase tracking-wider`}>
-              {activeItem.title}
+              Construction & Rénovation
             </span>
             <h1 className={`${effectiveIsMobile ? 'text-2xl' : effectiveIsTablet ? 'text-4xl' : 'text-6xl'} font-bold leading-tight tracking-tighter`}>
               <span className="bg-gradient-to-r from-secondary via-accent to-secondary bg-clip-text text-transparent">
@@ -183,12 +183,16 @@ export function LandingAccordionItem() {
 
             {/* Features list */}
             <div className={`mt-6 space-y-2 ${effectiveIsMobile || effectiveIsTablet ? 'max-w-sm mx-auto' : ''}`}>
-              {activeItem.features.map((feature, index) => (
-                <div key={index} className={`flex items-center gap-2 ${effectiveIsMobile || effectiveIsTablet ? 'justify-center' : ''}`}>
-                  <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              {['Conception', 'Maîtrise d\'Œuvre', 'Contractant Général', 'Second Œuvre & Finitions'].map((feature, index) => (
+                <div
+                  key={index}
+                  className={`flex items-center gap-2 ${effectiveIsMobile || effectiveIsTablet ? 'justify-center' : ''} cursor-pointer py-1 px-2 rounded-lg transition-all duration-300 ${activeIndex === index ? 'bg-secondary/10' : 'hover:bg-secondary/5'}`}
+                  onMouseEnter={() => setActiveIndex(index)}
+                >
+                  <svg className={`w-5 h-5 transition-colors duration-300 ${activeIndex === index ? 'text-secondary' : 'text-accent'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className={`${effectiveIsMobile ? 'text-sm' : 'text-base'} text-foreground`}>{feature}</span>
+                  <span className={`${effectiveIsMobile ? 'text-sm' : 'text-base'} transition-colors duration-300 ${activeIndex === index ? 'text-foreground font-semibold' : 'text-foreground'}`}>{feature}</span>
                 </div>
               ))}
             </div>

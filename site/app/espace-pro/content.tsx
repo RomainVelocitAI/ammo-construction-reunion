@@ -70,30 +70,34 @@ const poles = [
       'Plans architecturaux, modélisation 3D, permis de construire, études techniques et accompagnement dossiers de subventions.',
     href: '/pole/conception',
     accent: 'from-[#BD9C69] to-[#D6B363]',
+    dark: true,
   },
   {
     name: 'Maîtrise d\'Œuvre',
-    logo: '/logo-horizontal-gold.png',
+    logo: '/logo-ammo-noir.svg',
     description:
       'Pilotage, coordination et suivi de vos chantiers. Un chef d\'orchestre pour tous vos intervenants.',
     href: '/pole/maitrise-oeuvre',
     accent: 'from-[#D6B363] to-[#BD9C69]',
+    dark: false,
   },
   {
     name: 'Contractant Général',
-    logo: '/logo-ammo-noir.svg',
+    logo: '/logo-ammo-or.svg',
     description:
       'Rénovation, extension, gros œuvre et projets d\'envergure. Un seul contrat, tous les corps de métier.',
     href: '/pole/contractant-general',
     accent: 'from-[#BD9C69] to-[#D6B363]',
+    dark: true,
   },
   {
     name: 'Second Œuvre & Finitions',
-    logo: '/logo-ammo-or.svg',
+    logo: '/logo-ammo-or-fonce.svg',
     description:
       'Peinture, agencement, menuiserie, aménagements extérieurs, jardins et piscines. Le détail qui fait la différence.',
     href: '/pole/second-oeuvre-finitions',
     accent: 'from-[#D6B363] to-[#BD9C69]',
+    dark: false,
   },
 ]
 
@@ -242,7 +246,7 @@ export function EspaceProContent() {
       {/* ════════════════════════════════════════════════
           SECTION 2 — Nos 4 Pôles
          ════════════════════════════════════════════════ */}
-      <section className="py-20 sm:py-28 lg:py-32 bg-background relative overflow-hidden">
+      <section className="py-12 sm:py-16 lg:py-20 bg-background relative overflow-hidden">
         {/* Decorative element */}
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#BD9C69]/30 to-transparent" />
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#D6B363]/5 rounded-full blur-3xl" />
@@ -254,7 +258,7 @@ export function EspaceProContent() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-center mb-16 sm:mb-20"
+            className="text-center mb-10 sm:mb-12"
           >
             <span className="inline-block px-5 py-2 bg-gradient-to-r from-secondary/10 to-accent/10 border border-[#BD9C69]/30 rounded-full text-[#BD9C69] text-xs sm:text-sm font-bold uppercase tracking-[0.2em] mb-6">
               Notre Structure
@@ -267,8 +271,8 @@ export function EspaceProContent() {
             </p>
           </motion.div>
 
-          {/* Poles cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          {/* Poles cards — full width rows, alternating dark/light */}
+          <div className="flex flex-col gap-4">
             {poles.map((pole, i) => (
               <motion.div
                 key={pole.name}
@@ -277,14 +281,18 @@ export function EspaceProContent() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 custom={i}
-                className="group relative bg-white/60 backdrop-blur-sm border border-[#BD9C69]/15 rounded-2xl overflow-hidden hover:shadow-[0_20px_60px_-15px_rgba(189,156,105,0.15)] transition-all duration-700 hover:-translate-y-1"
+                className={`group relative rounded-2xl overflow-hidden hover:shadow-[0_20px_60px_-15px_rgba(189,156,105,0.15)] transition-all duration-700 ${
+                  pole.dark
+                    ? 'bg-[#605E5B] text-white'
+                    : 'bg-white/60 backdrop-blur-sm border border-[#BD9C69]/15 text-foreground'
+                }`}
               >
                 {/* Top gradient bar */}
                 <div className={`h-1 bg-gradient-to-r ${pole.accent}`} />
 
-                <div className="p-6 sm:p-8 lg:p-10">
+                <div className="flex flex-col sm:flex-row items-center gap-6 p-6 sm:p-8 lg:p-10">
                   {/* Logo */}
-                  <div className="relative h-14 sm:h-16 mb-8">
+                  <div className="relative h-12 w-32 sm:w-40 flex-shrink-0">
                     <Image
                       src={pole.logo}
                       alt={pole.name}
@@ -293,20 +301,20 @@ export function EspaceProContent() {
                     />
                   </div>
 
-                  {/* Name */}
-                  <h3 className="font-heading text-xl sm:text-2xl font-bold text-foreground uppercase tracking-wider mb-4">
-                    {pole.name}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="font-body text-sm sm:text-base text-muted-foreground leading-relaxed mb-8">
-                    {pole.description}
-                  </p>
+                  {/* Content */}
+                  <div className="flex-1 min-w-0">
+                    <h3 className={`font-heading text-xl sm:text-2xl font-bold uppercase tracking-wider mb-2 ${pole.dark ? 'text-white' : 'text-foreground'}`}>
+                      {pole.name}
+                    </h3>
+                    <p className={`font-body text-sm sm:text-base leading-relaxed ${pole.dark ? 'text-white/70' : 'text-muted-foreground'}`}>
+                      {pole.description}
+                    </p>
+                  </div>
 
                   {/* Link */}
                   <Link
                     href={pole.href}
-                    className="inline-flex items-center gap-2 text-[#BD9C69] font-body text-sm font-semibold uppercase tracking-wider group-hover:gap-4 transition-all duration-500"
+                    className="inline-flex items-center gap-2 text-[#D6B363] font-body text-sm font-semibold uppercase tracking-wider group-hover:gap-4 transition-all duration-500 flex-shrink-0"
                   >
                     En savoir plus
                     <ArrowRight className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1" />
@@ -321,7 +329,7 @@ export function EspaceProContent() {
       {/* ════════════════════════════════════════════════
           SECTION 3 — Pourquoi collaborer avec AMMO
          ════════════════════════════════════════════════ */}
-      <section className="py-20 sm:py-28 lg:py-32 bg-[#605E5B] relative overflow-hidden">
+      <section className="py-12 sm:py-16 lg:py-20 bg-[#605E5B] relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D6B363]/20 to-transparent" />
         <div className="absolute -bottom-60 -left-60 w-[500px] h-[500px] bg-[#D6B363]/5 rounded-full blur-3xl" />
@@ -405,7 +413,7 @@ export function EspaceProContent() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 custom={5}
-                className="absolute -bottom-6 -left-6 sm:-bottom-8 sm:-left-8 bg-gradient-to-br from-[#BD9C69] to-[#D6B363] text-white rounded-2xl p-5 sm:p-6 shadow-2xl"
+                className="absolute -bottom-6 -right-6 sm:-bottom-8 sm:-right-8 bg-gradient-to-br from-[#BD9C69] to-[#D6B363] text-white rounded-2xl p-5 sm:p-6 shadow-2xl"
               >
                 <p className="font-heading text-3xl sm:text-4xl font-bold">15+</p>
                 <p className="font-body text-xs sm:text-sm text-white/80 mt-1">années<br />d'expérience</p>
@@ -418,7 +426,7 @@ export function EspaceProContent() {
       {/* ════════════════════════════════════════════════
           SECTION 4 — Profils Recherchés
          ════════════════════════════════════════════════ */}
-      <section className="py-20 sm:py-28 lg:py-32 bg-background relative overflow-hidden">
+      <section className="py-12 sm:py-16 lg:py-20 bg-background relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#BD9C69]/30 to-transparent" />
         <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#D6B363]/[0.04] rounded-full blur-3xl" />
 
@@ -429,7 +437,7 @@ export function EspaceProContent() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-center mb-16 sm:mb-20"
+            className="text-center mb-10 sm:mb-12"
           >
             <span className="inline-block px-5 py-2 bg-gradient-to-r from-secondary/10 to-accent/10 border border-[#BD9C69]/30 rounded-full text-[#BD9C69] text-xs sm:text-sm font-bold uppercase tracking-[0.2em] mb-6">
               Recrutement
@@ -443,7 +451,7 @@ export function EspaceProContent() {
           </motion.div>
 
           {/* Trades grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5 max-w-5xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-5 max-w-4xl mx-auto">
             {trades.map((trade, i) => (
               <motion.div
                 key={trade.name}
@@ -452,7 +460,7 @@ export function EspaceProContent() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 custom={i}
-                className="group relative bg-white/50 backdrop-blur-sm border border-[#BD9C69]/10 rounded-2xl p-5 sm:p-6 text-center hover:bg-white/80 hover:border-[#BD9C69]/25 hover:shadow-[0_10px_40px_-10px_rgba(189,156,105,0.12)] transition-all duration-500 hover:-translate-y-1"
+                className="group relative bg-white/50 backdrop-blur-sm border border-[#BD9C69]/10 rounded-2xl p-5 sm:p-6 text-center hover:bg-white/80 hover:border-[#BD9C69]/25 hover:shadow-[0_10px_40px_-10px_rgba(189,156,105,0.12)] transition-all duration-500 hover:-translate-y-1 w-[calc(50%-8px)] sm:w-[calc(33.33%-14px)] lg:w-[calc(25%-15px)]"
               >
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#BD9C69]/10 to-[#D6B363]/5 flex items-center justify-center mx-auto mb-4 group-hover:from-[#BD9C69]/20 group-hover:to-[#D6B363]/15 transition-all duration-500">
                   <trade.icon className="w-5 h-5 text-[#BD9C69] group-hover:text-[#D6B363] transition-colors duration-300" />
@@ -484,7 +492,7 @@ export function EspaceProContent() {
       {/* ════════════════════════════════════════════════
           SECTION 5 — Formulaire de contact (placeholder)
          ════════════════════════════════════════════════ */}
-      <section className="py-20 sm:py-28 lg:py-32 bg-gradient-to-br from-[#F2ECE7] via-white to-[#F2ECE7] relative overflow-hidden">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-[#F2ECE7] via-white to-[#F2ECE7] relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#BD9C69]/30 to-transparent" />
         <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-[#D6B363]/5 rounded-full blur-3xl" />
         <div className="absolute top-20 -left-20 w-60 h-60 bg-[#BD9C69]/5 rounded-full blur-3xl" />

@@ -38,11 +38,18 @@ const FaqSection = () => {
     return (
         <section className="py-20 bg-muted/20">
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start justify-center gap-12 px-4 md:px-8">
-                <img
-                    className="max-w-md w-full rounded-2xl h-auto shadow-xl object-cover"
-                    src="/about-background.jpg"
-                    alt="AMMO Contractant Général"
-                />
+                <div className="max-w-md w-full flex flex-col items-center gap-6">
+                    <img
+                        src="/logo-horizontal-gold.png"
+                        alt="Groupe AMMO"
+                        className="h-16 w-auto"
+                    />
+                    <img
+                        className="w-full rounded-2xl h-auto shadow-xl object-cover"
+                        src="/about-background.jpg"
+                        alt="AMMO Contractant Général"
+                    />
+                </div>
                 <div className="flex-1">
                     <p className="text-secondary text-sm font-semibold uppercase tracking-wider">Questions Fréquentes</p>
                     <h2 className="text-4xl font-bold text-foreground mt-2">Vous avez des questions ?</h2>

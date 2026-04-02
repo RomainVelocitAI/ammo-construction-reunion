@@ -25,7 +25,7 @@ export default function GalleryHoverCarousel({
 }) {
 
   return (
-    <section className="py-32 bg-gradient-to-b from-background to-muted/20">
+    <section className="py-16 bg-gradient-to-b from-background to-muted/20">
       <div className="container mx-auto px-6 flex flex-col">
         {/* Section header */}
         <div className="mb-12 md:mb-16 lg:mb-20 text-center">
@@ -53,13 +53,6 @@ export default function GalleryHoverCarousel({
                   <p className="text-muted-foreground text-sm md:text-base line-clamp-3">
                     {item.summary}
                   </p>
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className="hidden md:flex absolute bottom-4 right-4 border border-border dark:border-border hover:-rotate-45 transition-all duration-500 rounded-full mt-2 px-0 items-center gap-1 text-primary hover:text-primary/80"
-                  >
-                    <ArrowRight className="size-4" />
-                  </Button>
                 </div>
 
                 {/* Image - En bas sur mobile, plein écran sur desktop */}
@@ -71,14 +64,6 @@ export default function GalleryHoverCarousel({
                     alt={item.title}
                     className="h-full w-full object-cover object-center"
                   />
-                  {/* Bouton flèche sur l'image - visible seulement sur mobile */}
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className="md:hidden absolute bottom-4 right-4 border border-white/50 bg-white/20 backdrop-blur-sm hover:-rotate-45 transition-all duration-500 rounded-full px-0 flex items-center gap-1 text-white hover:text-white/80 hover:bg-white/30"
-                  >
-                    <ArrowRight className="size-4" />
-                  </Button>
                   {/* Fade overlay at bottom - desktop only */}
                   <div className="hidden md:block absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>

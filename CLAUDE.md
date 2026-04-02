@@ -89,3 +89,14 @@ The `contenu_ammo_re.md` file contains the complete website content structure in
 
 ## Visual Assets
 The project includes various screenshots and images in the root directory for reference and development use. The public folder contains the logo and other static assets.
+
+## Verification Protocol
+
+After implementing changes, verification is done **point by point with the user** — never declare work complete unilaterally.
+
+**Process:**
+1. Present one point at a time: describe what was changed and give the exact URL + section to check (e.g. `http://localhost:3000/a-propos#equipe`)
+2. Wait for the user to visually verify on their end
+3. Only move to the next point after explicit user validation ("c'est bon", "ok", "validé", etc.)
+4. Never mark anything as complete based on code inspection alone — the user must confirm visually
+5. If a point is not OK, fix it before moving on
